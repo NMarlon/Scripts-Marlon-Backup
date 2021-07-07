@@ -1,0 +1,267 @@
+<link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/form001.css" />
+
+   <style>
+       form label {
+           color: white !important;
+       }
+       form#llCaptureForm {
+            background: none !important;
+        }
+
+   </style>
+
+   <script>
+   
+   function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      var user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+          setCookie("username", user, 365);
+        }
+      }
+    } 
+       
+          
+       function salvar_campos(){
+           if(document.getElementById("llfield115508").value=="Sim"){
+               var ehmembro = 1;
+           }else{
+               var ehmembro = 0;
+           }
+           var nome = document.getElementById("llfield49036").value;
+           //var ehmembro = document.getElementById("llerror49079").value;
+           var email = document.getElementById("llfield49037").value;
+           setCookie("nome",nome,1);
+           setCookie("ehmembro",ehmembro,1);
+            setCookie("email",email,1);
+       }
+      // document.getElementById("enviar2").hidden=true;
+       
+       
+       //document.getElementById("enviar2").hidden="";
+   </script>
+    
+<form id="llCaptureForm" class="llform001"  action="//paginas.rocks/capture" method="post">   
+    <input type="hidden" id="mid" name="mid" value="536497" />
+    <input type="hidden" id="fid" name="fid" value="39713" />
+       <input type="hidden" id="formType" name="formType" value="dynamic" />
+   <div>
+       <label  for="llfield49036">Nome</label>
+       <input type="text" id="llfield49036" name="llfield49036" placeholder="Nome" data-required="true" required/>
+       <div class="field-error" id="llerror49036"></div>
+   </div>
+   <div>
+       <label  for="llfield49037">E-mail</label>
+       <input type="email" id="llfield49037" name="llfield49037" placeholder="Digite seu e-mail" required data-required="true" />
+       <div class="field-error" id="llerror49037"></div>
+   </div>
+          <div>
+       <label >É membro de A Igreja de Jesus Cristo dos Santos dos Últimos Dias?</label>
+       <div class="field-error" id="llerror49079"></div>
+       <div class="radio-list" style="display:flex;" >
+           <div class="radio" style="margin-right: 20px;">
+            <input  type="radio" id="llfield115509" name="llfield49079" value="Não"  onclick="document.getElementById('mid').value='536497';document. getElementById('fid').value='39713';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=39713&m=536497'" required/> 
+               <label>
+                   Não
+               </label>
+           </div>
+           <div class="radio">
+            <input type="radio" id="llfield115508" name="llfield49079" value="Sim" onclick="document.getElementById('mid').value='536497';document.getElementById('fid').value='39676';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=39676&m=536497'" /> 
+               <label>
+                   Sim
+               </label>
+           </div>
+       </div>
+    </div>
+    <div>
+       <div class="checkbox-list" >
+           <div class="checkbox">
+               <label>
+                   <input type="checkbox" id="LGPDValidation" name="LGPDValidation" style="-webkit-appearance: auto !important;" value="1" required="required"/>   &nbsp;Eu li e concordo com os <a target="_blank" href="https://autossuficiencia.org.br/termos-de-uso-e-politica-de-privacidade/" style="color:#B7D43E">Termos de Uso</a>
+               </label>
+           </div>
+           
+            <div class="field-error" id="LGPDValidation" style="color:red;"></div>
+       </div>
+   </div>
+   
+   
+   <div class="button-bar">
+        <button  type="submit" style="font-size: initial;border:none;border-radius:5px;padding:10px 30px;text-transform: uppercase;font-weight:bolder;color:#0D2D3F;background:#B7D43E;font-family: Roboto,Arial,Helvetica,Verdana,sans-serif;cursor:pointer" onclick="salvar_campos()"><i class="fas fa-envelope" ></i>   Enviar</button>
+   </div>
+   
+   <div class="loading-box">
+       <img src="//paginas.rocks/content/images/spinner.gif" />
+       <div>loading...</div>
+   </div>
+   <div class="error-box">
+       <img src="//paginas.rocks/content/images/error-icon.png" />
+       <div></div>
+       <button type="button" class="btn" id="btn-error">Ok</button>
+   </div>
+      <img id="last" src="https://llimages.com/redirect/redirect.aspx?A=V&f=39713&m=536497" style="display: none;" />
+</form>
+
+<div id="form_sucess" style="font-size:1.3em; text-indent: 1.5em; color:white;" hidden>Sua inscrição foi realizada com sucesso! Você será redirecionado em <div id="redirect_timer"  style="display: inline ">...</div> segundos
+</div>
+<div id="form_email_used" hidden>
+<p  style="color: white;font-size: 1.3em;text-indent:1.5em;margin: 0 21px 0 30px;display: block;padding: 0 20px 20px sac;" >  Este e-mail já foi utilizado para a inscrição. Gentileza usar outro e-mail</p> 
+ </div>
+   <script> 
+   
+   
+   
+   
+   
+   
+
+        function checarVariavelDoLink(link,variavel){
+          var i=0;
+          var valor = "";
+          var variavel_pointer_link= "";
+          var link_length = link.length;
+
+          while(i<link_length){ 
+            if(link[i]=="?"){
+              var j=i+1;
+              var EhAVariavel = true;
+              var lastTurn=false;
+              while(j<link_length){
+                if(EhAVariavel){
+                  variavel_pointer_link=variavel_pointer_link+link[j]; 
+
+                }else{
+                  valor+=link[j];
+                }
+                var jj=j+1;
+                if(variavel_pointer_link==variavel && link[jj]=="="){
+                  EhAVariavel=false;
+                  lastTurn=true;
+                  j+=1;
+                }else{
+                  if(link[jj]=="="){
+                    variavel_pointer_link="";
+                    EhAVariavel=false;
+                    j+=1;
+                  }
+                }
+                
+                if(lastTurn==true && (link[jj]=="&" || link[jj]==undefined)){
+                  return valor; 
+                } 
+                if(link[j]=="&"){
+                  valor="";
+                  EhAVariavel=true;  
+                }
+                
+               /* //valor= valor.concat(valor,link[j]); 
+                console.log(valor+"; var"+variavel);
+                if (link[j]=="="){
+                    if(valor==variavel){
+                        EhAVariavel=true;
+                        console.log("ok");
+                    }
+                    valor="";
+                }
+                valor=valor.co  ncat(link[j]); 
+                j+=1;
+                
+                if(link[j]=="&"){
+                    j+=1;
+                }else {
+                    if(EhAVariavel){ 
+                        return valor;
+                    }
+                    
+                }
+                if(j>=link_length){
+                    
+                    console.log(j+"; "+link_length+"; Cutim: "+valor); 
+                    return valor;
+                  }*/
+                  j=j;
+                  j+=1; 
+                }
+                break;  
+              }
+              i+=1;
+            }
+
+        } 
+    var url_atual = window.location.href;
+      
+            //document.getElementById("redirect_progresso_bar").classList.add("hidden");
+        var user_nao_encontrado = checarVariavelDoLink(url_atual,"user_nao_encontrado");
+        if(user_nao_encontrado == "true"){
+            alert("Esse e-mail não foi cadastrado anteriormente, comece sua inscrição por esse e-mail, nessa página! Seja bem-vindo");
+        }
+        
+        
+        
+        var cadastro_ok = checarVariavelDoLink(url_atual,"cadastro_realizado_com_sucesso");
+        if(cadastro_ok == "true"){
+            //alert("Sua inscrição foi realizada com sucesso. O(a) gerente de autossuficiência da sua região entrará em contato para lhe informar o link de participação. Qualquer dúvida, você pode entrar em contato com ele(a) diretamente aqui: https://autossuficiencia.org.br/nosso-time");
+            //console.log("ok");
+            document.getElementById("form_sucess").hidden=false;
+            document.getElementById("form_sucess").scrollIntoView();
+            
+            
+            document.getElementById("redirect_progresso_bar").classList.remove("hidden");
+            
+            var timer=15;
+            var timer_start=timer;
+            document.getElementById("redirect_timer").innerHTML=timer;
+            /**/
+            setInterval(function(){ document.getElementById("redirect_timer").innerHTML=timer;
+            timer = timer - 1;
+                console.log("bugação:"+(timer/timer_start));
+                document.getElementsByClassName("elementor-progress-bar")[0].style.width=(100*(timer/timer_start)).toString()+"%";
+                console.log(document.getElementsByClassName("elementor-progress-bar")[0].style.width);
+                document.getElementsByClassName("elementor-progress-percentage")[0].innerHTML=(100*(timer/timer_start)).toFixed(0).toString()+"%";
+                if(timer==0){
+                    window.location.replace("https://autossuficiencia.org.br/gr");
+                    document.getElementById("form_sucess").innerHTML="REDIRECIONANDO AGORA!";
+                }
+            }, 1000);
+            
+            
+        }
+        
+        var BoolEmailJaCadastrado = checarVariavelDoLink(url_atual,"jacadastrado"); //emailJaCadastrado
+        
+     
+        if(BoolEmailJaCadastrado == "true"){
+          document.getElementById("form_email_used").hidden=false;
+          //window.location.href = 'https://autossuficiencia.org.br/minha-jornada';
+          alert("E-mail já cadastrado, por favor use outro e-mail");
+          document.getElementById("form_email_used").scrollIntoView();
+        }
+        </script>
+        
+        <script type="text/javascript" src="//paginas.rocks/scripts/capture/capture.js"></script>

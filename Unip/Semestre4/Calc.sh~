@@ -1,0 +1,101 @@
+#!/bin/bash
+#Autor: Marlon Rebello Viana
+#Data: 23/04/2021
+#Algoritmo que calcula: soma, subtração, multiplicação,
+#divisão, a raiz quadrada 
+
+
+menu ()
+{
+
+echo "  _____________________________________"
+echo
+echo "              CALCULADORA!"
+echo "         Desenvolvido por Marlon"
+echo "    F0965J2 Unip Anchieta Campus III"
+echo "  _____________________________________"
+echo
+echo "< 1 > Simples"
+echo "< 2 > Científica "
+echo "< 0 > Sair "
+
+#echo "Escolha uma das opções acima:  "
+echo "Escolha uma das opções acima:  "
+read  opcao
+
+case $opcao in
+    1) simples ;;
+    2) cientifica ;;   
+    0) exit ;;
+esac
+
+
+}
+
+simples ()
+{
+echo "Digite o primeiro valor"
+
+}
+
+cientifica ()
+{
+echo "Caracteres aceitos:" 
+echo "+ (soma) ex. 1+2="
+echo "- (subtração) ex. 1-2="
+echo "* (multiplicação) ex. 1*2="
+echo "/ (divisão) ex. 1/2"
+echo "^ (elevado) ex. 3^3 "
+echo "(NÃO use os números pequenos como: 3¹ ou 3² use 3^1 ou 3^2"
+echo
+echo "você também pode usar:"
+echo "(2-1)*3 (parênteses)"
+echo
+echo "menu (para voltar ao menu)"
+echo "sair (para sair da calculadora"
+
+
+#echo "Digite a fórmula: "
+
+read -p "Digite a fórmula: " conta
+
+i=0
+MEU_ARRAY=()	
+#Separar todos
+while [ $i -lt ${#conta} ] 
+do 
+
+	if [ $conta == *"sair"* ] 
+	then
+		echo "ok"
+		exit 
+	fi
+	if [ $conta == *"menu"* ] 
+	then
+		menu
+		break
+	fi
+	
+	#Fase de procurar os parenteses "()"
+		# Procura por todos 
+		
+	#long="USCAGol.blah.blah.blah"
+	#pax> short="${long:0:2}" ; echo "${short}"	
+	contar=`echo $conta | awk -F: '{print $i}'`
+	if [ $contar == "(" ]
+	then
+		echo		
+	
+	fi
+	 
+done
+
+
+
+}
+
+menu
+sair ()
+{
+exit
+}

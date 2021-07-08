@@ -58,7 +58,7 @@
     // Usage!
     
     function redirect(){
-        sleep(1200).then(() => {
+        sleep(1).then(() => {
             if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
                     window.location.href="semanadaeducacao.org/tpviral";
@@ -70,6 +70,7 @@
                }
                // Do something after the sleep!*/
            }else if (document.getElementById("llfield115509").checked) {
+
                 if(document.getElementById("llfield67881").value!="" )
                     window.location.href="semanadaeducacao.org/tpviral";
 
@@ -80,6 +81,7 @@
     }
           
        function salvar_campos(){
+            console.log("teste1");
 
             if(document.getElementById("llfield49036").value =="" || document.getElementById("llfield49037").value =="" || (document.getElementById("llfield115509").value =="" && document.getElementById("llfield115508").value =="") || document.getElementById("LGPDValidation").checked == false ){
              return null;   
@@ -97,12 +99,16 @@
                 }
 
             } 
+            console.log("teste2");
+
             var nome = document.getElementById("llfield49036").value;
             //var ehmembro = document.getElementById("llerror49079").value;
             var email = document.getElementById("llfield49037").value;
             setCookie("nome",nome,1);
             setCookie("ehmembro",ehmembro,1);
             setCookie("email",email,1);
+            console.log("teste3");
+
             redirect();
        }
       // document.getElementById("enviar2").hidden=true;
@@ -3962,10 +3968,12 @@
     }
     function nao(){
 
-            if(document.getElementById("idade-hidden")==undefined)
-                insertAfter(document.getElementById("ancora_estaca"),idade_element);
-        document.getElementById("estaca-hidden").remove();
-        document.getElementById("ala-hidden").remove();
+        if(document.getElementById("idade-hidden")==undefined)
+            insertAfter(document.getElementById("ancora_estaca"),idade_element);
+        if(document.getElementById("estaca-hidden")!=undefined){
+            document.getElementById("estaca-hidden").remove();
+            document.getElementById("ala-hidden").remove();
+        }
 
     }
     

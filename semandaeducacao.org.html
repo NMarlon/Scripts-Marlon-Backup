@@ -3199,7 +3199,7 @@
    </div>
 
 
-   <div id="conselhos" hidden>
+   <div id="conselhos" >
         <div>
            <label  for="llfield68855">Nome do Conselho</label>
            <input type="text" id="llfield68855" name="llfield68855" placeholder="Coloque o nome do conselho a qual se encontra" />
@@ -3473,8 +3473,15 @@
             
         } 
     
-    function finder_data_in_2d_array(id,array){
-
+    function finder_data_in_2d_array(id,array,ref_column){
+        i=0
+        var array_length = array.length;
+        var value = document.getElementById(id).value;
+        while (i<array_length){
+            if(value == array[i][2]) return array[i];
+            i+=1;
+        }
+        return "";
     }
 
 
@@ -3501,7 +3508,7 @@
                     //console.log("run!")
                                         
                 }else{
-                    var conselhos = finder_data_in_2d_array("llfield67883",estaca_ala);
+                    var conselhos = finder_data_in_2d_array("llfield67883",estaca_ala,2);
                     document.getElementById("llfield68853").value=conselhos[3];
                     document.getElementById("llfield68854").value=conselhos[4];
                     document.getElementById("llfield68855").value=conselhos[5];

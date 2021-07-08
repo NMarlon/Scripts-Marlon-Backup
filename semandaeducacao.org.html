@@ -58,20 +58,30 @@
     // Usage!
     
     function redirect(){
-        sleep(2000).then(() => {
-/*TAREFA! deixar apaenas tpviral*/
-            if(document.getElementById("llfield115508").checked==true){             
+        sleep(1200).then(() => {
+            if(document.getElementById("llfield115509").checked){ 
+                if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
+                    window.location.href="semanadaeducacao.org/tpviral";
+
+                /* if(document.getElementById("llfield115508").checked==true){             
                     window.location.href="semanadaeducacao.org/tpmembro";
                }else{               
                     window.location.href="semanadaeducacao.org/tpviral";
                }
-               // Do something after the sleep!
+               // Do something after the sleep!*/
+           }else if (document.getElementById("llfield115508").checked) {
+                if(document.getElementById("llfield67881").value!="" )
+                    window.location.href="semanadaeducacao.org/tpviral";
+
+           }else{
+            alert("Por favor preencha o campo de se é membro ou não (:-D)");
+           }
         });
     }
           
        function salvar_campos(){
 
-            if(document.getElementById("llfield49036").value =="" || document.getElementById("llfield49037").value =="" || document.getElementById("llfield115509").value ==""|| document.getElementById("LGPDValidation").checked == false ){
+            if(document.getElementById("llfield49036").value =="" || document.getElementById("llfield49037").value =="" || (document.getElementById("llfield115509").value =="" && document.getElementById("llfield115508").value =="") || document.getElementById("LGPDValidation").checked == false ){
              return null;   
             }
             if(document.getElementById("llfield115508").checked==true){
@@ -116,7 +126,7 @@
        <input type="email" id="llfield49037" name="llfield49037" placeholder="Digite seu e-mail" required data-required="true" />
        <div class="field-error" id="llerror49037"></div>
    </div>
-          <div>
+      <div>
        <label >É membro de A Igreja de Jesus Cristo dos Santos dos Últimos Dias?</label>
        <div class="field-error" id="llerror49079"></div>
        <div class="radio-list" style="display:flex;" >
@@ -2855,6 +2865,7 @@
 
 
 </script>
+<div id="ancora_estaca"></div>
    <div id="estaca-hidden">
       
        <label for="llfiedl49074" >Estaca <div class="div_position_load"><div id="loader_estaca" class="loader load_my off"></div></div></label>
@@ -3932,16 +3943,34 @@
     function insertAfter(referenceNode, newNode) {
       referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
-    var estaca_element = documento
+    var estaca_element = document.getElementById("estaca-hidden");
+    var ala_element = document.getElementById("ala-hidden");
+    var idade_element = document.getElementById("idade-hidden");
+
        
+
     function sim(){
-        document.getElementById("estaca-hidden").classList.add('hidden');
-            
+       /* document.getElementById("estaca-hidden").classList.add('hidden');*/
+       if(document.getElementById("llfield115508").checked){
+            if(document.getElementById("estaca-hidden")==undefined){
+                insertAfter(document.getElementById("ancora_estaca"),ala_element);
+                insertAfter(document.getElementById("ancora_estaca"),estaca_element);
+                if(document.getElementById("idade-hidden")==undefined)
+                    insertAfter(document.getElementById("ancora_estaca"),idade_element);
+            }
+        }
     }
     function nao(){
-        document.getElementById("estaca-hidden").classList.remove('hidden');
-        
+        document.getElementById("estaca-hidden").remove();
+        document.getElementById("ala-hidden").remove();
+
+            if(document.getElementById("idade-hidden")==undefined)
+                insertAfter(document.getElementById("ancora_estaca"),idade_element);
     }
     
    
+    document.getElementById("estaca-hidden").remove();
+    document.getElementById("ala-hidden").remove();
+    document.getElementById("idade-hidden").remove();
+
 </script>

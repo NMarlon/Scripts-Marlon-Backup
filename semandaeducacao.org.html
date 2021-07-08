@@ -58,7 +58,7 @@
     // Usage!
     
     function redirect(){
-        sleep(1).then(() => {
+        sleep(1200).then(() => {
             if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
                     window.location.href="semanadaeducacao.org/tpviral";
@@ -3642,19 +3642,6 @@
        <div class="field-error" id="llerror67881"></div>
    </div>
 
-   <script>
-
-   function sleep (time) {
-      return new Promise((resolve) => setTimeout(resolve, time));
-    }
-    function redirect(){
-        sleep(3000).then(() => {
-            if(!(document.getElementById('llfield49036').value=="" || document.getElementById('llfield49037').value=="" || document.getElementById('llfield49074').value=="" || document.getElementById('llfield67883').value=="" || document.getElementById('llfield67881').value=="") )
-            window.location.replace("http://semanadaeducacao.org/tpviral");
-        });
-    }
-   </script>
-
 
 
 
@@ -3920,31 +3907,33 @@
     function onInput(ala_or_estaca,id_datalist,id_select,id_input) {
 
        
-    document.getElementById("loader_ala").classList.remove('off');
-    document.getElementById("loader_estaca").classList.remove('off');
-       
-    sleep(350).then(() => {
+      document.getElementById("loader_ala").classList.remove('off');
+      document.getElementById("loader_estaca").classList.remove('off');
+         
+      sleep(350).then(() => {
+        try{
+          var el = document.getElementById(id_input);
+          var dl = document.getElementById(id_datalist);
+           if( el.value.trim() != '' ){
+              var opSelected = dl.querySelector(`[value="${el.value}"]`);
+               //console.log(dl+" ISSO!");
+              var option = document.createElement("option");
+              option.value = opSelected.value;
+              option.text = opSelected.getAttribute('label');
+              document.getElementById(id_select).value=el.value.trim();
+              if(ala_or_estaca){
+                  filter_ala("llfield49074","llfield678832","llfield67883");
+                  //console.log("run!")
+                
+              }
 
-        var el = document.getElementById(id_input);
-        var dl = document.getElementById(id_datalist);
-         if( el.value.trim() != '' ){
-            var opSelected = dl.querySelector(`[value="${el.value}"]`);
-             //console.log(dl+" ISSO!");
-            var option = document.createElement("option");
-            option.value = opSelected.value;
-            option.text = opSelected.getAttribute('label');
-            document.getElementById(id_select).value=el.value.trim();
-            if(ala_or_estaca){
-                filter_ala("llfield49074","llfield678832","llfield67883");
-                //console.log("run!")
-              
-            }
-
-              document.getElementById("loader_ala").classList.add('off');
-              document.getElementById("loader_estaca").classList.add('off');
-        }
-
-    });
+                document.getElementById("loader_ala").classList.add('off');
+                document.getElementById("loader_estaca").classList.add('off');
+          }
+      }catch (e){
+        console.error("Não foi possível trimar select. funcao onInput. Provavel causa: id da Ala ou estaca nao encontrado version 2021");
+      }
+      });
     };
     function insertAfter(referenceNode, newNode) {
       referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);

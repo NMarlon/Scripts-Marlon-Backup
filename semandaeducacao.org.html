@@ -59,7 +59,7 @@
     
     function redirect(){
         sleep(1200).then(() => {
-            if(document.getElementById("llfield115509").checked){ 
+            if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
                     window.location.href="semanadaeducacao.org/tpviral";
 
@@ -69,7 +69,7 @@
                     window.location.href="semanadaeducacao.org/tpviral";
                }
                // Do something after the sleep!*/
-           }else if (document.getElementById("llfield115508").checked) {
+           }else if (document.getElementById("llfield115509").checked) {
                 if(document.getElementById("llfield67881").value!="" )
                     window.location.href="semanadaeducacao.org/tpviral";
 
@@ -3673,7 +3673,7 @@
    
    
    <div class="button-bar">
-        <button  type="submit" style="font-family: 'pragmatica-extended', Sans-serif;padding: 10px 30px 10px 30px ;background:black;color:white; border:none;font-size:1.1em;" onclick="salvar_campos()">Enviar</button>
+        <button  type="submit" style="font-family: 'pragmatica-extended', Sans-serif;padding: 10px 30px 10px 30px ;background:black;color:white; border:none;font-size:1.1em;cursor:pointer;" onclick="salvar_campos()">Enviar</button>
    </div>
    
    <div class="loading-box">
@@ -3953,24 +3953,27 @@
        /* document.getElementById("estaca-hidden").classList.add('hidden');*/
        if(document.getElementById("llfield115508").checked){
             if(document.getElementById("estaca-hidden")==undefined){
-                insertAfter(document.getElementById("ancora_estaca"),ala_element);
-                insertAfter(document.getElementById("ancora_estaca"),estaca_element);
                 if(document.getElementById("idade-hidden")==undefined)
                     insertAfter(document.getElementById("ancora_estaca"),idade_element);
+                insertAfter(document.getElementById("ancora_estaca"),ala_element);
+                insertAfter(document.getElementById("ancora_estaca"),estaca_element);
             }
         }
     }
     function nao(){
-        document.getElementById("estaca-hidden").remove();
-        document.getElementById("ala-hidden").remove();
 
             if(document.getElementById("idade-hidden")==undefined)
                 insertAfter(document.getElementById("ancora_estaca"),idade_element);
+        document.getElementById("estaca-hidden").remove();
+        document.getElementById("ala-hidden").remove();
+
     }
     
    
     document.getElementById("estaca-hidden").remove();
     document.getElementById("ala-hidden").remove();
     document.getElementById("idade-hidden").remove();
+    document.getElementById("llfield115509").checked=false;
+    document.getElementById("llfield115508").checked=false;
 
 </script>

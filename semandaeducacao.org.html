@@ -81,7 +81,6 @@
     }
           
        function salvar_campos(){
-            console.log("teste1");
 
             if(document.getElementById("llfield49036").value =="" || document.getElementById("llfield49037").value =="" || (document.getElementById("llfield115509").value =="" && document.getElementById("llfield115508").value =="") || document.getElementById("LGPDValidation").checked == false ){
              return null;   
@@ -99,7 +98,6 @@
                 }
 
             } 
-            console.log("teste2");
 
             var nome = document.getElementById("llfield49036").value;
             //var ehmembro = document.getElementById("llerror49079").value;
@@ -107,8 +105,6 @@
             setCookie("nome",nome,1);
             setCookie("ehmembro",ehmembro,1);
             setCookie("email",email,1);
-            console.log("teste3");
-
             redirect();
        }
       // document.getElementById("enviar2").hidden=true;
@@ -119,7 +115,7 @@
     
 <form id="llCaptureForm" class="llform001"  action="//paginas.rocks/capture" method="post">   
     <input type="hidden" id="mid" name="mid" value="536497" />
-    <input type="hidden" id="fid" name="fid" value="40370" />
+    <input type="hidden" id="fid" name="fid" value="40622" />
        <input type="hidden" id="formType" name="formType" value="dynamic" />
        <label>Inscreva-se gratuitamente</label>
    <div>
@@ -137,13 +133,13 @@
        <div class="field-error" id="llerror49079"></div>
        <div class="radio-list" style="display:flex;" >
            <div class="radio" style="margin-right: 20px;">
-            <input  type="radio" id="llfield115509" name="llfield49079" value="Não" onchange="nao();document.getElementById('mid').value='536497';document.getElementById('fid').value='40370';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40370&m=536497'" required/> 
+            <input  type="radio" id="llfield115509" name="llfield49079" value="Não" onchange="nao();document.getElementById('mid').value='536497';document.getElementById('fid').value='40622';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497'" required/> 
                <label>
                    Não
                </label>
            </div>
            <div class="radio">
-            <input type="radio" id="llfield115508" name="llfield49079" value="Sim" onchange="sim();document.getElementById('mid').value='536497';document.getElementById('fid').value='39676';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=39676&m=536497'" /> 
+            <input type="radio" id="llfield115508" name="llfield49079" value="Sim" onchange="sim();document.getElementById('mid').value='536497';document.getElementById('fid').value='40622';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497'" /> 
                <label>
                    Sim
                </label>
@@ -3199,23 +3195,23 @@
    </div>
 
 
-   <div id="conselhos" >
-        <div>
-           <label  for="llfield68855">Nome do Conselho</label>
-           <input type="text" id="llfield68855" name="llfield68855" placeholder="Coloque o nome do conselho a qual se encontra" />
-           <div class="field-error" id="llerror68855"></div>
-        </div>
-        <div>
-           <label  for="llfield68854">Nome do Gerente dessa Pessoa</label>
-           <input type="text" id="llfield68854" name="llfield68854" placeholder="Coloque o gerente da sua região" />
-           <div class="field-error" id="llerror68854"></div>
-        </div>
-        <div>
-           <label  for="llfield68853">Nome Local do Escritório</label>
-           <input type="text" id="llfield68853" name="llfield68853" placeholder="Nome do escritório" />
-           <div class="field-error" id="llerror68853"></div>
-        </div>
+   
+    <div id="conselho1" >
+       <label  for="llfield68855">Nome do Conselho</label>
+       <input type="text" id="llfield68855" name="llfield68855"  placeholder="Coloque o nome do conselho a qual se encontra" />
+       <div class="field-error" id="llerror68855"></div><br><br>
+
+    </div>    <div id="conselho2" >
+       <label  for="llfield68854">Nome do Gerente dessa Pessoa</label>
+       <input type="text" id="llfield68854" name="llfield68854"  placeholder="Coloque o gerente da sua região" />
+       <div class="field-error" id="llerror68854"></div><br><br>
+    </div> 
+    <div  id="conselho3" >
+       <label  for="llfield68853">Nome Local do Escritório</label>
+       <input type="text" id="llfield68853" name="llfield68853"  placeholder="Nome do escritório"  />
+       <div class="field-error" id="llerror68853"></div>
     </div>
+   
 
 
 
@@ -3248,7 +3244,7 @@
        <div></div>
        <button type="button" class="btn" id="btn-error">Ok</button>
    </div>
-      <img id="last" src="https://llimages.com/redirect/redirect.aspx?A=V&f=40370&m=536497" style="display: none;" />
+      <img id="last" src="https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497" style="display: none;" />
 </form>
 
 <div id="form_sucess" style="font-size:1.3em; text-indent: 1.5em; color:white;" hidden>Sua inscrição foi realizada com sucesso! Você será redirecionado em <div id="redirect_timer"  style="display: inline ">...</div> segundos</div>
@@ -3473,12 +3469,13 @@
             
         } 
     
-    function finder_data_in_2d_array(id,array,ref_column){
+    function finder_data_in_2d_array(id,array,ref_collumn){
         i=0
-        var array_length = array.length;
-        var value = document.getElementById(id).value;
+        var array_length = array.length-1;
+        var value = document.getElementById(id).value.trim();
+        console.log(value+ " //  "+ array_length+ " /// "+ array[3][ref_collumn]);
         while (i<array_length){
-            if(value == array[i][2]) return array[i];
+            if(value == array[i][ref_collumn].trim()) return array[i];
             i+=1;
         }
         return "";
@@ -3492,7 +3489,7 @@
       document.getElementById("loader_ala").classList.remove('off');
       document.getElementById("loader_estaca").classList.remove('off');
          
-      sleep(350).then(() => {
+      sleep(2000).then(() => {
         try{
           var el = document.getElementById(id_input);
           var dl = document.getElementById(id_datalist);
@@ -3508,7 +3505,7 @@
                     //console.log("run!")
                                         
                 }else{
-                    var conselhos = finder_data_in_2d_array("llfield67883",estaca_ala,2);
+                    var conselhos = finder_data_in_2d_array("llfield67883",estaca_ala,1);
                     document.getElementById("llfield68853").value=conselhos[3];
                     document.getElementById("llfield68854").value=conselhos[4];
                     document.getElementById("llfield68855").value=conselhos[5];
@@ -3553,7 +3550,6 @@
         }
 
     }
-    
    
     document.getElementById("estaca-hidden").remove();
     document.getElementById("ala-hidden").remove();
@@ -3561,4 +3557,60 @@
     document.getElementById("llfield115509").checked=false;
     document.getElementById("llfield115508").checked=false;
 
+    
+
+
+    /*window.onkeypress = function(event) {
+       if (event.keyCode == 41) {
+          // do a function
+       }
+    }*/
 </script>
+
+ <script type="text/javascript">
+function develop_function()
+{
+            document.getElementById("conselho1").hidden=false;
+            document.getElementById("conselho2").hidden=false;
+            document.getElementById("conselho3").hidden=false;
+
+           // document.getElementById("conselhos").hidden=false;
+
+}
+
+
+ var t_cel,tc_ln;
+ if(document.addEventListener){ //code for Moz
+   document.addEventListener("keydown",keyCapt,false); 
+   /*document.addEventListener("keyup",keyCapt,false);
+   document.addEventListener("keypress",keyCapt,false);*/
+ }else{
+   document.attachEvent("onkeydown",keyCapt); //code for IE
+   /*document.attachEvent("onkeyup",keyCapt); 
+   document.attachEvent("onkeypress",keyCapt); */
+ }
+ function keyCapt(e){
+   if(typeof window.event!="undefined"){
+    e=window.event;//code for IE
+   }
+   if(e.type=="keydown"){
+   // t_cel[0].innerHTML=e.keyCode;
+    if(e.keyCode == 120 ){
+
+
+
+        
+        var senha = window.prompt("Bem vindo à Semana Da Educacao 2021!");
+        if(senha == null || senha == ""){return 0;
+
+        } else if(senha == "teste" ){
+            develop_function();
+        }
+    }
+   }/*else if(e.type=="keyup"){
+   }else if(e.type=="keypress"){
+   }*/
+ }
+
+//https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
+ </script>

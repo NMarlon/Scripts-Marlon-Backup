@@ -1,3 +1,4 @@
+
 <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/form001.css" />
 
@@ -17,13 +18,12 @@
 
    <script>
    
-    function setCookie(cname, cvalue, exdays) {
+   function setCookie(cname, cvalue, exdays) {
       var d = new Date();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
       var expires = "expires="+d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
-
     
     function getCookie(cname) {
       var name = cname + "=";
@@ -40,70 +40,29 @@
       return "";
     }
     
-    function checkCookie(name_cookie) {
-      var name = getCookie(name_cookie);
-      if (name != "") {
-        return name
-
+    function checkCookie() {
+      var user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
       } else {
-
-        return ""
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+          setCookie("username", user, 365);
+        }
       }
     } 
 
-    function prepareData(data) {
-        return Object.keys(data).map(function(key) {
-            return [key, data[key]].join('=');
-        }).join('&');
-    }
-
-    function parseURI(str) {
-        var data = {};
-        str.split('&').forEach(function(keyValue){
-            var parts = keyValue.split('=');
-            data[parts[0]] = parts[1];
-        });
-        return data;
-    }
    function sleep (time) {
       return new Promise((resolve) => setTimeout(resolve, time));
     }
 
     // Usage!
-    function pra_onde_vamos(){
-        //var link_referencia_upviral = parseURI(getCookie("link_referencia_upviral"));
-        //console.log(link_referencia_upviral+" AQUI O LINK DE REFERENCIA DO UP VIRAL semandaeducacao.org");
-        var veio_por_link_cookie = getCookie("veio_por_link_cookie");
-        var link = window.location.href;
-        var veio_por_link = checarVariavelDoLink(link,"veio_por_link");
-
-        if(!(veio_por_link=="true" || veio_por_link_cookie == "true")){
-            window.location.href="semanadaeducacao.org/tpviral";
-                    
-        }else{
-            //var object = location.search.slice(1));
-
-            //setCookie("cadastro_comlink_redirect","true",1);
-            //var link_referrer = document.referrer;
-            setCookie("lead_ok","true",1);
-            //window.location.href=link_referrer;
-            var we_have_id= document.cookie.split(';')[' referral_url116958'];
-            if(veio_por_link==true && !(we_have_id[' referral_url116958']==undefined || we_have_id[' referral_url116958']==null || we_have_id[' referral_url116958']=="" ) ){
-
-                window.location.href="https://upvir.al/116958/semana2021?ref_id="+we_have_id;
-            } else{
-               window.history.back();
-            }
-        };
-    }
+    
     function redirect(){
-
         sleep(1200).then(() => {
-
-
             if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
-                    pra_onde_vamos();
+                    window.location.href="semanadaeducacao.org/tpviral";
 
                 /* if(document.getElementById("llfield115508").checked==true){             
                     window.location.href="semanadaeducacao.org/tpmembro";
@@ -114,8 +73,7 @@
            }else if (document.getElementById("llfield115509").checked) {
 
                 if(document.getElementById("llfield67881").value!="" )
-                    pra_onde_vamos();
-
+                    window.location.href="semanadaeducacao.org/tpviral";
 
            }else{
             alert("Por favor preencha o campo de se é membro ou não (:-D)");
@@ -3413,6 +3371,7 @@
             
             
         }
+        
         var BoolEmailJaCadastrado = checarVariavelDoLink(url_atual,"jacadastrado"); //emailJaCadastrado
         
      
@@ -3593,9 +3552,9 @@
 
     }
    
-    document.getElementById("estaca-hidden").remove();
+    /*document.getElementById("estaca-hidden").remove();
     document.getElementById("ala-hidden").remove();
-    document.getElementById("idade-hidden").remove();
+    document.getElementById("idade-hidden").remove();*/
     document.getElementById("llfield115509").checked=false;
     document.getElementById("llfield115508").checked=false;
 
@@ -3654,6 +3613,5 @@ function develop_function()
    }*/
  }
 
-console.log(getCookie("id_ref")+" id AQUI");
 //https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
  </script>

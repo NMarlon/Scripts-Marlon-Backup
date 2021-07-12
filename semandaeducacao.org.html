@@ -74,6 +74,7 @@
         //var link_referencia_upviral = parseURI(getCookie("link_referencia_upviral"));
         //console.log(link_referencia_upviral+" AQUI O LINK DE REFERENCIA DO UP VIRAL semandaeducacao.org");
         var veio_por_link_cookie = getCookie("veio_por_link_cookie");
+        //setCookie("veio_por_link_cookie","",-1);
         var link = window.location.href;
         var veio_por_link = checarVariavelDoLink(link,"veio_por_link");
 
@@ -85,7 +86,10 @@
 
             //setCookie("cadastro_comlink_redirect","true",1);
             //var link_referrer = document.referrer;
+            
+
             setCookie("lead_ok","true",1);
+
             //window.location.href=link_referrer;
             var we_have_id= document.cookie.split(';')[' referral_url116958'];
             if(veio_por_link==true && !(we_have_id[' referral_url116958']==undefined || we_have_id[' referral_url116958']==null || we_have_id[' referral_url116958']=="" ) ){
@@ -148,6 +152,7 @@
             setCookie("nome",nome,1);
             setCookie("ehmembro",ehmembro,1);
             setCookie("email",email,1);
+
             redirect();
        }
       // document.getElementById("enviar2").hidden=true;
@@ -194,20 +199,6 @@
 
      <script>
     
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-        }
-        return "";
-    }
     document.getElementById("llfield49036").value=getCookie("nome");
     document.getElementById("llfield49037").value=getCookie("email");
     
@@ -3654,6 +3645,6 @@ function develop_function()
    }*/
  }
 
-console.log(getCookie("id_ref")+" id AQUI");
+//console.log(getCookie("id_ref")+" id AQUI");
 //https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
  </script>

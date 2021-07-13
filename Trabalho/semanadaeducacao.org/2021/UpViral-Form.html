@@ -1,5 +1,9 @@
 
 <script>
+
+
+
+
     function setCookie(cname, cvalue, exdays) {
       var d = new Date();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -22,6 +26,23 @@
       }
       return "";
     }
+
+
+    function getCookieAdapted(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
 
 
 
@@ -135,12 +156,50 @@
 
         //ref = "https://semanadaeducacao.org" +ref; //result: https://semanadaeducacao.orghttps//semanadaeducacao.org/upviral-form/
         //if(link_referencia_upviral!="true"){
-            setCookie("veio_por_link_cookie","true",1);
-            window.top.location.replace("https://semanadaeducacao.org/?veio_por_link=true");                    
+        
+        //var so_funciona = parent.window.location;
+        //setCookie("link_oks",so_funciona,1);
+        
+        //console.log(document.cookie);
+        //var link_referencia_upviral = encodeURI(parent.window.location);
+        //console.log(link_referencia_upviral);
+        
+
+        /*var link_upviral = parent.window.location;
+        var id_ref= checarVariavelDoLink(link_upviral,"ref_id");
+        setCookie("link_referencia_upviral",link_referencia_upviral,1);
+
+        setCookie("id_ref_upviral",id_ref,1);*/
+        setCookie("veio_por_link_cookie","true",1);
+
+        console.log(window.top.location);
+        var link_semana = "https://semanadaeducacao.org/?veio_por_link=true";
+        window.top.location.href=link_semana;                    
         //}
     }
     //gup('q', 'hxxp://example.com/?q=abc')
-    console.log(window.parent.location.href.toString());
+   /* try{
+    ////console.log(parent.document.location);
+    }catch (e){}finally{
+    try{
+    //console.log(document.referrer);
+    }catch (e){}finally{
+
+    try{
+    //console.log(parent.window.document.location);
+    }catch (e){}finally{
+    try{
+    console.log(parent.window.location);
+    }catch (e){}finally{
+    try{
+    //console.log(parent.document.location.href);
+    }catch (e){}finally{
+
+    try{
+    //console.log((window.location != window.parent.location)? document.referrer         : document.location.href);
+    }catch (e){}
+
+    }}}}}*/
     function link_onload(){
         sleep(100).then(() => {
             //var url_upviral=  parent.window.location;
@@ -153,10 +212,11 @@
             //var ref_id_link = gup("ref_id",url_upviral);
             //console.log(ref_id_link+" AQUI O link!!");
             //hecarVariavelDoLink("leadok","");
-            var leadok =getCookie("lead_ok");//document.cookie.split(';')['lead_ok']
-            
-            console.log(leadok+ " LEADOK");
-            if(leadok != "true"){
+            var leadok = getCookie("lead_ok");//document.cook7ie.split(';')['lead_ok']
+                   
+             console.log(document.cookie.split(";"));
+
+            if(leadok != "true" && getCookie("veio_por_link_cookie") != "true" ){
                 //var ref ="https://semanadaeducacao.org/?ref_id_link=" + ref_id_link;
                 if(document.location.href.search("elementor")==-1 && document.location.href.search("iral.com/editor/index/")==-1){
                     //console.log("work");

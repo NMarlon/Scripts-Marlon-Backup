@@ -1,6 +1,7 @@
 <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/form001.css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <style>
    form{
     
@@ -3261,12 +3262,90 @@
 
 
 
+<style>
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
 
+.hover_bkgr_fricc{
+    left: 0;
+}
+.terms{
+    height: 80vh;
+    overflow-y: auto;
+}
+</style>
     <div>
        <div class="checkbox-list" data-required="true" >
            <div class="checkbox">
                <label>
-                   <input type="checkbox" id="LGPDValidation" name="LGPDValidation" style="-webkit-appearance: auto !important;" value="1" required/>   &nbsp;Eu li e concordo com os <a target="_blank" href="https://autossuficiencia.org.br/termos-de-uso-e-politica-de-privacidade/" style="color:#023CFA">Termos de Uso</a>
+                   <input type="checkbox" id="LGPDValidation" name="LGPDValidation" style="-webkit-appearance: auto !important;" value="1" required/>   &nbsp;Eu li e concordo com os <a class="trigger_popup_fricc" onclick="deshidar('popup_lgpd')">Termos de uso</a>
+
+<div class="hover_bkgr_fricc" id="popup_lgpd" onclick="hidar('fechar_popup_lgpd')" >
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton" id="fechar_popup_lgpd" onclick="hidar('fechar_popup_lgpd')">&times;</div> <div class="modal-body pl-md-4 pr-md-4">
+                                <div class="terms"><p>TERMOS GERAIS – SORTEIOS “SEMANA DA EDUCAÇÃO”</p><p><br></p><p>Este regulamento tem por objetivo dirimir eventuais dúvidas a respeito dos sorteios a serem realizados entre os dias 20 de julho de 2021 a 23 de julho de 2021 na Semana da Educação, promovidos pela ASSOCIAÇÃO BRASILEIRA D’A IGREJA DE JESUS CRISTO DOS SANTOS DOS ÚLTIMOS DIAS (doravante denominada “Associação”), organização civil de natureza religiosa, cultural, recreativa e beneficente, sem fins lucrativos, com sede no Município de São Paulo/SP, à Avenida Francisco Morato, nº 2.430, inscrita no CNPJ/MF sob o nº 61.012.019/0001-42.</p><p><br></p><p>1.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Período dos Sorteios: entre os dias 20.07.2021 a 20.07.2021 durante as transmissões ao vivo (“Lives”) realizadas pela Associação;</p><p><br></p><p>2.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Como Participar dos Sorteios: poderão participar do sorteio todos que fizeram a inscrição no site da semana da educação – “semanadaeducacao.org” (Site)&nbsp;</p><p><br></p><p>3.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Como ocorrerão os Sorteios: &nbsp;os participantes deverão acessar o site “semanadaeducacao.org” e realizar a sua inscrição. Ato contínuo, será aberta uma janela para que o inscrito participe dos sorteios, se assim desejar, através de sua inclusão no grupo do WhatsApp “Semana da Educação”. Para participar dos sorteios das Bolsas de Estudo, os participantes deverão acessar o site da Autossuficiência e clicar em “Bolsas – Semana da Educação”.&nbsp;</p><p><br></p><p><br></p><p>4.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>acessar as “Lives” em que serão realizados os sorteios com no mínimo 20 minutos de antecedência, em data e horário previamente divulgados pela Associação através do WhastApp. Sendo, portanto, de inteira responsabilidade do participante consultar a data e horário das “Lives”.&nbsp;</p><p><br></p><p>4.1.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Ressalte-se que, o não acesso à transmissão ao vivo no período indicado acima é motivo para desclassificação do participante, caso seja sorteado;</p><p><br></p><p>4.2.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Após sorteado na “Live”, o participante receberá um comunicado pelo pessoal do Bem Estar e Autossuficiência da Área Brasil via Whatsapp ou ligação.</p><p><br></p><p>5.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Itens a serem sorteados:</p><p><br></p><p>a)<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Bolsas 100% Graduação, Pós Graduação, Cursos de Extensão, Curso de Inglês, Curso Preparatório para o ENEM e Cursos Profissionalizantes (todos on line);</p><p>b)<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Bolsas para curso de Inglês, TI programações, Graduação, Pós e MBA com descontos entre 40% e 70%;</p><p><br></p><p>c)<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Celulares, Tablets e livros;</p><p><br></p><p>d)<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Teste de perfil comportamental com devolutiva de um Gerente de Autossuficiência</p><p><br></p><p>6.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Procedimento do Sorteio: a Associação realizará os sorteios por meio de transmissões ao vivo (“Lives”) via plataformas digitais, em datas e horários previamente divulgados em suas redes sociais;</p><p>6.1. Os Sorteios serão realizados sempre com 20 minutos de antecedência do início das “Lives”;</p><p>6.2. Os itens sorteados serão indicados pelos Mestres de Cerimônia que conduzirão a “Live”, indicando a Instituição doadora, antes do início dos sorteios.</p><p>7.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Retirada dos prêmios: para recebimento do prêmio, o participante sorteado deverá obrigatoriamente e imediatamente ao Sorteio, entrar em contato com a Associação via chat da plataforma utilizada para acesso ao Sorteio e informar que está na “Live”, sob pena de perdimento do prêmio;</p><p><br></p><p>7.1.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Os sorteados que não retornarem o contato dos escritórios do Departamento de Bem Estar e Autossuficiência em 30 dias, perderá o direito ao prêmio, que será transferido para participantes de uma segunda lista de sorteados.&nbsp;</p><p><br></p><p>7.2.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Após contato do sorteado, o Departamento de Bem-Estar e Autossuficiência providenciará o envio do prêmio via Correios ao participante. Sendo o caso de Bolsa de Estudos, será enviado um “voucher” para resgate por meios digitais (e-mail ou whatsapp).</p><p><br></p><p>7.3.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Os prêmios que forem enviados pelo correio e retornarem em razão de “endereço não encontrado” serão repassados para a segunda lista de sorteados.</p><p><br></p><p>8.<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>Considerações finais: os casos omissos neste regulamento serão dirimidos pela ASSOCIAÇÃO BRASILEIRA D’A IGREJA DE JESUS CRISTO DOS SANTOS DOS ÚLTIMOS DIAS, sendo vedada a alegação de desconhecimento de qualquer cláusula aqui constante.</p><p><br></p></div>
+
+                        </div>
+    </div>
+</div>
+
                </label>
            </div>
            
@@ -3295,6 +3374,39 @@
     <div id="form_email_used" hidden>
     <p  style="color: white;font-size: 1.3em;text-indent:1.5em;margin: 0 21px 0 30px;display: block;padding: 0 20px 20px sac;" >  Este e-mail já foi utilizado para a inscrição. Gentileza usar outro e-mail</p> 
 </div>
+<script>/*
+$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});*/
+
+function deshidar(id){
+    document.getElementById(id).style.display="block";
+}
+function hidar(id){
+    document.getElementById(id).style.display="none";
+
+}
+var popoup_lgpd=document.getElementById("popup_lgpd");
+
+document.getElementById("popup_lgpd")
+
+
+/*
+window.onload(  function (){
+ document.getElementsByClassName("trigger_popup_fricc")[0];
+
+});*/
+
+</script>
+
 <script> 
    
 

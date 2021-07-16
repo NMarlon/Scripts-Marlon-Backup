@@ -3215,23 +3215,65 @@
        </select>
        <div class="field-error" id="llerror67883"></div>
    </div>
-   
+   <script>
+      function protocolo_bicicleta_de_rodinha(idade){
+        if(idade==document.getElementById('llfield67881').value){
+            //document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').hidden=false
+            insertAfter(document.getElementById("idade-hidden"),protocolo_bicicleta_de_rodinha);
+
+        }else{
+             document.getElementById("habilitar_protocolo_bicicleta_de_rodinha").remove();
+            
+
+        }
+    }
+   </script>
    <div id="idade-hidden">
        <label  for="llfield67881">Idade</label>
-       <select type="select" id="llfield67881" name="llfield67881" placeholder="Coloque a idade" data-required="true" >
-        <option value="">Selecione sua idade</option>
-            <option value="de 12 a 18 anos">de 12 a 18 anos</option>
+       <select type="select" id="llfield67881" namr="llfield67881" placeholder="Coloque a idade" data-required="true" onchange="if('Menor que 16 anos'==document.getElementById('llfield67881').value){               insertAfter(document.getElementById('idade-hidden'),protocolo_bicicleta_de_rodinha);        }else{            document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').remove();       }" data-required="true">
+            <option value="">Selecione sua idade</option>
+            <option value="Menor que 16 anos">Menor que 16 anos</option>
+
+            <option value="de 16 a 18 anos">de 17 a 18 anos</option>
             <option value="de 19 a 30 anos">de 19 a 30 anos</option>
             <option value="Maior de 30 anos">Maior que 30 anos</option>
 
 
-
        </select>
+
        <div class="field-error" id="llerror67881"></div>
    </div>
 
 
-   
+    <div id="habilitar_protocolo_bicicleta_de_rodinha" >
+       <label>Sou menor de idade, e agora!?</label>
+       <div class="field-error" id="llerror69212"></div>
+       <div class="checkbox-list"  >
+           <div class="checkbox">
+               <label>
+                   <input type="checkbox" id="llfield143068" name="llfield69212" value="Meus pais estão cientes" />&nbsp;Menores de 16 anos deverão ter autorização expressa de seus responsável referente ao compartilhamento de dados e recebimento de informações por whatsApp ou e-mail. Avise seus pais sobre isso. Assinale aqui se eles já estão cientes.
+               </label>
+           </div>
+       </div>
+   </div>
+
+
+
+   <script>
+
+
+
+    function insertAfter(referenceNode, newNode) {
+      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+       
+
+
+
+    var protocolo_bicicleta_de_rodinha = document.getElementById("habilitar_protocolo_bicicleta_de_rodinha");
+    document.getElementById("habilitar_protocolo_bicicleta_de_rodinha").remove();
+  
+   </script>
     <div id="conselho1" hidden>
        <label  for="llfield68855">Nome do Conselho</label>
        <input type="text" id="llfield68855" name="llfield68855"  disabled placeholder="Coloque o nome do conselho a qual se encontra" />
@@ -3248,7 +3290,6 @@
        <div class="field-error" id="llerror68853"></div>
     </div>
    
-
 
 
 

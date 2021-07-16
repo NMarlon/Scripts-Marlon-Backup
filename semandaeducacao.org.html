@@ -109,8 +109,12 @@
 
             if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
-                    pra_onde_vamos();
-
+                    //
+                    if(document.getElementById('llfield67881') == undefined || document.getElementById('llfield67881') == null){
+                        pra_onde_vamos();
+                    } else if( document.getElementById('llfield143068').checked ){
+                        pra_onde_vamos();
+                    }
                 /* if(document.getElementById("llfield115508").checked==true){             
                     window.location.href="semanadaeducacao.org/tpmembro";
                }else{               
@@ -123,7 +127,7 @@
                     pra_onde_vamos();
 
 
-           }else{
+           }else {
             alert("Por favor preencha o campo de se é membro ou não (:-D)");
            }
         });
@@ -3230,7 +3234,7 @@
    </script>
    <div id="idade-hidden">
        <label  for="llfield67881">Idade</label>
-       <select type="select" id="llfield67881" namr="llfield67881" placeholder="Coloque a idade" data-required="true" onchange="if('Menor que 16 anos'==document.getElementById('llfield67881').value){               insertAfter(document.getElementById('idade-hidden'),protocolo_bicicleta_de_rodinha);        }else{            document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').remove();       }" data-required="true">
+       <select type="select" id="llfield67881" namr="llfield67881" placeholder="Coloque a idade" data-required="true" onchange="if('Menor que 16 anos'==document.getElementById('llfield67881').value){               insertAfter(document.getElementById('idade-hidden'),protocolo_bicicleta_de_rodinha);        }else{            document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').remove();       }" data-required="" required="">
             <option value="">Selecione sua idade</option>
             <option value="Menor que 16 anos">Menor que 16 anos</option>
 

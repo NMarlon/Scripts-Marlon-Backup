@@ -2,16 +2,40 @@
 <html>
 <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/form001.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+
 
 function c(content){
     return console.log(content);
 }
 
 
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
 function t(){
     console.trace();
 }
@@ -35,18 +59,84 @@ function ln() {
   } while (!frameRE.exec(frame) && stack.length);
   return frameRE.exec(stack.shift())[1];
 }
+
+
+function debug_mode(key)
+{  if(key!="teste"){
+        return null;
+    }
+            //Coloque o código aqui
+}
+
+
+ var t_cel,tc_ln;
+ if(document.addEventListener){ //code for Moz
+   document.addEventListener("keydown",keyCapt,false); 
+   /*document.addEventListener("keyup",keyCapt,false);
+   document.addEventListener("keypress",keyCapt,false);*/
+ }else{
+   document.attachEvent("onkeydown",keyCapt); //code for IE
+   /*document.attachEvent("onkeyup",keyCapt); 
+   document.attachEvent("onkeypress",keyCapt); */
+ }
+ function keyCapt(e){
+   if(typeof window.event!="undefined"){
+    e=window.event;//code for IE
+   }
+   if(e.type=="keydown"){
+   // t_cel[0].innerHTML=e.keyCode;
+    if(e.keyCode == 120 ){
+
+
+        var debug_mode = prompt('Olá! Seja bem vindo à Semana da Educacao 2021! Deseja ver nosso site oficial?');
+        if(debug_mode=="teste"){
+            debug_mode(debug_mode);
+        }else{
+            if(confirm("Ok! Você será redirecionado para https://autossuficiencia.org")){
+                window.location.href="https://autossuficiencia.org";
+            }
+        }
+    }
+   }/*else if(e.type=="keyup"){
+   }else if(e.type=="keypress"){
+   }*/
+ }
+
+//console.log(getCookie("id_ref")+" id AQUI");
+//https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
+
+
+
+
+function ExReg(name,dias){//Conta quantas vezes entra na página, ele conta quantas execuções se fez e salva nos cookies
+    var re=getCookie(name);
+
+    if(!re || re.length === 0 ){
+        re=0;
+    }else{
+        re=(parseInt(re)+1).toString();
+    }
+
+    setCookie(name,re,1);
+    console.info(getCookie(name));
+}
+
+
+
+
+
 </script>
    <style>
    form{
     
    }
-       form label {
-           /*color: white !important;*/
-           font-family: 'pragmatica-extended', Sans-serif;
-       }
-       form#llCaptureForm {
-            /*background: none !important;*/
-        }
+   form label {
+       /*color: white !important;*/
+       font-family: 'pragmatica-extended', Sans-serif;
+   }
+   form#llCaptureForm {
+        /*background: none !important;*/
+    }
 
    </style>
 
@@ -139,6 +229,7 @@ function ln() {
     function redirect(){
 
         sleep(1200).then(() => {
+
             if(!(document.getElementById("habilitar_protocolo_homem_aranha")==null||document.getElementById("habilitar_protocolo_homem_aranha")==undefined) &&  document.getElementById("llfield67881").value=="Menor que 16 anos" && !document.getElementById("llfield143068").checked)  {
 
             
@@ -148,9 +239,9 @@ function ln() {
             }
 
             if(document.getElementById("llfield115508").checked){ 
-                if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
+                if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )//idade, estaca, ala
                     //
-                    if(document.getElementById('llfield67881') == undefined || document.getElementById('llfield67881') == null){
+                    if(document.getElementById('llfield67881').value!="Menor que 16 anos" ){
                         pra_onde_vamos();
                     } else if( document.getElementById('llfield143068').checked ){
                         pra_onde_vamos();
@@ -209,7 +300,7 @@ function ln() {
     
 <form id="llCaptureForm" class="llform001"  action="//paginas.rocks/capture" method="post">   
     <input type="hidden" id="mid" name="mid" value="536497" />
-    <input type="hidden" id="fid" name="fid" value="40622" />
+    <input type="hidden" id="fid" name="fid" value="40938" />
        <input type="hidden" id="formType" name="formType" value="dynamic" />
        <label>Inscreva-se gratuitamente</label>
    <div>
@@ -227,13 +318,13 @@ function ln() {
        <div class="field-error" id="llerror49079"></div>
        <div class="radio-list" style="display:flex;" >
            <div class="radio" style="margin-right: 20px;">
-            <input  type="radio" id="llfield115509" name="llfield49079" value="Não" onchange="nao();document.getElementById('mid').value='536497';document.getElementById('fid').value='40622';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497'" required/> 
+            <input  type="radio" id="llfield115509" name="llfield49079" value="Não" onchange="nao();document.getElementById('mid').value='536497';document.getElementById('fid').value='40938';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40938&m=536497'" required/> 
                <label>
                    Não
                </label>
            </div>
            <div class="radio">
-            <input type="radio" id="llfield115508" name="llfield49079" value="Sim" onchange="sim();document.getElementById('mid').value='536497';document.getElementById('fid').value='40622';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497'" /> 
+            <input type="radio" id="llfield115508" name="llfield49079" value="Sim" onchange="sim();document.getElementById('mid').value='536497';document.getElementById('fid').value='40938';document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=40938&m=536497'" /> 
                <label>
                    Sim
                </label>
@@ -3239,11 +3330,6 @@ function ln() {
 
 
 
-
-
-
-
-
     ====================================-->
      <div id="ala-hidden">
         
@@ -3307,6 +3393,7 @@ function ln() {
        <div class="field-error" id="llerror67881"></div>
    </div>
 
+
     <div id="habilitar_protocolo_homem_aranha" >
         <script>
 
@@ -3321,6 +3408,26 @@ function ln() {
             });
         }
         </script>
+        <script>
+            window.onload = function tel_respo(){    
+              jQuery(function($){
+                      $("#llfield69246").keyup(function() {//input[name='phone']
+                        $(this).val($(this).val().replace(/^(\d{2})(\d{3})(\d+)$/, "($1)$2-$3"));
+                    });
+
+                });
+            };
+        </script>
+
+
+       <label  for="llfield69245">O nome do seu responsável</label>
+       <input type="text" id="llfield69245" name="llfield69245" placeholder="Escreva aqui o nome de seu pai ou responsável" required data-required="true"/>
+       <div class="field-error" id="llerror69245"></div><br><br>
+  
+       <label  for="llfield69246">Telefone do seu Responsável</label>
+       <input type="tel" id="llfield69246" name="llfield69246" onchange="tel_respo();" placeholder="(01) 2 3456-7890 - Digite um telefone ou celular do seu responsável" required data-required="true"/>
+       <div class="field-error" id="llerror69246"></div><br><br>
+   
        <label>Sou menor de idade, e agora!?</label>
        <div class="field-error" id="llerror69212"></div>
        <div class="checkbox-list"  >
@@ -3344,22 +3451,24 @@ function ln() {
        jQuery(function($){
             $('#llfield67881').prop('selectedIndex',0);
             $('#llfield67881').val("");
-       });
-       ln();
-   </script>
+           
+        });
 
+
+   </script>
 
     <div id="conselho1" hidden>
        <label  for="llfield68855">Nome do Conselho</label>
        <input type="text" id="llfield68855" name="llfield68855"  disabled placeholder="Coloque o nome do conselho a qual se encontra" />
        <div class="field-error" id="llerror68855"></div><br><br>
 
-    </div>    <div id="conselho2" hidden>
+    </div>   
+    <div id="conselho2" hidden>
        <label  for="llfield68854">Nome do Gerente dessa Pessoa</label>
        <input type="text" id="llfield68854" name="llfield68854" disabled  placeholder="Coloque o gerente da sua região" />
        <div class="field-error" id="llerror68854"></div><br><br>
     </div> 
-    <div  id="conselho3" hidden >
+    <div  id="conselho3" hidden>
        <label  for="llfield68853">Nome Local do Escritório</label>
        <input type="text" id="llfield68853" name="llfield68853" disabled placeholder="Nome do escritório"  />
        <div class="field-error" id="llerror68853"></div>
@@ -3443,15 +3552,15 @@ function ln() {
                <label>
                    <input type="checkbox" id="LGPDValidation" name="LGPDValidation" style="-webkit-appearance: auto !important;  display: table-cell;" value="1" required/> &nbsp;Li e Concordo com os<a style="color:#023CFA; font-size: 13px;  display:contents;" class="trigger_popup_fricc" onclick="deshidar('popup_lgpd')"> &nbsp;Termos de Uso e da Notificação de Privacidade</a>
 
-<div class="hover_bkgr_fricc" id="popup_lgpd" onclick="hidar('popup_lgpd')" >
-    <span class="helper"></span>
-    <div>
-        <div class="popupCloseButton" id="fechar_popup_lgpd" onclick="hidar('fechar_popup_lgpd')">&times;</div> <div class="modal-body pl-md-4 pr-md-4">
-                               <div class="terms"><p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p><p><strong>1. Quem controla os seus dados pessoais?</strong></p><p>A Igreja de Jesus Cristo dos Santos dos Últimos Dias age por meio de seus representantes e de entidades da Igreja quando tratamos seus dados pessoais. Ao compartilhar seus dados pessoais conosco, você os compartilha com a Igreja por meio das entidades da Igreja.</p><p>a. A Igreja: A Igreja de Jesus Cristo dos Santos dos Últimos Dias (a “<strong>Igreja</strong>”) é uma comunidade de pessoas que acreditam na mesma doutrina religiosa, praticam os mesmos ritos e mesmas ordenanças religiosas e são governadas por princípios eclesiásticos. As unidades locais da Igreja, tais como alas, ramos, estacas, distritos, missões e áreas, são meramente subdivisões dessa comunidade de fiéis e não constituem entidades legais separadas. Algumas poucas exceções se aplicam.</p><p>b. Entidades da Igreja: A fim de atender às necessidades relacionadas a assuntos temporais e cumprir outros propósitos da Igreja, uma estrutura legal composta por várias entidades legais distintas auxilia a Igreja em todo o mundo. Essas entidades legais distintas (daqui por diante denominadas “<strong>entidades da Igreja</strong>”) estão legalmente separadas da Igreja. Uma das entidades da Igreja, A Igreja de Jesus Cristo dos Santos dos Últimos Dias, uma entidade unipessoal com finalidade religiosa de Utah, juntamente com uma ou mais entidades da Igreja, tratam seus dados pessoais como agentes com responsabilidade conjunta pelo tratamento de dados. Algumas entidades da Igreja podem receber dados pessoais como operadores de dados para fornecer serviços às entidades da Igreja que atuam como controladores de dados. Mediante sua solicitação, forneceremos informações sobre as entidades da Igreja que tratam seus dados pessoais.</p><p><strong>2. Que dados pessoais coletamos?</strong></p><p>Coletamos dados pessoais que (a) você voluntariamente nos envia, (b) são registrados por nós e (c) obtemos por meio de terceiros. Podemos tratar seus dados pessoais com ou sem a utilização de meios automáticos, incluindo coleta, registro, organização, estruturação, armazenamento, adaptação ou alteração, análise, recuperação, consulta, uso, divulgação por transmissão, disseminação ou outro tipo de disponibilização, alinhamento ou combinação, restrição, apagamento ou destruição de seus dados pessoais.</p><p>a. Dados enviados voluntariamente. Você nos envia dados pessoais quando se filia à Igreja, busca ordenanças da Igreja, solicita materiais da Igreja, solicita acesso a ferramentas ou serviços da Igreja ou participa de outras interações ou comunicações com a Igreja. Quando você interage com a Igreja, geralmente tratamos nome, data de nascimento, local de nascimento, número de telefone, endereço de e-mail, endereço físico, foto, sexo, informações sobre doações/pagamentos, e assim por diante. Você pode nos fornecer informações adicionais para participar, por iniciativa própria, de pesquisas, concursos ou outras atividades ou outros eventos, incluindo a participação em gravações de áudio ou vídeo, como quando a tecnologia de vídeoconferência é usada. A participação em pesquisas, concursos e atividades similares é opcional. Se você não desejar participar ou não desejar fornecer dados pessoais relacionados a essas atividades, nem sua condição de membro da Igreja nem sua capacidade de utilizar as ferramentas ou os serviços disponibilizados pela Igreja serão afetadas. Em cada um desses casos, você saberá quais dados pessoais está nos fornecendo, porque você ativa e voluntariamente os envia a nós.</p><p>b. Dados que obtemos de terceiros e dados enviados passivamente. Nos lugares em que a legislação local permitir, você pode enviar dados pessoais, inclusive informações de contato sobre alguém que não seja você mesmo (em outras palavras, um terceiro) para que possamos contatar essa pessoa, fazer uma entrega ou, atender à sua solicitação de algum outro modo. Ao fornecer dados pessoais sobre alguém que não seja você mesmo, você deve primeiro obter o consentimento da outra pessoa, caso o consentimento dela seja exigido por lei.</p><p>Se você ou outra pessoa tiver nos fornecido suas informações pessoais para contato e não quiser que voltemos a contatá-lo, siga os procedimentos de anulação ou cancelamento de assinatura indicados no site, no boletim ou na notificação de e-mail ou entre em contato conosco pelo site<a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a>.</p><p>Podemos tratar e disponibilizar publicamente os dados pessoais obtidos de fontes publicadas. Podemos tratar e publicar dados de pessoas vivas, em conformidade com as leis locais aplicáveis.</p><p>Suas informações de localização podem ser coletadas por meio de alguns aplicativos móveis com o objetivo de ajudar a encontrar a capela ou o templo mais próximo ou por razões semelhantes. Você pode alterar as configurações de seu dispositivo para desativar os serviços de localização.</p><p>Quando você acessar qualquer um de nossos recursos, nossos servidores (usando arquivos de registros ou sistemas de filtragem) podem coletar informações que seu navegador envia sempre que você acessa um site. Essas informações podem incluir, mas não se limitam a: seu endereço de protocolo da internet (endereço de IP), tipo de navegador, sistema operacional, idioma de preferência, página da internet que você estava acessando antes de entrar em nosso site, data e hora de cada solicitação de visitante, informações que você procurar em nossos recursos e outras informações coletadas por cookies ou tecnologias similares. &nbsp;Consulte a ferramenta Preferências de Cookie (“Ferramenta Cookies”) em cada um de nossos aplicativos para dispositivos móveis e sites da internet para saber mais sobre cookies, inclusive os tipos de cookies, e especificar quais cookies usamos. Contudo, se não aceitar os cookies, poderá não ser possível utilizar algumas das seções ou funções de nossos sites ou aplicativos, conforme descrito na Ferramenta Cookies.</p><p><strong>3. Para quais propósitos tratamos dados pessoais?</strong></p><p>Tratamos dados pessoais para propósitos eclesiásticos, genealógicos, humanitários, de bem-estar social, missionários, educativos e outros propósitos operacionais e administrativos.</p><p>Usamos dados pessoais para fornecer serviços eclesiásticos e outros serviços relacionados a fim de cumprir a missão da Igreja. Podemos usar e analisar dados pessoais (incluindo informações sobre como você usa nossos serviços e nossas ferramentas) para (a) contatá-lo ou contatar outros, (b) criar e manter registros de membros, (c) atender às suas solicitações, (d) buscar seu feedback voluntário, (e) customizar ou personalizar recursos ou conteúdo de nossas ferramentas ou nossos serviços, (f) avaliar a elegibilidade para participação no templo e em outras ordenanças, no serviço missionário e em cargos voluntários ou de liderança, ou (g) administrar a educação religiosa na Igreja, o bem-estar ou outros programas da Igreja. Nesse contexto, a base legal para nosso tratamento de seus dados pessoais é a necessidade de cumprir obrigações contratuais e de outra natureza que temos para com você ou o desempenho de nossas atividades legítimas como igreja.</p><p>Podemos também usar seus dados para o cumprimento das leis aplicáveis e o exercício de direitos legais como base para nosso tratamento de dados.</p><p>Também podemos usar seus dados pessoais para fins internos, incluindo auditorias, análise de dados, resolução de problemas e pesquisa. Nesses casos, baseamos nosso tratamento em interesses legítimos no desempenho das atividades da Igreja.</p><p><strong>4. Com quem compartilhamos seus dados pessoais?</strong></p><p>Compartilhamos seus dados pessoais com terceiros nas seguintes circunstâncias:</p><p>a. Provedores de serviço terceirizados. Podemos fornecer dados pessoais a terceiros para que sejam por eles tratados no desempenho de funções em nosso favor como operadores de dados (por exemplo: processamento de pagamentos, manutenção, segurança, análise de dados, hospedagem de dados, serviços de medição, mensagem de mídia social orientada por dados, pesquisas, etc.). Nesses casos, de acordo com esta notificação e com as leis cabíveis, os fornecedores estarão contratualmente obrigados a proteger os dados pessoais de tratamento adicional (inclusive para fins de marketing) e de transferência.</p><p>b. Entidades da Igreja. Podemos transferir seus dados pessoais para qualquer entidade da Igreja com o objetivo de cumprir os propósitos da Igreja.</p><p>As informações de seu registro geral de membro (caso você seja membro da Igreja), bem como outras informações opcionais que você decida fornecer (por exemplo: endereço de e-mail e foto ou vídeo que você fornecer ou que capturamos com sua permissão) podem ser compartilhadas com os membros da Igreja de sua ala ou seu ramo e de sua estaca ou seu distrito, ou com outros participantes de programas nos quais você participa, conforme necessário, para os propósitos da Igreja citados acima. Algumas de suas informações também podem ser visualizadas de modo restrito e limitado em nossos recursos da internet, incluindo o ChurchofJesusChrist.org. Você pode optar por não compartilhar informações ou limitar as informações opcionais que compartilha, modificando as preferências de seu perfil em cada recurso ou nos contatando por meio das informações fornecidas abaixo.</p><p>c. Exigências legais. Podemos acessar e disponibilizar seus dados pessoais, mensagens, anotações de diário, bate-papos on-line, anotações pessoais, conteúdo ou outros envios para qualquer recurso, caso acreditemos de boa-fé que isso esteja sendo requerido por meio de uma intimação, por uma ordem judicial ou administrativa, ou por qualquer outra exigência legal. Além disso, podemos divulgar seus dados pessoais e outras informações: conforme exigido por lei ou para exercer ou defender direitos legais; para nos precavermos de responsabilidade civil; para proteger os direitos, a propriedade ou a segurança dos recursos de qualquer pessoa ou do público em geral; para manter e proteger a segurança e a integridade de nossos serviços ou infraestrutura; para proteger a nós mesmos e a nossos serviços contra uso fraudulento, abusivo ou ilegal; para investigar e nos defender contra ações ou alegações de terceiros; ou para auxiliar órgãos fiscalizadores governamentais.</p><p><strong>5. Onde armazenamos seus dados pessoais?</strong></p><p>Podemos armazenar seus dados pessoais em centrais de dados nos Estados Unidos, em soluções de armazenamento na nuvem ou nas propriedades das entidades da Igreja. Para garantir a devida proteção dos dados que transferimos para outras jurisdições, firmamos acordos de transferência e tratamento de dados entre as respectivas entidades da Igreja e seus prestadores de serviços, que incluem cláusulas contratuais-padrão aprovadas pela Comissão Europeia em conformidade com a legislação dos Estados Unidos (os quais você tem direito de analisar caso entre em contato conosco, como é sugerido no final desta notificação).</p><p><strong>6. Como protegemos dados pessoais?</strong></p><p>Utilizamos medidas técnicas e organizacionais para proteger os dados pessoais que recebemos contra perda, uso indevido, alterações não autorizadas e para proteger a confidencialidade. Analisamos periodicamente nossos procedimentos de segurança e a possibilidade de empregar novos métodos e tecnologias de segurança adequados. Também usamos tecnologia de criptografia atual para criptografar a transmissão de dados em nossas páginas de acesso ao sistema. No entanto, como não podemos garantir a total segurança dessas tecnologias de criptografia, seja cauteloso ao enviar dados pessoais online.</p><p><strong>7. Por quanto tempo retemos seus dados pessoais?</strong></p><p>Retemos dados pessoais coletados, inclusive informações coletadas por meio de aplicativos móveis e outros envios, durante um período de tempo razoável para cumprir os propósitos de tratamento citados acima. Depois, arquivamos esses dados pelo período de tempo exigido ou necessário por lei ou por razões legais. Quando o arquivamento não for mais exigido, apagamos os dados pessoais de nossos registros, com exceção de certas informações históricas dos perfis, registros gerais de genealogia e informações pessoais retidas como parte de um registro genealógico permanente, de condição de membro ou registro histórico da Igreja.</p><p><strong>8. Como você pode acessar ou corrigir seus dados pessoais?</strong></p><p>Nós nos esforçamos para manter a exatidão de seus dados pessoas e dependemos de você para garantir que seus dados pessoais estejam completos e precisos. Você pode solicitar acesso a seus dados pessoais e verificá-los, corrigi-los ou retificá-los (inclusive atualizá-los), bloquear seus dados pessoais por meio do cadastramento específico no site, por meio de seu perfil ou de sua conta da Igreja, se for o caso.</p><p>Se você for membro da Igreja, alguns de seus dados pessoais só poderão ser atualizados fazendo alterações no seu registro de membro da Igreja. Para efetuar tais alterações, é necessário contatar o secretário da sua unidade e solicitar a alteração.</p><p>Se desejar, entre em contato conosco para exercer direitos regulamentares adicionais, tais como portabilidade de dados, objeção em conformidade com as leis aplicáveis, restrição de tratamento e eliminação de seus dados pessoais. Você também tem o direito de apresentar queixa a uma autoridade supervisora.</p><p>Caso surjam problemas ao modificar ou atualizar seus dados pessoais, entre em contato conosco, conforme sugerido no final desta notificação.</p><p><strong>9. Data de início de vigência e alterações.</strong></p><p>Esta notificação entra em vigor em 6 de abril de 2021 e pode ser alterada de tempos em tempos.</p><p><strong>10. Entre em contato conosco.</strong></p><p>As dúvidas referentes a esta notificação ou à segurança dos dados pessoais que tratamos podem ser enviadas por e-mail, fax ou correio:</p><p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos os seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p><p style="margin-left:.5in;">Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a><br>Fax: +1-801-240-1187<br>Endereço: Data Privacy Office<br>50 E. North Temple Street<br>Salt Lake City, UT 84150-0005 USA<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EUA</p></div>
+                    <div class="hover_bkgr_fricc" id="popup_lgpd" onclick="hidar('popup_lgpd')" >
+                        <span class="helper"></span>
+                        <div>
+                            <div class="popupCloseButton" id="fechar_popup_lgpd" onclick="hidar('fechar_popup_lgpd')">&times;</div> <div class="modal-body pl-md-4 pr-md-4">
+                                                   <div class="terms"><p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p><p><strong>1. Quem controla os seus dados pessoais?</strong></p><p>A Igreja de Jesus Cristo dos Santos dos Últimos Dias age por meio de seus representantes e de entidades da Igreja quando tratamos seus dados pessoais. Ao compartilhar seus dados pessoais conosco, você os compartilha com a Igreja por meio das entidades da Igreja.</p><p>a. A Igreja: A Igreja de Jesus Cristo dos Santos dos Últimos Dias (a “<strong>Igreja</strong>”) é uma comunidade de pessoas que acreditam na mesma doutrina religiosa, praticam os mesmos ritos e mesmas ordenanças religiosas e são governadas por princípios eclesiásticos. As unidades locais da Igreja, tais como alas, ramos, estacas, distritos, missões e áreas, são meramente subdivisões dessa comunidade de fiéis e não constituem entidades legais separadas. Algumas poucas exceções se aplicam.</p><p>b. Entidades da Igreja: A fim de atender às necessidades relacionadas a assuntos temporais e cumprir outros propósitos da Igreja, uma estrutura legal composta por várias entidades legais distintas auxilia a Igreja em todo o mundo. Essas entidades legais distintas (daqui por diante denominadas “<strong>entidades da Igreja</strong>”) estão legalmente separadas da Igreja. Uma das entidades da Igreja, A Igreja de Jesus Cristo dos Santos dos Últimos Dias, uma entidade unipessoal com finalidade religiosa de Utah, juntamente com uma ou mais entidades da Igreja, tratam seus dados pessoais como agentes com responsabilidade conjunta pelo tratamento de dados. Algumas entidades da Igreja podem receber dados pessoais como operadores de dados para fornecer serviços às entidades da Igreja que atuam como controladores de dados. Mediante sua solicitação, forneceremos informações sobre as entidades da Igreja que tratam seus dados pessoais.</p><p><strong>2. Que dados pessoais coletamos?</strong></p><p>Coletamos dados pessoais que (a) você voluntariamente nos envia, (b) são registrados por nós e (c) obtemos por meio de terceiros. Podemos tratar seus dados pessoais com ou sem a utilização de meios automáticos, incluindo coleta, registro, organização, estruturação, armazenamento, adaptação ou alteração, análise, recuperação, consulta, uso, divulgação por transmissão, disseminação ou outro tipo de disponibilização, alinhamento ou combinação, restrição, apagamento ou destruição de seus dados pessoais.</p><p>a. Dados enviados voluntariamente. Você nos envia dados pessoais quando se filia à Igreja, busca ordenanças da Igreja, solicita materiais da Igreja, solicita acesso a ferramentas ou serviços da Igreja ou participa de outras interações ou comunicações com a Igreja. Quando você interage com a Igreja, geralmente tratamos nome, data de nascimento, local de nascimento, número de telefone, endereço de e-mail, endereço físico, foto, sexo, informações sobre doações/pagamentos, e assim por diante. Você pode nos fornecer informações adicionais para participar, por iniciativa própria, de pesquisas, concursos ou outras atividades ou outros eventos, incluindo a participação em gravações de áudio ou vídeo, como quando a tecnologia de vídeoconferência é usada. A participação em pesquisas, concursos e atividades similares é opcional. Se você não desejar participar ou não desejar fornecer dados pessoais relacionados a essas atividades, nem sua condição de membro da Igreja nem sua capacidade de utilizar as ferramentas ou os serviços disponibilizados pela Igreja serão afetadas. Em cada um desses casos, você saberá quais dados pessoais está nos fornecendo, porque você ativa e voluntariamente os envia a nós.</p><p>b. Dados que obtemos de terceiros e dados enviados passivamente. Nos lugares em que a legislação local permitir, você pode enviar dados pessoais, inclusive informações de contato sobre alguém que não seja você mesmo (em outras palavras, um terceiro) para que possamos contatar essa pessoa, fazer uma entrega ou, atender à sua solicitação de algum outro modo. Ao fornecer dados pessoais sobre alguém que não seja você mesmo, você deve primeiro obter o consentimento da outra pessoa, caso o consentimento dela seja exigido por lei.</p><p>Se você ou outra pessoa tiver nos fornecido suas informações pessoais para contato e não quiser que voltemos a contatá-lo, siga os procedimentos de anulação ou cancelamento de assinatura indicados no site, no boletim ou na notificação de e-mail ou entre em contato conosco pelo site<a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a>.</p><p>Podemos tratar e disponibilizar publicamente os dados pessoais obtidos de fontes publicadas. Podemos tratar e publicar dados de pessoas vivas, em conformidade com as leis locais aplicáveis.</p><p>Suas informações de localização podem ser coletadas por meio de alguns aplicativos móveis com o objetivo de ajudar a encontrar a capela ou o templo mais próximo ou por razões semelhantes. Você pode alterar as configurações de seu dispositivo para desativar os serviços de localização.</p><p>Quando você acessar qualquer um de nossos recursos, nossos servidores (usando arquivos de registros ou sistemas de filtragem) podem coletar informações que seu navegador envia sempre que você acessa um site. Essas informações podem incluir, mas não se limitam a: seu endereço de protocolo da internet (endereço de IP), tipo de navegador, sistema operacional, idioma de preferência, página da internet que você estava acessando antes de entrar em nosso site, data e hora de cada solicitação de visitante, informações que você procurar em nossos recursos e outras informações coletadas por cookies ou tecnologias similares. &nbsp;Consulte a ferramenta Preferências de Cookie (“Ferramenta Cookies”) em cada um de nossos aplicativos para dispositivos móveis e sites da internet para saber mais sobre cookies, inclusive os tipos de cookies, e especificar quais cookies usamos. Contudo, se não aceitar os cookies, poderá não ser possível utilizar algumas das seções ou funções de nossos sites ou aplicativos, conforme descrito na Ferramenta Cookies.</p><p><strong>3. Para quais propósitos tratamos dados pessoais?</strong></p><p>Tratamos dados pessoais para propósitos eclesiásticos, genealógicos, humanitários, de bem-estar social, missionários, educativos e outros propósitos operacionais e administrativos.</p><p>Usamos dados pessoais para fornecer serviços eclesiásticos e outros serviços relacionados a fim de cumprir a missão da Igreja. Podemos usar e analisar dados pessoais (incluindo informações sobre como você usa nossos serviços e nossas ferramentas) para (a) contatá-lo ou contatar outros, (b) criar e manter registros de membros, (c) atender às suas solicitações, (d) buscar seu feedback voluntário, (e) customizar ou personalizar recursos ou conteúdo de nossas ferramentas ou nossos serviços, (f) avaliar a elegibilidade para participação no templo e em outras ordenanças, no serviço missionário e em cargos voluntários ou de liderança, ou (g) administrar a educação religiosa na Igreja, o bem-estar ou outros programas da Igreja. Nesse contexto, a base legal para nosso tratamento de seus dados pessoais é a necessidade de cumprir obrigações contratuais e de outra natureza que temos para com você ou o desempenho de nossas atividades legítimas como igreja.</p><p>Podemos também usar seus dados para o cumprimento das leis aplicáveis e o exercício de direitos legais como base para nosso tratamento de dados.</p><p>Também podemos usar seus dados pessoais para fins internos, incluindo auditorias, análise de dados, resolução de problemas e pesquisa. Nesses casos, baseamos nosso tratamento em interesses legítimos no desempenho das atividades da Igreja.</p><p><strong>4. Com quem compartilhamos seus dados pessoais?</strong></p><p>Compartilhamos seus dados pessoais com terceiros nas seguintes circunstâncias:</p><p>a. Provedores de serviço terceirizados. Podemos fornecer dados pessoais a terceiros para que sejam por eles tratados no desempenho de funções em nosso favor como operadores de dados (por exemplo: processamento de pagamentos, manutenção, segurança, análise de dados, hospedagem de dados, serviços de medição, mensagem de mídia social orientada por dados, pesquisas, etc.). Nesses casos, de acordo com esta notificação e com as leis cabíveis, os fornecedores estarão contratualmente obrigados a proteger os dados pessoais de tratamento adicional (inclusive para fins de marketing) e de transferência.</p><p>b. Entidades da Igreja. Podemos transferir seus dados pessoais para qualquer entidade da Igreja com o objetivo de cumprir os propósitos da Igreja.</p><p>As informações de seu registro geral de membro (caso você seja membro da Igreja), bem como outras informações opcionais que você decida fornecer (por exemplo: endereço de e-mail e foto ou vídeo que você fornecer ou que capturamos com sua permissão) podem ser compartilhadas com os membros da Igreja de sua ala ou seu ramo e de sua estaca ou seu distrito, ou com outros participantes de programas nos quais você participa, conforme necessário, para os propósitos da Igreja citados acima. Algumas de suas informações também podem ser visualizadas de modo restrito e limitado em nossos recursos da internet, incluindo o ChurchofJesusChrist.org. Você pode optar por não compartilhar informações ou limitar as informações opcionais que compartilha, modificando as preferências de seu perfil em cada recurso ou nos contatando por meio das informações fornecidas abaixo.</p><p>c. Exigências legais. Podemos acessar e disponibilizar seus dados pessoais, mensagens, anotações de diário, bate-papos on-line, anotações pessoais, conteúdo ou outros envios para qualquer recurso, caso acreditemos de boa-fé que isso esteja sendo requerido por meio de uma intimação, por uma ordem judicial ou administrativa, ou por qualquer outra exigência legal. Além disso, podemos divulgar seus dados pessoais e outras informações: conforme exigido por lei ou para exercer ou defender direitos legais; para nos precavermos de responsabilidade civil; para proteger os direitos, a propriedade ou a segurança dos recursos de qualquer pessoa ou do público em geral; para manter e proteger a segurança e a integridade de nossos serviços ou infraestrutura; para proteger a nós mesmos e a nossos serviços contra uso fraudulento, abusivo ou ilegal; para investigar e nos defender contra ações ou alegações de terceiros; ou para auxiliar órgãos fiscalizadores governamentais.</p><p><strong>5. Onde armazenamos seus dados pessoais?</strong></p><p>Podemos armazenar seus dados pessoais em centrais de dados nos Estados Unidos, em soluções de armazenamento na nuvem ou nas propriedades das entidades da Igreja. Para garantir a devida proteção dos dados que transferimos para outras jurisdições, firmamos acordos de transferência e tratamento de dados entre as respectivas entidades da Igreja e seus prestadores de serviços, que incluem cláusulas contratuais-padrão aprovadas pela Comissão Europeia em conformidade com a legislação dos Estados Unidos (os quais você tem direito de analisar caso entre em contato conosco, como é sugerido no final desta notificação).</p><p><strong>6. Como protegemos dados pessoais?</strong></p><p>Utilizamos medidas técnicas e organizacionais para proteger os dados pessoais que recebemos contra perda, uso indevido, alterações não autorizadas e para proteger a confidencialidade. Analisamos periodicamente nossos procedimentos de segurança e a possibilidade de empregar novos métodos e tecnologias de segurança adequados. Também usamos tecnologia de criptografia atual para criptografar a transmissão de dados em nossas páginas de acesso ao sistema. No entanto, como não podemos garantir a total segurança dessas tecnologias de criptografia, seja cauteloso ao enviar dados pessoais online.</p><p><strong>7. Por quanto tempo retemos seus dados pessoais?</strong></p><p>Retemos dados pessoais coletados, inclusive informações coletadas por meio de aplicativos móveis e outros envios, durante um período de tempo razoável para cumprir os propósitos de tratamento citados acima. Depois, arquivamos esses dados pelo período de tempo exigido ou necessário por lei ou por razões legais. Quando o arquivamento não for mais exigido, apagamos os dados pessoais de nossos registros, com exceção de certas informações históricas dos perfis, registros gerais de genealogia e informações pessoais retidas como parte de um registro genealógico permanente, de condição de membro ou registro histórico da Igreja.</p><p><strong>8. Como você pode acessar ou corrigir seus dados pessoais?</strong></p><p>Nós nos esforçamos para manter a exatidão de seus dados pessoas e dependemos de você para garantir que seus dados pessoais estejam completos e precisos. Você pode solicitar acesso a seus dados pessoais e verificá-los, corrigi-los ou retificá-los (inclusive atualizá-los), bloquear seus dados pessoais por meio do cadastramento específico no site, por meio de seu perfil ou de sua conta da Igreja, se for o caso.</p><p>Se você for membro da Igreja, alguns de seus dados pessoais só poderão ser atualizados fazendo alterações no seu registro de membro da Igreja. Para efetuar tais alterações, é necessário contatar o secretário da sua unidade e solicitar a alteração.</p><p>Se desejar, entre em contato conosco para exercer direitos regulamentares adicionais, tais como portabilidade de dados, objeção em conformidade com as leis aplicáveis, restrição de tratamento e eliminação de seus dados pessoais. Você também tem o direito de apresentar queixa a uma autoridade supervisora.</p><p>Caso surjam problemas ao modificar ou atualizar seus dados pessoais, entre em contato conosco, conforme sugerido no final desta notificação.</p><p><strong>9. Data de início de vigência e alterações.</strong></p><p>Esta notificação entra em vigor em 6 de abril de 2021 e pode ser alterada de tempos em tempos.</p><p><strong>10. Entre em contato conosco.</strong></p><p>As dúvidas referentes a esta notificação ou à segurança dos dados pessoais que tratamos podem ser enviadas por e-mail, fax ou correio:</p><p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos os seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p><p style="margin-left:.5in;">Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a><br>Fax: +1-801-240-1187<br>Endereço: Data Privacy Office<br>50 E. North Temple Street<br>Salt Lake City, UT 84150-0005 USA<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EUA</p></div>
 
+                                            </div>
                         </div>
-    </div>
-</div>
+                    </div>
 
                </label>
            </div>
@@ -3474,7 +3583,7 @@ function ln() {
        <div></div>
        <button type="button" class="btn" id="btn-error">Ok</button>
    </div>
-      <img id="last" src="https://llimages.com/redirect/redirect.aspx?A=V&f=40622&m=536497" style="display: none;" />
+      <img id="last" src="https://llimages.com/redirect/redirect.aspx?A=V&f=40938&m=536497" style="display: none;" />
 </form>
 
 <div id="form_sucess" style="font-size:1.3em; text-indent: 1.5em; color:white;" hidden>Sua inscrição foi realizada com sucesso! Você será redirecionado em <div id="redirect_timer"  style="display: inline ">...</div> segundos</div>
@@ -3835,12 +3944,9 @@ function debug_mode(key)
 {  if(key!="teste"){
         return null;
     }
-            document.getElementById("conselho1").hidden=false;
-            document.getElementById("conselho2").hidden=false;
-            document.getElementById("conselho3").hidden=false;
-
-           // document.getElementById("conselhos").hidden=false;
-
+    document.getElementById("conselho1").hidden=false;
+    document.getElementById("conselho2").hidden=false;
+    document.getElementById("conselho3").hidden=false;
 }
 
 
@@ -3887,3 +3993,9 @@ function debug_mode(key)
  </script>
 
 </html>
+
+<script>
+window.onload=function(){
+    ExReg("re_da_pagina_aqui",365);//salva por 1 ano desde a ultima visualizaçao
+}
+</script>

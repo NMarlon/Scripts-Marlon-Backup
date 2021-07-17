@@ -5,6 +5,28 @@ function c(content){
 }
 
 
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
 function t(){
     console.trace();
 }
@@ -73,3 +95,19 @@ function debug_mode(key)
 
 //console.log(getCookie("id_ref")+" id AQUI");
 //https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
+
+
+function ExReg(name,dias){//Conta quantas vezes entra na página, ele conta quantas execuções se fez e salva nos cookies
+    var re=getCookie(name);
+
+    if(!re || re.length === 0 ){
+        re=0;
+    }else{
+        re=(parseInt(re)+1).toString();
+    }
+
+    setCookie(name,re,1);
+    console.info(getCookie(name));
+}
+ExReg("re_da_pagina_aqui",365);//salva por 1 ano desde a ultima visualizaçao
+

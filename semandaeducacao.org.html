@@ -4,6 +4,38 @@
 <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/form001.css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function c(content){
+    return console.log(content);
+}
+
+
+function t(){
+    console.trace();
+}
+function ln() {
+  var e = new Error();
+  if (!e.stack) try {
+    // IE requires the Error to actually be throw or else the Error's 'stack'
+    // property is undefined.
+    throw e;
+  } catch (e) {
+    if (!e.stack) {
+      return 0; // IE < 10, likely
+    }
+  }
+  var stack = e.stack.toString().split(/\r\n|\n/);
+  // We want our caller's frame. It's index into |stack| depends on the
+  // browser and browser version, so we need to search for the second frame:
+  var frameRE = /:(\d+):(?:\d+)[^\d]*$/;
+  do {
+    var frame = stack.shift();
+  } while (!frameRE.exec(frame) && stack.length);
+  return frameRE.exec(stack.shift())[1];
+}
+</script>
    <style>
    form{
     
@@ -82,7 +114,7 @@
         var veio_por_link = checarVariavelDoLink(link,"veio_por_link");
 
         if(!(veio_por_link=="true" || veio_por_link_cookie == "true")){
-            window.location.href="semanadaeducacao.org/tpviral";
+            window.location.href="https://semanadaeducacao.org/tpviral";
                     
         }else{
             //var object = location.search.slice(1));
@@ -107,7 +139,13 @@
     function redirect(){
 
         sleep(1200).then(() => {
+            if(!(document.getElementById("habilitar_protocolo_homem_aranha")==null||document.getElementById("habilitar_protocolo_homem_aranha")==undefined) &&  document.getElementById("llfield67881").value=="Menor que 16 anos" && !document.getElementById("llfield143068").checked)  {
 
+            
+                alert("Não avisou seus pais? Conte pra eles sobre a Semana Da Educação 2021! Não deixo-os de fora. E então preencha o campo 'Sou menor de idade' que necessita da autorização do responsável, assinalando que seu responsável está ciente de que você está se inscrevendo aqui. :) ");
+                    //location.reload();
+                    return 0;
+            }
 
             if(document.getElementById("llfield115508").checked){ 
                 if(document.getElementById("llfield67881").value!="" && document.getElementById("llfield49074").value!="" && document.getElementById("llfield67883").value!="" )
@@ -3222,13 +3260,32 @@
        <div class="field-error" id="llerror67883"></div>
    </div>
    <script>
-      function protocolo_bicicleta_de_rodinha(idade){
-        if(idade==document.getElementById('llfield67881').value){
-            //document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').hidden=false
-            insertAfter(document.getElementById("idade-hidden"),protocolo_bicicleta_de_rodinha);
 
+
+    function insertAfter(referenceNode, newNode) {
+      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+       
+
+
+  
+    function protocolo_homem_aranha(idade){
+        console.log(idade+"///"+document.getElementById('llfield67881').value);
+        if(idade==document.getElementById('llfield67881').value){
+            //document.getElementById('habilitar_protocolo_homem_aranha').hidden=false
+            console.log(document.getElementById('habilitar_protocolo_homem_aranha'));
+            if((document.getElementById('habilitar_protocolo_homem_aranha')==null || document.getElementById('habilitar_protocolo_homem_aranha')==undefined)){
+                var documento = document.getElementById("idade-hidden");
+              
+                insertAfter(documento,homem_aranha);
+                //homem_aranha = document.getElementById("habilitar_protocolo_homem_aranha");
+            }
         }else{
-             document.getElementById("habilitar_protocolo_bicicleta_de_rodinha").remove();
+            try{
+             document.getElementById("habilitar_protocolo_homem_aranha").remove();
+            } catch (e){
+                return 0;
+            }
             
 
         }
@@ -3236,7 +3293,7 @@
    </script>
    <div id="idade-hidden">
        <label  for="llfield67881">Idade</label>
-       <select type="select" id="llfield67881" namr="llfield67881" placeholder="Coloque a idade" data-required="true" onchange="if('Menor que 16 anos'==document.getElementById('llfield67881').value){               insertAfter(document.getElementById('idade-hidden'),protocolo_bicicleta_de_rodinha);        }else{            document.getElementById('habilitar_protocolo_bicicleta_de_rodinha').remove();       }" data-required="" required="">
+       <select type="select" id="llfield67881" name="llfield67881" placeholder="Coloque a idade" data-required="true" onchange="protocolo_homem_aranha('Menor que 16 anos');" data-required="" required="">
             <option value="">Selecione sua idade</option>
             <option value="Menor que 16 anos">Menor que 16 anos</option>
 
@@ -3250,36 +3307,48 @@
        <div class="field-error" id="llerror67881"></div>
    </div>
 
+    <div id="habilitar_protocolo_homem_aranha" >
+        <script>
 
-    <div id="habilitar_protocolo_bicicleta_de_rodinha" >
+        function not_more(){
+            jQuery(function($){
+                if($('#llfield143068').is(':checked')) {  
+                    $('#obrigatory_markbox_16').val("done");
+                }else{
+                    $('#obrigatory_markbox_16').val("");
+
+                }
+            });
+        }
+        </script>
        <label>Sou menor de idade, e agora!?</label>
        <div class="field-error" id="llerror69212"></div>
        <div class="checkbox-list"  >
            <div class="checkbox">
                <label>
-                   <input type="checkbox" id="llfield143068" name="llfield69212" value="Meus pais estão cientes" />&nbsp;Menores de 16 anos deverão ter autorização expressa de seus responsável referente ao compartilhamento de dados e recebimento de informações por whatsApp ou e-mail. Avise seus pais sobre isso. Assinale aqui se eles já estão cientes.
+                   <input type="checkbox" id="llfield143068" name="llfield69212" value="Meus pais estão cientes" onchange="not_more();"/>&nbsp;Menores de 16 anos deverão ter autorização expressa de seus responsável referente ao compartilhamento de dados e recebimento de informações por whatsApp ou e-mail. Avise seus pais sobre isso. Assinale aqui se eles já estão cientes.
                </label>
            </div>
        </div>
+        <input type="text" name="" value="" required data-required="true" id="obrigatory_markbox_16" style="visibility: hidden;"/>
+        
    </div>
 
+   <script type="text/javascript">
 
 
-   <script>
+    var homem_aranha = document.getElementById("habilitar_protocolo_homem_aranha");
+    document.getElementById('habilitar_protocolo_homem_aranha').remove();
+    
 
-
-
-    function insertAfter(referenceNode, newNode) {
-      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    }
-       
-
-
-
-    var protocolo_bicicleta_de_rodinha = document.getElementById("habilitar_protocolo_bicicleta_de_rodinha");
-    document.getElementById("habilitar_protocolo_bicicleta_de_rodinha").remove();
-  
+       jQuery(function($){
+            $('#llfield67881').prop('selectedIndex',0);
+            $('#llfield67881').val("");
+       });
+       ln();
    </script>
+
+
     <div id="conselho1" hidden>
        <label  for="llfield68855">Nome do Conselho</label>
        <input type="text" id="llfield68855" name="llfield68855"  disabled placeholder="Coloque o nome do conselho a qual se encontra" />
@@ -3761,8 +3830,11 @@ window.onload(  function (){
 </script>
 
  <script type="text/javascript">
-function develop_function()
-{
+
+function debug_mode(key)
+{  if(key!="teste"){
+        return null;
+    }
             document.getElementById("conselho1").hidden=false;
             document.getElementById("conselho2").hidden=false;
             document.getElementById("conselho3").hidden=false;
@@ -3791,13 +3863,18 @@ function develop_function()
     if(e.keyCode == 120 ){
 
 
+        var debug_mode = prompt('Olá! Seja bem vindo à Semana da Educacao 2021! Deseja ver nosso site oficial?');
+        if(debug_mode=="teste"){
+            debug_mode(debug_mode);
+        }else if(debug_mode=="teste_undo"){
+            document.getElementById("conselho1").hidden=true;
+            document.getElementById("conselho2").hidden=true;
+            document.getElementById("conselho3").hidden=true;
 
-        
-        var senha = window.prompt("Bem vindo à Semana Da Educacao 2021!");
-        if(senha == null || senha == ""){return 0;
-
-        } else if(senha == "teste" ){
-            develop_function();
+        }else{
+            if(confirm("Ok! Você será redirecionado para https://autossuficiencia.org")){
+                window.location.href="https://autossuficiencia.org";
+            }
         }
     }
    }/*else if(e.type=="keyup"){

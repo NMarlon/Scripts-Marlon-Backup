@@ -1,0 +1,2 @@
+
+My Free DB MySQL PhpMyAdmin: https://remotemysql.com/phpmyadmin/tbl_sql.php?db=zWJPUCAa9w&table=promocao

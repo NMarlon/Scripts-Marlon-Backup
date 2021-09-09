@@ -1,0 +1,240 @@
+<!--SITE OFICIAL deste gist: https://testeapi-lojavirtual.000webhostapp.com/teste-->
+<div id="version_doc">v0.0.0</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript" onload="start()">
+
+// ENVIAR: http://faq.bonmarketplace.com.br/index.php/2015/04/20/como-solicito-uma-api-key/
+/*
+//FUNCAO NO SITE
+
+jQuery(($)=>{ 
+	$(document).ready(()=>{
+						$('#ancora_sublime_text').load('https://gist.githubusercontent.com/NMarlon/7901169778902334d73facad9c864f0d/raw/'); 
+	});  
+}); 
+
+*/
+
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires="+d.toUTCString();	
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;"+"SameSite=Lax; Secure;";
+}
+
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+funcoes_de_teste= (id_teste)=>{
+	if(id_teste==""){
+		//se não houver nada aqui...
+	}else if(id_teste=="0"){
+		//algo aqui
+	}else{
+		alert('Número de teste não encontrado!');
+		chat_assist();
+	}
+
+}
+
+
+
+
+name_user=()=>{
+
+  var dev_nick = prompt('Bem-vindo, digite seu nome de usuário: ')
+ 	setCookie("dev_username_"+dev_nick,dev_nick,365); // 1 ano salvo	
+ 	alert("criado com sucesso!");
+}
+
+
+diaSeg=(valor)=>{
+	return valor/24/60/60
+}
+/*
+
+conv=(valor,type,typeValor)=>{
+	var array=[60000,3600000,86400000,31536000000];
+	return 
+}
+*/
+auto_reload_ate_version_mudar = (timeOut)=>{		
+	setCookie('version_doc_auto_reload',document.getElementById('version_doc').innerHTML,timeOut);
+	//setCookie('version_doc_auto_reload',"true",timeOut);
+
+}
+
+check_if_auto_reload=()=>{
+	if(getCookie("version_doc_auto_reload")==document.getElementById('version_doc').innerHTML) {
+		window.location.reload(true);	
+	}else{
+		setCookie("version_doc_auto_reload","",-1);
+	}
+}
+
+
+chat_assist=(dev_nick)=>{
+
+	console.log("Bem-vindo dev "+ dev_nick);
+	var solicitacao_dev = prompt('digite "/help" pra saber o que você pode fazer');
+	try{
+	if(solicitacao_dev=="/help"){
+		alert('/cdn (muda o nickname de dev atual))\n/v (ver versão atual)\n/test=on (habilita o modo de teste sempre ligado)\n/test=off (desabilita modo de teste)\n/autoreload ou /autor ou /ar =0~inf [timOut: padrao 60] (recarrega a página por durante esse tempo ou até o version_doc alterar');
+		chat_assist(dev_nick);
+	}else if(solicitacao_dev=="/cdn"){
+		name_user();
+	}else if(solicitacao_dev=="/v"){
+		if(confirm("A versão atual em cookies é: "+getCookie("v")+"\n(cancelar pra sair)"))chat_assist(dev_nick);
+	}else if(solicitacao_dev=="/r"|| solicitacao_dev=="/reload"){
+		window.location.reload(true);
+	}else if(solicitacao_dev=="/teste=on"|| solicitacao_dev=="/teste"){
+		funcoes_de_teste(solicitacao_dev.split('=').trim());
+		alert("modo de teste habilitado");
+	}else if(solicitacao_dev.search("/autoreload")|| solicitacao_dev.search("/autor")|| solicitacao_dev.search("/autoR")|| solicitacao_dev.search("/ar")){
+			var timeOut_ar= diaSeg(parseInt(solicitacao_dev.split('=')[1].trim()))>0;
+			if(!(timeOut_ar)){
+				auto_reload_ate_version_mudar(60);
+			}else{
+				auto_reload_ate_version_mudar(timeOut_ar);
+			}
+			window.location.reload(true);
+	}else{alert("Não entendi/Ainda falta me desenvolver :| ");}
+	}catch(e){
+		console.error("Erro no dev_assist! (função chat_assist) Erro: "+e);
+	}
+}
+check_if_user_dev_exists=(dev_nick_input)=>{	
+	dev_nick = getCookie('dev_nick_'+dev_nick_input);
+	if(dev_nick_input==dev_nick){
+		setCookie("last_dev",dev_nick,7); // 7 dias salvo
+  	return true
+	}
+	return false
+}
+
+ 
+
+create_dev= ()=>{
+	var dev_nick= prompt("Digite seu nome de usuário: ");
+	setCookie("dev_nick_"+dev_nick,dev_nick,365);
+
+}
+remove_dev= (dev_nick)=>{
+	setCookie("dev_nick_"+dev_nick,"",-1);
+}
+
+
+	 var t_cel,tc_ln;
+	 if(document.addEventListener){ //code for Moz
+	   document.addEventListener("keydown",keyCapt,false); 
+	   /*document.addEventListener("keyup",keyCapt,false);
+	   document.addEventListener("keypress",keyCapt,false);*/
+	 }else{
+	   document.attachEvent("onkeydown",keyCapt); //code for IE
+	   /*document.attachEvent("onkeyup",keyCapt); 
+	   document.attachEvent("onkeypress",keyCapt); */
+	 }
+
+	setCookie("v",document.getElementById('version_doc'),365);//teste_marlon_site
+
+	
+      
+      var t_cel,tc_ln;
+      if(document.addEventListener){ //code for Moz
+      	document.addEventListener("keydown",keyCapt,false); 
+        /*document.addEventListener("keyup",keyCapt,false);
+        document.addEventListener("keypress",keyCapt,false);*/
+      }else{
+        document.attachEvent("onkeydown",keyCapt); //code for IE
+        /*document.attachEvent("onkeyup",keyCapt); 
+        document.attachEvent("onkeypress",keyCapt); */
+      }
+      function keyCapt(e){
+      if(typeof window.event!="undefined"){
+      e=window.event;//code for IE
+      }
+      if(e.type=="keydown"){
+        // t_cel[0].innerHTML=e.keyCode;
+        if(e.keyCode == 120 ){    
+        	dev_nick=getCookie("last_dev");
+        	if(dev_nick!="" || document.location.href.search('dev_nick_=NMarlon')>=0){
+        		chat_assist(dev_nick);
+        		return
+        	}  
+        	var debug_mode_key = prompt('Olá! Seja bem vindo!');//qualquer bordão pra o user não estranhar o textbox.
+
+      		if(check_if_user_dev_exists(debug_mode_key)){
+      			chat_assist(debug_mode_key);
+      		}else if(debug_mode_key=="/create"){
+	          create_dev();
+      		}else if(debug_mode_key=="/drop"){
+      			remove_dev();
+      		}else if(debug_mode_key==false){
+      			return
+	        }else{
+	            if(confirm("Deseja ser redirecionado para página inicial?: https://testeapi-lojavirtual.000webhostapp.com/ ")){
+	                window.location.href=" https://testeapi-lojavirtual.000webhostapp.com/";
+	            }
+	        }
+        }
+        }/*else if(e.type=="keyup"){
+        }else if(e.type=="keypress"){
+        }*/
+      }
+      
+
+
+
+
+
+
+start = ()=>{
+
+
+	check_if_auto_reload();
+	document.getElementsByClassName('entry-content')[0].id="start";
+	rt = ()=>{
+	    	if(window.location.href.search('develop_mode=on')>=0){
+	        	alert("versão 1");
+	    }	
+		jQuery(($)=>{
+
+		});
+	}
+
+
+
+
+
+}
+</script>
+
+<div>
+
+<input type="text" id="link_site" placeholder="Digite aqui o link"  />
+<button onclick="">Adicionar</button>
+
+
+<ul id="tabela de links">
+	<li></li>
+</ul>
+
+<button onclick="">retornar</button>
+
+
+ </div>

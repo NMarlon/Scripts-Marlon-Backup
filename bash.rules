@@ -1,0 +1,14 @@
+polkit.addRule(function (action, subject) {
+var YES = polkit.Result.YES;
+var permission = {
+"org.freedesktop.udisks2.ata-smart-update": YES
+};
+
+
+if (subject.user == "blah") {
+return permission[action.id];
+}
+
+
+return polkit.Result.NOT_HANDLED;
+}); 

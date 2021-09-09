@@ -1,0 +1,25 @@
+{
+  "name": "teste-cypress",
+  "version": "1.0.0",
+  "description": "teste",
+  "main": "minimalyze.js",
+  "scripts": {
+    "test": "teste"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NMarlon/Scripts-Marlon-Backup.git"
+  },
+  "keywords": [
+    "senha"
+  ],
+  "author": "Marlon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NMarlon/Scripts-Marlon-Backup/issues"
+  },
+  "homepage": "https://github.com/NMarlon/Scripts-Marlon-Backup#readme",
+  "devDependencies": {
+    "cypress": "^8.0.0"
+  }
+}

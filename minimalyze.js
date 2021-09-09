@@ -1,4 +1,46 @@
+//http://gist-it.appspot.com/?COLOQUE AQUI O LINK DO GITHUB COM O ARQUIVO
+//http://gist-it.appspot.com/https://github.com/tau-prolog/tau-prolog/tree/master/modules/core.js
+//http://gist-it.appspot.com/...
 
+
+/*
+//Kit Básico pra jQuery 
+
+
+function isMyScriptLoaded(url) {
+    if (!url) url = "http://xxx.co.uk/xxx/script.js";
+    var scripts = document.getElementsByTagName('script');
+    for (var i = scripts.length; i--;) {
+        if (scripts[i].src == url) return true;
+    }
+    return false;
+}
+
+function ijct_script(script_link){//Injeta scripts na página. script_link = link com .js pra injetar
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onload = function() {
+        //ACrescente a função do script aqui
+    }
+    script.src = script_link;
+    if(!isMyScriptLoaded(script_link)){// pra evitar colocar repetição de script
+        head.appendChild(script);        
+    }else{
+        console.warn("Script já existente: "+script_link);
+    }
+   
+}
+
+ijct_script('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+
+jQuery(($)=>{
+
+
+});
+
+
+*///----------------------KIT PARA JQUERY TESTE
 
 function c(content){
     return console.log(content);
@@ -30,6 +72,7 @@ function c(content){
 function t(){
     console.trace();
 }
+
 function ln() {
   var e = new Error();
   if (!e.stack) try {
@@ -74,7 +117,7 @@ function debug_mode(key)
    if(typeof window.event!="undefined"){
     e=window.event;//code for IE
    }
-   if(e.type=="keydown"){
+   if(e.type=="keypress"){
    // t_cel[0].innerHTML=e.keyCode;
     if(e.keyCode == 120 ){
 
@@ -89,15 +132,13 @@ function debug_mode(key)
         }
     }
    }/*else if(e.type=="keyup"){
-   }else if(e.type=="keypress"){
+   }else if(e.type=="keydown"){
    }*/
  }
 
 //console.log(getCookie("id_ref")+" id AQUI");
 //https://stackoverflow.com/questions/424407/handling-key-press-events-f1-f12-using-javascript-and-jquery-cross-browser
-
-
-function ExReg(name,dias){//Conta quantas vezes entra na página, ele conta quantas execuções se fez e salva nos cookies
+function ExReg(name,dias,text){//Conta quantas vezes entra na página, ele conta quantas execuções se fez e salva nos cookies
     var re=getCookie(name);
 
     if(!re || re.length === 0 ){
@@ -107,7 +148,134 @@ function ExReg(name,dias){//Conta quantas vezes entra na página, ele conta quan
     }
 
     setCookie(name,re,1);
-    console.info(getCookie(name));
+    console.info(text+getCookie(name));
 }
-ExReg("re_da_pagina_aqui",365);//salva por 1 ano desde a ultima visualizaçao
+
+function r(text){
+    var re=getCookie(text);
+
+    if(!re || re.length === 0 ){
+        re=0;
+    }else{
+        re=(parseInt(re)+1).toString();
+    }
+
+    setCookie(text,re,1);
+    console.info(text+getCookie(text));
+
+}
+
+ExReg("abertura_de_paginas",365,"aberturas: ");//salva por 1 ano desde a ultima visualizaçao
+
+  function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+  sleep(1200).then(() => {
+    //fazer alguma coisa após 2 minutos;
+  }
+
+ /*try{//OLD
+        jQuery(($)=>{
+            if($('script[src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"]').length>0){
+                return;              
+            }
+
+        });
+    }catch(e){
+        head.appendChild(script);
+        console.error("Não há jQuery");
+    }finally{
+        
+    }*/
+
+/* //está com erro!
+function rename_element(node,name) {//renomear um elemento
+    var renamed = document.createElement(name); 
+    foreach (node.attributes as a) {
+        renamed.setAttribute(a.nodeName, a.nodeValue);
+    }
+    while (node.firstChild) {
+        renamed.appendChild(node.firstChild);
+    }
+    return node.parentNode.replaceChild(renamed, node);
+}
+*/
+
+
+function atualizar_select(id_datalist,id_select,id_input) {//função pra sincronizar datalist
+
+   
+    try{
+      var el = document.getElementById(id_input);
+      var dl = document.getElementById(id_datalist);
+       if( el.value.trim() != '' ){
+            var opSelected = dl.querySelector(`[value="${el.value}"]`);
+            //console.log(dl+" ISSO!");
+            var option = document.createElement("option");
+            option.value = opSelected.value;
+            option.text = opSelected.getAttribute('label');
+            document.getElementById(id_select).value=el.value.trim();           
+      }
+  }catch (e){
+    console.error("Não foi possível trimar select. funcao onInput. Provavel causa: id  nao encontrado");
+  }
+
+}
+
+
+function select_all_child_elements_from_element(id_element){//seleciona todos os elementos
+    var nodes = document.getElementById(id_element).childNodes;
+    for(var i=0; i<nodes.length; i++) {
+        if (nodes[i].nodeName.toLowerCase() == 'div') {
+             nodes[i].style.background = color;
+         }
+    }
+    return nodes;
+}
+
+
+
+function isMyScriptLoaded(url) {// verifica se o link (SOMENTE SCRIPT) já não existe
+    if (!url) url = "http://xxx.co.uk/xxx/script.js";
+    var scripts = document.getElementsByTagName('script');
+    for (var i = scripts.length; i--;) {
+        if (scripts[i].src == url) return true;
+    }
+    return false;
+}
+
+function ijct_script(script_link){//Injeta scripts na página. script_link = link com .js pra injetar
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onload = function() {//abre essa função ao carregar o script
+        //ACrescente a função que quiser aqui. 
+    }
+    script.src = script_link;
+    if(!isMyScriptLoaded(script_link)){// pra evitar colocar repetição de script
+        head.appendChild(script);        
+    }else{
+        console.warn("Script já existente: "+script_link);
+    }
+   
+}
+
+ijct_script('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');//adiciona o jQuery na página
+
+jQuery(function($){
+    $(document).click(function(event) {//mostra o innerHTML de onde clicou (VERSÃO jQuery!)
+        var content = $(event.target).text();
+        console.log(content);//Mostra no console o innerHTML do clique
+    });
+
+});
+
+function i_want_the_innerHTML_of_this(){//mostra o innerHTML de onde clicou (VERSÃO JS)
+    document.addEventListener('click', function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement,
+            text = target.textContent || target.innerText;   
+    }, false);
+}
+
 

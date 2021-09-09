@@ -1,0 +1,19 @@
+07/2021 - Tentativa falhada de puxar os dados dos sites por meio do JS
+- https://www.serpwow.com/pricing  Encontrado API shopping do Google
+
+22/07/2021
+
+
+23/07/2021 
+- Falei com a gamer que quer fazer um jogo estilo Clash of Kings.
+- Desenvolvi um esquema pra tornar mais fácil meu gerenciametno no GIST entre outras funções.
+-
+
+
+24/Jul/2021 
+- Falei com a Gamer, ela vai cuidar da parte legal do processo de desenvolver o jogo e eu vou cuidar de testar a engine do Godot criando um terreno e exportando pra diversos modelos.
+
+-- Estava pensando: Por conta de portabilidade, imagino que seja necessário desenvolver a interface, a parte que cuida dos controles como par 
+
+25/Jul/2021 
+00:32 - Tentativa de desenvolver uma adaptação pra https://www.familysearch.org/indexing , agilizar o trabalho

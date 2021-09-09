@@ -1,0 +1,44 @@
+"""
+Desenvolvimento de aplicativo para auxiliar no desenvolvimento de IA
+
+
+
+- FOCUS and DEFOCUS Optimization & Full spec (A IA pode ver somente alguns pixels de algo, para facilitar o processamento, ou se o user quiser pode habilitar ver todos os pixels)
+- Janela com painel acessável
+	- Customiza as teclas que o bot não pode acessar e as teclas que o bot pode acessar
+	- Janela com input para comandos pro bot
+
+
+- Configurar o que o bot pode fazer
+- Dizer o que ele DEVE alcançar & o que deve EVITAR & e o que NÃO DEVE alcançar
+- Modo procura (ele vai errar de propósito pra encontrar novos caminhos)
+	- Ele vai errar de propósito (depois de encontrar os caminhos), pra encontrar BUGS no cenário pra se aproveitar
+
+
+
+
+
+//Output_Control (as keys que o bot pode usar) deve ter raiz variável 
+
+
+
+
+
+
+"""
+
+
+
+
+
+
+
+
+
+#parte para apertar F9 e abrir o menu popup
+
+
+
+
+
+print("start")

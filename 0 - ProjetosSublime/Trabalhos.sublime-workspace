@@ -1,0 +1,739 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"c",
+				"check_if_autoreload"
+			],
+			[
+				"dia",
+				"diaSeg"
+			],
+			[
+				"doc",
+				"version_doc"
+			],
+			[
+				"version",
+				"version_doc_auto_reload"
+			],
+			[
+				"dev",
+				"dev_nick"
+			],
+			[
+				"de",
+				"dev_nick_input"
+			],
+			[
+				"input",
+				"input_cat_serv"
+			],
+			[
+				"acn",
+				"ancora_cat_serv"
+			],
+			[
+				"campo",
+				"campo_datalist_categoria_servico"
+			],
+			[
+				"a",
+				"alert"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"scr",
+				"script_link"
+			],
+			[
+				"sc",
+				"script_link"
+			],
+			[
+				"i",
+				"ijct_script"
+			],
+			[
+				"data",
+				"campo_datalist_categoria_servico"
+			],
+			[
+				"in",
+				"insertBefore"
+			],
+			[
+				"camp",
+				"campo_datalist_categorai_servico"
+			],
+			[
+				"ve",
+				"veio_de_form_preenchido"
+			],
+			[
+				"set",
+				"setCookie"
+			],
+			[
+				"pop",
+				"popup_lgpd"
+			],
+			[
+				"appe",
+				"appendChild"
+			],
+			[
+				"lgp",
+				"popup_lgpd"
+			],
+			[
+				"do",
+				"document.getElementById(\""
+			],
+			[
+				"conso",
+				"console.log("
+			],
+			[
+				"link",
+				"link_ok2"
+			],
+			[
+				"s",
+				"so_funciona"
+			],
+			[
+				"lin",
+				"link_referencia_upviral"
+			],
+			[
+				"en",
+				"encodeURI"
+			],
+			[
+				"link_",
+				"link_referencia_upviral"
+			],
+			[
+				"we",
+				"we_have_id"
+			],
+			[
+				"semanadae",
+				"semanadaeducacao.org"
+			],
+			[
+				"che",
+				"checarVariavelDoLink"
+			],
+			[
+				"ref_i",
+				"ref_id_link"
+			],
+			[
+				"semanad",
+				"semanadaeducacao.org\""
+			],
+			[
+				"re",
+				"ref_id_link"
+			],
+			[
+				"ref_",
+				"ref_id_link"
+			],
+			[
+				"w",
+				"window.location.href"
+			],
+			[
+				"sema",
+				"semanadaeducacao.org"
+			],
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"semana",
+				"semanadaeducacao.org"
+			],
+			[
+				"disabel",
+				"disabled"
+			],
+			[
+				"getElem",
+				"getElementById"
+			],
+			[
+				"array",
+				"array_lenght"
+			],
+			[
+				"getEle",
+				"getElementById"
+			],
+			[
+				"idad",
+				"idade-hidden"
+			],
+			[
+				"d",
+				"document.getElementById(\"llfield115508\").checked==true"
+			],
+			[
+				"insert",
+				"insertAfter"
+			],
+			[
+				"estaca",
+				"estaca-hidden"
+			],
+			[
+				"ruby",
+				"ruby-text-container"
+			],
+			[
+				"docu",
+				"document.getElementById("
+			],
+			[
+				"document",
+				"document.getElementById("
+			],
+			[
+				"inver",
+				"inversor\t⌬ tabnine"
+			],
+			[
+				"contador",
+				"contador_max\t⌬ tabnine"
+			],
+			[
+				"combin",
+				"combinadores\t⌬ tabnine"
+			],
+			[
+				"Departa",
+				"departamento\t⌬ tabnine"
+			],
+			[
+				"opera",
+				"operador_verificador\t⌬ tabnine"
+			],
+			[
+				"CIENC",
+				"CIENTÍFICA\t⌬ tabnine"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Python 3/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python 3/Python3.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"python3",
+				"Set Syntax: Python3"
+			],
+			[
+				"github",
+				"GitHub: Switch Accounts"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Build With: Python3"
+			],
+			[
+				"githbu",
+				"Github: Pull Requests"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"termin",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"pyth",
+				"Build With: Python3"
+			],
+			[
+				"termi",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"py",
+				"Pretty Print: Format (Pretty Print) Python code"
+			],
+			[
+				"pyt",
+				"Build With: Python"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"inden",
+				"Text Refactor: Expand to Indentation"
+			],
+			[
+				"ter",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"TER",
+				"Terminus: Reset"
+			],
+			[
+				"pytohn",
+				"Build With: Python"
+			],
+			[
+				"",
+				"Build: New Build System"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"g",
+				"Gist: Open Gist"
+			],
+			[
+				"gist]",
+				"Gist: Open Gist"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				" gist",
+				"Gist: Open Gist"
+			],
+			[
+				"removce",
+				"Package Control: Remove Package"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"angular",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"auto",
+				"Toggle AutoSave: all files"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/nmarlon/Área de Trabalho/Trabalho"
+	],
+	"file_history":
+	[
+		"/tmp/form-sem-saude-emoc.html",
+		"/home/nmarlon/Área de Trabalho/Trabalho/autossuficiencia.org/Semana da Saude Emocional/from.html",
+		"/tmp/semanadaeducao.org-form_TESTE.html",
+		"/tmp/semanadaeducao.org-form",
+		"/home/nmarlon/Área de Trabalho/Scripts/py.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha/JogoDaVelhapy.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha/JogoDaVelha.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/PDPP Marlon Senac.txt",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/Assist IA develop for Games /main.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/diario.txt",
+		"/home/nmarlon/Área de Trabalho/Scripts/DevMode-(model).js",
+		"/home/nmarlon/Área de Trabalho/Scripts/FreeLancer/ErpPipeDrive_database.py/python-pipedrive-master/setup.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/Tricks/JS plugins - Marlon/Elementor_Patch_Bugs.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Tricks/JS plugins - Marlon/www.familysearch.org_.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/FreeLancer/ErpPipeDrive_database.py/python-pipedrive-master/README.txt",
+		"/home/nmarlon/Área de Trabalho/Scripts/FreeLancer/ErpPipeDrive_database.py/ErpDrive.py",
+		"/home/nmarlon/Downloads/python-pipedrive-master.zip",
+		"/home/nmarlon/Área de Trabalho/Scripts/FreeLancer/ErpPipe.py",
+		"/home/nmarlon/Área de Trabalho/Trabalho/FreeLancer/O Jogo/Jogos Exportados/HTML/O Jogo (WEB).js",
+		"/home/nmarlon/.cache/.fr-Yp6feV/O Jogo.app/Contents/Info.plist",
+		"/home/nmarlon/Área de Trabalho/Trabalho/FreeLancer/O Jogo/Jogos Exportados/Info.plist",
+		"/tmp/minimalyze-functions_compilation.js",
+		"/tmp/Fernando-GetNinjas-Pegar_precos_de_varios_sites.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/GIST_API.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/Mapa de ação de processadora de números/index_processadora_de_numeros.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Game Develop.txt",
+		"/tmp/Paginas de Teste.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS plugins - Marlon/nfe.prefeitura.sp.gov.br_.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/FreeLancer/Woocomerce atualizar preços de Vários sites pro Wordpress/Free Cashback  API.py",
+		"/tmp/GIST_API",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS plugins - Marlon/Elementor_Patch_Bugs.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/FreeLancer/Woocomerce atualizar preços de Vários sites pro Wordpress/script_develop.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/Meu Wordpress/000webhostapp/testeapi-lojavirtual/Paginas de Teste.js",
+		"/home/nmarlon/Área de Trabalho/polkit-gnome-authentication-agent-1",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/GruposWhatsApp.html",
+		"/tmp/mozilla_nmarlon0/index.json",
+		"/home/nmarlon/Área de Trabalho/Scripts/minimalyze.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS plugins - Marlon/semanadaeducacao.org.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/importar scripts do meu git.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS plugins - Marlon/www.familysearch.org_.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/MyAssistForNavigation/virt_assis.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/semandaeducacao.org.html",
+		"/home/nmarlon/.config/sublime-text-3/Packages/User/Gist.sublime-settings",
+		"/home/nmarlon/.config/sublime-text-3/Packages/Gist/Gist.sublime-settings",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/js.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/UpViral-form (versão 3).html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/TERMOS GERAIS – SORTEIOS “SEMANA DA EDUCAÇÃO”.txt",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/autossuficiencia.org/js.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/autossuficiencia.org/css.css",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/UpViral-Form.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/TPViral (CtrlC CtrlV) tentativa 3.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Marlon INFO - Coisas úteis (PC) links e outros.txt",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS Bug FIX - Navegator JS Plugin/www.unip.br_.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/JS Bug FIX - Navegator JS Plugin/nfe.prefeitura.sp.gov.br_.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/gruposwhatsapp.betoleite.com.br/autopreenchimento.js",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/UpViral-old-versao-com-formulario-completo.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/TPViral (old) v1.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/TPViral (para o novo visual) v2.html",
+		"/home/nmarlon/.config/sublime-text-3/Packages/TabNine/TabNine.sublime-settings",
+		"/home/nmarlon/Área de Trabalho/Scripts/tpmembro.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Trabalho/semanadaeducacao.org/2021/TPViral.html",
+		"/home/nmarlon/.config/sublime-text-3/Local/Session.sublime_session",
+		"/home/nmarlon/.config/sublime-text-3/Local/Auto Save Session.sublime_session",
+		"/home/nmarlon/Área de Trabalho/Scripts/start.sh",
+		"/home/nmarlon/Área de Trabalho/Scripts/html.html",
+		"/home/nmarlon/Área de Trabalho/Scripts/Naturalying ROTEIRO.txt",
+		"/home/nmarlon/hyperativa3/.api.json",
+		"/home/nmarlon/Área de Trabalho/Scripts/Unip/Semestre4/Calc.sh",
+		"/home/nmarlon/Área de Trabalho/Scripts/Game/Brawlhalla/Treinamento/brawlhalla_random.py",
+		"/home/nmarlon/Área de Trabalho/Scripts/Game/brawlhalla_random.py",
+		"/home/nmarlon/Downloads/DuckStation.sh",
+		"/tmp/mozilla_nmarlon0/Calc.sh",
+		"/home/nmarlon/hyperativa3/db.json",
+		"/home/nmarlon/hyperativa3/src/app/funcionario.service.ts",
+		"/home/nmarlon/hyperativa3/src/app/app.component.css",
+		"/home/nmarlon/hyperativa3/src/app/funcionario/funcionario.component.ts",
+		"/home/nmarlon/hyperativa3/src/app/funcionario.service.spec.ts",
+		"/home/nmarlon/hyperativa3/src/app/funcionarioio.service.spec.ts",
+		"/home/nmarlon/hyperativa3/src/app/funcionarios.ts",
+		"/home/nmarlon/hyperativa3/src/app/funcionarioio.service.ts",
+		"/home/nmarlon/hyperativa3/src/app/app.component.html",
+		"/home/nmarlon/hyperativa3/src/app/app.module.ts",
+		"/home/nmarlon/hyperativa3/api.json",
+		"/home/nmarlon/hyperativa/package.json",
+		"/home/nmarlon/hyperativa/package(teste Web  api).json",
+		"/home/nmarlon/hyperativa/.api.json",
+		"/home/nmarlon/hyperativa/.api(backup).json",
+		"/home/nmarlon/hyperativa/src/app/heroes/heroes.component.html",
+		"/home/nmarlon/hyperativa/tsconfig.json",
+		"/home/nmarlon/hyperativa/src/app/data.json",
+		"/home/nmarlon/hyperativa/api.json",
+		"/home/nmarlon/hyperativa/src/app/heroes/heroes.component.ts",
+		"/home/nmarlon/hyperativa/src/app/hero.ts",
+		"/home/nmarlon/hyperativa/src/app/app.module.ts",
+		"/home/nmarlon/hyperativa/src/app/app.component.html",
+		"/home/nmarlon/hyperativa/src/styles.css",
+		"/home/nmarlon/hyperativa/src/app/app.component.ts",
+		"/home/nmarlon/hyperativa/src/app/app-routing.module.ts",
+		"/home/nmarlon/.config/sublime-text-3/Packages/AngularJS/AngularJS-sublime-package.sublime-settings",
+		"/home/nmarlon/.config/sublime-text-3/Packages/User/AngularJS-sublime-package.sublime-settings",
+		"/home/nmarlon/Downloads/AngularJS.zip",
+		"/home/nmarlon/Área de Trabalho/Calc.sh",
+		"/home/nmarlon/Área de Trabalho/Scripts/temp_throttle.sh",
+		"/home/nmarlon/Área de Trabalho/Scripts/init/temp_throttle.sh",
+		"/home/nmarlon/Documentos/Projetos/Testes programação/teste1.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 139.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"abuso",
+			"\" />",
+			"value=\"",
+			"118",
+			"119",
+			"emocional\"",
+			"http",
+			"/*",
+			"window.",
+			"time",
+			"pra_onde_vamos",
+			"<i",
+			"                   <",
+			"<i",
+			"versi",
+			"versao",
+			"redirect_progresso_bar",
+			"119",
+			"Debug",
+			"Debugo",
+			"(",
+			"debug",
+			"id=\"",
+			"debug_mode",
+			"key",
+			"llfield144859",
+			"40938",
+			"587799",
+			"536497"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			")\" />",
+			"value=\"(-",
+			"emocional-tp\""
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 56.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 147.0
+	},
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 96.0
+	},
+	"pinned_build_system": "",
+	"project": "Trabalhos.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"FreeLancer/ErpPipeDrive_database.py/python-pipedrive-master/README.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

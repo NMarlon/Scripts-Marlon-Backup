@@ -1,0 +1,293 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ver",
+				"versaoMock"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"nodem",
+				"Nodejs::NPM::Command"
+			],
+			[
+				"node",
+				"Nodejs::NPM::Command"
+			],
+			[
+				"termina",
+				"Terminal: Open in project folder"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Preferences: Terminal Settings – Default"
+			],
+			[
+				"termi",
+				"Terminal: Open"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"comman",
+				"npm: Type Arbitrary Command"
+			],
+			[
+				"npm",
+				"npm: Install Package"
+			],
+			[
+				"i",
+				"npm: Install Package"
+			],
+			[
+				"nodejs",
+				"Nodejs::User File Settings"
+			],
+			[
+				"pkgctlinspk",
+				"Package Control: Install Package"
+			],
+			[
+				"set sintax ",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Scripts-Marlon-Backup"
+	],
+	"file_history":
+	[
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/swagger.css",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/package.json",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/index.js",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/README.md",
+		"/c/users/marlo/appdata/local/temp/139ffd669feadc9b2b4c94153e5ecfc5-mailchimp-form-sem-saude-emoc.html",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/swagger.json",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/indexXAMMP.js",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/node_modules/@apidevtools/json-schema-ref-parser/lib/index.d.ts",
+		"/c/users/marlo/appdata/local/temp/739126c27442921fbaf159bc5d09881a-form-sem-saude-emoc.html",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/node_modules/yaml/index.d.ts",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/routes/books.js",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/db.json",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/exemplosDeRequisicoes.js",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/OpenAPISawgger.yaml",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/indexOLD.js",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/node_modules/lowdb/package.json",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/nodemon.json",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/tsconfig.json",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/TerminalinPackages/Default.sublime-keymap",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Gupy-Teste/teste.js",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/sublime-github/GitHub.sublime-settings",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/User/GitHub.sublime-settings",
+		"/c/users/marlo/appdata/local/temp/e23c7972b7ee079bfc7b14a023463aac-form-bae-nacional.html",
+		"/C/Users/marlo/Downloads/teste.html",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
+		"/C/Users/marlo/AppData/Roaming/Sublime Text 3/Packages/User/Gist.sublime-settings",
+		"/C/Users/marlo/OneDrive/Área de Trabalho/Pit_Sangrador do Sistema Hidráulico de Embreagem .ppsx",
+		"/C/Users/marlo/OneDrive/Área de Trabalho/Pit_Sangrador do Sistema Hidráulico de Embreagem .pdf",
+		"/C/Users/marlo/OneDrive/Documentos/GitHub/Scripts-Marlon-Backup/PDPP Marlon Senac.txt",
+		"/C/Users/marlo/OneDrive/Área de Trabalho/html.html"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 98.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Cmder-2":
+	{
+		"height": 102.0
+	},
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 102.0
+	},
+	"output.textarea":
+	{
+		"height": 102.0
+	},
+	"pinned_build_system": "Packages/Nodejs/Nodejs.sublime-build",
+	"project": "ScriptsALL.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 163.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

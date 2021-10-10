@@ -111,3 +111,23 @@ function ExReg(name,dias){//Conta quantas vezes entra na página, ele conta quan
 }
 ExReg("re_da_pagina_aqui",365);//salva por 1 ano desde a ultima visualizaçao
 
+
+// CAPTURA COMENTÁRIOS DO HTML:
+function filterNone() {
+    return NodeFilter.FILTER_ACCEPT;
+}
+
+function getAllComments(rootElem) {
+    var comments = [];
+    // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
+    var iterator = document.createNodeIterator(rootElem, NodeFilter.SHOW_COMMENT, filterNone, false);
+    var curNode;
+    while (curNode = iterator.nextNode()) {
+        comments.push(curNode.nodeValue);
+    }
+    return comments;
+}
+
+/*window.addEventListener("load", function() {
+    console.log(getAllComments(document.body));
+});*/

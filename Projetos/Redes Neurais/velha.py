@@ -32,7 +32,7 @@ def game():
         jogada +=1
     
 def ganhou():
-    #checando linhas
+    #checando linhas11
     for i in range(3):
         soma = board[i][0]+board[i][1]+board[i][2]
         if soma==3 or soma ==-3:
@@ -70,4 +70,4 @@ board= [ [0,0,0],
          [0,0,0],
          [0,0,0] ]
 
-menu()
+#menu()

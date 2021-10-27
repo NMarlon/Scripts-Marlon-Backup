@@ -33,8 +33,3 @@ import pyautogui
 
 myScreenshot = pyautogui.screenshot()
 myScreenshot.save(r'./screenshot_test.png')
-
-###0.001| 0.099| 
-###0.009| 0.891|
-###0.1  |  0.9
-print(0.009/0.108)

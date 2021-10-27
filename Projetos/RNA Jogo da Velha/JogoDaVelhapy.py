@@ -13,7 +13,7 @@ pesos_json= """{
     },
 }"""
 
-
+print(pesos_json)
 procura_por_json = json.loads(pesos_json)
 if "json" in procura_por_json:
     print("Key exist in JSON data")

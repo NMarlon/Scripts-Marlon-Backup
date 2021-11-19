@@ -240,253 +240,6 @@
 	"buffers":
 	[
 		{
-			"file": "/home/nmarlon/Área de Trabalho/Scripts/Projetos/Rede Neural com ajuste manual de pesos (busca de padrões dos erros e da RNA)/index.py",
-			"redo_stack":
-			[
-				[
-					76,
-					1,
-					"cut",
-					null,
-					"AQAAABQKAAAAAAAAWQsAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFAoAAAAAAAAUCgAAAAAAAAAAAAAAAPC/"
-				]
-			],
-			"settings":
-			{
-				"buffer_size": 5767,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					5,
-					1,
-					"insert",
-					{
-						"characters": "pesos"
-					},
-					"BQAAAHsFAAAAAAAAfAUAAAAAAAAAAAAAfAUAAAAAAAB9BQAAAAAAAAAAAAB9BQAAAAAAAH4FAAAAAAAAAAAAAH4FAAAAAAAAfwUAAAAAAAAAAAAAfwUAAAAAAACABQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAewUAAAAAAAB7BQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					14,
-					1,
-					"insert",
-					{
-						"characters": "pesos"
-					},
-					"BgAAAKAFAAAAAAAAoQUAAAAAAAAAAAAAoQUAAAAAAAChBQAAAAAAAAsAAABzdHVkZW50SnNvbqEFAAAAAAAAogUAAAAAAAAAAAAAogUAAAAAAACjBQAAAAAAAAAAAACjBQAAAAAAAKQFAAAAAAAAAAAAAKQFAAAAAAAApQUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoAUAAAAAAACrBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					16,
-					1,
-					"delete_word",
-					{
-						"forward": true
-					},
-					"AQAAAIsFAAAAAAAAiwUAAAAAAAAHAAAAc3R1ZGVudA",
-					"AQAAAAAAAAABAAAAiwUAAAAAAACLBQAAAAAAAAAAAAAAAFBA"
-				],
-				[
-					17,
-					1,
-					"insert",
-					{
-						"characters": "pe"
-					},
-					"AgAAAIsFAAAAAAAAjAUAAAAAAAAAAAAAjAUAAAAAAACNBQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiwUAAAAAAACLBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					18,
-					2,
-					"left_delete",
-					null,
-					"AgAAAIwFAAAAAAAAjAUAAAAAAAABAAAAZYsFAAAAAAAAiwUAAAAAAAABAAAAcA",
-					"AQAAAAAAAAABAAAAjQUAAAAAAACNBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					19,
-					1,
-					"insert",
-					{
-						"characters": "procura_po"
-					},
-					"CgAAAIsFAAAAAAAAjAUAAAAAAAAAAAAAjAUAAAAAAACNBQAAAAAAAAAAAACNBQAAAAAAAI4FAAAAAAAAAAAAAI4FAAAAAAAAjwUAAAAAAAAAAAAAjwUAAAAAAACQBQAAAAAAAAAAAACQBQAAAAAAAJEFAAAAAAAAAAAAAJEFAAAAAAAAkgUAAAAAAAAAAAAAkgUAAAAAAACTBQAAAAAAAAAAAACTBQAAAAAAAJQFAAAAAAAAAAAAAJQFAAAAAAAAlQUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiwUAAAAAAACLBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					20,
-					1,
-					"insert",
-					{
-						"characters": "r_s"
-					},
-					"AwAAAJUFAAAAAAAAlgUAAAAAAAAAAAAAlgUAAAAAAACXBQAAAAAAAAAAAACXBQAAAAAAAJgFAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlQUAAAAAAACVBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					21,
-					1,
-					"left_delete",
-					null,
-					"AQAAAJcFAAAAAAAAlwUAAAAAAAABAAAAcw",
-					"AQAAAAAAAAABAAAAmAUAAAAAAACYBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					22,
-					1,
-					"insert",
-					{
-						"characters": "json"
-					},
-					"BAAAAJcFAAAAAAAAmAUAAAAAAAAAAAAAmAUAAAAAAACZBQAAAAAAAAAAAACZBQAAAAAAAJoFAAAAAAAAAAAAAJoFAAAAAAAAmwUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlwUAAAAAAACXBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					25,
-					1,
-					"insert",
-					{
-						"characters": "\n\t\"hson"
-					},
-					"CAAAACcKAAAAAAAAKAoAAAAAAAAAAAAAKAoAAAAAAAAwCgAAAAAAAAAAAAAwCgAAAAAAADQKAAAAAAAAAAAAADQKAAAAAAAANQoAAAAAAAAAAAAANQoAAAAAAAA2CgAAAAAAAAAAAAA2CgAAAAAAADcKAAAAAAAAAAAAADcKAAAAAAAAOAoAAAAAAAAAAAAAOAoAAAAAAAA5CgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAJwoAAAAAAAAnCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					26,
-					4,
-					"left_delete",
-					null,
-					"BAAAADgKAAAAAAAAOAoAAAAAAAABAAAAbjcKAAAAAAAANwoAAAAAAAABAAAAbzYKAAAAAAAANgoAAAAAAAABAAAAczUKAAAAAAAANQoAAAAAAAABAAAAaA",
-					"AQAAAAAAAAABAAAAOQoAAAAAAAA5CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					27,
-					1,
-					"insert",
-					{
-						"characters": "json\":"
-					},
-					"BgAAADUKAAAAAAAANgoAAAAAAAAAAAAANgoAAAAAAAA3CgAAAAAAAAAAAAA3CgAAAAAAADgKAAAAAAAAAAAAADgKAAAAAAAAOQoAAAAAAAAAAAAAOQoAAAAAAAA6CgAAAAAAAAAAAAA6CgAAAAAAADsKAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANQoAAAAAAAA1CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					28,
-					1,
-					"insert",
-					{
-						"characters": "t"
-					},
-					"AQAAADsKAAAAAAAAPAoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAOwoAAAAAAAA7CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					29,
-					1,
-					"left_delete",
-					null,
-					"AQAAADsKAAAAAAAAOwoAAAAAAAABAAAAdA",
-					"AQAAAAAAAAABAAAAPAoAAAAAAAA8CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					30,
-					1,
-					"insert",
-					{
-						"characters": "Treu"
-					},
-					"BAAAADsKAAAAAAAAPAoAAAAAAAAAAAAAPAoAAAAAAAA9CgAAAAAAAAAAAAA9CgAAAAAAAD4KAAAAAAAAAAAAAD4KAAAAAAAAPwoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAOwoAAAAAAAA7CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					31,
-					2,
-					"left_delete",
-					null,
-					"AgAAAD4KAAAAAAAAPgoAAAAAAAABAAAAdT0KAAAAAAAAPQoAAAAAAAABAAAAZQ",
-					"AQAAAAAAAAABAAAAPwoAAAAAAAA/CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"insert",
-					{
-						"characters": "ue"
-					},
-					"AgAAAD0KAAAAAAAAPgoAAAAAAAAAAAAAPgoAAAAAAAA/CgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPQoAAAAAAAA9CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					33,
-					1,
-					"insert",
-					{
-						"characters": ","
-					},
-					"AQAAAD8KAAAAAAAAQAoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPwoAAAAAAAA/CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					38,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AgAAAIoGAAAAAAAAiwYAAAAAAAAAAAAAiwYAAAAAAACMBgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAigYAAAAAAACKBgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					41,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AgAAAGYFAAAAAAAAZwUAAAAAAAAAAAAAZwUAAAAAAABrBQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAZgUAAAAAAABmBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					51,
-					1,
-					"insert",
-					{
-						"characters": "json"
-					},
-					"BgAAAMEFAAAAAAAAwgUAAAAAAAAAAAAAwgUAAAAAAADCBQAAAAAAAAoAAABwZXJjZW50YWdlZwUAAAAAAABnBQAAAAAAAAQAAAAgICAgvgUAAAAAAAC/BQAAAAAAAAAAAAC/BQAAAAAAAMAFAAAAAAAAAAAAAMAFAAAAAAAAwQUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAwQUAAAAAAADLBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					57,
-					1,
-					"insert",
-					{
-						"characters": "pro"
-					},
-					"BAAAAMYFAAAAAAAAxwUAAAAAAAAAAAAAxwUAAAAAAADHBQAAAAAAAAcAAABzdHVkZW50xwUAAAAAAADIBQAAAAAAAAAAAADIBQAAAAAAAMkFAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxgUAAAAAAADNBQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					58,
-					1,
-					"insert_completion",
-					{
-						"completion": "procura_por_json",
-						"format": "text",
-						"keep_prefix": false,
-						"must_insert": false,
-						"trigger": "procura_por_json"
-					},
-					"AgAAAMYFAAAAAAAAxgUAAAAAAAADAAAAcHJvxgUAAAAAAADWBQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAyQUAAAAAAADJBQAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
 			"contents": "\npesos_json= \"\"\"{\n    \"json\":True,\n    {\n        \"nod_e\":\"0\",#id nodo de saída\n        \"nod_s\":\"1\",\n        \"peso\":0.5\n    },\n    {\n        \"nod_e\":\"0\",#id nodo de saída\n        \"nod_s\":\"2\",\n        \"peso\":0.5\n    },\n}\"\"\"\n\n\nprocura_por_json = json.loads(pesos)\nif \"json\" in procura_por_json:\n    print(\"Key exist in JSON data\")\n    print(student[\"name\"], \"marks is: \", student[\"percentage\"])\nelse:\n    print(\"Key doesn't exist in JSON data\")\n",
 			"file": "/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha/JogoDaVelhapy.py",
 			"file_size": 219,
@@ -494,7 +247,6 @@
 			"settings":
 			{
 				"buffer_size": 442,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
@@ -505,7 +257,7 @@
 					"paste",
 					null,
 					"AgAAAAAAAAAAAAAACwEAAAAAAAAAAAAACwEAAAAAAAALAQAAAAAAAB0BAABpbXBvcnQgcmFuZG9tIGFzIHJkCmNhbWFkYXMgPSAyCmFycl9udW1fbm9kZXNfY2FtPVszLDVdCmFtcGxpdHVkZV9wZXNvcz0yCnNoaWZ0X2FtcGxpdHVkZV9wZXNvcz0wCnBlc29zPVtdCmZvciBpIGluIHJhbmdlKGNhbWFkYXMpOgogICAgcGVzb3MuYXBwZW5kKFtdKQogICAgZm9yIGogaW4gcmFuZ2UoYXJyX251bV9ub2Rlc19jYW1baV0pOgogICAgICAgIHBlc29zW2ldLmFwcGVuZChyZC5yYW5kb20oKSphbXBsaXR1ZGVfcGVzb3Mrc2hpZnRfYW1wbGl0dWRlX3Blc29zKQoKcHJpbnQocGVzb3MpCgo",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAB0BAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					6,
@@ -513,7 +265,7 @@
 					"unindent",
 					null,
 					"DAAAAAEAAAAAAAAAAQAAAAAAAAAEAAAAICAgICoAAAAAAAAAKgAAAAAAAAAEAAAAICAgIE0AAAAAAAAATQAAAAAAAAAEAAAAICAgIHUAAAAAAAAAdQAAAAAAAAAEAAAAICAgILkAAAAAAAAAuQAAAAAAAAAEAAAAICAgIMMAAAAAAAAAwwAAAAAAAAAEAAAAICAgIAEAAAAAAAAAAQAAAAAAAAAEAAAAICAgICYAAAAAAAAAJgAAAAAAAAAEAAAAICAgIEUAAAAAAAAARQAAAAAAAAAEAAAAICAgIGkAAAAAAAAAaQAAAAAAAAAEAAAAICAgIKkAAAAAAAAAqQAAAAAAAAAEAAAAICAgIK8AAAAAAAAArwAAAAAAAAAEAAAAICAgIA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAALAQAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAsBAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					11,
@@ -521,7 +273,7 @@
 					"paste",
 					null,
 					"AQAAAAAAAAAAAAAARQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					16,
@@ -529,7 +281,7 @@
 					"unindent",
 					null,
 					"GgAAAAEAAAAAAAAAAQAAAAAAAAAEAAAAICAgIBYAAAAAAAAAFgAAAAAAAAAEAAAAICAgICsAAAAAAAAAKwAAAAAAAAAEAAAAICAgIDUAAAAAAAAANQAAAAAAAAAEAAAAICAgIF8AAAAAAAAAXwAAAAAAAAAEAAAAICAgIHgAAAAAAAAAeAAAAAAAAAAEAAAAICAgII8AAAAAAAAAjwAAAAAAAAAEAAAAICAgIJoAAAAAAAAAmgAAAAAAAAAEAAAAICAgIKQAAAAAAAAApAAAAAAAAAAEAAAAICAgIM4AAAAAAAAAzgAAAAAAAAAEAAAAICAgIOcAAAAAAAAA5wAAAAAAAAAEAAAAICAgIP4AAAAAAAAA/gAAAAAAAAAEAAAAICAgIAkBAAAAAAAACQEAAAAAAAAEAAAAICAgIAEAAAAAAAAAAQAAAAAAAAAEAAAAICAgIBIAAAAAAAAAEgAAAAAAAAAEAAAAICAgICMAAAAAAAAAIwAAAAAAAAAEAAAAICAgICkAAAAAAAAAKQAAAAAAAAAEAAAAICAgIE8AAAAAAAAATwAAAAAAAAAEAAAAICAgIGQAAAAAAAAAZAAAAAAAAAAEAAAAICAgIHcAAAAAAAAAdwAAAAAAAAAEAAAAICAgIH4AAAAAAAAAfgAAAAAAAAAEAAAAICAgIIQAAAAAAAAAhAAAAAAAAAAEAAAAICAgIKoAAAAAAAAAqgAAAAAAAAAEAAAAICAgIL8AAAAAAAAAvwAAAAAAAAAEAAAAICAgINIAAAAAAAAA0gAAAAAAAAAEAAAAICAgINkAAAAAAAAA2QAAAAAAAAAEAAAAICAgIA",
-					"AQAAAAAAAAABAAAAFQAAAAAAAABFAQAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAVAAAAAAAAAEUBAAAAAAAAAAAAAAAA8L8"
 				],
 				[
 					20,
@@ -539,7 +291,7 @@
 						"characters": "\n\n"
 					},
 					"AgAAAN0AAAAAAAAA3gAAAAAAAAAAAAAA3gAAAAAAAADfAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3QAAAAAAAADdAAAAAAAAAAAAAAAAAPC/"
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADdAAAAAAAAAN0AAAAAAAAAAAAAAAAA8L8"
 				]
 			]
 		}
@@ -760,13 +512,11 @@
 	},
 	"expanded_folders":
 	[
-		"/home/nmarlon/Área de Trabalho/Scripts",
-		"/home/nmarlon/Área de Trabalho/Scripts/Projetos",
-		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/Rede Neural com ajuste manual de pesos (busca de padrões dos erros e da RNA)",
-		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha"
+		"/home/nmarlon/Área de Trabalho/Scripts"
 	],
 	"file_history":
 	[
+		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/Rede Neural com ajuste manual de pesos (busca de padrões dos erros e da RNA)/index.py",
 		"/home/nmarlon/Área de Trabalho/Scripts/py.py",
 		"/tmp/semanadaeducao.org-form",
 		"/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha/JogoDaVelhapy.py",
@@ -910,37 +660,6 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/nmarlon/Área de Trabalho/Scripts/Projetos/Rede Neural com ajuste manual de pesos (busca de padrões dos erros e da RNA)/index.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5767,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2580,
-								2905
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1080.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/home/nmarlon/Área de Trabalho/Scripts/Projetos/RNA Jogo da Velha/JogoDaVelhapy.py",
 					"selected": true,
 					"semi_transient": false,
@@ -959,6 +678,7 @@
 						],
 						"settings":
 						{
+							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true

@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>hour Now Colour Intuitive</title>
+
+<style>
+	body{
+		background-repeat: no-repeat;
+		background-clip: border-box;
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+		-webkit-transition: background-image 0.5s ease-in-out;
+		-moz-transition: background-image 0.5s ease-in-out;
+		-o-transition: background-image 0.5s ease-in-out;
+		transition: background-image 0.5s ease-in-out;
+		}
+	#conteudo{
+		padding: 50px;
+	}
+</style>
+</head>
+<body >
+	<canvas id="canvas"></canvas>
+
+	<div visibility="visible" id="opcoes">
+		<input type="number" id="period" placeholder="periodo minutos">
+		<input id="date" type="datetime-local" value="2018-06-12T19:30"><!-- 
+	    <h1 id="heading">This is a heading</h1>
+	    <p>This is a paragraph of text.</p> -->
+	     <hr>
+	    <div>
+	        <label>Change Webpage Background To:</label>
+	        <button type="button" onclick="save('yellow');">Save and Update</button>
+	    <br>
+    </div>
+</body>
+<script>
+
+var draw = function(color1, color2, shadow) {
+	 var lingrd = context.createLinearGradient(0, 0, 0, 195);
+  lingrd.addColorStop(1, color1);
+  lingrd.addColorStop(0, color2);
+  context.fillStyle = lingrd;
+  context.shadowColor = shadow; 
+}
+
+
+// Create a linear gradient
+// The start gradient point is at x=20, y=0
+// The end gradient point is at x=220, y=0
+var gradient = ctx.createLinearGradient(20,0, 220,0);
+
+// Add three color stops
+gradient.addColorStop(0, 'green');
+gradient.addColorStop(.5, 'cyan');
+gradient.addColorStop(1, 'green');
+
+
+
+// Set the fill style and draw a rectangle
+ctx.fillStyle = gradient;
+ctx.fillRect(20, 20, 200, 100);
+
+// TENTATIVA DE CANVAS GRADIENT
+// // F1. SUNSET increment & check for change.
+// skyInterval = sunset*sunsetFactor;
+// skyCount    = skyCount + interval;
+// if(skyCount > skyInterval) 
+// {
+//   // F2. SKY ALPHA increase if reached skyInterval.
+//   skyAlpha = skyAlpha + .01;
+//   if(skyAlpha > 1) {skyApha = 1}
+//   skyCount = 0;
+
+//   // F3. SKY alpha setting.
+//   contextSK.globalAlpha = skyAlpha;
+//   if(skyNight == 1) {contextSK.globalAlpha = 1}
+
+//   // F4. SKY gradient.
+//   var skyGrad = contextSK.createLinearGradient(0, 0, 0, canvasSK.height-sunsetHorizon);
+//   skyGrad.addColorStop( 0, "black");
+//   skyGrad.addColorStop(.8, "black");
+//   skyGrad.addColorStop( 1, "transparent");
+
+//   // F5. SKY fill.
+//   contextSK.fillStyle = skyGrad;
+//   contextSK.clearRect(0, 0, canvasSK.width, canvasSK.height);
+//   contextSK.fillRect( 0, 0, canvasSK.width, canvasSK.height);
+
+
+
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+	/*
+
+	1,2...
+
+	trimestre
+	semana/mês
+	horas/dia
+	sgundos/minutos
+
+
+
+
+	*/
+	color1="#F00"; //OR FIRST COLOR *Ou primeira cor
+	color2="#0f0";
+	color3="#00f";
+	color4="#ff0000";
+	arrayColours=[[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
+
+	//dateControl.value = '2017-06-01T08:30';
+	var DataUser=getCookie('DataUser');
+	if(DataUser==""||DataUser==null||DataUser==undefined){
+		document.querySelector('input[type="datetime-local"]').value=new Date().toJSON().slice(0,19);
+	}else{
+		document.querySelector('input[type="datetime-local"]').value=DataUser;
+	}
+	var dateControl = document.querySelector('input[type="datetime-local"]');
+
+  //background-image: linear-gradient(red, yellow);
+    // Function to change webpage background color
+ 	document.body.style.backgroundImage = 'linear-gradient(' + color1 + ', ' + color2 + ', ' + color3+ ', ' + color4 + ')';
+    function save(color){
+    	setCookie('DataUser',dateControl,1000);
+
+        document.body.style.backgroundImage = 'linear-gradient(' + color1 + ', ' + color2 + ', ' + color3+ ', ' + color4+ ')';
+    }
+		    
+	// function gradient(startColor, endColor, steps) {
+ //             var start = {
+ //                     'Hex'   : startColor,
+ //                     'R'     : parseInt(startColor.slice(1,3), 16),
+ //                     'G'     : parseInt(startColor.slice(3,5), 16),
+ //                     'B'     : parseInt(startColor.slice(5,7), 16)
+ //             }
+ //             var end = {
+ //                     'Hex'   : endColor,
+ //                     'R'     : parseInt(endColor.slice(1,3), 16),
+ //                     'G'     : parseInt(endColor.slice(3,5), 16),
+ //                     'B'     : parseInt(endColor.slice(5,7), 16)
+ //             }
+ //             diffR = end['R'] - start['R'];
+ //             diffG = end['G'] - start['G'];
+ //             diffB = end['B'] - start['B'];
+
+ //             stepsHex  = new Array();
+ //             stepsR    = new Array();
+ //             stepsG    = new Array();
+ //             stepsB    = new Array();
+
+ //             for(var i = 0; i <= steps; i++) {
+ //                     stepsR[i] = start['R'] + ((diffR / steps) * i);
+ //                     stepsG[i] = start['G'] + ((diffG / steps) * i);
+ //                     stepsB[i] = start['B'] + ((diffB / steps) * i);
+ //                     stepsHex[i] = '#' + Math.round(stepsR[i]).toString(16) + '' + Math.round(stepsG[i]).toString(16) + '' + Math.round(stepsB[i]).toString(16);
+ //             }
+ //             return stepsHex;
+
+ //         }
+
+
+var incrementColor = function(color, step){
+	    var colorToInt = parseInt(color.substr(1), 16),                     // Convert HEX color to integer
+	        nstep = parseInt(step);                                         // Convert step to integer
+	    if(!isNaN(colorToInt) && !isNaN(nstep)){                            // Make sure that color has been converted to integer
+	        colorToInt += nstep;                                            // Increment integer with step
+	        var ncolor = colorToInt.toString(16);                           // Convert back integer to HEX
+	        ncolor = '#' + (new Array(7-ncolor.length).join(0)) + ncolor;   // Left pad "0" to make HEX look like a color
+	        if(/^#[0-9a-f]{6}$/i.test(ncolor)){                             // Make sure that HEX is a valid color
+	            return ncolor;
+	        }
+	    }
+	    return color;
+	};
+
+    // 1 by 1 to 256 increment last color
+    // 256 by 256 increment middle color
+    // 65536 by 65536 increment first color
+
+	up=true;
+	totalRGB=256*7;//256r+256lar+256yell+256gree+256blue+256purp
+	timer1=0;
+	timer2=0;
+	timer3=0;
+	timer4=0;
+	period4=60;
+	stepRGB256=256;
+	periodoRGB=[1,256,65536,-1,-256,-65536];
+
+    setInterval(()=>{    	
+
+	    progress=(totalRGB/period4|0)*timer4;
+	    if(progress<stepRGB256){
+	    	actualPeriod=0;
+	    }else if(progress<stepRGB256*2){
+	    	actualPeriod=1;
+	    }else if(progress<stepRGB256*3){
+	    	actualPeriod=3;
+	  	}else if(progress<stepRGB256*4){
+	    	actualPeriod=2;
+	  	}else if(progress<stepRGB256*5){
+	    	actualPeriod=4;
+	  	}else if(progress<stepRGB256*6){
+	    	actualPeriod=0;
+	  	}else if(progress<stepRGB256*7){
+	    	actualPeriod=5;
+	  	}
+
+		if(up){
+			color4=incrementColor(color4,periodoRGB[actualPeriod]*(totalRGB/period4|0));
+		}else{
+			color4=incrementColor(color4,periodoRGB[actualPeriod]*(totalRGB/period4|0));	
+		}
+		timer4+=1;
+		if(timer4==period4){
+			timer4=0;
+		}
+
+		draw("#ff0000", "#00ff00", color4); 
+		console.log(color4+"   ::: "+timer4+ "  ::: "+ progress +"      ::: "+actualPeriod);
+		document.body.style.backgroundImage = 'linear-gradient(' + color1 + ', ' + color2 + ', ' + color3+ ', ' + color4 + ')';
+
+
+    	// color4=parseInt(arrayColours[4][0], 10).toString(16)+parseInt(arrayColours[4][1], 10).toString(16)+parseInt(arrayColours[4][2], 10).toString(16);
+
+    },1000);
+    
+    document.getElementById('opcoes').visibility="visible";
+    swich=true;
+    document.body.addEventListener('click',()=>{
+    	
+    	if(swich){
+    		document.getElementById('opcoes').visibility="hidden";
+    		swich=false;
+    	}else{
+    		document.getElementById('opcoes').visibility="visible";
+    		swich=true;
+    	}
+
+    });
+</script>
+</html>

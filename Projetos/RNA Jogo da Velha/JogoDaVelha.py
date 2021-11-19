@@ -1,5 +1,17 @@
 import random as rd
 import json
+import pickle
+
+# obj0, obj1, obj2 are created here...
+
+# Saving the objects:
+with open('RNAmind.pkl', 'w') as f:  # Python 3: open(..., 'wb')
+    pickle.dump([obj0, obj1, obj2], f)
+
+# Getting back the objects:
+with open('RNAmind.pkl') as f:  # Python 3: open(..., 'rb')
+    obj0, obj1, obj2 = pickle.load(f)
+
 
 def menu():
     continuar=1
@@ -171,6 +183,7 @@ print(funny)
 
 board= [ [0,0,0],
          [0,0,0],
-         [0,0,0] ]
 
+        ]
 menu()
+

@@ -16,7 +16,7 @@ Como o Senac me ajudou nessa trajetória:
  - Me fazendo conhecer outas visões de outras pessoas
  - Me fazendo abrir a boca
 
-
+  
 Tópicos:
 
 (Esse texto é uma opinião pessoal)
@@ -124,3 +124,26 @@ Mas a escola tradicional do ensino médio e fundamental, como está hoje, está 
 
 Uma frase do vídeo "Escolas matam a criatividade": "Se um médico prescreve o mesmo remédio para todos os seus pacientes o resultado seria trágico"
 Deixo o link na descrição (https://www.youtube.com/watch?v=P7m5gIIU-kM)], 
+
+
+
+
+
+
+
+
+- Níveis de info
+- Biometria
+- Android
+- Login
+- 
+
+
+
+Com este trabalho foi útil para o desenvolvimento de um app com um sistema de login com biometria, senha e visualização de informações relativas ao respectivo nível de cada usuário e com isso, adquirimos o aprendizado de como desenvolver um sistema com bibliotecas para Android e estarmos prontos para quando nos for exigido desenvolver uma plataforma desse porte.
+
+
+0,25h 15/11/2021
+
+DESCARTADO:
+- [sistema] de login com uma autenticação de segurança por posse de biometria e hash, um banco de dados com as informações da empresa

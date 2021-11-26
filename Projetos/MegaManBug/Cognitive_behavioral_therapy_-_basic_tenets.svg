@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="830"
+   height="698"
+   style="fill:none;stroke:#000000;stroke-width:5;marker-end:url(#marker6);stroke-linecap:round;stroke-linejoin:round;font-family:sans-serif;font-weight:600;text-anchor:middle"
+   id="svg2">
+  <defs
+     id="defs8">
+    <marker
+       style="overflow:visible"
+       orient="auto"
+       id="marker6">
+      <path
+         d="M -2,-2 -0,-0 -2,2"
+         style="stroke-width:1"
+         id="path4" />
+    </marker>
+  </defs>
+  <path
+     d="M 557,99 A 142,68 0 0 1 415,167 142,68 0 0 1 273,99 142,68 0 0 1 415,31 142,68 0 0 1 557,99 Z"
+     style="fill:#ffffff;marker-end:none"
+     id="circle10" />
+  <use
+     xlink:href="#circle10"
+     transform="translate(-270,448)"
+     id="use12" />
+  <use
+     xlink:href="#circle10"
+     transform="translate(270,448)"
+     id="use14" />
+  <path
+     d="m 415,271 92,159 H 323 Z"
+     style="fill:#ffffff;marker-end:none"
+     id="path16" />
+  <path
+     d="m 576,91 c 126,73 188,221 150,362"
+     style="stroke-width:11"
+     id="path18" />
+  <path
+     d="M 104,453 A 322,322 0 0 1 254,91"
+     style="stroke-width:11"
+     id="path20" />
+  <path
+     d="m 611,625 a 322,322 0 0 1 -392,0"
+     style="stroke-width:11"
+     id="path22" />
+  <path
+     d="M 266,50 H 111"
+     style="fill:#ffffff;stroke-width:20"
+     id="path24" />
+  <path
+     d="M 564,50 H 719"
+     style="fill:#ffffff;stroke-width:20"
+     id="path26" />
+  <path
+     d="M 330,173 C 217,220 163,350 210,463"
+     id="path28" />
+  <path
+     d="M 620,463 C 667,350 613,220 500,173"
+     id="path30" />
+  <path
+     d="m 304,570 c 69,40 153,40 222,0"
+     id="path32" />
+  <g
+     style="stroke:none;font-size:18px;fill:#0000fe"
+     id="g64">
+    <text
+       style="font-size:33px;fill:#d9271b"
+       id="text36"><tspan
+         x="419"
+         y="111"
+         id="tspan34">BEHAVIOR</tspan></text>
+    <text
+       style="font-size:33px;fill:#d9271b"
+       id="text40"><tspan
+         x="149"
+         y="559"
+         id="tspan38">FEELINGS</tspan></text>
+    <text
+       style="font-size:33px;fill:#d9271b"
+       id="text44"><tspan
+         x="691"
+         y="559"
+         id="tspan42">THOUGHTS</tspan></text>
+    <text
+       style="fill:#000000"
+       id="text50"><tspan
+         x="414"
+         y="377"
+         id="tspan46">CORE</tspan><tspan
+         x="414"
+         y="400"
+         id="tspan48">BELIEFS</tspan></text>
+    <text
+       id="text54"><tspan
+         x="415.5"
+         y="266"
+         id="tspan52">YOURSELF</tspan></text>
+    <text
+       id="text58"><tspan
+         x="298"
+         y="462"
+         id="tspan56">OTHERS</tspan></text>
+    <text
+       id="text62"><tspan
+         x="533"
+         y="462"
+         id="tspan60">FUTURE</tspan></text>
+  </g>
+</svg>

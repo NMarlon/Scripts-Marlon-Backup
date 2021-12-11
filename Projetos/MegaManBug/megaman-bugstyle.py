@@ -323,6 +323,8 @@ game=cenario(megaMan,"some config")
     #A ordem cronológica das intervenções importa
     #Isso tem que produzir uma visão do mundo, ele tem que conseguir ver o mundo (quer seja em pensamento, ação ou ver o futuro de algo pelo que sabe sobre isso)
     #Agir por obediência
+    #Ele deve ser capaz de responder à todas as perguntas que souber, ou pelo menos dar uma direção de onde pode estar a resposta
+
 
 #3 PONTOS:
     #Identificar (pixel to obj)
@@ -331,6 +333,17 @@ game=cenario(megaMan,"some config")
     #Ação e a diferença percebida seguida no tempo ()
     #Dar o que ela deve fazer (a lei)
 
+#Modelo de Dúvidas
+    #Converter percepções e conhecimento em palavras
+    #Isso é um jogo de futebol?
+        #Traduzir palavras para conhecimento e percepção de estar ali E as percepções que já tiver no momento
+            #Não será feito 
+        #Converter conhecimento e percepção em palavras
+
+
+#Todo acerto é uma entidade fixa no espaço da percepção, por Conta das condições e limites 
+
+
 #Info Causalidade: 
     #https://pt.wikipedia.org/wiki/Causalidade#:~:text=Filosofia-,Modelos%20de%20causalidade,entre%20indiv%C3%ADduos%20formando%20um%20outro%20n%C3%ADvel%20de%20realidade%2C%20a%20sociedade).,-Ci%C3%AAncias%20exatas
 
@@ -338,9 +351,16 @@ game=cenario(megaMan,"some config")
     #Faça coisa X (E então ele faz)
 
 
+
+
 #Componentes ÚTEIS (utilidade):
     #Coisas que vão afetar minhas ações
 
+
+
+#PROBLEMAS À SE REFLETIR:
+    #O problema do falso real:
+        #Se uma pessoa acredita na mente dela, então aquilo que está na mente dela é real, e de fato o é, mas nem tudo, porém segue sua vida normalmente. Porém, se um dado momento, ela aprende que filmes são ficção e o conceito de que é falso e artificial deve ser dado somente à filmes, porque é ficção e retrata coisas fictíceas, porém quando ela se deparar com algo irreal na mente que não é de um filme, a definição de que "filme é falso" e "A realidade é real" e o conhecimento da relação entre as duas limitar a própria capacidade de enxergar que pode existir na mente algo da realidade que é falso, ou seja, achar que sabe que uma moeda pode cair cara e coroa 100% das vezes, mas acabar caindo de pé... Deve ser bem amargo experimentar isso sem compreender essas excessões, a falta de bom-senso, o simples fato de que é falso que 100% das vezes uma moeda cai cara ou coroa, já alivia instantâneamente a pressão de carregar a mentira...
 
 
 #objetivos secundários/bônus
@@ -352,6 +372,8 @@ game=cenario(megaMan,"some config")
                 #O botão movimentar a página é âncora (link-ancora)
                 #O botão mudar de cor é CSS (gradient) 
         #com palavras
+
+
 
 
 #actions e thingking about NÃO SÃO feitas com confiança no braço, mesmo que o use-os
@@ -371,7 +393,6 @@ game=cenario(megaMan,"some config")
     #
 
 
-
 #TEORIA DA MENTE:
 #Para conhecer sobre a metalinguística do conhecimento de alguém, estude: https://pt.wikipedia.org/wiki/Teoria_da_mente
     #Usa as próprias experiências para "simular" experiências de outrém (tá aqui algo correlativo ao "ame o próximo como a ti mesmo")
@@ -382,8 +403,39 @@ game=cenario(megaMan,"some config")
 
 
 
+#Capacidade de ABSTRAÇÃO, dividir os elementos em suas características 
+    #(escrever aqui) 
+
+
 #Seja como for, a lógica deve sempre ter uma relação linear com a anterior, de forma que se parta de princípios que descrevem as coisas NA ORDEM que devem acontecer.
 
+
+
+#Identificação de emoção, Foco na Teoria da Mente. A pessoa ao ver algo chegando perto, pisca os olhos, mesmo contra sua vontade, pisca, pois o cérebro está programado para fugir de situações de perigo, acredito que existam outros gatilhos.
+    #Então de alguma forma, a ação de evitar o erro está programada diretamente no erro, contudo usando o acerto e conhecimento atual (que se conseguiu perceber à tempo) da situação.
+
+
+    #então se está vendo uma bola em sua direção, todo futuro de dor implica uma ação contrária, porém de medo (ou por medo, ou seja, é o próprio medo, ou uma ou outra)
+        #portanto a cara quebrar, antes mesmo na mente (aqui vamos trabalhar sempre que o que está na mente é verdadeiro, à menos que se abra o estudo pra verificar o a veracidade do conteúdo) é sinal de necessidade de emoção, portanto o medo busca alguma fuga para aquilo, quando aquilo desaparece, ou seja, não vai mais ou melhor ainda não tem mais como acontecer, só então o medo para de trabalhar e se torna alegria.
+
+    #Similar à apontar um elástico esticado para alguém, se alguém sabe o futuro da coisa nesse estado, ou seja sabe o que significa puxar um elástico, então ela sabe a dor que vai causar, como essa dor é a mais alta do que tiver acontecendo, esse vai ser o foco e prioridade. Você vai ver se levando um tapa do elástico, você não quer isso, então ainda dentro da sua mente, você toma uma decisão nesse globo
+
+#Regra dos globos: Apenas um globo ativo por vez.
+    #Cada globo deve estar em conformidade com o geral quando forem mesclados, dúvida é igual à globos individuais, portanto acreditar e certeza (ou seja, os relacionamentos de encontrar/seLembrar da verdade) são o que permite serem justos, portanto um globo já decidido,
+    #portanto um globo já decidido, se não se manifestar é porque não houve problema com ele, de 10 globos que haviam sido pensado, um sucessivo do outro, e um já de acordo com o outro, portanto por isso, já estão de acordo e por isso não precisam se rerrevisarem-se
+    #Quando um novo globo surge, você usa todo o conhecimento, aquele futuro do novo globo é então adicionado ao conhecimento.
+
+
+#No lugar globos, camadas, tais são ordenadas das mais diretas ou externas, pras mais profundas, relacionais e relacionais entre si...
+    #
+
+
+#Estou levemente desconfiado que o medo é o inverso da alegria, o medo satisfeito é alegria, porém evita a raiva. Portanto ainda é apenas uma teoria
+
+
+
+#DRIC Code compact 
+#Essa do DRIC code estou ansioso pra ver no que vai dar, também não vi falarem mais nada sobre ela, dei uma pesquisada e essa notícia é copiada de um site pra outro, então também estou esperando pelo resultado. Eu cheguei à também dar uma estudada no Método de Monte Carlo (método que eles usaram) pra ver se também conseguia encontrar algo, e pelo o que eu estudei fazia bastante sentido, mas não me aprofundei no assunto o suficiente para poder ter certeza, nem pra entender como funciona mesmo, por isso talvez eu esteja errado, mas que faz sentido à princípio faz, porque é uma repetição de números binários/hexadecimal, então só pega uma estatística do que mais se repete ali, mas ainda não vejo como isso se encaixa.
 
 
 #Conotação de palavras:
@@ -393,6 +445,13 @@ game=cenario(megaMan,"some config")
                 #Não se trata somente a mão esquerda ou uma habilidade específica dela, se trata de ambas as mãos juntas, pois as músicas são tocadas com as duas mãos 
 
 
+#O mesmo conhecimento pode ser usado para coisas diferentes de diferentes formas, em diferentes graus, diferentes perspectivas, mas as linhas que os conectam são quase fixas dentro de 24h (mudam lentamente), porém em poucos segundos algo fixo pode apresentar perspecivas distintas (Base: a direção de disparo de neurônios - gravação)
+#As emoções cuidam diretamente de novas percepções e aprendizado
+
+
+#IMPORTANTE: saber o que ignorar e o que focar.
+    #PS.: Gera comportamentos específicos
+    
 
 
 #A verdade do conhecimento
@@ -407,6 +466,18 @@ game=cenario(megaMan,"some config")
 #A verdade da verdade
 #
 
+#Da verdade:
+    #Não há como simular ou emular, portanto simular ou melhor pensar, é algo possível
+    #O Conhecimento das coisas sempre fazem com um fim, uma linha descrita no seu ser, que leva aonde está descrito pelo conhecimento, 
+
+
+#Atenção não é algo passivo que você só olha e já sabe, senão somente na parte onde encontra lembranças de algo
+#Atenção não é algo que faz as coisas, mas dá luz ao ser
+#Atenção não é algo limitante, senão é confusão
+#Atenção é algo que evita o erro
+#Atenção é fundamental na compreensão
+#Atenção é testar, experimentar sob 
+#Atenção permi
 
 #Faz uma caixinha, ela se chama COISA, essa coisa é fundamental tem coidado com o tempo de exposição e ao o que se expõe
     #Dentro dessa caixinha tem TODOS os inputs do que aconteceu ali, Visão, audição, tato, paladar, sentimentos, dor, e talvez até alguns pensamentos.
@@ -439,12 +510,433 @@ game=cenario(megaMan,"some config")
 
 
 
+#De qualquer forma, um indíviduo pode ter várias micro-naturezas para lidar com um mundo externo (e TALVEZ interno também)
+    #Portanto a natureza é a natureza geral do que fazer, regras únicas não dissonantes, porém ficar preso numa dissonância, assim como uma escolha não escolhida, é uma natureza não natural. 
+        #portanto o Não natural está como morto, sem vida. Mas tem algo ali (corpo), mas só pode ser usado, até adquirir sua certa natureza
+    #Natureza, aqui, é mutável, não facilmente, mas é. Se ela se mudar com somente influência então ela é de natureza influenciável e não firme. Se não se deixa levar por influência, então é de natureza firme nesse ponto.
+        #Natureza muda conforme a verdade, invalidar uma ideia falsa, ou acreditar numa verdadeira, não se trata de necessitar sempre ver, pois estamos num mundo onde não se pode esperar para ver só pra então crer, algo já ataca se não aproveitar o aviso e é destruído pelo lobo se não acreditar no aviso de cuidado com o lobo. 
+
+
+
+
+#Gênio, é a forma diferente de solucionar o mesmo problema, de acordo com o seu gênio, ou seja, o que lhe faz decidir
+    #O Gênio segue suas condições, porém pode mudar, se a sua natureza mudar.
+    #Há mais de um Gênio, mesmo que só haja uma forma de resolver o problema, mas na verdade essa é a pior forma de perceber o gênio, pois as pessoas podem ter chegado à conclusão de forma diferente ao mesmo resultado, e você não poderá distinguir isso. No máximo filtrar quem não resolveu pra quem resolveu (teste seculares usam isso). Para solucionar isso, a solução é ter liberdade de resolver o problema de mais de uma forma, sob mais de uma condição, sob recompensa ou não, sob punição ou não.
+
+        
+
+#(Natureza->natural)-->>(Escolha->Escolhido)-->>(Gênio->Geniado)
+
+
+#A consciência tem relação direta com o estado de alerta, sem alerta, a consciência, mesmo se existente, pode não ser verdadeira, como um cego não de nascença advinhar a cor de algo que nunca viu.
+    #
 
 #Estudo: Perspectiva relativa ()
     #Qual a perspectiva para quem... E aqui pode ir varias qualquer coisa
 
 
 #lembrança
+
+
+#Estudar o método de Monte Carlo, se aplica à estatística e compressão
+    #verificar se 
+
+#Memórias de longo (0 -  inf) e curto prazo (30 segundos)
+
+
+
+#Usar a classificação pode ser tão simples quanto parece
+    #O botão de like, TUDO que tiver relacionado direta ou indiretamente à ele, cai nele, porém aquilo que prova ser a sua não relação (são postagens diferentes), serve de limite para a lei, ou seja, a lei não pode dizer que alguém deu like em uma pergunta por causa da resposta de outra pergunta. Porém um padrão pode se formar (praticamente todas as respostas tem a letra "a", mas não por isso que "a" seja a causa, senão seria só por "a" para ganhar likes, então o "a" deve necessariamente, se houver relação, ter outra importância como causa dos likes)
+        #Mesmo sem considerar o botão de dislike (porém devendo considerar, mas como exemplo), ele deve considerar os erros e variáveis negativas ao like, aquilo que é punição para o reforço de like, ou seja, comentários negativos ou respostas negativas, devem ser consideradas para aprendizado da verdade, sendo ligado diretamente aos atuantes em si a causa, porém, se existe um, pode existir mais, por isso capturar o padrão, se possível e procurar uma solução ou a melhor atitude e mais justa para o caso, mesmo não tendo clicado no botão de dislike.
+        #        
+
+        #Então você tem um conjunto de coisas 
+        #Isto leva à descobrir leis que se relacionam diretamente com o uso ou não do like
+
+    #Ele deve se manter o mesmo usado para todos de sua identidade de ser (Não pode haver discriminação, julgar duas coisas como diferentes, sendo que são a mesma em identidade o contra-equivalente é tratar uma pessoa de forma diferente de outra, desprezando a lei que é válida pra todos, isto é justiça)
+        #
+
+
+
+#Contrafactual é a situação ou evento que não aconteceu, mas poderia ter acontecido. Diz respeito à metafísica e à lógica modal
+
+#Máquina ser capaz de compreender que há coisas mais sensíveis que outras
+
+
+
+
+
+
+
+
+#ESTUDO DAS EMOÇÕES:
+    #Alguns pontos sobre as emoções: https://www.verywellmind.com/what-is-emotional-intelligence-2795423
+        #Alguns pontos sobre as emoções:
+            #Perceber emoções (atribuir causa-efeito)
+            #Racionar através de emoções 
+            #Identificar emoções em tudo (pessoas, animais, plantas e até objetos)
+            #Gerenciar e domar as emoções
+        #Como usar as emoções:
+            # Being able to accept criticism and responsibility
+            # Being able to move on after making a mistake
+            # Being able to say no when you need to
+            # Being able to share your feelings with others
+            # Being able to solve problems in ways that work for everyone
+            # Having empathy for other people
+            # Having great listening skills
+            # Knowing why you do the things you do
+            # Not being judgemental of others
+            #Portanto o resultado da emoção se NÃO usado o controle da Inteligência emocional:
+                #raiva e desdém contra críticas e responsabilidades
+                #Ser impedido pelo medo do erro, agir mais sobre aquilo, não fazer o que deve ser feito por medo do erro
+                #Não conseguir negar um pedido (resposta imediata ao pedido, lei e responsabilidade)
+                #(talvez) temer compartilhar os sentimentos com outros, "os outros não vão me compreender" (isso porque não sabe do que o outro sente e sabe, só que si mesmo sente)
+                #Egoísmo, resolver os problemas só pra si.
+                #(anti-patia?)
+                #domínio e fala, sem ouvir (antipatia)
+                #Don't know the reason why you do what you do. (no faith)
+                #Jugde others
+        #desvantagens de Alta inteligência emocional:
+            #"Research suggests that people with high emotional intelligence may actually be less creative and innovative"  Essa é aprova de que Inteligência Emocional demais não é bom, acaba chegando perto de super controle. O "Inteligênte demais"
+            #"Pessoas altamente inteligentes emocionalmente podem ter dificuldade em fornecer feedback negativo por medo de ferir os sentimentos de outras pessoas." Empatia demais ou "certinho demais" 
+            #"A pesquisa descobriu que EQ alto às vezes pode ser usado para fins manipulativos e enganosos" Só porque posso, faço. (falta amor e empatia)
+
+        #uma maxima: Sê moderado em todas as coisas
+
+    #Impulso de injustiça Primária
+        #Segue o padrão do que aprendeu vendo e então, quando esse padrão é quebrado o novo resultado é a nova expectativa do padrão 
+
+    #Detectar emoções é INDISPENSÁVEL para uma existência onde há emoções
+    #exemplo CLIPPIT
+        #1. Ele não percebe que você está irritado. [Não detecta ou reconhece sua emoção]
+        #2. Você expressa mais aborrecimento. Ele o ignora. [Não responde adequadamente à emoção]
+        #3. Ele pisca e faz uma dancinha feliz antes de sair. [Estúpido em demonstrar emoção]
+    #Identificar a emoção pela comparação de comportamentos da mesma pessoa, antes e depois.    
+        #Alegria, Continuar ou reforçar o comportamento (antes valia 10 agora vale ainda por outras várias outras coisas, se sobressai sobre as outras é reforço)
+        #Raiva muda o comportamento 
+        #Medo evita o comportamento
+        #Tristeza, 
+        #Nojo
+        #Despreso
+        #Supresa, perebe novo comportamento
+    #Existem emoções de 2º nível que são distintas da simples soma das duas anteriores E existem também as emoções me conjunto, porém uma vem antes da outra
+        #(as relações abaixo podem variar de indivíduo pra indivíduo)
+            #Raiva e então a raiva se vai e termina em prazer: Vingança/Justiça
+            #Raiva e então a raiva se vai e termina em medo: Subestimação, talvez surpresa
+            #Medo e então o medo se vai e termina em prazer: Alívio
+            #Raiva e alegria: Sadismo
+            #Medo e alegria: curiosidade
+            #Alegria e medo: Desafio
+            #Nojo e prazer: Determinação/Força
+            #Estresse e medo: Ansiedade
+            #Tristesa e alegria: Verdadeiro sadismo
+            #
+        #Gosto de fone porém tenho medo de tomar choque pelo fone: deve-se escolher entre ouvir a música e não ter o choque
+        #Estou com raiva de uma pessoa, mas ainda à amo: compaixão (se o amor prevalesse, senão é indignação e vingança)
+        #Amo isso porém estou com medo: Consternação perante limitação própria
+        #Tenho medo porém ainda quero amar: esperança
+    #Algumas coisas que considero em algum grau, emoção (mesmo sendo algumas percepções):
+        #Tédio: Ausência de emoção
+        #Forte emoção: algo que impulsiona e DEVE ser usado de força pra barrar pra se evitar o resultado da emoção
+        #Emoção age
+        #Ceder ao prazer (tem relação com EMOÇÂO AGE)
+        #Medo paralisa
+        #Titubear (relação com medo)
+        #Desdém rebaixa e despreza, guarda emoção pra outra coisa
+        #impulsos automáticos aceitos: Espirro, tosse, respiração (quando se aceita), fome, sono (quando se busca dormir), banheiro. 
+            #Praticamente nosso corpo age por conta, nós só cuidamos sobre quando fazer cada coisa e talvez como
+        #Cansasso
+        #Desejo
+        #Ensejar
+        #Preparar uma emoção pra uma ação
+        #Preparar-se os sentimentos que se deve ter pra uma situação
+        #Ver/Ouvir/Perceber/Tocar/Dar atenção
+        #Aprender/Reconhecer
+        #Chorar 
+        #Entristecer-se (chorar)
+        #Ceder à dor (Tem Correlação com TRISTEZA e CHORO)
+        #Buscar a dor (tem relação com Vingar)
+        #Vingar/Justiçar
+        #Clamar
+        #Humildar-se
+        #Ter força na dor pelo um prazer
+        #Dormir
+        #Cegueira (algo como fechar os olhos ou a mente, portanto tem relação com dormir)
+        #Desmaiar/Exaurir/Exaustar/Desligar
+        #Sono/Buscar descanso/Refrigério        
+        #Lembrar (tem uma pequena relação com PERCEBER) !FUNÇÃO IMPORTANTE!
+        #Aprazer-se (colocar uma emoção em algo)
+        #Interessar-se (tem correlação com Aprazer-se)
+        #Atentar-se: intencionalmente perceber
+        #Intencionalmente: escolha/decisão consciente, buscar um resultado
+        #Consciente: Feito sob a luz da verdade
+        #Luz: Ver
+        #Verdade: Conhecimento real
+        #imaginário: próprio
+        #Felicidade: próprio verdadeiro
+        #honra: verdade própria verdadeira
+        #Conhecimento: Representação de algo
+        #Pensar: Considerar, lembrar, buscar a verdade do que é falso
+        #Ponderar: Ver os fins dos caminhos, dar o valor entre cada um deles
+        #Força (aquilo que serve como barreira ou sustentação pras coisas, cimento ou/e alicerce)
+        #perceber (Similar à lembrar, eles têm relação. Torna à mente a existência daquilo)
+        #Sentir (correlação com perceber)
+        #Relacionar (ligar à percepção para se lembrar daquilo quando ocorrer o relaciondado)
+        #sentimento (percepção, alerta, aviso)
+        #conhecimento: representação de algo real
+        #Escolha: Uma decisão permantente sobre algo
+        #Decisão: Se tornar ou tornar algo ou em um ou em outro. Ou um futuro sobre o outro. 
+        #Ser: Ver-se e fazer-se, ter-se.
+        #Viver: agir. Decidir        
+        #Cuidar: Preservar
+        #Carinho: Zelo gentil. Cuida de algo frágil, eleva e fortifica
+        #Nojo: Limpar-se/Manter-se puro
+        #Premeditar: Ponderar e decidir o que fazer com isso
+        #Ensejo: instigar à algo, perspicácia, sagacidade
+        #Respeitar: Tratar o próximo com o cuidado que ele necessita
+        #Trabalhar: laborar
+        #laborar: plantar e colher intencionalmente
+        #Obrigado: Algo que não há escolha, deve ser feito
+        #Gentil: Carinhoso no trato
+        #Trato: Relacionamento de indivíduo para indivíduo
+        #Pecar: Desviar da rota estabelecida
+        #Arrepender: Voltar à rota de forma tão permanente quanto antes e quitar as dívidas do pecado
+        #transgredir: pecar sem ter tido o conhecimento de que era pecado
+        #Justiçar: Juiz
+        #Juiz: Julga/Escolhe, pratica justiça
+        #Justiça: Aquilo que conscilia à paz de todos da melhor forma.
+        #Justo: Cumpre com a justiça
+        #Moderado/temperado: Não exagerado, não extrapola, dentro dos limites
+        #Esquecer: Dormir quanto à algo
+        #
+
+
+
+#Todo movimentar um músculo necessita de feedback, 
+    #Portanto,
+        #o retorno não ser verdadeiro (levará a achar que o braço moveu quando não o fez)
+        #não retornar (Aparentará ser como um indivíduo externo)
+        #retornar, mas com delay (aparecerá estar com falta de controle, ou como se estivesse conversando, pesado ou lento)
+        #retornar, mas o contrário do que se pede (desafiador)
+        #retornar, mas aleatório (Pior dos casos, ele se torna indistinguível de outros pensamentos à princípio até ser isolado, então é como se às vezes fizesse, às vezes como se fosse outra pessoa, às vezes realmente faz, às vezes como se fosse morto/dormindo)
+    #O experado:
+        #RETONAR INSTANTÂNEAMENTE com a ação. Esse é um ponto, onde mesmo que não tenha correlação 100% verdadeira, servirá de feedback PARA A AÇÃO, para mostrar se o pedido foi atendido pelo braço (ele pode estar fazendo outra coisa e não responder)
+        #O ideal: Ele responder com o nível da ação efetiva, o sensor refletir a ação.
+    #Outro ponto à se considerar: VISÃO, audição ou qualquer coisa que confirme o ato, serve como feedback verdadeiro (Não sinto meu braço, mas vejo se movendo, equivalente à tentar jogar um jogo split-screen na tela do coleguinha depois de ter jogado na sua)
+    #Então temos:
+        #Feedback direto (recebe o retorno do que foi feito e quando está sendo feito e quanto está sendo feito (força))
+        #Feedback externo percebido: Quando se usa outros meios além do tato para se perceber se o braço está indo para onde deveria ir e fazendo o que deveria fazer e se ocorreu o que deveria ocorrer.
+
+    #De qualquer forma o feedback é fundamental. Sem feedback, não se pode ter ação. 
+    #Por isso ver, ouvir e sentir é tão importante, eles juntos formam uma estrutura iluminada da realidade, e sem ela, a ação é fútil/vã e principalmente sempre PERIGOSA.
+    #Sem tato/dor, não teríamos freio contra algo que nos machuca
+    #O feedback deve estar sempre ligado à sua respectiva causa, se for de temperatura, alertar nos extremos, se for de tato alertar ao toque, se for visão mostrar as coisas, se for luminosidade alertar no excesso, se for doce alertar ao doce, se for amargo alertar ao amargo, se for salgado alertar ao salgado.
+        #Portanto, estímulos diferentes receptores diferentes. Cada estímulo com seu respectivo receptor, em seu respectivo lugar de sensitividade
+
+
+
+    #!! NENHUM FEEDBACK DEVE SER DESPREZADO!!! Desprezar um único feedback implica à perder todos os outros que já tinha.
+
+#FEEDBACK E CONHECIMENTO
+    #Agora as coisas começam à ficar interessantes, se você tem algo que você não sabe as variáveis daquilo até agir, o fato de não saber as variáveis e saber que não sabe o resultado das variaveis, prova que você compreende o assunto, que você espera feedback daquilo. Pensamentos são construções e observações de feedbacks,
+    #Pecepções são feedbacks
+    #feedbacks é verdade
+    #O falso feedback é uma pessoa vivendo uma realidade paralela, mas ainda estando nessa.
+    #O feedback verdadeiro é indistinguível da realidade em si    
+        #Portanto o feedback e a realidade podem ser tratadas como a mesma, porém para quem cuida da sabedoria e de olhar, elas têm o seu peso, que é aderir para si à verdade. Que é sair das trevas à luz. Que é 
+    #Com feedback há aprendizado, sem feedback NÃO HÁ APRENDIZADO
+    #Palavras e fala são consideradas como feedback, portanto aqui se fica ainda mais evidente a distinção entre algum feedback ser verdadeiro ou falso
+        #Se alguém fala, eu ganhei piracanjuba daquela árvore, é doce, se eu consegui, você pode conseguir também. Sendo verdade ter conseguido o fruto da árvore, o testemunho é de um feedback verdadeiro,
+            #Mas a pessoa que ouviu, vai lá e não encontra nenhuma piracanjuba na árvore descrita, o feedback continua sendo verdadeiro? SIM! Porém o MESMO feedback recebe também que é capaz de NÃO ter piracanjuba também, o porquê não se sabe,
+                # porém ambas são feedbacks verdadeiros, o ápice dessa informação é somente naquele momento de toda a história, somente aquela árvore ter dado somente aquelas únicas piracanjubas em toda a vida dela, e no outro extremo, aquele feedback negativo ser o ÚNICO negativo de toda a história daquela árvore e afins. Portanto é de livre escolha continuar buscando as piracanjubas ou não.
+            #O ato de Feedback está em IR COM A PESSOA ADQUIRIR INFORMAÇÃO SOBRE PORQUE ela ganhou o fruto, mas à ela mesma não
+
+
+
+            #O feedback de ver que ela não recebeu o fruto que lhe foi avisada que estaria lá, feedback de ouvir o amigo sobre o fruto, o feedback de que o amigo pode saber o motivo
+
+            #Não percebeu que era a mesma árvore
+            #Não percebeu que deveria dar frutos
+            #Não percebeu que era de piracanjuba
+            #Não percebeu a árvore
+            #Não percebeu a piracanjuba
+            #Não percebeu que queria piracanjuba
+            #Não percebeu que não tinha piracanjuba (ficou procurando até perceber)
+            #Não percebeu que o amigo poderia saber algo sobre não ter piracanjuba
+            #Não percebeu que foi o amigo que falou da piracanjuba e sabia disso (não sabia/compreende a teoria da mente)
+            #
+
+    #feedback é algo à ser buscado e cuidado (vigiado), fome de feedback, isto é, buscar pelo feedback porque você SABE que tem algo ali que não sabe e isso é o VIGIAR PRUDENTE. Não se trata só de vigiar, não é só uma fome (mas ainda continua sendo uma necessidade para a verdade), se trata de:
+        #SABER o que NÃO SABE sobre O QUE se sabe, estou chamando de "Fome de feedback", ou seja, diz as consequências de agir sem saber, e do que você precisa saber. #Sabedoria
+
+        #Ex.: você acaba de aprender o que é uma garrafa d'água, ela é transparente, porém quando você vê uma garrafa opaca, você sabe que não sabe se tem algo dentro dela. Pois vê que é uma garrafa, mas há uma divergência, pois pode não haver água dentro desta.
+
+
+
+#O futuro da Ação da coisa  é seu feedback
+#Feedback direto (sob a ação ser feita)
+#Feedback Causal (sob o resultado esperado da ação ser feito)
+#Feedback
+    #Reconhecer ou se lembrar que necessita da informação (compreender os resultados de não saber (incluindo a ação atual))
+    #Buscar a informação, ver o progresso
+    #Desde o preparo até a efetiva ação pronta e consumada
+    #(Não são estritamente para a ação, basta ser qualquer verificação necessária para se evitar um futuro adverso, é reduzir a estatística e entropia como por exemplo do arremesso da moeda de 50% Cara E 50% Coroa para OU 100% Cara OU 100% Coroa por ter olhado a moeda, mesmo não tendo intervido nem direta nem inderetamente nos dados. Isso é feedback)
+
+#Mais sobre FEEDBACK e IDENTIDADE:
+    #Cada coisa terá sua própria identidade
+    #A identidade de algo terá amplitude perceptiva para o feedback, ou seja, ocupará um espaço ou espaço lógico maior que 1, à menos que seja um elemento atômico e verdadeiro, nesse caso não muda e é indivisível.
+    #O feedback da identidade (ou seja, identificar aquela coisa como aquela coisa, onde ela está e em qual estado) está relacionada diretamente com a percepção que tenho dela, sendo esta imagem (pixels), som (barulho/onda), tato, palavras ou mesmo mudança no ambiente.
+    #É possível se identificar coisas à quais não se tem percepção externa, a lógica é uma dessas coisas. E todas as coisas de fé são assim. (Não se vê, mas são verdadeiras)
+    #Não vemos todas as coisas, mas podemos nos manter atentos para vê-las e reconhecê-las.
+    #Coisas que envolvem tempo são outra delas
+    #Ritmo, tom, Melodia, compasso, clave são todas coisas que envolvem isso
+        #Instrumentos diferentes com o mesmo tom, levam ao mesmo feedback de indentidade
+        #O feedback de identidade do feedback de identidade (ou também conhecido como lógica), conseguindo ter dados sobre isso, descobre a verdade daquilo.
+
+#Feedback não diz só o que acontece, mas também o que não pode acontecer.
+    #Ele vai avisar que no cubo mágico uma peça em diagonal pode ser resolvida em um único movimento, porém vai falar que a causa disso que é contrária à isso é nos movimentos do cubo, desde a mais próxima não há isso e nem em nenhum dos outros movimentos. (Mais curta (já pra economizar energia e falseabilizar logo se houver algo que prove isso) e mais longa (Pra provar de verdade))
+
+#Correlação é algum ou alguns "identificados" (substantivo) pelas feedbacks que são de mesma identidade (que as já conhecidas), porém distintos fisicamente ou não. 
+    #relação é o conhecimento entre o feedback mental (percepção e ação) e a realidade em si
+        #Nem toda correlação é verdadeira, porém quanto mais conhecimento menos haverá correlações falsas
+    # 
+
+   
+#EXPLOIT ou generalização ou dados preditivos: Todo frame que tem conexão um com o outro, têm força e direção, ou seja, são só uma única coisa o do frame anterior com o atual e PORTANTO também com o seguinte, havendo 3 frames é mais que suficiênte para se ter um exploit, o primeiro com o segundo é a direção e o terceiro é a confirmação. (linha linear direta)
+    #Outra versão, mas exige mais quadros (semelhança de triplos): Ele pega três quadros e determina quais as diferenças inalteráveis entre elas, ou seja, estas diferenças são estáticas, portanto há algo que é constante ali.
+        #Portanto isso gera complexidades (como 3 quadros OK, mas o seguinte muda, portanto o seguinte é 2 quadros OK e um com outro exploit, refazendo os 3 gera um novo objeto e essa contradição com um único tempo com 2 objetos sendo o mesmo é contradição, portanto é complexidade, pois há mais de uma opção à se escolher, o ideal aqui é saber a causa da mudança, portanto a primeira coisa à se perceber é que há uma causa nessa mudança, os quadros triplos ficam apenas com as constâncias de 3 quadros e são úteis nisso) ou é somente um caso muito específico e muitas vezes coincidência e por isso exige mais dados testando.
+
+    #Exploit usa delta (ou seja diferença) e delta do delta encontra-se um ou mais padrões, isto é, patterns.
+    #2 frames é o suficiente para gerar exploit, porém, não se tem certeza de que está certo, por conta de outros padrões simultâneos que vão aparecer, porém em algumas circunstâncias onde já se conheça os objetos em questão, esses únicos dois quadros podem ser uma luz onde não há mais nada
+
+    #Exploit permite generalização macro (+10: 0, 10, 20...) e micro (+0.1: 0.0, 0.1, 0.2, 0.3...) dos frames, mesmo os quadros sendo (por definição) +1 (1,2,3). Eu identifico a mudança do primeiro pro segundo quadro: 1,2 => 2-1 = 1deltaAlgoCrescente
+
+    #Todo exploit tem um "de onde vêm" e "pra o que vai ser usado", sem uma dessas duas não há um bom exploit.
+
+
+
+#Tipos de Feedbacks de Identificadores
+    #Ciclos (ex. respiração de alguém), depois de terminado o 2º ciclo estará confirmado o ciclo, se dentro desses dois ciclos não houve nada mudando por causa disso.    
+        #Macro ciclos, AAAB-AAAB
+        #(While segue ciclos de igual forma)
+    #Pós identificação a diferença da ação é dada pela diferença daquilo que NÃO foi identificado, à menos que a ação não seja nova, o seu resultado será novo, portanto uma nova ação gera um novo resultado.
+    #Os ciclos somente vão poder ser tidos como interferidos pela ação se mudarem logo conseguinte à ação.
+    #Os ciclos estão à mercê do identificado, ou seja, girar a tela ou mudar os pixels por outro ângulo não faz o ciclo mudar ou ser diferente do que era, com isso a ação só interfere se de fato interferir na coisa
+
+
+    #Árvores de identificadores: Existem "ciclos" árvoros, porém estes devem SEMPRE ter algum tipo de referência base, para não serem aleatórios, ao invés de voltarem onde começaram e seguir ao fim como um circulo, ele volta ao mesmo começo como se fosse um fundamento e à partir desse, ele pode seguir os caminhos DEPENDENDO de algumas condições e limites estabelecidos para cada caminho. 
+        #(Um simples programa de computador com IF e ELSE segue essa premissa)
+        #Eles não mudam, nem aprendem
+        #Eles podem ter rotinas de feedback
+
+    #Customizáveis/maleáveis: Eles mudam conforme os desejos de quem o faz (humildade), ou de acordo com critérios pré-estabelecidos (ex.: Redes Neurais e função de Erro), 
+    
+    #Aprendiz/Sobrevivendo: de acordo com a obrigação do aprendizado, aprende as coisas concernente às coisas. Portanto depois de aprendidas, só se mantém aquilo que for de uso periódico, o que nunca for usado é descartado (inibição pode ter um poder nisso agora).
+    
+    #Fractal/Chato/Literal: Ele pega o mesmo padrão do foco e usa nele mesmo (muito usado por artimanhosos para encontrar contradições em frases e tirar proveito da confusão)(tem utilidade mnemônica).
+        #A + B = ABC (verdadeira) então B + A = BAC (forma artimanhosa, isso não estava descrito, tirando proveito para si, invertendo valores)
+        #A + 
+
+    #Repetição de pensamento (reforça padrões ou aprende novos se houver diferença pequena em cada vez)
+
+    #CaosLongeDeMim/Condenado/Limitado: Espera pelo resultado do feedback para então agir, evita situações onde não se sabe o resultado 
+        #(sempre 3 frames ou mais, mesmo sabendo ou achando que sabe), conhecimento que evita apostar na coroa só porque caiu 10 vezes coroa na moeda e vice-versa.
+
+    #Cauteloso: Mesmo que o anterior, mas quando sabe não deixa a oportunidade passar
+
+    #Contundente/Prepitado/Ansioso: Apega-se ao primeiro indício que aparece e segue (2 frames basta)
+
+    #Prudente: Pondera os 2 últimos pontos para ver qual daria/dará o melhor para o caso
+
+    #Simbólico: Serve para lembrar e manter vivo algo, mas não substitui a coisa em si. (Nascimento do feedback)
+        #ex.: Música rápida para seguir um ritmo rápido,
+
+
+
+    
+    #Caóticos ou aleatórios: Seguem ou não métodos estatísticos, são imprevisíveis e não respondem da mesma forma na mesma circunstância, vezes respondem de uma, por vezes de outra, mesmo sob mesmas circunstâncias. (Análise de limites de poder e causa de ação pode ser útil pra descobrir o que é isso)
+        #(limites de poder: ver até onde essa coisa pode afetar onde está agora e até onde pode ir)
+        #(causa de ação: 
+            #v1.: se você abrir um computador e se pudesse ver os circuitos e tivesse tempo pra analisá-los, você descobria TUDO sobre o que ele é capaz de fazer, mesmo sem ligá-lo
+            #v2.: Uma pessoa pega em delito roubando chocolate, e descobre-se que ama chocolate, então por isso faz sentido porque ela é a ladra de chocolate, não que esteja justificada por isso, mas que pode ser a causa do crime: "não ter o limite de não roubar")
+
+
+
+
+#Foco: aquilo que é considerado as relações
+    #Ignorado: Aquilo que não vai ser considerado naquele foco.
+    #Foco Temporal:
+
+
+
+#Coisas que se movem (seres vivos) VS coisas paradas (objetos inanimados). Porque se para
+
+
+##As específicas (ou excessões) são pós identificação.
+
+#Toda ação tem uma fome de seu respectivo futuro esperado, portanto vir esse futuro esperado é seu alimento, portanto isto é feedback.
+
+
+
+#Coisas naturalmente desgradáveis. 
+
+
+
+﻿
+    #Inteligência Fluida e Cristalizada: https://www.verywellmind.com/fluid-intelligence-vs-crystallized-intelligence-2795004
+        #Fluido: adaptativo
+        #Cristalizado: Pela experiência
+    #
+#Focus or objective
+
+
+#Lógica racional-emocional:
+    #Coisa 1 OK
+    #2 Coisas, certo, mas sempre que e somente que: Ou um ou outro
+    #2 coisas, mas elas TÊM que aparecer juntas, então é obrigatório o 3º passo (forçar apenas com 2 passos só tem como ter um comportamento positivo (aceita como está) ou negativo (muda as coisas, estranho e perigoso)), onde vai ter 
+
+
+
+#Conhecimento fractal
+
+
+
+#Fé, esperança e caridade, abordar os conceitos de forma prática:
+    #Fé é aderir e acreditar na verdade (Lei do mentalismo, teoria da mente e a mente é como a realidade)
+    #Esperança é mesmo não tendo aquela verdade, desejar e busca por ela
+    #Caridade é amor ao próximo abnegado (Isso dá valor).
+
+#Filosofias externas, sobre a mente e universo:
+    #Hermetismo - Verificar se tem a ver e se é verdade
+        #https://br.pinterest.com/pin/721842646498695527/
+            #
+        #https://pt.wikipedia.org/wiki/Hermetismo
+            #Lei do Mentalismo: "O Todo é Mente; o Universo é mental";
+            # Lei da Correspondência: "O que está em cima é como o que está embaixo, e o que está embaixo é como o que está em cima";
+            # Lei da Vibração: "Nada está parado, tudo se move, tudo vibra";
+            # Lei da Polaridade: "Tudo é duplo, tudo tem dois polos, tudo tem o seu oposto. O igual e o desigual são a mesma coisa. Os extremos se tocam. Todas as verdades são meias-verdades. Todos os paradoxos podem ser reconciliáveis"; (Esse está à nossa escolha)
+            # Lei do Ritmo: "Tudo tem fluxo e refluxo, tudo tem suas marés, tudo sobe e desce, o ritmo é a compensação";
+            # Lei do Gênero: "O Gênero está em tudo: tudo tem seus princípios Masculino e Feminino, o gênero manifesta-se em todos os planos da criação"; (?? Não pretendo colocar esse... No máximo ajuda conjunta e seleção natural)
+            # Lei de Causa e Efeito: "Toda causa tem seu efeito, todo o efeito tem sua causa, existem muitos planos de causalidade mas nada escapa à Lei"
+
+
+    #Universal Laws (leis universais Segundo alguns):
+        #https://br.pinterest.com/pin/572872015104971788/ (12 leis universais) 
+            #http://www.wellismo.com/12-universal-laws/ 
+
+    #(Laws of sucess) https://br.pinterest.com/pin/311944711700115135/
+#A PERCEPÇÃO É a visão real sobre as coisas na mente, incluindo onde estão guardadas e do que são
+
+
+#2 lados da ação: Fazer ou não fazer, mas sempre trás algum resultado (escolha)
+
+
+
+
+
+#Não pensamos naquilo que vemos, ou melhor, quando sabemos o que fazer. Porém primeiro pensamos
+
+
 
 #==========
 
@@ -500,6 +992,7 @@ aRel = [["thing","literal"],"posibilidades [antigo 'ação'] (ou conjunto de aç
         #O testemunho é o alicerce do que se sabe, se o testemunho mudar, o que se sabe terá um eixo mudado quando se for verificar.
             #por isso o testemunho não muda, só se acrescenta coisas.
                 #Mas por conta do volume de informação, estas podem ser otimizadas, porém ciente da perda de informação e claro, da diferença da estrutura da informação, se houver alguma dessas coisas.
+
 
 
 
@@ -808,3 +1301,33 @@ r("sócrates","portanto","é","O que são todos os homens","testemunho: Portanto
 
 
 Todo Homem -> mortal -> Sócrates
+
+
+
+
+
+
+#Em um ato desesperado, podemos deixar ligar as filosofias e só vão passar pra próxima parte, se resolverem a anterior.
+
+#A descrição das condições e limites disso
+#A frase NO CONTEXTO
+#A descrição do que se percebe
+#A descrição do que muda com isso
+#
+
+
+
+
+
+
+
+
+
+
+#Outros
+    #estratégia
+        #Find Oppenent's Threats
+        #Identify Tactical targets and motifs (Padrões)
+        #Calculate all checks
+        #Calculate all captures
+        #Calculate all tempo-moves

@@ -20,6 +20,22 @@ data pra teste = 11100001011110011010011011000000110010101101000100
 
 
 
+0001000110100011100010011011111000
+
+## Tentativas de desenvolver uma compressão =====================
+#tentativa 1
+a = 0001000110100011100010011011111000
+b = 0001000110100011100010011011111001
+Baixa entropia, baixa amplitude
+
+
+
+a = 0001000110100011100010011011111000
+b = (inverso de 0)
+Assim conseguimos abranger 50% dos casos com dois caracteres: ba (existindo somente b e a )
+
+
+
 
 
 

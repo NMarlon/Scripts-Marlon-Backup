@@ -1,2 +1,27 @@
 
 My Free DB MySQL PhpMyAdmin: https://remotemysql.com/phpmyadmin/tbl_sql.php?db=zWJPUCAa9w&table=promocao
+
+
+
+
+
+
+
+
+Resposta: https://pt.quora.com/O-padrão-é-2-4-6-10-16-26-O-que-vem-a-seguir 
+(Descartar maioria, pegar somente os exemplos matemáticos)
+
+kkkk Mano… Dá uma olhada nessa sequência:
+1, 2, 3, 4, 5, 6, 7… Qual o próximo número? 8? Certo? Como não seria 8? É possível? Sim.. Mas vamos pra outros exemplos:
+1,2… Qual o próximo? 3? 
+Pode ser, afinal 1 + 1 = 2 
+2+1=3
+3+1=4… vai somando 1
+Mas… Conhecemos exponenciação também, então também pode ser também 1,2, então 4, 8, 16, 32, 64 ,128… Ou seja, 2^n. Essa também se encaixaria PERFEITAMENTE… Aqui está o primeiro ponto: faltam dados… 
+Mas os problemas de testes sempre procuram não dar problemas ambíguos, ou seja, com duas soluções contrárias válidas pra uma resposta verdadeira, obviamente se tivesse duas respostas válidas não tem como resolver o problema, estaria portanto errada a questão. Agora já duas formas diferentes de chegar à mesma solução do problema isso sim pode acontecer e até que é tolerável, pois de qualquer forma vai chegar na resposta e pode ter sido um lapso em gerar o problema ou mesmo pode estar reforçando alguma ideia ou padrão tornando ainda mais válida a resposta, por isso se estudam pra criar problemas com uma única resposta verdadeira, senão aí sim estaria errada, por isso ainda tem como responder. 
+Mas… Eu quero ver conseguir encontrar em qual fórmula continua sendo verdadeira em 1,2,3,4,5,6,7… SEM SER 8? Acho que a pergunta é, porque não seria? Não é exponencial à primeira vista, porque 2*2 dá 4 não 3, não tem x^n que dê um valor em sequência aritmética. Então não é mais exponencial. (não negando que n ão exista um padrão que use exponencial), pois pode ser x^0+x, ou seja usou de forma meio complexa algo que simplesmente pode ser f(x)=x | x >= 1. Assim a resposta continua sendo 8. Mesmo que existam outras formas válidas de resolver o problema que não deem 8, só vamos estar complicando o negócio simples. Porque duvidaria do meu amigo que me disse que está chovendo onde ele mora? Preciso eu ir lá na casa dele ver que está chovendo pra ter certeza? Não! Basta ele me falar que está ouvindo gotas de chuva nesse período nublado, mesmo com a chance de estar errado, na maioria das vezes vou estar certo e isso é melhor do que nunca estar certo por nunca ter acreditado. 
+A resposta é 8 (da sequência 1,2,3,4,5,6,7…), se não for, aprendo algo novo, se for então estava certo e pelo menos em questões similares também acertaria, se acerto em um acerta em outros de mesmo cunho. Um copo é um copo, não deixa de ser só porque outra pessoa chama de balde. Ainda posso beber água nele.
+Quem chuta qualquer das alternativas em uma prova tira notas maiores do que quem desiste de assinalar uma questão, não importa se dá pra tirar a resposta pela questão ou não, o cara do chute tem um desempenho melhor só porque se arriscou. 
+.
+Cuidado com o efeito Dunnig-Kruegger! Muito fácil cair nele
+.

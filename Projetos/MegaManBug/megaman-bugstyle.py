@@ -187,6 +187,43 @@ Bibligrafia: @stevepsychology Tiktok, Descript: "Can babies judge right from wro
 -----<
 
 
+#Representação do virtual (ou mental) com o real e vice-versa
+    #Conhecimento que é mental/virtual vs conhecimento do real
+    
+
+
+Se eu:
+
+"""
+
+#Representando um parâmetro virtual para um real:
+
+if(True):
+    print("ok")#Leia coments abaixo:
+
+#Versão REAL:
+#Modo de Representação 1 (pessoa): 
+    #Um escrivão foi instruído assim: "Quando você for chamado, se for verdade e é verdade, você tem que escrever 'ok' e mostrar isso"
+
+#Representação 2 (objeto físico):
+    #Uma porta presa aberta, com uma impressora que imprime "ok" quando é chamada pra essa tarefa.
+
+
+#Agora encontrando o que tem em comum entre os 3 casos, começando pelo que se tem em comum nos dois reais: 
+    #o 'ok' n  
+    
+
+#Agora o inverso, o Real pro Virtual:
+    ..
+
+
+
+
+"""
+
+
+
+
 
 "#
 Se conhece o resultado de uma ação, 
@@ -219,14 +256,31 @@ então se eu não for fazer mais essa ação, ou seja, colocar uma peça na posi
 
 
 """
-
+import cv2
 import PIL
 import pyautogui
+import numpy as np
+
+#V1:
+#myScreenshot = pyautogui.screenshot()
+#myScreenshot.save(r'./screenshot_test.png')
+
+
+#V2:
+# display screen resolution, get it using pyautogui itself
+SCREEN_SIZE = tuple(pyautogui.size())
+# define the codec
+fourcc = cv2.VideoWriter_fourcc(*"XVID")
+# frames per second
+fps = 12.0
+# create the video write object
+out = cv2.VideoWriter("output.avi", fourcc, fps, (SCREEN_SIZE))
+# the time you want to record in seconds
+record_seconds = 3
+ 
 
 
 
-myScreenshot = pyautogui.screenshot()
-myScreenshot.save(r'./screenshot_test.png')
 
 ###0.001| 0.099| 
 ###0.009| 0.891|
@@ -238,7 +292,7 @@ class cenario:
         print("system_cenario: "+what)
 
     def tirarArestasMapa(mapa):
-
+        print("vazio_arestas")
 
     def mapa():
         terreno=["","",""]        
@@ -285,6 +339,7 @@ class bot:
     def __init__(self, whatISee, whatICanDo):
         self.whatISee = whatISee
         self.whatICanDo = whatICanDo
+        openedEyes=True
         print("system_body: thinking...")
 
         
@@ -384,8 +439,7 @@ game=cenario(megaMan,"some config")
     # https://www.youtube.com/watch?v=1pMgry05WJg (modified)
     # https://www.youtube.com/watch?v=n9TWwG4SFWQ 
 
-    #Aqui o objetivo não é trazer inicialmente um concenso dentre as mais diversas interpretações de uma mesma questão minimalista (https://www.youtube.com/watch?v=7szPBZxBIg4), mas o objetivo é exatamente de provar que algo que parece aleatório, na verdade possui um significado, mesmo sendo sem forma, não são apenas objetos se movimentando, nem seria possível que fosse-
-        #Em resumo, há de fato um divergencia e amplitude de interpretações para um cenário genérico, mas meu foco é provar que há alguma forma de diferenciar,
+         #Em resumo, há de fato um divergencia e amplitude de interpretações para um cenário genérico, mas meu foco é provar que há alguma forma de diferenciar,
 
     
     #Se foi aquele lugar que aquilo chegou, provavelmente foi porque quis, se não houve nada que lhe a impedisse. Se foi dessa forma que ele fez, dentre outra, foi por opção. Porém a escolha sempre deve ser colocada na balança da justiça
@@ -799,10 +853,13 @@ game=cenario(megaMan,"some config")
 #Correlação é algum ou alguns "identificados" (substantivo) pelas feedbacks que são de mesma identidade (que as já conhecidas), porém distintos fisicamente ou não. 
     #relação é o conhecimento entre o feedback mental (percepção e ação) e a realidade em si
         #Nem toda correlação é verdadeira, porém quanto mais conhecimento menos haverá correlações falsas
-    # 
 
    
 #EXPLOIT ou generalização ou dados preditivos: Todo frame que tem conexão um com o outro, têm força e direção, ou seja, são só uma única coisa o do frame anterior com o atual e PORTANTO também com o seguinte, havendo 3 frames é mais que suficiênte para se ter um exploit, o primeiro com o segundo é a direção e o terceiro é a confirmação. (linha linear direta)
+
+    #Exploit direto: o delta de 2 frames (incluindo o conhecimento, portanto o exploit direto = conhecimento - o que foi visto (já identificado) - o feedback do que falta ver (portanto depois de ver) + 0 * as suposições do que pode acontecer ()) 
+        #Fazer Exploit direto SEM ainda ter recebido o feedback do que ainda falta, é também uma suposição ou um salto de fé, pois pode ter informação relevante ali ou não.
+
     #Outra versão, mas exige mais quadros (semelhança de triplos): Ele pega três quadros e determina quais as diferenças inalteráveis entre elas, ou seja, estas diferenças são estáticas, portanto há algo que é constante ali.
         #Portanto isso gera complexidades (como 3 quadros OK, mas o seguinte muda, portanto o seguinte é 2 quadros OK e um com outro exploit, refazendo os 3 gera um novo objeto e essa contradição com um único tempo com 2 objetos sendo o mesmo é contradição, portanto é complexidade, pois há mais de uma opção à se escolher, o ideal aqui é saber a causa da mudança, portanto a primeira coisa à se perceber é que há uma causa nessa mudança, os quadros triplos ficam apenas com as constâncias de 3 quadros e são úteis nisso) ou é somente um caso muito específico e muitas vezes coincidência e por isso exige mais dados testando.
 
@@ -813,6 +870,10 @@ game=cenario(megaMan,"some config")
 
     #Todo exploit tem um "de onde vêm" e "pra o que vai ser usado", sem uma dessas duas não há um bom exploit.
 
+    #
+
+#Coisas que mudam a ação têm poder transformador
+
 
 
 #Tipos de Feedbacks de Identificadores
@@ -822,6 +883,9 @@ game=cenario(megaMan,"some config")
     #Pós identificação a diferença da ação é dada pela diferença daquilo que NÃO foi identificado, à menos que a ação não seja nova, o seu resultado será novo, portanto uma nova ação gera um novo resultado.
     #Os ciclos somente vão poder ser tidos como interferidos pela ação se mudarem logo conseguinte à ação.
     #Os ciclos estão à mercê do identificado, ou seja, girar a tela ou mudar os pixels por outro ângulo não faz o ciclo mudar ou ser diferente do que era, com isso a ação só interfere se de fato interferir na coisa
+
+
+    #O TEMPO TAMBÉM É UM IDENTIFICADOR e tráz consigo informação como qualquer outro identifador, este porém é como vivo,  
 
 
     #Árvores de identificadores: Existem "ciclos" árvoros, porém estes devem SEMPRE ter algum tipo de referência base, para não serem aleatórios, ao invés de voltarem onde começaram e seguir ao fim como um circulo, ele volta ao mesmo começo como se fosse um fundamento e à partir desse, ele pode seguir os caminhos DEPENDENDO de algumas condições e limites estabelecidos para cada caminho. 
@@ -848,20 +912,70 @@ game=cenario(megaMan,"some config")
 
     #Prudente: Pondera os 2 últimos pontos para ver qual daria/dará o melhor para o caso
 
-    #Simbólico: Serve para lembrar e manter vivo algo, mas não substitui a coisa em si. (Nascimento do feedback)
-        #ex.: Música rápida para seguir um ritmo rápido,
+    #Simbólico: Serve para lembrar e manter vivo algo, mas não substitui a coisa em si. 
+        #ex.: Música rápida para seguir um ritmo rápido, ou uma música doce para um momento doce. 
+        #ex.:
+
+    #Transpassar propriedades, justiça, ou outras características que pertencem à uma identidade à um simbolo de comportamento equivalente
 
 
+    #Justiça atemporal: A propriedade de uma identidade permanecer com ela, principalmente de um objeto particular, seu potencial e futuro, seus "prefiro A sobre B", ou seja comportamentos e decisões VAI carregar consigo através do tempo dali em diante e sua história atestará isso (se não mudou, não mudou).
+
+    #
 
     
     #Caóticos ou aleatórios: Seguem ou não métodos estatísticos, são imprevisíveis e não respondem da mesma forma na mesma circunstância, vezes respondem de uma, por vezes de outra, mesmo sob mesmas circunstâncias. (Análise de limites de poder e causa de ação pode ser útil pra descobrir o que é isso)
         #(limites de poder: ver até onde essa coisa pode afetar onde está agora e até onde pode ir)
-        #(causa de ação: 
+        #(causa de ação): 
             #v1.: se você abrir um computador e se pudesse ver os circuitos e tivesse tempo pra analisá-los, você descobria TUDO sobre o que ele é capaz de fazer, mesmo sem ligá-lo
             #v2.: Uma pessoa pega em delito roubando chocolate, e descobre-se que ama chocolate, então por isso faz sentido porque ela é a ladra de chocolate, não que esteja justificada por isso, mas que pode ser a causa do crime: "não ter o limite de não roubar")
 
 
+#EXATIDÃO: O quão preciso algo precisa ser pra ser efetivo/funcionar. Algumas coisas exigem menos ou mais exatidão. Identificação também tem graus de exatidão.
+    #Ex.: O formato pra se identificar garfos
 
+
+
+#Lembrança 13-12-2021 (Inspiração: game I.Q. PSX)
+    #A lembrança é uma força tangível no sentido de não se mover perante adversidades e ações, porém tem interveção e diferença real, ela busca mostrar o que pode acontecer com as coisas, AO PONTO DE NÃO PRECISAR DO FEEDBACK, pois vai saber seu resultado, portanto o feedback, mesmo após o efeito terminado, confirma o fato da lembrança. 
+    #Temos duas coisas: Lembranças (aquilo que sabemos como é e como foi ou como vai ser) e feedback (ver agora aquilo).
+
+
+    #Os exclusivos (só acontece sob determinadas condições, se tornam suas condições e seus respectivos resultados), ações podem mudar isso, portanto a causa que causa a ação faz isso, com isso há coisas que só a ação intencional consegue causar, portanto 'intencional' é a relação causal daquela ação com a realidade (Ex.: Faço isso por causa disso (salvar minha vida/ajudar npc/cumprir quest/etc))
+
+
+    #A lembrança é algo conscientemente buscado (exclusivos da ação), ou emocionalmente imputado (exclusivos)
+    
+
+
+
+    #O que quer que seja a estrutura mental, vai permitir AGIR de forma LITERAL em sua extensão e amplitude, então se algo me atinge, a diferença que na mente eu vou estar vendo o futuro e passado daquilo.
+
+    #Os erros seguidos implicam mudar a estratégia e objetivo na LEMBRANÇA (Não vai mudar a lembrança, mas vai procurar OUTRA lembrança que seja plausível ou mais plausível pra essa situação, mas SEM deixar pra trás as lembranças adjascentes, ou seja, elas irão continuar sendo testadas junto com outras lembranças e percepções).
+
+    #É possível você conseguir descobrir e manter um futuro sem ao menos ter a lembrança daquilo ainda, porém dura enquanto aquilo durar, essa é a lembrança das ações.
+
+
+#Detalhe IMPORTANTE: SE UM ATO NÃO GERA DIFERENÇA PERCEPTÍVEL, ENTÃO É IMPOSSÍVEL DA COISA DESCOBRIR QUE ESSA DIFERENÇA OCORRE. (POR ISSO, É NECESSÁRIO INSTRUÇÃO) Isso é um alerta pra aprendizado não supervisionadao e sem instrução, o agente jamais vai descobrir algo se não há diferença perceptível quanto à causa de algo. Se algo que ele aperta, não muda nada, então mesmo ele mantendo na memória o jogo todo sobre esse botão ter sido pressionado e não ter a diferença no jogo dali em diante e nem jogando de volta sem pressionar, então está bem provado que aquele botão é bem provavel de ser falso/enfeite.
+    #Isso significa que é FUNDAMENTAL ele receber instrução sobre o que se sabe sobre o jogo, isso além de adiantar muitas tentativas, vai torna possível coisas que antes era impossível sem essa instrução.
+
+#Lembranças das coisas que permanecem.
+#Buscar o conhecimento das coisas que PERMANECEM
+
+#
+
+#Aprendizado Supervisionado e não supervisionado. É o mesmo que os aprendizado de Machine Learning... Supervisionado tem alguém pra dar um feedback, quanto o não supervisionado ele deve descobrir por conta
+#Aprendizado COM ou SEM instrução:
+    #Com instrução: Por meio de palavras ou qualquer outra comunicação o agente vai poder receber informações relevantes sobre o problema
+    #Sem instrução: Sem qualquer contato ou comunicação com alguém que SAIBA sobre o problema.
+#
+
+
+
+#Uma parte ENCONTRA a estrutura e outra VIVE na estrutura PARA o fim na realidade
+
+
+#Criação.
 
 #Foco: aquilo que é considerado as relações
     #Ignorado: Aquilo que não vai ser considerado naquele foco.
@@ -880,9 +994,26 @@ game=cenario(megaMan,"some config")
 
 #Coisas naturalmente desgradáveis. 
 
+#Adaptação, conceito de transformar algo de forma que esta coisa se mantenha de acordo com o resultado esperado.
+    
+#Fé
 
 
-﻿
+#Estudar a informação. criação, desde seu primeiro contato até o conhecimento e certeza dessa (ainda sem adquirir mais informação), ter certeza por outras fontes.
+
+
+#Energia Mental (Aquilo que te permite agir, conhecida como ATENÇÃO)
+    #Ter energia mental e conhecimento da cola da fita significa poder usar ela pra colar coisas, isso vai brilhar sua respectiva ação (e provavelmente possível de poder reconhecer seu futuro) com essa energia.
+    #Ter conhecimento, mas sem energia mental é o equivalente à "Não exercer fé", não atingir a plena capacidade coginitiva de algpo.
+
+
+#Just turn it bigger: Conceito de fartura (mas ainda tem que ter algo pra limitar isso)
+
+#Energia das coisa (é da física mesmo)
+
+#A máquina tem que resolver os problemas, mas pra isso descobrir sozinha
+
+
     #Inteligência Fluida e Cristalizada: https://www.verywellmind.com/fluid-intelligence-vs-crystallized-intelligence-2795004
         #Fluido: adaptativo
         #Cristalizado: Pela experiência
@@ -932,9 +1063,46 @@ game=cenario(megaMan,"some config")
 
 
 
+#Tracking something:
+    #Quando você distingue algo de seu fundo, você isola ele, se não for trackeado a imagem do objeto do fundo, eles serão como uma coisa só.
 
+    
+
+
+# Conceitos, memória e existência do dado em conceito e principalmente perdurar no tempo (problema da continuação)
+#(Sophia: https://www.youtube.com/watch?v=78-1MlkxyqI) Aqui demonstra de forma sutil, não tão discara os problemas de continuidade da Sophia
+
+
+#Continuidade de ação, um braço ocupado coçando, não pode segurar um copo cheio de água, portanto, a contradição JÁ ESTÁ em ALGO querer usar o braço ocupado, terá primeiro que solucionar a coceira (quer coce ou não), pra então usar o braço pra outra coisa
+
+
+#Conceitos, Todo resultado vai para o lado Y, 
+
+#Com CONTINUAÇÃO de conceitos, onde estes conceitos vão ter de ser perdurados sempre, quer sejam verdadeiros ou falsos, eles estão em 100% do tempo podendo serem aplicados de  verdade, sem a necessidade de RELACIONAR e IFAR (verbo de "IF", equivalente à verificar, verificar se é verdade) TODOS os outros dados já conhecidos. Ainda é fundamental que qualquer mudança tenha sua causa, pois há uma causa.
+
+
+
+#Perspectiva de limitada de conceito
+
+
+#Se Azul for verde, não se existe distinção entre azul e verde, portanto esses perdem seus sentidos. Com isso Cada conceito é distinto entre si um dos outros. Se é A não é B, A menos que B possa ou deva ser tratado como A, portanto se perde seu conceito e com isso, TALVEZ possa se adquirir um novo conceito ou senão provavelmente REDUZIR o conceito à um estado mais elementar (o que pode ser necessário pra simplificação em alguns momentos).
+
+
+#As coisas não mudam, mas o conceito se muda às coisas. A mudança do conceito geralmente implica mudar QUAIS coisas vai atingir e quais não
+
+#Conceitos podem carregar ações?
+
+#Se algo diz a verdade, sempre foi verdade, e nunca errou, nem mentiu, porém se teve um único erro, isso já torna tudo daquilo duvidoso e instável, perde-se a confiança e o erro após estudado seus limites e condições, ou seja, após conhecida sua verdadeira causa, se pode assim saber a verdade sobre o resultado desse erro junto com a nova verdade aprendida sobre aquele que diz a verdade ou a buscava dizer
+
+#Com isso, a verdade para ser verdade, ela JAMAIS pode ter pecado naquilo que diz ser verdade.
+
+#Se algo diz que 
+
+
+#acreditar
 
 #Não pensamos naquilo que vemos, ou melhor, quando sabemos o que fazer. Porém primeiro pensamos
+
 
 
 
@@ -947,7 +1115,13 @@ game=cenario(megaMan,"some config")
 ##.1: 
 ##.2:
 
-aRel = [["thing","literal"],"posibilidades [antigo 'ação'] (ou conjunto de ações preparadas)",[[["intervenção1 (causa do ocorrido)",naoOcorreuPorCausaDaIntervencaoOuIdle],"action"],[["intervenção2 (causa do ocorrido)",naoOcorreuPorCausaDaIntervencaoOuIdle2],"noAction"]],ocorridoOuMudado"(fimIntervencao)", causaDaIntervencao "Externo em relação à oFimQueSeQuerBuscar.",oFimQueSeQuerBuscarOuOQueDevoFazer "Esperança, favor ou contra C. INTERNO em relação à causaDaIntervencao", testemunhoPresente]
+naoOcorreuPorCausaDaIntervencaoOuIdle=""
+naoOcorreuPorCausaDaIntervencaoOuIdle2=""
+ocorridoOuMudado=""
+causaDaIntervencao=""
+oFimQueSeQuerBuscarOuOQueDevoFazer=""
+testemunhoPresente=""
+aRel = [["thing","literal"],["posibilidades [antigo 'ação'] (ou conjunto de ações preparadas)"],[[["intervenção1 (causa do ocorrido)",naoOcorreuPorCausaDaIntervencaoOuIdle],["action"]],[["intervenção2 (causa do ocorrido)",naoOcorreuPorCausaDaIntervencaoOuIdle2],["noAction"]]],[ocorridoOuMudado+"(fimIntervencao)"], [causaDaIntervencao +"Externo em relação à oFimQueSeQuerBuscar."],[oFimQueSeQuerBuscarOuOQueDevoFazer+ "Esperança, favor ou contra C. INTERNO em relação à causaDaIntervencao"], testemunhoPresente]
 #'ocorrido' e 'naoOcorreuPorCausaDaIntervencao' são a compreensão do resultado da intervenção, portanto, são do mesmo tipo
 #'ocorrido' e 'naoOcorreuPorCausaDaIntervencao' são dinâmicas com a intervenção, ou seja o domínio da intervenção na coisa, leva à mu
 #thing são os qualia, inputs e cenários, por isso antes de chegar aqui, deve estar traduzido e da linguagem a coisa exposta. Portanto "thing" é dinâmica
@@ -964,7 +1138,9 @@ aRel = [["thing","literal"],"posibilidades [antigo 'ação'] (ou conjunto de aç
     #causaDaIntervenção é individual para cada pessoa, ou mesmo para cada objetivo da mesma pessoa, porém deve ainda ter uma ordem
     #existe causaDaIntervenção externa, que é uma causa que não veio de nada interno e por nada interno
 
-#testemunho é a prova da "thing" (A), da "intervenção" (B) e um de seus resultados (C ou D) e depois do outro resultado (Ou C ou D) 
+#testemunho é a pro1
+,
+va da "thing" (A), da "intervenção" (B) e um de seus resultados (C ou D) e depois do outro resultado (Ou C ou D) 
 #testemunho é sempre input direto + as relações percebidas
 #testemunho é dinãmico dentro de um intervalo
 #"thing" é a classe das instâncias de testemunho
@@ -1281,14 +1457,14 @@ game=" | | , | | , | | "
 
 
 
-aRel = [["thing","literal"],"ação (ou conjunto de ações preparadas)",["intervenção (causa do ocorrido)","action"],ocorridoOuMudado"(fimIntervencao)",naoOcorreuPorCausaDaIntervencaoOuIdle, causaDaIntervencao,oFimQueSeQuerBuscarOuOQueDevoFazer "Esperança, favor ou contra C", testemunho]
+aRel = [["thing","literal"],["ação (ou conjunto de ações preparadas)"],["intervenção (causa do ocorrido)","action"],ocorridoOuMudado+"(fimIntervencao)",naoOcorreuPorCausaDaIntervencaoOuIdle, causaDaIntervencao,oFimQueSeQuerBuscarOuOQueDevoFazer +"Esperança, favor ou contra C", [testemunho]]
 
 r("Trabalho da Unip","Invstigação metódica","Investigação metódica (testada)","Conhecimento científico","conhecimento empírico","Frase de Martins, Theóphilo 2009","Conhecimento verdadeiro","23METODOLOGIA DO TRABALHO ACADÊMICOQuadro 2 – Principais características do conhecimento filosófico e respectivas formas de representaçãoCaracterísticaForma de representaçãoValorativoO ponto de partida são hipóteses que não podem ser submetidas à observação. O conhecimento emerge da experiência, e não da experimentação. Não verificávelOs enunciados das hipóteses filosóficas não podem ser confirmados nem refutados, mas são logicamente correlacionados. SistemáticoSuas hipóteses e enunciados visam à representação coerente da realidade estudada, na tentativa de apreendê-la integralmente.Infalível e exatoSeus postulados e hipóteses não são submetidos ao teste da experimentação. Há um esforço da razão pura, com a finalidade de questionar os problemas humanos e discernir entre o certo e o errado. A filosofia emprega o método racional, em que prevalece a coerência lógica.Fonte: Marconi e Lakatos (2003, p. 78-79).2 CONHECIMENTO CIENTÍFICO, PESQUISA TEÓRICA E PESQUISA EMPÍRICAVimos,  anteriormente,  o  conhecimento  comum,  o  teológico  e  o  filosófico.  Falemos,  agora,  do  conhecimento científico. Comecemos com o surgimento da ciência.Muitas das perguntas mais elementares que os seres humanos se propõem podem ter dado origem a estudos científicos. Em outras palavras, a ciência desenvolveu-se a partir de perguntas feitas pelos homens em relação ao que os cercava. Evidentemente, no início, muitas das respostas às perguntas que os seres humanos se faziam (por exemplo: “Por que chove?”, “O que são estrelas?”) tinham fundamentação nas explicações míticas e religiosas. Tratava-se, simplesmente, de explicações para alguns fenômenos naturais. Distanciando-se dessa visão, o valor da ciência variou bastante ao longo da história, até chegar ao status atual.Figura 6 – A ciência desenvolveu-se a partir de perguntas feitas pelos homens em relação  ao que os cercava, cuja natureza e funcionamento eles tinham interesse em entenderO conhecimento científico resulta de investigação metódica e sistemática da realidade. Utilizando-se do intelecto, o homem procura respostas para as causas dos fatos; a partir de classificações, comparações e análises – enfim, de métodos –, pode chegar a leis gerais que os regem. O processo de investigação, descoberta e expansão do conhecimento faz do ser humano sujeito ativo em relação a fatos e objetos (MARTINS; THEÓPHILO, 2009). [Tirei do site da Unip]")
 
-
-if(caiUva){
+caiUva=False
+if(caiUva):
     Raposa(come,caiUva)
-}
+
 
 linear("caiUva","")
 r("Uvas","Vendo","Uvas caindo","Raposa come","?","Come uvas maduras")
@@ -1299,8 +1475,28 @@ r("Todos os homens","perceber","são mortais","Todos os homens morrem","Há algu
 r("Sócrates","Aprender","é","homem","não é homem")
 r("sócrates","portanto","é","O que são todos os homens","testemunho: Portanto, Sócrates é mortal.")
 
+#Todo mortal <- Homem <- Sócrates
 
-Todo Homem -> mortal -> Sócrates
+#Não há homem que não seja mortal
+    #portanto todo homem é mortal
+
+if(homem):#Já atalhado/conhecido
+    print("Aqui um mortal")
+
+
+considero um 'homem' + 'imortal' isto é(homem_imortal)
+
+porém sob meu conhecimento, não há homem imortal, com isso todos os homens são mortais, porém encontrar um homem imortal implicará a falseabilidade de que todos os homens são mortais pois será falso que não há homem homem_imortal
+
+homem vivo
+homem morto #se comparar com não vivo é o mesmo
+
+#A consciência registra, doma e aprende os pensamentos e seus resultados
+
+
+
+
+
 
 
 

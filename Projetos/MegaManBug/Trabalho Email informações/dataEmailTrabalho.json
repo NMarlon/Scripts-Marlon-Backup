@@ -1,0 +1,64 @@
+//Para mim
+
+//Converter texto para Json string:
+	// https://onlinetexttools.com/json-stringify-text
+
+
+//	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+//
+//
+{
+	"emailDe":"",
+	"assunto":"Oportunidade | Commcepta",
+	"conteudo":"Olá, tudo bem?\n\n\n\nRecebemos sua candidatura na nossa vaga de Full Stack. Segue mais algumas infos para seu conhecimento:\n\n \n\n44h semanais / 8h48 diárias / Segunda a Sexta / Banco de Horas / CLT \n\nSalário Compatível (Dependente da senioridade - Júnior, Pleno, Sênior ou Master) \n\nBenefício: Vale Refeição R$17,50 p/dia | VT\n\nVaga home office\n\nO processo seletivo é dividido em 6 etapas: questionário, teste específico, vídeo currículo, entrevista com RH, entrevista com time e definição de contratação.\n\n \n\n// Tendo interesse em seguir no processo, poderia responder algumas perguntas?\n\n1. Conte-nos um pouco mais sobre a sua experiência. Você já trabalhou com back? E com front? Com qual se identifica mais?\n\n2. Qual é a sua formação superior?\n\n3. Há quantos anos atua na área?\n\n4. Caso seja selecionad@ você estaria disponível para iniciar conosco em quanto tempo?\n\n5. Qual a sua posição atual (Júnior, Pleno, Sênior ou Master) \n\n6. Qual a sua pretensão salarial?\n\n7. Qual sistema operacional você usa? Linux, Windows ou MacOS? Qual versão? \n\n \n\nObrigad@,\n\nEquipe Commcepta Design\n\nProcesso Seletivo Commcepta - Fase 1/6",
+	"comentário":"Email de vaga",
+	"tipo":"vagaImportante",
+
+	"tipoDeExemplo":"EhIsso"
+},	
+
+{
+	"emailDe":"felipe@felipeasensi.com",
+	"assunto":"Presente antecipado (abra hoje)",
+	"conteudo":"Olá,\n\n\nEstamos quase encerrando 2021... que ano!\n\nEu não poderia encerrar o ano sem conversar contigo sobre seleção de mestrado e doutorado. Somente em 2021 eu participei de 05 bancas de seleção, então tem muita coisa descobri que pode fazer diferença na sua candidatura.\n\nE eu quero ir além: se você deseja se candidatar, eu vou te dar um presente hoje!\n\nDeixe eu te explicar como vai funcionar:\n\nÀs 18h (de Brasília) vai rolar uma aula imperdível sobre \"Oportunidades para quem tem Mestrado e Doutorado\" e nela eu vou te mostrar estratégias práticas que não existem em livros de como aproveitar o primeiro trimestre de 2022...\n\nToque no botão abaixo para ativar o lembrete:\nQUERO PARTICIPAR DA AULA\n\"E o presente, Felipe?\"\n\nÉ o seguinte:\n\nTalvez você saiba, talvez não, mas eu tenho um treinamento chamado \"Aprovação em Mestrado e Doutorado\" com a estratégia completa para você usar na sua aprovação, independente do seu currículo, área do conhecimento ou experiência acadêmica.\n\nVocê pode se inscrever em qualquer momento neste treinamento, mas exclusivamente hoje ele estará com 40% de desconto para quem estiver na Aula.\n\nAqui neste site você pode acessar as informações sobre o treinamento, mas você usará o link que fornecerei na aula para ter o desconto.\n\nVou ficar muito feliz em te encontrar mais tarde!\n\n\nGrande abraço,\n\nFelipe Asensi\n\nPs: Ative o lembrete da aula",
+	"tipo":"curso",
+	"comentário":"",
+	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+
+},
+{
+	"emailDe":"",
+	"assunto":"",
+	"conteudo":"",
+	"tipo":"",
+	"comentário":"",
+	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+
+},
+{
+	"emailDe":"",
+	"assunto":"",
+	"conteudo":"",
+	"tipo":"",
+	"comentário":"",
+	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+
+},
+{
+	"emailDe":"",
+	"assunto":"",
+	"conteudo":"",
+	"tipo":"",
+	"comentário":"",
+	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+
+},
+{
+	"emailDe":"",
+	"assunto":"",
+	"conteudo":"",
+	"tipo":"",
+	"comentário":"",
+	"tipoDeExemplo":"CuidadoSimilarNaoEh"
+
+},

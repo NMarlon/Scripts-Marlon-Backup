@@ -1,0 +1,65 @@
+Python 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+=============================== RESTART: C:\Users\marlo\OneDrive\Documentos\GitHub\Scripts-Marlon-Backup\Projetos\MegaManBug\Test.py ==============================
+test
+1
+
+=============================== RESTART: C:\Users\marlo\OneDrive\Documentos\GitHub\Scripts-Marlon-Backup\Projetos\MegaManBug\Test.py ==============================
+test
+'12+32'
+test2
+'this=this'
+
+=============================== RESTART: C:\Users\marlo\OneDrive\Documentos\GitHub\Scripts-Marlon-Backup\Projetos\MegaManBug\Test.py ==============================
+Traceback (most recent call last):
+  File "C:\Users\marlo\OneDrive\Documentos\GitHub\Scripts-Marlon-Backup\Projetos\MegaManBug\Test.py", line 9, in <module>
+    test2=this=this
+NameError: name 'this' is not defined
+import json
+json.dumps(['foo',{'bar':('baz',None,1.0,2)}])
+'["foo", {"bar": ["baz", null, 1.0, 2]}]'
+from io import StringIO
+io = StringIO()
+json.dump(['streaming API'],io)
+io.getvalue()
+'["streaming API"]'
+[DEBUG ON]
+[DEBUG OFF]
+
+test========================================================================== RESTART: Shell =========================================================================
+io.getvalue()
+KeyboardInterrupt
+i=0
+while i <1000:
+    i+=1
+    x=i+1+x
+
+    
+Traceback (most recent call last):
+  File "<pyshell#13>", line 3, in <module>
+    x=i+1+x
+NameError: name 'x' is not defined
+x=i
+while i < 1000:
+    i+=1
+    x=i+1+x
+
+    
+x
+501499
+"Costume"
+'Costume'
+input("what are you finding out?")
+what are you finding out?ok
+'ok'
+"Separar por linhas cada causalidade"
+'Separar por linhas cada causalidade'
+"Só há uma linha do tempo"
+'Só há uma linha do tempo'
+"por isso tudo vai em uma linha"
+'por isso tudo vai em uma linha'
+$ python3 ok.py
+SyntaxError: invalid syntax
+python3 ok.py
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

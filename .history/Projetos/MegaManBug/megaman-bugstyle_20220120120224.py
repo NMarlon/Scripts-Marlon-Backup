@@ -1570,9 +1570,7 @@ Questões:
     - 
          
         
-
-Pontos:
-- Na consciencia de dois caminhos, A leva à B ou seja Não A leva à não B. Ramificação V. Supondo que só queiramos 1 das duas, colocamos a que queremos sobre o erro (que não quermos), então quando A aparecer a primeira coisa será buscar o resultado, mas nem sempre que isso é a melhor opção, pois VAI obstruir a compreensão do caminho alternativo
+        
         
         
 """

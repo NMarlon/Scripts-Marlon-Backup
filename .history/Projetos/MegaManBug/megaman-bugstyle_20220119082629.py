@@ -1461,7 +1461,14 @@ aRel = [["thing","literal"],["ação (ou conjunto de ações preparadas)"],["int
 
 r("Trabalho da Unip","Invstigação metódica","Investigação metódica (testada)","Conhecimento científico","conhecimento empírico","Frase de Martins, Theóphilo 2009","Conhecimento verdadeiro","23METODOLOGIA DO TRABALHO ACADÊMICOQuadro 2 – Principais características do conhecimento filosófico e respectivas formas de representaçãoCaracterísticaForma de representaçãoValorativoO ponto de partida são hipóteses que não podem ser submetidas à observação. O conhecimento emerge da experiência, e não da experimentação. Não verificávelOs enunciados das hipóteses filosóficas não podem ser confirmados nem refutados, mas são logicamente correlacionados. SistemáticoSuas hipóteses e enunciados visam à representação coerente da realidade estudada, na tentativa de apreendê-la integralmente.Infalível e exatoSeus postulados e hipóteses não são submetidos ao teste da experimentação. Há um esforço da razão pura, com a finalidade de questionar os problemas humanos e discernir entre o certo e o errado. A filosofia emprega o método racional, em que prevalece a coerência lógica.Fonte: Marconi e Lakatos (2003, p. 78-79).2 CONHECIMENTO CIENTÍFICO, PESQUISA TEÓRICA E PESQUISA EMPÍRICAVimos,  anteriormente,  o  conhecimento  comum,  o  teológico  e  o  filosófico.  Falemos,  agora,  do  conhecimento científico. Comecemos com o surgimento da ciência.Muitas das perguntas mais elementares que os seres humanos se propõem podem ter dado origem a estudos científicos. Em outras palavras, a ciência desenvolveu-se a partir de perguntas feitas pelos homens em relação ao que os cercava. Evidentemente, no início, muitas das respostas às perguntas que os seres humanos se faziam (por exemplo: “Por que chove?”, “O que são estrelas?”) tinham fundamentação nas explicações míticas e religiosas. Tratava-se, simplesmente, de explicações para alguns fenômenos naturais. Distanciando-se dessa visão, o valor da ciência variou bastante ao longo da história, até chegar ao status atual.Figura 6 – A ciência desenvolveu-se a partir de perguntas feitas pelos homens em relação  ao que os cercava, cuja natureza e funcionamento eles tinham interesse em entenderO conhecimento científico resulta de investigação metódica e sistemática da realidade. Utilizando-se do intelecto, o homem procura respostas para as causas dos fatos; a partir de classificações, comparações e análises – enfim, de métodos –, pode chegar a leis gerais que os regem. O processo de investigação, descoberta e expansão do conhecimento faz do ser humano sujeito ativo em relação a fatos e objetos (MARTINS; THEÓPHILO, 2009). [Tirei do site da Unip]")
 
-"","Uvas Verdes","Uvas Caem","Ou um ou outro, aplico assim")
+caiUva=False
+if(caiUva):
+    Raposa(come,caiUva)
+
+
+linear("caiUva","")
+r("Uvas","Vendo","Uvas caindo","Raposa come","?","Come uvas maduras")
+r("Uvas","Vendo","","Uvas Verdes","Uvas Caem","Ou um ou outro, aplico assim")
 r("",)
 
 r("Todos os homens","perceber","são mortais","Todos os homens morrem","Há algum homem nunca morreu","Testemunho: Todos os homens são mortais")
@@ -1570,9 +1577,7 @@ Questões:
     - 
          
         
-
-Pontos:
-- Na consciencia de dois caminhos, A leva à B ou seja Não A leva à não B. Ramificação V. Supondo que só queiramos 1 das duas, colocamos a que queremos sobre o erro (que não quermos), então quando A aparecer a primeira coisa será buscar o resultado, mas nem sempre que isso é a melhor opção, pois VAI obstruir a compreensão do caminho alternativo
+        
         
         
 """

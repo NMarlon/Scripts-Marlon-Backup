@@ -5,8 +5,8 @@ O objetivo desse projeto é desenvolver um tela impeça de ver o jogo de tempos 
 - Útil para quem quer treinar memorizar o mapa ou algum conjunto de ações.
 - Pode ser útil para quem quer aumentar o desafio em algum jogo específico
 - Ajuda à treinar habilidade específica de reação
-
-!!ALERTAS!!:
+- Curiosamente ajuda à treinar para situações onde há lags leves.
+a
 - (--------------!!! FLASH WARNING !!!--------------) Esse programa tem uma tela piscante e pode não ser ok para todos. Pessoas com epilepsia ou sinais de convulsão não devem tentar usar isso.
 - Essa é uma técnica avançada, vai ter melhor proveito quem JÁ CONHECE as mecânicas fundamentais do jogo em questão e já sabe das coisas que ocorrem. É algo para aumentar o desafio, talvez nãoo sirva para quando não se jogou o jogo antes e é um jogo novo
 
@@ -69,6 +69,8 @@ Dicas de apresentação do método:
 
 
 """
+
+
 import tkinter as tk
 import time
 import random
@@ -109,10 +111,10 @@ while True:  # making a loop
 
 
 #Brawlhalla Timer Ok
-# tempoMediaBlind=900#em milisegundos ms
-# tempoMinimoBlind=600#em milisegundos ms
-# tempoMediaVisivel=1.1 #em segundos (s)
-# tempoMinimavisivel=0.95 #em segundos (s)
+tempoMediaBlind=800#em milisegundos ms
+tempoMinimoBlind=150#em milisegundos ms
+tempoMediaVisivel=1.1 #em segundos (s)
+tempoMinimavisivel=0.55 #em segundos (s)
 
 #Castlevania symphony of the night
 # tempoMediaBlind=1500#em milisegundos ms
@@ -122,10 +124,10 @@ while True:  # making a loop
 
 
 # Tony Hawk 2
-# tempoMediaBlind=1000#em milisegundos ms
-# tempoMinimoBlind=100#em milisegundos ms
-# tempoMediaVisivel=1.2 #em segundos (s)
-# tempoMinimavisivel=0.15 #em segundos (s)
+##tempoMediaBlind=900#em milisegundos ms
+##tempoMinimoBlind=330#em milisegundos ms
+##tempoMediaVisivel=0.6 #em segundos (s)
+##tempoMinimavisivel=0.15 #em segundos (s)
 
 #Metal Gear Solid VR
 # tempoMediaBlind=2000#em milisegundos ms
@@ -141,31 +143,32 @@ while True:  # making a loop
 ##tempoMinimavisivel=0.1 #em segundos (s)
 
 # Mega man X5
-tempoMediaBlind=900#em milisegundos ms (SOMENTE NÚMEROS INTEIROS)
-tempoMinimoBlind=150#em milisegundos ms (SOMENTE NÚMEROS INTEIROS)
-tempoMediaVisivel=0.33 #em segundos (s)
-tempoMinimavisivel=0.100 #em segundos (s)
+##tempoMediaBlind=900#em milisegundos ms (SOMENTE NÚMEROS INTEIROS)
+##tempoMinimoBlind=150#em milisegundos ms (SOMENTE NÚMEROS INTEIROS)
+##tempoMediaVisivel=0.33 #em segundos (s)
+##tempoMinimavisivel=0.100 #em segundos (s)
 
 
 #Quantas vezes vai rodar
-quantasVezes=300 #Loop, quantas vezes vai mostrar a tela 
+quantasVezes=80 #Loop, quantas vezes vai mostrar a tela  (Se é sua primeira vez com isso use o valor 3, ele só ativará 3 vezes, então você vai testar o sistema antes de ter uma tela piscando indefinidamente, COMECE COM 3) (para ficar infinito coloque: True) (Padrão: 150)
 
 
 #Outras Variáveis principais: 
-useRefresh=True#Se True, habilita um Tempo de Descanso por loop (Padrão: False)
-refreshRepeatFor = 100 #Quantas vezes vai repetir (para ficar infinito coloque: True)(Se é sua primeira vez com isso use o valor 3, ele só ativará 3 vezes para você testar) (Padrão de jogo: 100)
-randomTimeRefresh=15#Quanto vai variar pra mais em segundos o timeRefresh (deixe 0 para não variar; Padrão: 20)
-timeRefresh=10#tempo em segundos (s) de pausa (refrescar a mente) (Padrão: 25)
+useRefresh=False#Se True, habilita um Tempo de Descanso por loop (Padrão: True)
+refreshRepeatFor=20 #Quantas vezes vai repetir até o próximo Refresh (Padrão de jogo: 10)
+randomTimeRefreshInitial=40#Quanto vai variar pra mais em segundos o timeRefresh (deixe 0 para não variar; Padrão: 20)
+timeRefresh=20#tempo em segundos de pausa (para refrescar a mente do esforço) (Padrão: 25)
 #Segue abaixo o cálculo dessas variáveis:
 
 
 
 
 #Processamento de variáveis:
-randomTimeRefresh*=random.random()
+randomTimeRefresh=randomTimeRefreshInitial*random.random()
 randomTimeRefresh=int(randomTimeRefresh)
+#print(randomTimeRefresh)
 timeRefresh+= randomTimeRefresh
-timeRefresh*=1000
+##timeRefresh*=1000
 
 
 
@@ -174,15 +177,16 @@ fetchKeyPress = 10
 def on_release(key):
     global fetchKeyPress
     fetchKeyPress = key
+    print("here!")
     if key == keyboard.Key.f8:
         fetchKeyPress = 0
         print('Exiting...')
         stop=True
         # Stop listener
         return False
-
-
+    
 def keyboardListener(q):
+    print("aqui2")
     global fetchKeyPress
     prevKeyFetch = 10    # Keep track of the previous keyPress
     keyboard.Listener(on_release=on_release).start()
@@ -214,12 +218,12 @@ def oneSecondTimer(q):
         time.sleep(1.0 - ((time.time() - starttime) % 1.0))
     return False
 
-q = Queue()
-p1 = Process(target=oneSecondTimer, args=(q,))
-p1.start()
-
-stop=False
+##q = Queue()
+##p1 = Process(target=oneSecondTimer, args=(q,),stop=False)
+##?
 refreshRepeatForCount=0
+
+stop= False
 ##while(True and not stop):
 while(not stop and (quantasVezes>0  or useRefresh)):
         try:
@@ -241,7 +245,9 @@ while(not stop and (quantasVezes>0  or useRefresh)):
                 root.mainloop()
                 duracaoVendo = (random.random()*tempoMediaVisivel+tempoMinimavisivel)
                 time.sleep(duracaoVendo)
-                if useRefresh and refreshRepeatFor<=refreshRepeatForCount:                    
+                if useRefresh and refreshRepeatFor<=refreshRepeatForCount:
+                    randomTimeRefresh=randomTimeRefreshInitial*random.random()
+                    randomTimeRefresh=int(randomTimeRefresh)
                     time.sleep(timeRefresh)
                     refreshRepeatForCount=0
                 else:

@@ -1,5 +1,5 @@
 {
-    "editor.suggest.showClasses": false,
+   "editor.suggest.showClasses": false,
     "editor.suggest.showColors": false,
     "editor.suggest.showConstants": false,
     "editor.suggest.showConstructors": false,

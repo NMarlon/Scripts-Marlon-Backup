@@ -1,0 +1,1333 @@
+
+<form id="llCaptureForm2" class="llform0012" action="//paginas.rocks/capture" method="post" hidden>
+    <input type="hidden" id="mid" name="mid" value="626843" />
+    <input type="hidden" id="fid" name="fid" value="47846" />
+    <input type="hidden" id="formType" name="formType" value="dynamic" />
+
+
+    <div class="esteEhONome campo_hid1 elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100">
+        <label for="llfield49036">Nome</label>
+        <input type="text" id="nome" class="input_to_hidden1 campoDoFormulario elementor-field elementor-size-sm  elementor-field-textual" name="form_fields[nome]" placeholder="Digite aqui seu nome" onkeydown="" data-required="true" required />
+        <div class="field-error" id="llerror49036"></div>
+    </div>
+    <div class="esteEhOEmail elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100">
+        <label for="form-field-email" class="">E-mail</label><input size="1" type="email" name="form_fields[email]" id="form-field-email-manualHtml" class="elementor-field elementor-size-sm  elementor-field-textual" aria-invalid="false">
+    </div>
+    <!--  <div class="campo_hid2">
+       <label for="email">E-mail</label>
+       <input type="email"  id="llfield49037" class="input_to_hidden2 campoDoFormulario" onkeydown="" name="form_fields[email]" placeholder="Digite seu e-mail" required data-required="true" />
+       <div class="field-error" id="llerror49037"></div>
+       </div> -->
+    <script>
+    //Telefone input manual-build-regex
+        function checkIfTelOk(tel) {
+
+            if (tel.length >= 13) {
+
+                SHC(4, 5);
+                document.getElementsByClassName('campo_hid5')[0].hidden = false;
+
+                jQuery(($) => {
+                    $('#avisoWhatsApp').prop('hidden', 'true');
+                });
+            } else {
+                document.getElementsByClassName('campo_hid5')[0].hidden = true;
+                jQuery(($) => {
+                    //$('[for="llfield49038"]').css('color', 'red');
+                    $('#avisoWhatsApp').removeAttr('hidden');
+                });
+
+            }
+        };
+        function telRegex(tel) {
+            tel = tel.replace(/\D/g, "");
+            tel = tel.replace(/(.{0})(\d)/, "$1($2");
+            tel = tel.replace(/(.{3})(\d)/, "$1) $2");
+            if (tel.length == 10) {
+                tel = tel.replace(/(.{1})$/, "-$1")
+            } else if (tel.length == 11) {
+                tel = tel.replace(/(.{2})$/, "-$1")
+            } else if (tel.length == 12) {
+                //tel=tel.replace(/(.{3})$/,"-$1")
+                tel = tel.replace(/(.{9})(\d)/, "$1-$2");
+
+            } else if (tel.length >= 13) {
+                // tel=tel.replace(/(.{4})$/,"-$1")
+                tel = tel.replace(/(.{10})(\d)/, "$1-$2");
+
+            } /* else if (tel.length > 15) {
+                console.log("16: "+tel);
+                tel=tel.replace(/(.{12})(\d)/,"$1-$2");
+
+               // tel=tel.replace(/(.{5})$/,"-$1")
+             } else if (tel.length > 16) {
+                console.log("17: "+tel);
+                tel=tel.replace(/(.{11})(\d)/,"$1-$2");
+
+             // tel=tel.replace(/(.{4}$)/,"-$1")
+           }*/
+            return tel;
+        };
+    </script>
+    <div id="ancora_email"></div>
+    <div class="esteEhONumeroDeWhatsapp">
+        <label for="llfield49038">
+            Seu número do WhatsApp
+            <error id="avisoWhatsApp" hidden style="color:red"> *Por favor coloque todos os digitos para poder continuar</error>
+        </label>
+        <br>
+        <input type="tel" id="telefone" class="input_to_hidden3 campoDoFormulario  elementor-field elementor-size-sm  elementor-field-textual" onkeydown="checkIfTelOk(this.value.toString());this.value=telRegex(this.value.toString());" name="form_fields[telefone]" placeholder="Digite o Telefone" style="width: 100%;border:solid 1px;" />
+        <div class="field-error" id="llerror49038"></div>
+    </div>
+    <div class="esteEhOCampoMembro">
+        <label>É membro de A Igreja de Jesus Cristo dos Santos dos Últimos Dias?</label>
+        <div class="field-error" id="llerror49079"></div>
+        <input class="input_to_hidden4 campoDoFormulario  elementor-field elementor-size-sm  elementor-field-textual" type="text" value="" name="" hidden />
+        <div class="radio-list" style="display:flex;">
+            <div class="radio" style="margin-right: 20px;">
+                <input type="radio" id="llfield115509" name="form_fields[ehmembro]" value="Não" onchange="nao();document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=47846&m=626843';document.getElementsByClassName('input_to_hidden4')[0].setAttribute('value','ok');/*SHC(4,5);*/if(document.getElementsByClassName('input_to_hidden5')[0].value!='ok'){document.getElementById('estaca-hidden').hidden=true;document.getElementById('idade-hidden').hidden=true;}" required />
+                <label> Não </label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="llfield115508" name="form_fields[ehmembro]" value="Sim" onchange="sim();document.getElementById('last').src='https://llimages.com/redirect/redirect.aspx?A=V&f=47846&m=626843';document.getElementsByClassName('input_to_hidden4')[0].setAttribute('value','ok');/*SHC(4,5);*/if(document.getElementsByClassName('form_fields[ehmembro]')[0].value!='ok'){document.getElementById('estaca-hidden').hidden=true;document.getElementById('idade-hidden').hidden=true;}" />
+                <label> Sim </label>
+            </div>
+        </div>
+    </div>
+    <!-- horário do envento
+       <div class="campo_hid5">
+                <label>Escolha o horário </label>
+                <div class="field-error" id="llerror70821"></div>
+                <input id="input_check_temas_sse" class="input_to_hidden5" hidden />
+                <div class="checkbox-list">
+                   <div class="radio" id="checkbox_temas_sse" >
+                      <div class="checkbox-list">
+                     <div class="checkbox" id="checkbox_temas_sse" onchange="">
+                        <label>
+                           <input type="radio" name="form_fields[temas]" value="Tarde - 16h00" onchange="check_for_any_cheked('checkbox_temas_sse')?document.getElementById('input_check_temas_sse').setAttribute('value','true'):document.getElementById('input_check_temas_sse').setAttribute('value','');SHC(5,6);" /> Tarde - 16h00 </label>
+                        <br>
+                        <label>
+                           <input type="radio" name="form_fields[temas]" value="Noite - 19h30" onchange="check_for_any_cheked('checkbox_temas_sse')?document.getElementById('input_check_temas_sse').setAttribute('value','true'):document.getElementById('input_check_temas_sse').setAttribute('value','');SHC(5,6);"/> Noite - 19h30</label>
+                        <br>
+                   </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+
+             <script>
+                //document.getElementById("llfield49036").value=getCookie("nome");
+                //document.getElementById("llfield49037").value=getCookie("email");
+                var estaca_ala = [
+                   ["1", "ALEGRETE CENTRO", "ALEGRETE BRASIL", "Porto Alegre", "Hilton Costa", "CONSELHO SANTA MARIA", "2010", "1083295", "514705", "ESTACA", "59439", "ALA"],
+                   ["2187",
+                   "VOLTA REDONDA USINA",
+                   "VOLTA REDONDA BRASIL", //
+                   "Rio de Janeiro",//Estado
+                    "Humberto Mendes", //Gerente
+                    "CONSELHO JUIZ DE FORA",//Nome do conselho
+                     "2008",
+                      "1999176",//Id Conselho
+                      "527130", //Id Estaca
+                      "ESTACA",
+                       "165514",
+                       "ALA"],
+                   ["2188", "NOME ALA", "CARAPICUIBA BRASIL", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "ESTACA", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS: SE É DISTRITO, RAMO OU ALA)"],
+                    ["2189", "Ariston", "CARAPICUIBA BRASIL", "", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS)", "ESTACA", "(ESTACA NOVA ADICIONAR DADOS)", "(ESTACA NOVA ADICIONAR DADOS: SE É DISTRITO, RAMO OU ALA)"],
+                    ["2190", "NOME ALA", "CARAPICUIBA BRASIL", "ESTADO", "GERENTE",  "NOME DO CONSELHO", "Algum ano??", "ID DO CONSELHO", "ID DA ESTACA", "ESTACA","ID da Ala", "ALA"]
+                ];
+                /*=============================================================================================*/
+                function removeAllChildNodes(parent) {
+                   if (parent != null) {
+                      while (parent.firstChild) {
+                         parent.removeChild(parent.firstChild);
+                      }
+                   }
+                }
+
+                function byId(id) {
+                   return document.getElementById(id);
+                }
+
+                function filter_ala(estaca_id, ala_id_datalist, ala_id_select) {
+                   var estaca_element = document.getElementById(estaca_id);
+                   var estaca = estaca_element.value;
+                   removeAllChildNodes(document.getElementById(ala_id_datalist));
+                   removeAllChildNodes(document.getElementById(ala_id_select));
+                   i = estaca_ala.length - 1;
+                   teste = false;
+                   while (i > 0) {
+                      if (estaca_ala[i][2] == estaca) {
+                         var divNova = document.createElement("option");
+                         divNova.innerHTML = estaca_ala[i][1];
+                         divNova.value = estaca_ala[i][1];
+                         document.getElementById(ala_id_select).appendChild(divNova);
+                         var divNova = document.createElement("option");
+                         //divNova.innerHTML=estaca_ala[i][1];
+                         divNova.value = estaca_ala[i][1];
+                         divNova.setAttribute("data", estaca_ala[i][1]);
+                         divNova.setAttribute("class", "option_datalist_form");
+                         document.getElementById(ala_id_datalist).appendChild(divNova);
+                      }
+                      i -= 1;
+                   }
+                   document.getElementById("loader_ala").classList.add('off');
+                   document.getElementById("loader_estaca").classList.add('off');
+                }
+             </script>
+             <div id="ancora_estaca"></div>
+             <div id="estaca-hidden" class="campo_hid6" onload="">
+                <label for="llfiedl49074"> Estaca <div class="div_position_load">
+                      <div id="loader_estaca" class="loader load_my "></div>
+                   </div>
+                </label>
+                <input list="llfield490742" oninput="estaca_onInput('llfield490742','llfield49074', 'input_datalist_estaca');" class="input_to_hidden6  elementor-field elementor-size-sm  elementor-field-textual" id="input_datalist_estaca" placeholder="Pesquise sua estaca por aqui"  onchange="SHC(6,7)" autocomplete="off" />
+                <datalist id="llfield490742" name="llfield490742">
+                   <option value=""></option>
+                   <script>//< !--<option id="option_estaca_key"  class="option_datalist_form" value="Distrito Araripina Brasil">Distrito Araripina Brasil</option>-- ></script>
+                   <option id="option_estaca_key" class="option_datalist_form" value="ALEGRETE BRASIL" data="ALEGRETE BRASIL"></option>
+                   <option class="option_datalist_form" value="ALPHAVILLE BRASIL" data="ALPHAVILLE BRASIL"></option>
+                   <option class="option_datalist_form" value="ALVARENGA BRASIL" data="ALVARENGA BRASIL"></option>
+                   <option class="option_datalist_form" value="AMERICANA BRASIL" data="AMERICANA BRASIL"></option>
+                   <option class="option_datalist_form" value="ANAPOLIS BRASIL" data="ANAPOLIS BRASIL"></option>
+                   <option class="option_datalist_form" value="APUCARANA BRASIL" data="APUCARANA BRASIL"></option>
+                   <option class="option_datalist_form" value="ARACAJU BRASIL NORTE" data="ARACAJU BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="ARACAJU BRASIL SUL" data="ARACAJU BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="ARACATUBA BRASIL" data="ARACATUBA BRASIL"></option>
+                   <option class="option_datalist_form" value="ARAPIRACA BRASIL" data="ARAPIRACA BRASIL"></option>
+                   <option class="option_datalist_form" value="ARARAQUARA BRASIL" data="ARARAQUARA BRASIL"></option>
+                   <option class="option_datalist_form" value="ARARIPINA BRASIL" data="ARARIPINA BRASIL"></option>
+                   <option class="option_datalist_form" value="ARSENAL BRASIL" data="ARSENAL BRASIL"></option>
+                   <option class="option_datalist_form" value="BAGE BRASIL" data="BAGE BRASIL"></option>
+                   <option class="option_datalist_form" value="BARCARENA BRASIL" data="BARCARENA BRASIL"></option>
+                   <option class="option_datalist_form" value="BARREIRAS BRASIL" data="BARREIRAS BRASIL"></option>
+                   <option class="option_datalist_form" value="BARUERI BRASIL" data="BARUERI BRASIL"></option>
+                   <option class="option_datalist_form" value="BAURU BRASIL" data="BAURU BRASIL"></option>
+                   <option class="option_datalist_form" value="BELEM BRASIL" data="BELEM BRASIL"></option>
+                   <option class="option_datalist_form" value="BELEM BRASIL CABANAGEM" data="BELEM BRASIL CABANAGEM"></option>
+                   <option class="option_datalist_form" value="BELEM BRASIL CIDADE NOVA" data="BELEM BRASIL CIDADE NOVA"></option>
+                   <option class="option_datalist_form" value="BELEM BRASIL ENTRONCAMENTO" data="BELEM BRASIL ENTRONCAMENTO"></option>
+                   <option class="option_datalist_form" value="BELEM BRASIL ICOARACI" data="BELEM BRASIL ICOARACI"></option>
+                   <option class="option_datalist_form" value="BELO HORIZONTE BRASIL" data="BELO HORIZONTE BRASIL"></option>
+                   <option class="option_datalist_form" value="BELO HORIZONTE BRASIL LESTE" data="BELO HORIZONTE BRASIL LESTE"></option>
+                   <option class="option_datalist_form" value="BELO HORIZONTE BRASIL OESTE" data="BELO HORIZONTE BRASIL OESTE"></option>
+                   <option class="option_datalist_form" value="BELO HORIZONTE BRASIL PAMPULHA" data="BELO HORIZONTE BRASIL PAMPULHA"></option>
+                   <option class="option_datalist_form" value="BETIM BRASIL" data="BETIM BRASIL"></option>
+                   <option class="option_datalist_form" value="BIRIGUI BRASIL" data="BIRIGUI BRASIL"></option>
+                   <option class="option_datalist_form" value="BOA VISTA BRASIL" data="BOA VISTA BRASIL"></option>
+                   <option class="option_datalist_form" value="BOTUCATU BRASIL" data="BOTUCATU BRASIL"></option>
+                   <option class="option_datalist_form" value="BRASIL BELEM" data="BRASIL BELEM"></option>
+                   <option class="option_datalist_form" value="BRASIL BELO HORIZONTE" data="BRASIL BELO HORIZONTE"></option>
+                   <option class="option_datalist_form" value="BRASIL BRASILIA" data="BRASIL BRASILIA"></option>
+                   <option class="option_datalist_form" value="BRASIL CUIABA" data="BRASIL CUIABA"></option>
+                   <option class="option_datalist_form" value="BRASIL CURITIBA" data="BRASIL CURITIBA"></option>
+                   <option class="option_datalist_form" value="BRASIL CURITIBA SUL" data="BRASIL CURITIBA SUL"></option>
+                   <option class="option_datalist_form" value="BRASIL FLORIANOPOLIS" data="BRASIL FLORIANOPOLIS"></option>
+                   <option class="option_datalist_form" value="BRASIL FORTALEZA" data="BRASIL FORTALEZA"></option>
+                   <option class="option_datalist_form" value="BRASIL FORTALEZA LESTE" data="BRASIL FORTALEZA LESTE"></option>
+                   <option class="option_datalist_form" value="BRASIL GOIANIA" data="BRASIL GOIANIA"></option>
+                   <option class="option_datalist_form" value="BRASIL JOAO PESSOA" data="BRASIL JOAO PESSOA"></option>
+                   <option class="option_datalist_form" value="BRASIL JUIZ DE FORA" data="BRASIL JUIZ DE FORA"></option>
+                   <option class="option_datalist_form" value="BRASIL LONDRINA" data="BRASIL LONDRINA"></option>
+                   <option class="option_datalist_form" value="BRASIL MACEIO" data="BRASIL MACEIO"></option>
+                   <option class="option_datalist_form" value="BRASIL MANAUS" data="BRASIL MANAUS"></option>
+                   <option class="option_datalist_form" value="BRASIL NATAL" data="BRASIL NATAL"></option>
+                   <option class="option_datalist_form" value="BRASIL PIRACICABA" data="BRASIL PIRACICABA"></option>
+                   <option class="option_datalist_form" value="BRASIL PORTO ALEGRE SUL" data="BRASIL PORTO ALEGRE SUL"></option>
+                   <option class="option_datalist_form" value="BRASIL RECIFE SUL" data="BRASIL RECIFE SUL"></option>
+                   <option class="option_datalist_form" value="BRASIL RIO DE JANEIRO NORTE" data="BRASIL RIO DE JANEIRO NORTE"></option>
+                   <option class="option_datalist_form" value="BRASIL SALVADOR" data="BRASIL SALVADOR"></option>
+                   <option class="option_datalist_form" value="BRASIL SALVADOR SUL" data="BRASIL SALVADOR SUL"></option>
+                   <option class="option_datalist_form" value="BRASIL SANTA MARIA" data="BRASIL SANTA MARIA"></option>
+                   <option class="option_datalist_form" value="BRASIL SAO PAULO INTERLAGOS" data="BRASIL SAO PAULO INTERLAGOS"></option>
+                   <option class="option_datalist_form" value="BRASIL SAO PAULO LESTE" data="BRASIL SAO PAULO LESTE"></option>
+                   <option class="option_datalist_form" value="BRASIL SAO PAULO NORTE" data="BRASIL SAO PAULO NORTE"></option>
+                   <option class="option_datalist_form" value="BRASIL SAO PAULO SUL" data="BRASIL SAO PAULO SUL"></option>
+                   <option class="option_datalist_form" value="BRASIL TERESINA" data="BRASIL TERESINA"></option>
+                   <option class="option_datalist_form" value="BRASIL VITORIA" data="BRASIL VITORIA"></option>
+                   <option class="option_datalist_form" value="BRASILIA BRASIL" data="BRASILIA BRASIL"></option>
+                   <option class="option_datalist_form" value="BRASILIA BRASIL ALVORADA" data="BRASILIA BRASIL ALVORADA"></option>
+                   <option class="option_datalist_form" value="BRASILIA BRASIL CEILANDIA" data="BRASILIA BRASIL CEILANDIA"></option>
+                   <option class="option_datalist_form" value="BRASILIA BRASIL NORTE" data="BRASILIA BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="BRASILIA BRASIL TAGUATINGA" data="BRASILIA BRASIL TAGUATINGA"></option>
+                   <option class="option_datalist_form" value="CABO FRIO BRASIL" data="CABO FRIO BRASIL"></option>
+                   <option class="option_datalist_form" value="CAICO BRASIL" data="CAICO BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMACARI BRASIL" data="CAMACARI BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMACARI BRASIL CENTRAL" data="CAMACARI BRASIL CENTRAL"></option>
+                   <option class="option_datalist_form" value="CAMARAGIBE BRASIL" data="CAMARAGIBE BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMPINA GRANDE BRASIL" data="CAMPINA GRANDE BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMPINA GRANDE BRASIL LIBERDADE" data="CAMPINA GRANDE BRASIL LIBERDADE"></option>
+                   <option class="option_datalist_form" value="CAMPINAS BRASIL" data="CAMPINAS BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMPINAS BRASIL CAMPOS ELISEOS" data="CAMPINAS BRASIL CAMPOS ELISEOS"></option>
+                   <option class="option_datalist_form" value="CAMPINAS BRASIL CASTELO" data="CAMPINAS BRASIL CASTELO"></option>
+                   <option class="option_datalist_form" value="CAMPINAS BRASIL FLAMBOYANT" data="CAMPINAS BRASIL FLAMBOYANT"></option>
+                   <option class="option_datalist_form" value="CAMPO GRANDE BRASIL" data="CAMPO GRANDE BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMPO GRANDE BRASIL MONTE LIBANO" data="CAMPO GRANDE BRASIL MONTE LIBANO"></option>
+                   <option class="option_datalist_form" value="CAMPO MAIOR BRAZIL" data="CAMPO MAIOR BRAZIL"></option>
+                   <option class="option_datalist_form" value="CAMPO MOURAO BRASIL" data="CAMPO MOURAO BRASIL"></option>
+                   <option class="option_datalist_form" value="CAMPOS BRASIL" data="CAMPOS BRASIL"></option>
+                   <option class="option_datalist_form" value="CANOAS BRASIL" data="CANOAS BRASIL"></option>
+                   <option class="option_datalist_form" value="CANOAS BRASIL NORTE" data="CANOAS BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="CARAJAS BRASIL" data="CARAJAS BRASIL"></option>
+                   <option class="option_datalist_form" value="CARAPICUIBA BRASIL" data="CARAPICUIBA BRASIL"></option>
+                   <option class="option_datalist_form" value="CARIACICA BRASIL" data="CARIACICA BRASIL"></option>
+                   <option class="option_datalist_form" value="CARUARU BRASIL" data="CARUARU BRASIL"></option>
+                   <option class="option_datalist_form" value="CASCAVEL BRASIL" data="CASCAVEL BRASIL"></option>
+                   <option class="option_datalist_form" value="CASTANHAL BRASIL" data="CASTANHAL BRASIL"></option>
+                   <option class="option_datalist_form" value="CAUCAIA BRASIL" data="CAUCAIA BRASIL"></option>
+                   <option class="option_datalist_form" value="CAXIAS DO SUL BRASIL" data="CAXIAS DO SUL BRASIL"></option>
+                   <option class="option_datalist_form" value="CHAPECO BRASIL" data="CHAPECO BRASIL"></option>
+                   <option class="option_datalist_form" value="COLATINA BRASIL" data="COLATINA BRASIL"></option>
+                   <option class="option_datalist_form" value="CONTAGEM BRASIL" data="CONTAGEM BRASIL"></option>
+                   <option class="option_datalist_form" value="CRUZ ALTA BRASIL" data="CRUZ ALTA BRASIL"></option>
+                   <option class="option_datalist_form" value="CUIABA BRASIL" data="CUIABA BRASIL"></option>
+                   <option class="option_datalist_form" value="CUIABA BRASIL INDUSTRIARIO" data="CUIABA BRASIL INDUSTRIARIO"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL" data="CURITIBA BRASIL"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL BOA VISTA" data="CURITIBA BRASIL BOA VISTA"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL BOQUEIRAO" data="CURITIBA BRASIL BOQUEIRAO"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL IGUACU" data="CURITIBA BRASIL IGUACU"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL JARDIM DO SOL" data="CURITIBA BRASIL JARDIM DO SOL"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL LUZ" data="CURITIBA BRASIL LUZ"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL NOVO MUNDO" data="CURITIBA BRASIL NOVO MUNDO"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL PORTAO" data="CURITIBA BRASIL PORTAO"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL SAO LOURENCO" data="CURITIBA BRASIL SAO LOURENCO"></option>
+                   <option class="option_datalist_form" value="CURITIBA BRASIL TARUMA" data="CURITIBA BRASIL TARUMA"></option>
+                   <option class="option_datalist_form" value="DIADEMA BRASIL" data="DIADEMA BRASIL"></option>
+                   <option class="option_datalist_form" value="FEIRA DE SANTANA BRASIL" data="FEIRA DE SANTANA BRASIL"></option>
+                   <option class="option_datalist_form" value="FEIRA DE SANTANA BRASIL KALILANDIA" data="FEIRA DE SANTANA BRASIL KALILANDIA"></option>
+                   <option class="option_datalist_form" value="FEIRA DE SANTANA BRASIL NORTE" data="FEIRA DE SANTANA BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="FLORIANOPOLIS BRASIL" data="FLORIANOPOLIS BRASIL"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL" data="FORTALEZA BRASIL"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL BENFICA" data="FORTALEZA BRASIL BENFICA"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL BOM JARDIM" data="FORTALEZA BRASIL BOM JARDIM"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL BOM SUCESSO" data="FORTALEZA BRASIL BOM SUCESSO"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL CASTELAO" data="FORTALEZA BRASIL CASTELAO"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL CEARA" data="FORTALEZA BRASIL CEARA"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL DUNAS" data="FORTALEZA BRASIL DUNAS"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL LESTE" data="FORTALEZA BRASIL LESTE"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL LISBOA" data="FORTALEZA BRASIL LISBOA"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL LITORAL" data="FORTALEZA BRASIL LITORAL"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL MESSEJANA" data="FORTALEZA BRASIL MESSEJANA"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL MONTESE" data="FORTALEZA BRASIL MONTESE"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL OESTE" data="FORTALEZA BRASIL OESTE"></option>
+                   <option class="option_datalist_form" value="FORTALEZA BRASIL SUL" data="FORTALEZA BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="FOZ DO IGUACU BRASIL" data="FOZ DO IGUACU BRASIL"></option>
+                   <option class="option_datalist_form" value="FRANCA BRASIL" data="FRANCA BRASIL"></option>
+                   <option class="option_datalist_form" value="GARANHUNS BRASIL" data="GARANHUNS BRASIL"></option>
+                   <option class="option_datalist_form" value="GOIANIA BRASIL" data="GOIANIA BRASIL"></option>
+                   <option class="option_datalist_form" value="GOIANIA BRASIL NORTE" data="GOIANIA BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="GOIANIA BRASIL SUL" data="GOIANIA BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="GRAMADO BRASIL" data="GRAMADO BRASIL"></option>
+                   <option class="option_datalist_form" value="GRAVATAI BRASIL" data="GRAVATAI BRASIL"></option>
+                   <option class="option_datalist_form" value="GUARAPUAVA BRASIL" data="GUARAPUAVA BRASIL"></option>
+                   <option class="option_datalist_form" value="GUARATINGUETA BRASIL" data="GUARATINGUETA BRASIL"></option>
+                   <option class="option_datalist_form" value="GUARUJA BRASIL" data="GUARUJA BRASIL"></option>
+                   <option class="option_datalist_form" value="HORTOLANDIA BRASIL" data="HORTOLANDIA BRASIL"></option>
+                   <option class="option_datalist_form" value="IMPERATRIZ BRASIL" data="IMPERATRIZ BRASIL"></option>
+                   <option class="option_datalist_form" value="IPATINGA BRASIL" data="IPATINGA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITABUNA BRASIL" data="ITABUNA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITACOATIARA BRASIL" data="ITACOATIARA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITAPETININGA BRASIL" data="ITAPETININGA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITAPEVA BRASIL" data="ITAPEVA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITATIBA BRASIL" data="ITATIBA BRASIL"></option>
+                   <option class="option_datalist_form" value="ITU BRASIL" data="ITU BRASIL"></option>
+                   <option class="option_datalist_form" value="JABOATAO BRASIL LITORAL" data="JABOATAO BRASIL LITORAL"></option>
+                   <option class="option_datalist_form" value="JABOATAO DOS GUARARAPES BRASIL" data="JABOATAO DOS GUARARAPES BRASIL"></option>
+                   <option class="option_datalist_form" value="JOAO PESSOA BRASIL" data="JOAO PESSOA BRASIL"></option>
+                   <option class="option_datalist_form" value="JOAO PESSOA BRASIL CENTRO" data="JOAO PESSOA BRASIL CENTRO"></option>
+                   <option class="option_datalist_form" value="JOAO PESSOA BRASIL RANGEL" data="JOAO PESSOA BRASIL RANGEL"></option>
+                   <option class="option_datalist_form" value="JOAO PESSOA BRASIL TORRE" data="JOAO PESSOA BRASIL TORRE"></option>
+                   <option class="option_datalist_form" value="JOINVILLE BRASIL NORTE" data="JOINVILLE BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="JOINVILLE BRASIL SUL" data="JOINVILLE BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="JUAZEIRO DO NORTE BRASIL" data="JUAZEIRO DO NORTE BRASIL"></option>
+                   <option class="option_datalist_form" value="JUIZ DE FORA BRASIL" data="JUIZ DE FORA BRASIL"></option>
+                   <option class="option_datalist_form" value="JUNDIAI BRASIL" data="JUNDIAI BRASIL"></option>
+                   <option class="option_datalist_form" value="JUNDIAI BRASIL REPRESA" data="JUNDIAI BRASIL REPRESA"></option>
+                   <option class="option_datalist_form" value="LAFAIETE BRASIL" data="LAFAIETE BRASIL"></option>
+                   <option class="option_datalist_form" value="LAGARTO BRASIL" data="LAGARTO BRASIL"></option>
+                   <option class="option_datalist_form" value="LAGES BRASIL" data="LAGES BRASIL"></option>
+                   <option class="option_datalist_form" value="LEOPOLDINA BRASIL" data="LEOPOLDINA BRASIL"></option>
+                   <option class="option_datalist_form" value="LIVRAMENTO BRASIL" data="LIVRAMENTO BRASIL"></option>
+                   <option class="option_datalist_form" value="LONDRINA BRASIL" data="LONDRINA BRASIL"></option>
+                   <option class="option_datalist_form" value="LONDRINA BRASIL TIRADENTES" data="LONDRINA BRASIL TIRADENTES"></option>
+                   <option class="option_datalist_form" value="MACAE BRASIL" data="MACAE BRASIL"></option>
+                   <option class="option_datalist_form" value="MACAPA BRASIL" data="MACAPA BRASIL"></option>
+                   <option class="option_datalist_form" value="MACEIO BRASIL" data="MACEIO BRASIL"></option>
+                   <option class="option_datalist_form" value="MACEIO BRASIL COLINA" data="MACEIO BRASIL COLINA"></option>
+                   <option class="option_datalist_form" value="MACEIO BRASIL LITORAL" data="MACEIO BRASIL LITORAL"></option>
+                   <option class="option_datalist_form" value="MACEIO BRASIL PAJUCARA" data="MACEIO BRASIL PAJUCARA"></option>
+                   <option class="option_datalist_form" value="MACEIO BRASIL TABULEIRO" data="MACEIO BRASIL TABULEIRO"></option>
+                   <option class="option_datalist_form" value="MAMANGUAPE BRASIL" data="MAMANGUAPE BRASIL"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL" data="MANAUS BRASIL"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL CIDADE NOVA" data="MANAUS BRASIL CIDADE NOVA"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL GUARANY" data="MANAUS BRASIL GUARANY"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL MINDU" data="MANAUS BRASIL MINDU"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL PONTA NEGRA" data="MANAUS BRASIL PONTA NEGRA"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL RIO AMAZONAS" data="MANAUS BRASIL RIO AMAZONAS"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL RIO NEGRO" data="MANAUS BRASIL RIO NEGRO"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL SAMAUMA" data="MANAUS BRASIL SAMAUMA"></option>
+                   <option class="option_datalist_form" value="MANAUS BRASIL SOLIMOES" data="MANAUS BRASIL SOLIMOES"></option>
+                   <option class="option_datalist_form" value="MARACANAU BRASIL" data="MARACANAU BRASIL"></option>
+                   <option class="option_datalist_form" value="MARACANAU BRASIL NORTE" data="MARACANAU BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="MARILIA BRASIL" data="MARILIA BRASIL"></option>
+                   <option class="option_datalist_form" value="MARINGA BRASIL" data="MARINGA BRASIL"></option>
+                   <option class="option_datalist_form" value="MAUA BRASIL" data="MAUA BRASIL"></option>
+                   <option class="option_datalist_form" value="MOGI MIRIM BRASIL" data="MOGI MIRIM BRASIL"></option>
+                   <option class="option_datalist_form" value="MONTES CLAROS BRASIL" data="MONTES CLAROS BRASIL"></option>
+                   <option class="option_datalist_form" value="MOSSORO BRASIL" data="MOSSORO BRASIL"></option>
+                   <option class="option_datalist_form" value="NANUQUE BRASIL" data="NANUQUE BRASIL"></option>
+                   <option class="option_datalist_form" value="NATAL BRASIL" data="NATAL BRASIL"></option>
+                   <option class="option_datalist_form" value="NATAL BRASIL PAJUCARA" data="NATAL BRASIL PAJUCARA"></option>
+                   <option class="option_datalist_form" value="NATAL BRASIL PONTA NEGRA" data="NATAL BRASIL PONTA NEGRA"></option>
+                   <option class="option_datalist_form" value="NATAL BRASIL POTENGI" data="NATAL BRASIL POTENGI"></option>
+                   <option class="option_datalist_form" value="NAVEGANTES BRASIL" data="NAVEGANTES BRASIL"></option>
+                   <option class="option_datalist_form" value="NITEROI BRASIL" data="NITEROI BRASIL"></option>
+                   <option class="option_datalist_form" value="NOVA IGUACU BRASIL" data="NOVA IGUACU BRASIL"></option>
+                   <option class="option_datalist_form" value="NOVO HAMBURGO BRASIL" data="NOVO HAMBURGO BRASIL"></option>
+                   <option class="option_datalist_form" value="OLINDA BRASIL" data="OLINDA BRASIL"></option>
+                   <option class="option_datalist_form" value="OSASCO BRASIL" data="OSASCO BRASIL"></option>
+                   <option class="option_datalist_form" value="OSORIO BRASIL" data="OSORIO BRASIL"></option>
+                   <option class="option_datalist_form" value="PACAJUS BRASIL" data="PACAJUS BRASIL"></option>
+                   <option class="option_datalist_form" value="PALHOCA BRASIL" data="PALHOCA BRASIL"></option>
+                   <option class="option_datalist_form" value="PALMARES BRASIL" data="PALMARES BRASIL"></option>
+                   <option class="option_datalist_form" value="PALMAS BRASIL" data="PALMAS BRASIL"></option>
+                   <option class="option_datalist_form" value="PALMAS BRASIL NORTE" data="PALMAS BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="PARANAGUA BRASIL" data="PARANAGUA BRASIL"></option>
+                   <option class="option_datalist_form" value="PARNAIBA BRASIL" data="PARNAIBA BRASIL"></option>
+                   <option class="option_datalist_form" value="PASSO FUNDO BRASIL" data="PASSO FUNDO BRASIL"></option>
+                   <option class="option_datalist_form" value="PASSO FUNDO BRASIL SUL" data="PASSO FUNDO BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="PATOS DE MINAS BRASIL" data="PATOS DE MINAS BRASIL"></option>
+                   <option class="option_datalist_form" value="PAULISTA BRASIL" data="PAULISTA BRASIL"></option>
+                   <option class="option_datalist_form" value="PELOTAS BRASIL" data="PELOTAS BRASIL"></option>
+                   <option class="option_datalist_form" value="PELOTAS BRASIL NORTE" data="PELOTAS BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="PETROLINA BRASIL" data="PETROLINA BRASIL"></option>
+                   <option class="option_datalist_form" value="PETROPOLIS BRASIL" data="PETROPOLIS BRASIL"></option>
+                   <option class="option_datalist_form" value="PINHAIS BRASIL" data="PINHAIS BRASIL"></option>
+                   <option class="option_datalist_form" value="PIRACICABA BRASIL" data="PIRACICABA BRASIL"></option>
+                   <option class="option_datalist_form" value="PIRACICABA BRASIL REZENDE" data="PIRACICABA BRASIL REZENDE"></option>
+                   <option class="option_datalist_form" value="PIRASSUNUNGA BRASIL" data="PIRASSUNUNGA BRASIL"></option>
+                   <option class="option_datalist_form" value="PLANALTINA BRASIL" data="PLANALTINA BRASIL"></option>
+                   <option class="option_datalist_form" value="PONTA GROSSA BRASIL" data="PONTA GROSSA BRASIL"></option>
+                   <option class="option_datalist_form" value="PONTA GROSSA BRASIL CAMPOS GERAIS" data="PONTA GROSSA BRASIL CAMPOS GERAIS"></option>
+                   <option class="option_datalist_form" value="PONTA PORA BRASIL" data="PONTA PORA BRASIL"></option>
+                   <option class="option_datalist_form" value="PORTO ALEGRE BRASIL" data="PORTO ALEGRE BRASIL"></option>
+                   <option class="option_datalist_form" value="PORTO ALEGRE BRASIL MOINHOS DE VENTO" data="PORTO ALEGRE BRASIL MOINHOS DE VENTO"></option>
+                   <option class="option_datalist_form" value="PORTO ALEGRE BRASIL NORTE" data="PORTO ALEGRE BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="PORTO ALEGRE BRASIL PARTENON" data="PORTO ALEGRE BRASIL PARTENON"></option>
+                   <option class="option_datalist_form" value="PORTO ALEGRE BRASIL SUL" data="PORTO ALEGRE BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="PORTO SEGURO BRASIL" data="PORTO SEGURO BRASIL"></option>
+                   <option class="option_datalist_form" value="PORTO VELHO BRASIL" data="PORTO VELHO BRASIL"></option>
+                   <option class="option_datalist_form" value="POUSO ALEGRE BRASIL" data="POUSO ALEGRE BRASIL"></option>
+                   <option class="option_datalist_form" value="PRAIA GRANDE BRASIL" data="PRAIA GRANDE BRASIL"></option>
+                   <option class="option_datalist_form" value="PRESIDENTE PRUDENTE BRASIL" data="PRESIDENTE PRUDENTE BRASIL"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL" data="RECIFE BRASIL"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL BOA VIAGEM" data="RECIFE BRASIL BOA VIAGEM"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL CASA AMARELA" data="RECIFE BRASIL CASA AMARELA"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL CAXANGA" data="RECIFE BRASIL CAXANGA"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL IMBIRIBEIRA" data="RECIFE BRASIL IMBIRIBEIRA"></option>
+                   <option class="option_datalist_form" value="RECIFE BRASIL JARDIM SAO PAULO" data="RECIFE BRASIL JARDIM SAO PAULO"></option>
+                   <option class="option_datalist_form" value="REGISTRO BRASIL" data="REGISTRO BRASIL"></option>
+                   <option class="option_datalist_form" value="RIBEIRAO PIRES BRASIL" data="RIBEIRAO PIRES BRASIL"></option>
+                   <option class="option_datalist_form" value="RIBEIRAO PRETO BRASIL LESTE" data="RIBEIRAO PRETO BRASIL LESTE"></option>
+                   <option class="option_datalist_form" value="RIBEIRAO PRETO BRASIL OESTE" data="RIBEIRAO PRETO BRASIL OESTE"></option>
+                   <option class="option_datalist_form" value="RIBEIRAO PRETO BRASIL SUL" data="RIBEIRAO PRETO BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="RIO BRANCO BRASIL" data="RIO BRANCO BRASIL"></option>
+                   <option class="option_datalist_form" value="RIO CLARO BRASIL" data="RIO CLARO BRASIL"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL" data="RIO DE JANEIRO BRASIL"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL ANDARAI" data="RIO DE JANEIRO BRASIL ANDARAI"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL CAMPO GRANDE" data="RIO DE JANEIRO BRASIL CAMPO GRANDE"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL ENGENHO DE DENTRO" data="RIO DE JANEIRO BRASIL ENGENHO DE DENTRO"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL ITAGUAI" data="RIO DE JANEIRO BRASIL ITAGUAI"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL JACAREPAGUA" data="RIO DE JANEIRO BRASIL JACAREPAGUA"></option>
+                   <option class="option_datalist_form" value="RIO DE JANEIRO BRASIL MADUREIRA" data="RIO DE JANEIRO BRASIL MADUREIRA"></option>
+                   <option class="option_datalist_form" value="RIO GRANDE BRASIL" data="RIO GRANDE BRASIL"></option>
+                   <option class="option_datalist_form" value="RIO VERDE BRASIL" data="RIO VERDE BRASIL"></option>
+                   <option class="option_datalist_form" value="RONDONOPOLIS BRASIL" data="RONDONOPOLIS BRASIL"></option>
+                   <option class="option_datalist_form" value="SALVADOR BRASIL" data="SALVADOR BRASIL"></option>
+                   <option class="option_datalist_form" value="SALVADOR BRASIL IMBUI" data="SALVADOR BRASIL IMBUI"></option>
+                   <option class="option_datalist_form" value="SALVADOR BRASIL LIBERDADE" data="SALVADOR BRASIL LIBERDADE"></option>
+                   <option class="option_datalist_form" value="SALVADOR BRASIL NORTE" data="SALVADOR BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="SANTA CRUZ DO SUL BRASIL" data="SANTA CRUZ DO SUL BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTA MARIA BRASIL" data="SANTA MARIA BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTA RITA BRASIL" data="SANTA RITA BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTAREM BRASIL" data="SANTAREM BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTO ANDRE BRASIL" data="SANTO ANDRE BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTO ANGELO BRASIL" data="SANTO ANGELO BRASIL"></option>
+                   <option class="option_datalist_form" value="SANTOS BRASIL" data="SANTOS BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO BERNARDO BRASIL" data="SAO BERNARDO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO BERNARDO BRASIL RUDGE RAMOS" data="SAO BERNARDO BRASIL RUDGE RAMOS"></option>
+                   <option class="option_datalist_form" value="SAO BORJA BRASIL" data="SAO BORJA BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO CARLOS BRASIL" data="SAO CARLOS BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO GABRIEL BRASIL" data="SAO GABRIEL BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JERONIMO BRASIL" data="SAO JERONIMO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOAO DA BOA VISTA BRASIL" data="SAO JOAO DA BOA VISTA BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE BRASIL" data="SAO JOSE BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DO RIO PRETO BRASIL" data="SAO JOSE DO RIO PRETO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DO RIO PRETO BRASIL SUL" data="SAO JOSE DO RIO PRETO BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DOS CAMPOS BRASIL" data="SAO JOSE DOS CAMPOS BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DOS CAMPOS BRASIL SUL" data="SAO JOSE DOS CAMPOS BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DOS PINHAIS BRASIL" data="SAO JOSE DOS PINHAIS BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO JOSE DOS PINHAIS BRASIL JARDIM IPE" data="SAO JOSE DOS PINHAIS BRASIL JARDIM IPE"></option>
+                   <option class="option_datalist_form" value="SAO LEOPOLDO BRASIL" data="SAO LEOPOLDO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO LOURENCO DO SUL BRASIL" data="SAO LOURENCO DO SUL BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO LUIS BRASIL" data="SAO LUIS BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO LUIS BRASIL LESTE" data="SAO LUIS BRASIL LESTE"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL" data="SAO PAULO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL CAMPO LIMPO" data="SAO PAULO BRASIL CAMPO LIMPO"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL CASA GRANDE" data="SAO PAULO BRASIL CASA GRANDE"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL COTIA" data="SAO PAULO BRASIL COTIA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL CUMBICA" data="SAO PAULO BRASIL CUMBICA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL EMBU" data="SAO PAULO BRASIL EMBU"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL FERREIRA" data="SAO PAULO BRASIL FERREIRA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL GRAJAU" data="SAO PAULO BRASIL GRAJAU"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL GUARAPIRANGA" data="SAO PAULO BRASIL GUARAPIRANGA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL GUARULHOS" data="SAO PAULO BRASIL GUARULHOS"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL INTERLAGOS" data="SAO PAULO BRASIL INTERLAGOS"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL IPIRANGA" data="SAO PAULO BRASIL IPIRANGA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL ITAQUA" data="SAO PAULO BRASIL ITAQUA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL ITAQUERA" data="SAO PAULO BRASIL ITAQUERA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL JACANA" data="SAO PAULO BRASIL JACANA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL JARAGUA" data="SAO PAULO BRASIL JARAGUA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL JARDIM DA SAUDE" data="SAO PAULO BRASIL JARDIM DA SAUDE"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL MOGI DAS CRUZES" data="SAO PAULO BRASIL MOGI DAS CRUZES"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL NORTE" data="SAO PAULO BRASIL NORTE"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PARQUE BRISTOL" data="SAO PAULO BRASIL PARQUE BRISTOL"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PARQUE PINHEIROS" data="SAO PAULO BRASIL PARQUE PINHEIROS"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PENHA" data="SAO PAULO BRASIL PENHA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PERDIZES" data="SAO PAULO BRASIL PERDIZES"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PIRATININGA" data="SAO PAULO BRASIL PIRATININGA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL PIRITUBA" data="SAO PAULO BRASIL PIRITUBA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL RAPOSO TAVARES" data="SAO PAULO BRASIL RAPOSO TAVARES"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL SANTO AMARO" data="SAO PAULO BRASIL SANTO AMARO"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL SAO MIGUEL PAULISTA" data="SAO PAULO BRASIL SAO MIGUEL PAULISTA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL SAPOPEMBA" data="SAO PAULO BRASIL SAPOPEMBA"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL SUL" data="SAO PAULO BRASIL SUL"></option>
+                   <option class="option_datalist_form" value="SAO PAULO BRASIL TABOAO" data="SAO PAULO BRASIL TABOAO"></option>
+                   <option class="option_datalist_form" value="SAO SEBASTIAO BRASIL" data="SAO SEBASTIAO BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO VICENTE BRASIL" data="SAO VICENTE BRASIL"></option>
+                   <option class="option_datalist_form" value="SAO VICENTE BRASIL SERRA DO MAR" data="SAO VICENTE BRASIL SERRA DO MAR"></option>
+                   <option class="option_datalist_form" value="SETE LAGOAS BRASIL" data="SETE LAGOAS BRASIL"></option>
+                   <option class="option_datalist_form" value="SETE LAGOAS BRASIL LESTE" data="SETE LAGOAS BRASIL LESTE"></option>
+                   <option class="option_datalist_form" value="SOBRAL BRASIL" data="SOBRAL BRASIL"></option>
+                   <option class="option_datalist_form" value="SOROCABA BRASIL" data="SOROCABA BRASIL"></option>
+                   <option class="option_datalist_form" value="SOROCABA BRASIL BARCELONA" data="SOROCABA BRASIL BARCELONA"></option>
+                   <option class="option_datalist_form" value="SOROCABA BRASIL SANTANA" data="SOROCABA BRASIL SANTANA"></option>
+                   <option class="option_datalist_form" value="SOROCABA BRASIL TRUJILO" data="SOROCABA BRASIL TRUJILO"></option>
+                   <option class="option_datalist_form" value="SORRISO BRASIL" data="SORRISO BRASIL"></option>
+                   <option class="option_datalist_form" value="SOUSA BRASIL" data="SOUSA BRASIL"></option>
+                   <option class="option_datalist_form" value="SUMARE BRASIL" data="SUMARE BRASIL"></option>
+                   <option class="option_datalist_form" value="TERESINA BRASIL" data="TERESINA BRASIL"></option>
+                   <option class="option_datalist_form" value="TERESINA BRASIL HORTO" data="TERESINA BRASIL HORTO"></option>
+                   <option class="option_datalist_form" value="TERESINA BRASIL PLANALTO" data="TERESINA BRASIL PLANALTO"></option>
+                   <option class="option_datalist_form" value="TERESOPOLIS BRASIL" data="TERESOPOLIS BRASIL"></option>
+                   <option class="option_datalist_form" value="TRES CORACOES BRASIL" data="TRES CORACOES BRASIL"></option>
+                   <option class="option_datalist_form" value="TRES RIOS BRASIL" data="TRES RIOS BRASIL"></option>
+                   <option class="option_datalist_form" value="TUBARAO BRASIL" data="TUBARAO BRASIL"></option>
+                   <option class="option_datalist_form" value="TUPA BRASIL" data="TUPA BRASIL"></option>
+                   <option class="option_datalist_form" value="UBERABA BRASIL" data="UBERABA BRASIL"></option>
+                   <option class="option_datalist_form" value="UBERLANDIA BRASIL" data="UBERLANDIA BRASIL"></option>
+                   <option class="option_datalist_form" value="URUGUAIANA BRASIL" data="URUGUAIANA BRASIL"></option>
+                   <option class="option_datalist_form" value="VALE DO ITAJAI BRASIL" data="VALE DO ITAJAI BRASIL"></option>
+                   <option class="option_datalist_form" value="VALPARAISO BRASIL" data="VALPARAISO BRASIL"></option>
+                   <option class="option_datalist_form" value="VIAMAO BRASIL" data="VIAMAO BRASIL"></option>
+                   <option class="option_datalist_form" value="VILA VELHA BRASIL" data="VILA VELHA BRASIL"></option>
+                   <option class="option_datalist_form" value="VITORIA BRASIL" data="VITORIA BRASIL"></option>
+                   <option class="option_datalist_form" value="VITORIA DA CONQUISTA BRASIL" data="VITORIA DA CONQUISTA BRASIL"></option>
+                   <option class="option_datalist_form" value="VOLTA REDONDA BRASIL" data="VOLTA REDONDA BRASIL"></option>
+                </datalist>
+                <select id="llfield49074" class="openOnHover_estaca elementor-field elementor-size-sm  elementor-field-textual" name="form_fields[estaca]" data-required="true" disable  onchange="SHC(6,7)">
+                   <option value="">Essa será sua estaca selecionada</option>
+                   <option value="ALEGRETE BRASIL">ALEGRETE BRASIL</option>
+                   <option value="ALPHAVILLE BRASIL">ALPHAVILLE BRASIL</option>
+                   <option value="ALVARENGA BRASIL">ALVARENGA BRASIL</option>
+                   <option value="AMERICANA BRASIL">AMERICANA BRASIL</option>
+                   <option value="ANAPOLIS BRASIL">ANAPOLIS BRASIL</option>
+                   <option value="APUCARANA BRASIL">APUCARANA BRASIL</option>
+                   <option value="ARACAJU BRASIL NORTE">ARACAJU BRASIL NORTE</option>
+                   <option value="ARACAJU BRASIL SUL">ARACAJU BRASIL SUL</option>
+                   <option value="ARACATUBA BRASIL">ARACATUBA BRASIL</option>
+                   <option value="ARAPIRACA BRASIL">ARAPIRACA BRASIL</option>
+                   <option value="ARARAQUARA BRASIL">ARARAQUARA BRASIL</option>
+                   <option value="ARARIPINA BRASIL">ARARIPINA BRASIL</option>
+                   <option value="ARSENAL BRASIL">ARSENAL BRASIL</option>
+                   <option value="BAGE BRASIL">BAGE BRASIL</option>
+                   <option value="BARCARENA BRASIL">BARCARENA BRASIL</option>
+                   <option value="BARREIRAS BRASIL">BARREIRAS BRASIL</option>
+                   <option value="BARUERI BRASIL">BARUERI BRASIL</option>
+                   <option value="BAURU BRASIL">BAURU BRASIL</option>
+                   <option value="BELEM BRASIL">BELEM BRASIL</option>
+                   <option value="BELEM BRASIL CABANAGEM">BELEM BRASIL CABANAGEM</option>
+                   <option value="BELEM BRASIL CIDADE NOVA">BELEM BRASIL CIDADE NOVA</option>
+                   <option value="BELEM BRASIL ENTRONCAMENTO">BELEM BRASIL ENTRONCAMENTO</option>
+                   <option value="BELEM BRASIL ICOARACI">BELEM BRASIL ICOARACI</option>
+                   <option value="BELO HORIZONTE BRASIL">BELO HORIZONTE BRASIL</option>
+                   <option value="BELO HORIZONTE BRASIL LESTE">BELO HORIZONTE BRASIL LESTE</option>
+                   <option value="BELO HORIZONTE BRASIL OESTE">BELO HORIZONTE BRASIL OESTE</option>
+                   <option value="BELO HORIZONTE BRASIL PAMPULHA">BELO HORIZONTE BRASIL PAMPULHA</option>
+                   <option value="BETIM BRASIL">BETIM BRASIL</option>
+                   <option value="BIRIGUI BRASIL">BIRIGUI BRASIL</option>
+                   <option value="BOA VISTA BRASIL">BOA VISTA BRASIL</option>
+                   <option value="BOTUCATU BRASIL">BOTUCATU BRASIL</option>
+                   <option value="BRASIL BELEM">BRASIL BELEM</option>
+                   <option value="BRASIL BELO HORIZONTE">BRASIL BELO HORIZONTE</option>
+                   <option value="BRASIL BRASILIA">BRASIL BRASILIA</option>
+                   <option value="BRASIL CUIABA">BRASIL CUIABA</option>
+                   <option value="BRASIL CURITIBA">BRASIL CURITIBA</option>
+                   <option value="BRASIL CURITIBA SUL">BRASIL CURITIBA SUL</option>
+                   <option value="BRASIL FLORIANOPOLIS">BRASIL FLORIANOPOLIS</option>
+                   <option value="BRASIL FORTALEZA">BRASIL FORTALEZA</option>
+                   <option value="BRASIL FORTALEZA LESTE">BRASIL FORTALEZA LESTE</option>
+                   <option value="BRASIL GOIANIA">BRASIL GOIANIA</option>
+                   <option value="BRASIL JOAO PESSOA">BRASIL JOAO PESSOA</option>
+                   <option value="BRASIL JUIZ DE FORA">BRASIL JUIZ DE FORA</option>
+                   <option value="BRASIL LONDRINA">BRASIL LONDRINA</option>
+                   <option value="BRASIL MACEIO">BRASIL MACEIO</option>
+                   <option value="BRASIL MANAUS">BRASIL MANAUS</option>
+                   <option value="BRASIL NATAL">BRASIL NATAL</option>
+                   <option value="BRASIL PIRACICABA">BRASIL PIRACICABA</option>
+                   <option value="BRASIL PORTO ALEGRE SUL">BRASIL PORTO ALEGRE SUL</option>
+                   <option value="BRASIL RECIFE SUL">BRASIL RECIFE SUL</option>
+                   <option value="BRASIL RIO DE JANEIRO NORTE">BRASIL RIO DE JANEIRO NORTE</option>
+                   <option value="BRASIL SALVADOR">BRASIL SALVADOR</option>
+                   <option value="BRASIL SALVADOR SUL">BRASIL SALVADOR SUL</option>
+                   <option value="BRASIL SANTA MARIA">BRASIL SANTA MARIA</option>
+                   <option value="BRASIL SAO PAULO INTERLAGOS">BRASIL SAO PAULO INTERLAGOS</option>
+                   <option value="BRASIL SAO PAULO LESTE">BRASIL SAO PAULO LESTE</option>
+                   <option value="BRASIL SAO PAULO NORTE">BRASIL SAO PAULO NORTE</option>
+                   <option value="BRASIL SAO PAULO SUL">BRASIL SAO PAULO SUL</option>
+                   <option value="BRASIL TERESINA">BRASIL TERESINA</option>
+                   <option value="BRASIL VITORIA">BRASIL VITORIA</option>
+                   <option value="BRASILIA BRASIL">BRASILIA BRASIL</option>
+                   <option value="BRASILIA BRASIL ALVORADA">BRASILIA BRASIL ALVORADA</option>
+                   <option value="BRASILIA BRASIL CEILANDIA">BRASILIA BRASIL CEILANDIA</option>
+                   <option value="BRASILIA BRASIL NORTE">BRASILIA BRASIL NORTE</option>
+                   <option value="BRASILIA BRASIL TAGUATINGA">BRASILIA BRASIL TAGUATINGA</option>
+                   <option value="CABO FRIO BRASIL">CABO FRIO BRASIL</option>
+                   <option value="CAICO BRASIL">CAICO BRASIL</option>
+                   <option value="CAMACARI BRASIL">CAMACARI BRASIL</option>
+                   <option value="CAMACARI BRASIL CENTRAL">CAMACARI BRASIL CENTRAL</option>
+                   <option value="CAMARAGIBE BRASIL">CAMARAGIBE BRASIL</option>
+                   <option value="CAMPINA GRANDE BRASIL">CAMPINA GRANDE BRASIL</option>
+                   <option value="CAMPINA GRANDE BRASIL LIBERDADE">CAMPINA GRANDE BRASIL LIBERDADE</option>
+                   <option value="CAMPINAS BRASIL">CAMPINAS BRASIL</option>
+                   <option value="CAMPINAS BRASIL CAMPOS ELISEOS">CAMPINAS BRASIL CAMPOS ELISEOS</option>
+                   <option value="CAMPINAS BRASIL CASTELO">CAMPINAS BRASIL CASTELO</option>
+                   <option value="CAMPINAS BRASIL FLAMBOYANT">CAMPINAS BRASIL FLAMBOYANT</option>
+                   <option value="CAMPO GRANDE BRASIL">CAMPO GRANDE BRASIL</option>
+                   <option value="CAMPO GRANDE BRASIL MONTE LIBANO">CAMPO GRANDE BRASIL MONTE LIBANO</option>
+                   <option value="CAMPO MAIOR BRAZIL">CAMPO MAIOR BRAZIL</option>
+                   <option value="CAMPO MOURAO BRASIL">CAMPO MOURAO BRASIL</option>
+                   <option value="CAMPOS BRASIL">CAMPOS BRASIL</option>
+                   <option value="CANOAS BRASIL">CANOAS BRASIL</option>
+                   <option value="CANOAS BRASIL NORTE">CANOAS BRASIL NORTE</option>
+                   <option value="CARAPICUIBA BRASIL">CARAPICUIBA BRASIL</option>
+                   <option value="CARAJAS BRASIL">CARAJAS BRASIL</option>
+                   <option value="CARIACICA BRASIL">CARIACICA BRASIL</option>
+                   <option value="CARUARU BRASIL">CARUARU BRASIL</option>
+                   <option value="CASCAVEL BRASIL">CASCAVEL BRASIL</option>
+                   <option value="CASTANHAL BRASIL">CASTANHAL BRASIL</option>
+                   <option value="CAUCAIA BRASIL">CAUCAIA BRASIL</option>
+                   <option value="CAXIAS DO SUL BRASIL">CAXIAS DO SUL BRASIL</option>
+                   <option value="CHAPECO BRASIL">CHAPECO BRASIL</option>
+                   <option value="COLATINA BRASIL">COLATINA BRASIL</option>
+                   <option value="CONTAGEM BRASIL">CONTAGEM BRASIL</option>
+                   <option value="CRUZ ALTA BRASIL">CRUZ ALTA BRASIL</option>
+                   <option value="CUIABA BRASIL">CUIABA BRASIL</option>
+                   <option value="CUIABA BRASIL INDUSTRIARIO">CUIABA BRASIL INDUSTRIARIO</option>
+                   <option value="CURITIBA BRASIL">CURITIBA BRASIL</option>
+                   <option value="CURITIBA BRASIL BOA VISTA">CURITIBA BRASIL BOA VISTA</option>
+                   <option value="CURITIBA BRASIL BOQUEIRAO">CURITIBA BRASIL BOQUEIRAO</option>
+                   <option value="CURITIBA BRASIL IGUACU">CURITIBA BRASIL IGUACU</option>
+                   <option value="CURITIBA BRASIL JARDIM DO SOL">CURITIBA BRASIL JARDIM DO SOL</option>
+                   <option value="CURITIBA BRASIL LUZ">CURITIBA BRASIL LUZ</option>
+                   <option value="CURITIBA BRASIL NOVO MUNDO">CURITIBA BRASIL NOVO MUNDO</option>
+                   <option value="CURITIBA BRASIL PORTAO">CURITIBA BRASIL PORTAO</option>
+                   <option value="CURITIBA BRASIL SAO LOURENCO">CURITIBA BRASIL SAO LOURENCO</option>
+                   <option value="CURITIBA BRASIL TARUMA">CURITIBA BRASIL TARUMA</option>
+                   <option value="DIADEMA BRASIL">DIADEMA BRASIL</option>
+                   <option value="FEIRA DE SANTANA BRASIL">FEIRA DE SANTANA BRASIL</option>
+                   <option value="FEIRA DE SANTANA BRASIL KALILANDIA">FEIRA DE SANTANA BRASIL KALILANDIA</option>
+                   <option value="FEIRA DE SANTANA BRASIL NORTE">FEIRA DE SANTANA BRASIL NORTE</option>
+                   <option value="FLORIANOPOLIS BRASIL">FLORIANOPOLIS BRASIL</option>
+                   <option value="FORTALEZA BRASIL">FORTALEZA BRASIL</option>
+                   <option value="FORTALEZA BRASIL BENFICA">FORTALEZA BRASIL BENFICA</option>
+                   <option value="FORTALEZA BRASIL BOM JARDIM">FORTALEZA BRASIL BOM JARDIM</option>
+                   <option value="FORTALEZA BRASIL BOM SUCESSO">FORTALEZA BRASIL BOM SUCESSO</option>
+                   <option value="FORTALEZA BRASIL CASTELAO">FORTALEZA BRASIL CASTELAO</option>
+                   <option value="FORTALEZA BRASIL CEARA">FORTALEZA BRASIL CEARA</option>
+                   <option value="FORTALEZA BRASIL DUNAS">FORTALEZA BRASIL DUNAS</option>
+                   <option value="FORTALEZA BRASIL LESTE">FORTALEZA BRASIL LESTE</option>
+                   <option value="FORTALEZA BRASIL LISBOA">FORTALEZA BRASIL LISBOA</option>
+                   <option value="FORTALEZA BRASIL LITORAL">FORTALEZA BRASIL LITORAL</option>
+                   <option value="FORTALEZA BRASIL MESSEJANA">FORTALEZA BRASIL MESSEJANA</option>
+                   <option value="FORTALEZA BRASIL MONTESE">FORTALEZA BRASIL MONTESE</option>
+                   <option value="FORTALEZA BRASIL OESTE">FORTALEZA BRASIL OESTE</option>
+                   <option value="FORTALEZA BRASIL SUL">FORTALEZA BRASIL SUL</option>
+                   <option value="FOZ DO IGUACU BRASIL">FOZ DO IGUACU BRASIL</option>
+                   <option value="FRANCA BRASIL">FRANCA BRASIL</option>
+                   <option value="GARANHUNS BRASIL">GARANHUNS BRASIL</option>
+                   <option value="GOIANIA BRASIL">GOIANIA BRASIL</option>
+                   <option value="GOIANIA BRASIL NORTE">GOIANIA BRASIL NORTE</option>
+                   <option value="GOIANIA BRASIL SUL">GOIANIA BRASIL SUL</option>
+                   <option value="GRAMADO BRASIL">GRAMADO BRASIL</option>
+                   <option value="GRAVATAI BRASIL">GRAVATAI BRASIL</option>
+                   <option value="GUARAPUAVA BRASIL">GUARAPUAVA BRASIL</option>
+                   <option value="GUARATINGUETA BRASIL">GUARATINGUETA BRASIL</option>
+                   <option value="GUARUJA BRASIL">GUARUJA BRASIL</option>
+                   <option value="HORTOLANDIA BRASIL">HORTOLANDIA BRASIL</option>
+                   <option value="IMPERATRIZ BRASIL">IMPERATRIZ BRASIL</option>
+                   <option value="IPATINGA BRASIL">IPATINGA BRASIL</option>
+                   <option value="ITABUNA BRASIL">ITABUNA BRASIL</option>
+                   <option value="ITACOATIARA BRASIL">ITACOATIARA BRASIL</option>
+                   <option value="ITAPETININGA BRASIL">ITAPETININGA BRASIL</option>
+                   <option value="ITAPEVA BRASIL">ITAPEVA BRASIL</option>
+                   <option value="ITATIBA BRASIL">ITATIBA BRASIL</option>
+                   <option value="ITU BRASIL">ITU BRASIL</option>
+                   <option value="JABOATAO BRASIL LITORAL">JABOATAO BRASIL LITORAL</option>
+                   <option value="JABOATAO DOS GUARARAPES BRASIL">JABOATAO DOS GUARARAPES BRASIL</option>
+                   <option value="JOAO PESSOA BRASIL">JOAO PESSOA BRASIL</option>
+                   <option value="JOAO PESSOA BRASIL CENTRO">JOAO PESSOA BRASIL CENTRO</option>
+                   <option value="JOAO PESSOA BRASIL RANGEL">JOAO PESSOA BRASIL RANGEL</option>
+                   <option value="JOAO PESSOA BRASIL TORRE">JOAO PESSOA BRASIL TORRE</option>
+                   <option value="JOINVILLE BRASIL NORTE">JOINVILLE BRASIL NORTE</option>
+                   <option value="JOINVILLE BRASIL SUL">JOINVILLE BRASIL SUL</option>
+                   <option value="JUAZEIRO DO NORTE BRASIL">JUAZEIRO DO NORTE BRASIL</option>
+                   <option value="JUIZ DE FORA BRASIL">JUIZ DE FORA BRASIL</option>
+                   <option value="JUNDIAI BRASIL">JUNDIAI BRASIL</option>
+                   <option value="JUNDIAI BRASIL REPRESA">JUNDIAI BRASIL REPRESA</option>
+                   <option value="LAFAIETE BRASIL">LAFAIETE BRASIL</option>
+                   <option value="LAGARTO BRASIL">LAGARTO BRASIL</option>
+                   <option value="LAGES BRASIL">LAGES BRASIL</option>
+                   <option value="LEOPOLDINA BRASIL">LEOPOLDINA BRASIL</option>
+                   <option value="LIVRAMENTO BRASIL">LIVRAMENTO BRASIL</option>
+                   <option value="LONDRINA BRASIL">LONDRINA BRASIL</option>
+                   <option value="LONDRINA BRASIL TIRADENTES">LONDRINA BRASIL TIRADENTES</option>
+                   <option value="MACAE BRASIL">MACAE BRASIL</option>
+                   <option value="MACAPA BRASIL">MACAPA BRASIL</option>
+                   <option value="MACEIO BRASIL">MACEIO BRASIL</option>
+                   <option value="MACEIO BRASIL COLINA">MACEIO BRASIL COLINA</option>
+                   <option value="MACEIO BRASIL LITORAL">MACEIO BRASIL LITORAL</option>
+                   <option value="MACEIO BRASIL PAJUCARA">MACEIO BRASIL PAJUCARA</option>
+                   <option value="MACEIO BRASIL TABULEIRO">MACEIO BRASIL TABULEIRO</option>
+                   <option value="MAMANGUAPE BRASIL">MAMANGUAPE BRASIL</option>
+                   <option value="MANAUS BRASIL">MANAUS BRASIL</option>
+                   <option value="MANAUS BRASIL CIDADE NOVA">MANAUS BRASIL CIDADE NOVA</option>
+                   <option value="MANAUS BRASIL GUARANY">MANAUS BRASIL GUARANY</option>
+                   <option value="MANAUS BRASIL MINDU">MANAUS BRASIL MINDU</option>
+                   <option value="MANAUS BRASIL PONTA NEGRA">MANAUS BRASIL PONTA NEGRA</option>
+                   <option value="MANAUS BRASIL RIO AMAZONAS">MANAUS BRASIL RIO AMAZONAS</option>
+                   <option value="MANAUS BRASIL RIO NEGRO">MANAUS BRASIL RIO NEGRO</option>
+                   <option value="MANAUS BRASIL SAMAUMA">MANAUS BRASIL SAMAUMA</option>
+                   <option value="MANAUS BRASIL SOLIMOES">MANAUS BRASIL SOLIMOES</option>
+                   <option value="MARACANAU BRASIL">MARACANAU BRASIL</option>
+                   <option value="MARACANAU BRASIL NORTE">MARACANAU BRASIL NORTE</option>
+                   <option value="MARILIA BRASIL">MARILIA BRASIL</option>
+                   <option value="MARINGA BRASIL">MARINGA BRASIL</option>
+                   <option value="MAUA BRASIL">MAUA BRASIL</option>
+                   <option value="MOGI MIRIM BRASIL">MOGI MIRIM BRASIL</option>
+                   <option value="MONTES CLAROS BRASIL">MONTES CLAROS BRASIL</option>
+                   <option value="MOSSORO BRASIL">MOSSORO BRASIL</option>
+                   <option value="NANUQUE BRASIL">NANUQUE BRASIL</option>
+                   <option value="NATAL BRASIL">NATAL BRASIL</option>
+                   <option value="NATAL BRASIL PAJUCARA">NATAL BRASIL PAJUCARA</option>
+                   <option value="NATAL BRASIL PONTA NEGRA">NATAL BRASIL PONTA NEGRA</option>
+                   <option value="NATAL BRASIL POTENGI">NATAL BRASIL POTENGI</option>
+                   <option value="NAVEGANTES BRASIL">NAVEGANTES BRASIL</option>
+                   <option value="NITEROI BRASIL">NITEROI BRASIL</option>
+                   <option value="NOVA IGUACU BRASIL">NOVA IGUACU BRASIL</option>
+                   <option value="NOVO HAMBURGO BRASIL">NOVO HAMBURGO BRASIL</option>
+                   <option value="OLINDA BRASIL">OLINDA BRASIL</option>
+                   <option value="OSASCO BRASIL">OSASCO BRASIL</option>
+                   <option value="OSORIO BRASIL">OSORIO BRASIL</option>
+                   <option value="PACAJUS BRASIL">PACAJUS BRASIL</option>
+                   <option value="PALHOCA BRASIL">PALHOCA BRASIL</option>
+                   <option value="PALMARES BRASIL">PALMARES BRASIL</option>
+                   <option value="PALMAS BRASIL">PALMAS BRASIL</option>
+                   <option value="PALMAS BRASIL NORTE">PALMAS BRASIL NORTE</option>
+                   <option value="PARANAGUA BRASIL">PARANAGUA BRASIL</option>
+                   <option value="PARNAIBA BRASIL">PARNAIBA BRASIL</option>
+                   <option value="PASSO FUNDO BRASIL">PASSO FUNDO BRASIL</option>
+                   <option value="PASSO FUNDO BRASIL SUL">PASSO FUNDO BRASIL SUL</option>
+                   <option value="PATOS DE MINAS BRASIL">PATOS DE MINAS BRASIL</option>
+                   <option value="PAULISTA BRASIL">PAULISTA BRASIL</option>
+                   <option value="PELOTAS BRASIL">PELOTAS BRASIL</option>
+                   <option value="PELOTAS BRASIL NORTE">PELOTAS BRASIL NORTE</option>
+                   <option value="PETROLINA BRASIL">PETROLINA BRASIL</option>
+                   <option value="PETROPOLIS BRASIL">PETROPOLIS BRASIL</option>
+                   <option value="PINHAIS BRASIL">PINHAIS BRASIL</option>
+                   <option value="PIRACICABA BRASIL">PIRACICABA BRASIL</option>
+                   <option value="PIRACICABA BRASIL REZENDE">PIRACICABA BRASIL REZENDE</option>
+                   <option value="PIRASSUNUNGA BRASIL">PIRASSUNUNGA BRASIL</option>
+                   <option value="PLANALTINA BRASIL">PLANALTINA BRASIL</option>
+                   <option value="PONTA GROSSA BRASIL">PONTA GROSSA BRASIL</option>
+                   <option value="PONTA GROSSA BRASIL CAMPOS GERAIS">PONTA GROSSA BRASIL CAMPOS GERAIS</option>
+                   <option value="PONTA PORA BRASIL">PONTA PORA BRASIL</option>
+                   <option value="PORTO ALEGRE BRASIL">PORTO ALEGRE BRASIL</option>
+                   <option value="PORTO ALEGRE BRASIL MOINHOS DE VENTO">PORTO ALEGRE BRASIL MOINHOS DE VENTO</option>
+                   <option value="PORTO ALEGRE BRASIL NORTE">PORTO ALEGRE BRASIL NORTE</option>
+                   <option value="PORTO ALEGRE BRASIL PARTENON">PORTO ALEGRE BRASIL PARTENON</option>
+                   <option value="PORTO ALEGRE BRASIL SUL">PORTO ALEGRE BRASIL SUL</option>
+                   <option value="PORTO SEGURO BRASIL">PORTO SEGURO BRASIL</option>
+                   <option value="PORTO VELHO BRASIL">PORTO VELHO BRASIL</option>
+                   <option value="POUSO ALEGRE BRASIL">POUSO ALEGRE BRASIL</option>
+                   <option value="PRAIA GRANDE BRASIL">PRAIA GRANDE BRASIL</option>
+                   <option value="PRESIDENTE PRUDENTE BRASIL">PRESIDENTE PRUDENTE BRASIL</option>
+                   <option value="RECIFE BRASIL">RECIFE BRASIL</option>
+                   <option value="RECIFE BRASIL BOA VIAGEM">RECIFE BRASIL BOA VIAGEM</option>
+                   <option value="RECIFE BRASIL CASA AMARELA">RECIFE BRASIL CASA AMARELA</option>
+                   <option value="RECIFE BRASIL CAXANGA">RECIFE BRASIL CAXANGA</option>
+                   <option value="RECIFE BRASIL IMBIRIBEIRA">RECIFE BRASIL IMBIRIBEIRA</option>
+                   <option value="RECIFE BRASIL JARDIM SAO PAULO">RECIFE BRASIL JARDIM SAO PAULO</option>
+                   <option value="REGISTRO BRASIL">REGISTRO BRASIL</option>
+                   <option value="RIBEIRAO PIRES BRASIL">RIBEIRAO PIRES BRASIL</option>
+                   <option value="RIBEIRAO PRETO BRASIL LESTE">RIBEIRAO PRETO BRASIL LESTE</option>
+                   <option value="RIBEIRAO PRETO BRASIL OESTE">RIBEIRAO PRETO BRASIL OESTE</option>
+                   <option value="RIBEIRAO PRETO BRASIL SUL">RIBEIRAO PRETO BRASIL SUL</option>
+                   <option value="RIO BRANCO BRASIL">RIO BRANCO BRASIL</option>
+                   <option value="RIO CLARO BRASIL">RIO CLARO BRASIL</option>
+                   <option value="RIO DE JANEIRO BRASIL">RIO DE JANEIRO BRASIL</option>
+                   <option value="RIO DE JANEIRO BRASIL ANDARAI">RIO DE JANEIRO BRASIL ANDARAI</option>
+                   <option value="RIO DE JANEIRO BRASIL CAMPO GRANDE">RIO DE JANEIRO BRASIL CAMPO GRANDE</option>
+                   <option value="RIO DE JANEIRO BRASIL ENGENHO DE DENTRO">RIO DE JANEIRO BRASIL ENGENHO DE DENTRO</option>
+                   <option value="RIO DE JANEIRO BRASIL ITAGUAI">RIO DE JANEIRO BRASIL ITAGUAI</option>
+                   <option value="RIO DE JANEIRO BRASIL JACAREPAGUA">RIO DE JANEIRO BRASIL JACAREPAGUA</option>
+                   <option value="RIO DE JANEIRO BRASIL MADUREIRA">RIO DE JANEIRO BRASIL MADUREIRA</option>
+                   <option value="RIO GRANDE BRASIL">RIO GRANDE BRASIL</option>
+                   <option value="RIO VERDE BRASIL">RIO VERDE BRASIL</option>
+                   <option value="RONDONOPOLIS BRASIL">RONDONOPOLIS BRASIL</option>
+                   <option value="SALVADOR BRASIL">SALVADOR BRASIL</option>
+                   <option value="SALVADOR BRASIL IMBUI">SALVADOR BRASIL IMBUI</option>
+                   <option value="SALVADOR BRASIL LIBERDADE">SALVADOR BRASIL LIBERDADE</option>
+                   <option value="SALVADOR BRASIL NORTE">SALVADOR BRASIL NORTE</option>
+                   <option value="SANTA CRUZ DO SUL BRASIL">SANTA CRUZ DO SUL BRASIL</option>
+                   <option value="SANTA MARIA BRASIL">SANTA MARIA BRASIL</option>
+                   <option value="SANTA RITA BRASIL">SANTA RITA BRASIL</option>
+                   <option value="SANTAREM BRASIL">SANTAREM BRASIL</option>
+                   <option value="SANTO ANDRE BRASIL">SANTO ANDRE BRASIL</option>
+                   <option value="SANTO ANGELO BRASIL">SANTO ANGELO BRASIL</option>
+                   <option value="SANTOS BRASIL">SANTOS BRASIL</option>
+                   <option value="SAO BERNARDO BRASIL">SAO BERNARDO BRASIL</option>
+                   <option value="SAO BERNARDO BRASIL RUDGE RAMOS">SAO BERNARDO BRASIL RUDGE RAMOS</option>
+                   <option value="SAO BORJA BRASIL">SAO BORJA BRASIL</option>
+                   <option value="SAO CARLOS BRASIL">SAO CARLOS BRASIL</option>
+                   <option value="SAO GABRIEL BRASIL">SAO GABRIEL BRASIL</option>
+                   <option value="SAO JERONIMO BRASIL">SAO JERONIMO BRASIL</option>
+                   <option value="SAO JOAO DA BOA VISTA BRASIL">SAO JOAO DA BOA VISTA BRASIL</option>
+                   <option value="SAO JOSE BRASIL">SAO JOSE BRASIL</option>
+                   <option value="SAO JOSE DO RIO PRETO BRASIL">SAO JOSE DO RIO PRETO BRASIL</option>
+                   <option value="SAO JOSE DO RIO PRETO BRASIL SUL">SAO JOSE DO RIO PRETO BRASIL SUL</option>
+                   <option value="SAO JOSE DOS CAMPOS BRASIL">SAO JOSE DOS CAMPOS BRASIL</option>
+                   <option value="SAO JOSE DOS CAMPOS BRASIL SUL">SAO JOSE DOS CAMPOS BRASIL SUL</option>
+                   <option value="SAO JOSE DOS PINHAIS BRASIL">SAO JOSE DOS PINHAIS BRASIL</option>
+                   <option value="SAO JOSE DOS PINHAIS BRASIL JARDIM IPE">SAO JOSE DOS PINHAIS BRASIL JARDIM IPE</option>
+                   <option value="SAO LEOPOLDO BRASIL">SAO LEOPOLDO BRASIL</option>
+                   <option value="SAO LOURENCO DO SUL BRASIL">SAO LOURENCO DO SUL BRASIL</option>
+                   <option value="SAO LUIS BRASIL">SAO LUIS BRASIL</option>
+                   <option value="SAO LUIS BRASIL LESTE">SAO LUIS BRASIL LESTE</option>
+                   <option value="SAO PAULO BRASIL">SAO PAULO BRASIL</option>
+                   <option value="SAO PAULO BRASIL CAMPO LIMPO">SAO PAULO BRASIL CAMPO LIMPO</option>
+                   <option value="SAO PAULO BRASIL CASA GRANDE">SAO PAULO BRASIL CASA GRANDE</option>
+                   <option value="SAO PAULO BRASIL COTIA">SAO PAULO BRASIL COTIA</option>
+                   <option value="SAO PAULO BRASIL CUMBICA">SAO PAULO BRASIL CUMBICA</option>
+                   <option value="SAO PAULO BRASIL EMBU">SAO PAULO BRASIL EMBU</option>
+                   <option value="SAO PAULO BRASIL FERREIRA">SAO PAULO BRASIL FERREIRA</option>
+                   <option value="SAO PAULO BRASIL GRAJAU">SAO PAULO BRASIL GRAJAU</option>
+                   <option value="SAO PAULO BRASIL GUARAPIRANGA">SAO PAULO BRASIL GUARAPIRANGA</option>
+                   <option value="SAO PAULO BRASIL GUARULHOS">SAO PAULO BRASIL GUARULHOS</option>
+                   <option value="SAO PAULO BRASIL INTERLAGOS">SAO PAULO BRASIL INTERLAGOS</option>
+                   <option value="SAO PAULO BRASIL IPIRANGA">SAO PAULO BRASIL IPIRANGA</option>
+                   <option value="SAO PAULO BRASIL ITAQUA">SAO PAULO BRASIL ITAQUA</option>
+                   <option value="SAO PAULO BRASIL ITAQUERA">SAO PAULO BRASIL ITAQUERA</option>
+                   <option value="SAO PAULO BRASIL JACANA">SAO PAULO BRASIL JACANA</option>
+                   <option value="SAO PAULO BRASIL JARAGUA">SAO PAULO BRASIL JARAGUA</option>
+                   <option value="SAO PAULO BRASIL JARDIM DA SAUDE">SAO PAULO BRASIL JARDIM DA SAUDE</option>
+                   <option value="SAO PAULO BRASIL MOGI DAS CRUZES">SAO PAULO BRASIL MOGI DAS CRUZES</option>
+                   <option value="SAO PAULO BRASIL NORTE">SAO PAULO BRASIL NORTE</option>
+                   <option value="SAO PAULO BRASIL PARQUE BRISTOL">SAO PAULO BRASIL PARQUE BRISTOL</option>
+                   <option value="SAO PAULO BRASIL PARQUE PINHEIROS">SAO PAULO BRASIL PARQUE PINHEIROS</option>
+                   <option value="SAO PAULO BRASIL PENHA">SAO PAULO BRASIL PENHA</option>
+                   <option value="SAO PAULO BRASIL PERDIZES">SAO PAULO BRASIL PERDIZES</option>
+                   <option value="SAO PAULO BRASIL PIRATININGA">SAO PAULO BRASIL PIRATININGA</option>
+                   <option value="SAO PAULO BRASIL PIRITUBA">SAO PAULO BRASIL PIRITUBA</option>
+                   <option value="SAO PAULO BRASIL RAPOSO TAVARES">SAO PAULO BRASIL RAPOSO TAVARES</option>
+                   <option value="SAO PAULO BRASIL SANTO AMARO">SAO PAULO BRASIL SANTO AMARO</option>
+                   <option value="SAO PAULO BRASIL SAO MIGUEL PAULISTA">SAO PAULO BRASIL SAO MIGUEL PAULISTA</option>
+                   <option value="SAO PAULO BRASIL SAPOPEMBA">SAO PAULO BRASIL SAPOPEMBA</option>
+                   <option value="SAO PAULO BRASIL SUL">SAO PAULO BRASIL SUL</option>
+                   <option value="SAO PAULO BRASIL TABOAO">SAO PAULO BRASIL TABOAO</option>
+                   <option value="SAO SEBASTIAO BRASIL">SAO SEBASTIAO BRASIL</option>
+                   <option value="SAO VICENTE BRASIL">SAO VICENTE BRASIL</option>
+                   <option value="SAO VICENTE BRASIL SERRA DO MAR">SAO VICENTE BRASIL SERRA DO MAR</option>
+                   <option value="SETE LAGOAS BRASIL">SETE LAGOAS BRASIL</option>
+                   <option value="SETE LAGOAS BRASIL LESTE">SETE LAGOAS BRASIL LESTE</option>
+                   <option value="SOBRAL BRASIL">SOBRAL BRASIL</option>
+                   <option value="SOROCABA BRASIL">SOROCABA BRASIL</option>
+                   <option value="SOROCABA BRASIL BARCELONA">SOROCABA BRASIL BARCELONA</option>
+                   <option value="SOROCABA BRASIL SANTANA">SOROCABA BRASIL SANTANA</option>
+                   <option value="SOROCABA BRASIL TRUJILO">SOROCABA BRASIL TRUJILO</option>
+                   <option value="SORRISO BRASIL">SORRISO BRASIL</option>
+                   <option value="SOUSA BRASIL">SOUSA BRASIL</option>
+                   <option value="SUMARE BRASIL">SUMARE BRASIL</option>
+                   <option value="TERESINA BRASIL">TERESINA BRASIL</option>
+                   <option value="TERESINA BRASIL HORTO">TERESINA BRASIL HORTO</option>
+                   <option value="TERESINA BRASIL PLANALTO">TERESINA BRASIL PLANALTO</option>
+                   <option value="TERESOPOLIS BRASIL">TERESOPOLIS BRASIL</option>
+                   <option value="TRES CORACOES BRASIL">TRES CORACOES BRASIL</option>
+                   <option value="TRES RIOS BRASIL">TRES RIOS BRASIL</option>
+                   <option value="TUBARAO BRASIL">TUBARAO BRASIL</option>
+                   <option value="TUPA BRASIL">TUPA BRASIL</option>
+                   <option value="UBERABA BRASIL">UBERABA BRASIL</option>
+                   <option value="UBERLANDIA BRASIL">UBERLANDIA BRASIL</option>
+                   <option value="URUGUAIANA BRASIL">URUGUAIANA BRASIL</option>
+                   <option value="VALE DO ITAJAI BRASIL">VALE DO ITAJAI BRASIL</option>
+                   <option value="VALPARAISO BRASIL">VALPARAISO BRASIL</option>
+                   <option value="VIAMAO BRASIL">VIAMAO BRASIL</option>
+                   <option value="VILA VELHA BRASIL">VILA VELHA BRASIL</option>
+                   <option value="VITORIA BRASIL">VITORIA BRASIL</option>
+                   <option value="VITORIA DA CONQUISTA BRASIL">VITORIA DA CONQUISTA BRASIL</option>
+                   <option value="VOLTA REDONDA BRASIL">VOLTA REDONDA BRASIL</option>
+                </select>
+                <div class="field-error" id="llerror49074"></div>
+             </div>
+             <div id="omitir-ala">
+                <div id="ala-hidden">
+                   <label for="llfield49074"> Ala <div id="loader_ala" hidden class="loader load_my off"></div>
+                   </label>
+                   <input list="llfield678832" oninput="ala_onInput('llfield678832','llfield67883','input_datalist_ala')" id="input_datalist_ala" placeholder="Pesquise sua ala por aqui" class=" elementor-field elementor-size-sm  elementor-field-textual">
+                   <datalist id="llfield678832" name="form_fields[ala]"></datalist>
+                   <select id="llfield67883" name="form_fields[ala]" data-required="true" placeholder="Clique aqui para SELECIONAR sua Ala (ou pesquise no campo acima)" value="ala não registrada" hidden></select>
+                   <div class="field-error" id="llerror67883"></div>
+                </div>
+             </div>
+         -->
+    <script>
+    //protocolo homem aranha
+        function insertAfter(referenceNode, newNode) {
+            referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+        }
+
+        function protocolo_homem_aranha(idade) {
+            //console.log(idade+"///"+document.getElementById('llfield67881').value);
+            if (idade == document.getElementById('llfield67881').value) {
+                //a.getElementById('habilitar_protocolo_homem_aranha').hidden=false
+                //console.log(document.getElementById('habilitar_protocolo_homem_aranha'));
+                if ((document.getElementById('habilitar_protocolo_homem_aranha') == null || document.getElementById('habilitar_protocolo_homem_aranha') == undefined)) {
+                    var documento = document.getElementById("idade-hidden");
+                    insertAfter(documento, homem_aranha);
+                    //homem_aranha = document.getElementById("habilitar_protocolo_homem_aranha");
+                }
+            } else {
+                try {
+                    document.getElementById("habilitar_protocolo_homem_aranha").remove();
+                } catch (e) {
+                    return 0;
+                }
+            }
+        }
+    </script>
+    <script>
+    // check for any cheked function
+        function check_for_any_cheked(id) {
+            var len = jQuery("#" + id).length;
+            if (len > 0) {
+                return true;
+            } else if (len === 0) {
+                return false
+            }
+        }
+    </script>
+    <div id="idade-hidden" class="">
+        <label for="llfield67881">Idade</label>
+        <select type="select" id="llfield67881" name="form_fields[idadeString]" class="input_to_hidden7 elementor-field elementor-size-sm  elementor-field-textual" placeholder="Coloque a idade" data-required="true" onchange="protocolo_homem_aranha('Menor que 16 anos');document.getElementById('llfield67881').value=document.getElementById('llfield67881').options[document.getElementById('llfield67881').selectedIndex].value;SHC(7,8)" data-required="" required="">
+            <option value="">Selecione sua idade</option>
+            <option value="Menor que 16 anos">Menor que 16 anos</option>
+            <option value="de 16 a 18 anos">de 17 a 18 anos</option>
+            <option value="de 19 a 30 anos">de 19 a 30 anos</option>
+            <option value="Maior de 30 anos">Maior que 30 anos</option>
+        </select>
+        <div class="field-error" id="llerror67881"></div>
+    </div>
+    <div id="habilitar_protocolo_homem_aranha">
+        <script>
+            function not_more() {
+                jQuery(function ($) {
+                    if ($('#llfield143068').is(':checked')) {
+                        $('#obrigatory_markbox_16').val("done");
+                    } else {
+                        $('#obrigatory_markbox_16').val("");
+                    }
+                });
+            }
+        </script>
+        <script>
+            tel_respo = () => {
+                jQuery(function ($) {
+                    $("#llfield69246").keyup(function () { //input[name='phone']
+                        $(this).val($(this).val().replace(/^(\d{2})(\d{3})(\d+)$/, "($1)$2-$3"));
+                    });
+                });
+            };
+        </script>
+        <label for="llfield69245">O nome do seu responsável</label>
+        <input type="text" id="llfield69245" name="form_fields[nomeResposavel]" placeholder="Escreva aqui o nome de seu pai ou responsável" required data-required="true" class=" elementor-field elementor-size-sm  elementor-field-textual" />
+        <div class="field-error" id="llerror69245"></div>
+        <br>
+        <br>
+        <label for="llfield69246">Telefone do seu Responsável</label>
+        <input type="tel" id="llfield69246" name="form_fields[telReponsavel]" onchange="tel_respo();" placeholder="(01) 2 3456-7890 - Digite um telefone ou celular do seu responsável" required data-required="true" class=" elementor-field elementor-size-sm  elementor-field-textual" />
+        <div class="field-error" id="llerror69246"></div>
+        <br>
+        <br>
+        <label>Sou menor de idade, e agora!?</label>
+        <div class="field-error" id="llerror69212"></div>
+        <div class="checkbox-list">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="llfield143068" name="form_fields[meusPaisEstaoCientes]" value="Meus pais estão cientes" onchange="not_more();" />&nbsp;Menores de 16 anos deverão ter autorização expressa de seus responsável referente ao compartilhamento de dados e recebimento de informações por whatsApp ou e-mail. Avise seus pais sobre isso. Assinale aqui se eles já estão cientes
+                </label>
+            </div>
+        </div>
+        <input type="text" name="" value="" required data-required="true" id="obrigatory_markbox_16" style="visibility: hidden;" class=" elementor-field elementor-size-sm  elementor-field-textual" />
+    </div>
+    <div>
+        <!--<label hiidden>modificado2</label>-->
+    </div>
+    <script type="text/javascript">
+        var homem_aranha = document.getElementById("habilitar_protocolo_homem_aranha");
+        document.getElementById('habilitar_protocolo_homem_aranha').remove();
+        jQuery(function ($) {
+            $('#llfield67881').prop('selectedIndex', 0);
+            $('#llfield67881').val("");
+        });
+    </script>
+    <!--
+    <div id="conselho1" hidden>
+       <label for="llfield68855">Nome do Conselho</label>
+       <input type="text" id="llfield68855" name="form_fields[nomeConselho]" disabled placeholder="Coloque o nome do conselho a qual se encontra" class=" elementor-field elementor-size-sm  elementor-field-textual" />
+       <div class="field-error" id="llerror68855"></div>
+       <br>
+       <br>
+    </div>
+    <div id="conselho2" hidden>
+       <label for="llfield68854">Nome do Gerente dessa Pessoa</label>
+       <input type="text" id="llfield68854" name="form_fields[nomeDoGerente]" class=" elementor-field elementor-size-sm  elementor-field-textual" disabled placeholder="Coloque o gerente da sua região" />
+       <div class="field-error" id="llerror68854"></div>
+       <br>
+       <br>
+    </div>
+    <div id="conselho3" hidden>
+       <label for="llfield68853">Nome Local do Escritório</label>
+       <input type="text" class=" elementor-field elementor-size-sm  elementor-field-textual" id="llfield68853" name="form_fields[nomeLocalDoEscritorioDoGerente]" disabled placeholder="Nome do escritório" />
+       <div class="field-error" id="llerror68853"></div>
+    </div>
+    <div id="conselho4" hidden>
+       <label for="llfield70926">Apenas o Tipo da Estaca Distrito ou Ramo</label>
+       <input type="text"  class=" elementor-field elementor-size-sm  elementor-field-textual" id="llfield70926" name="form_fields[ehEstacaOuRamo]" placeholder="Estaca Distrito ou Ramo" />
+       <div class="field-error" id="llerror70926"></div>
+    </div>
+    <div id="conselho5" hidden>
+       <label for="llfield70924">ID da Ala</label>
+       <input type="text" id="llfield70924" name="form_fields[idDaAla]" placeholder="Id da Ala" />
+       <div class="field-error" id="llerror70924"></div>
+    </div>
+    <div id="conselho6" hidden>
+       <label for="llfield70923">ID da Estaca</label>
+       <input type="text" class=" elementor-field elementor-size-sm  elementor-field-textual" id="llfield70923" name="form_fields[idDaEstaca]" placeholder="Id da estaca" />
+       <div class="field-error" id="llerror70923"></div>
+    </div>
+    <div id="conselho7" hidden>
+       <label for="llfield70925">ID do Conselho</label>
+       <input type="text" class=" elementor-field elementor-size-sm  elementor-field-textual" id="llfield70925" name="form_fields[idDoConselho]" placeholder="Id do Conselho" />
+       <div class="field-error" id="llerror70925"></div>
+    </div>-->
+    <style>
+        /*Mais algum estilo aí pra alguma coisa... (só retirar e ver o que muda, ainda à fazer) */
+        /* Popup box BEGIN */
+        .hover_bkgr_fricc {
+            background: rgba(0, 0, 0, .4);
+            cursor: pointer;
+            display: none;
+            height: 100%;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+        }
+
+            .hover_bkgr_fricc .helper {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            .hover_bkgr_fricc > div {
+                background-color: #fff;
+                box-shadow: 10px 10px 60px #555;
+                display: inline-block;
+                height: auto;
+                max-width: 551px;
+                min-height: 100px;
+                vertical-align: middle;
+                width: 60%;
+                position: relative;
+                border-radius: 8px;
+                padding: 15px 5%;
+            }
+
+        .popupCloseButton {
+            background-color: #fff;
+            border: 3px solid #999;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            font-family: arial;
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 25px;
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+
+            .popupCloseButton:hover {
+                background-color: #ccc;
+            }
+
+        .trigger_popup_fricc {
+            cursor: pointer;
+            font-size: 20px;
+            margin: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        /* Popup box BEGIN */
+        .hover_bkgr_fricc {
+            left: 0;
+        }
+
+        .terms {
+            height: 80vh;
+            overflow-y: auto;
+        }
+    </style>
+    <div class="checkbox-list " data-required="true">
+        <div class="checkbox">
+            <label>
+                <input id="li_e_concordo_check" class="input_to_hidden8" hidden />
+                <input type="checkbox" id="LGPDValidation" name="form_fields[lgpdValidation]" style="-webkit-appearance: auto !important;  display: table-cell;" value="1" onchange="check_for_any_cheked('LGPDValidation')?document.getElementById('li_e_concordo_check').setAttribute('value','true'):document.getElementById('li_e_concordo_check').setAttribute('value','');SHC(8,9);" required /> &nbsp; <span style="color:red" nowrap>*</span>Li e Concordo com os <a style="color:#023CFA; font-size: 13px;  display:contents;" class="trigger_popup_fricc" onclick="(deshidar('popup_lgpd'))"> &nbsp;Termos de Uso e da Notificação de Privacidade</a>
+                <div class="hover_bkgr_fricc" id="popup_lgpd" onclick="hidar('popup_lgpd')">
+                    <span class="helper"></span>
+                    <div style="padding: 5px;">
+                        <div class="popupCloseButton" id="fechar_popup_lgpd" onclick="hidar('fechar_popup_lgpd')">&times;</div>
+                        <div class="modal-body pl-md-4 pr-md-4" style="    padding: 3px;">
+                            <div class="terms" style="color:black!important; text-align: left">
+                                <p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p>
+                                <p>
+                                    <strong>1. Quem controla os seus dados pessoais?</strong>
+                                </p>
+                                <p>A Igreja de Jesus Cristo dos Santos dos Últimos Dias age por meio de seus representantes e de entidades da Igreja quando tratamos seus dados pessoais. Ao compartilhar seus dados pessoais conosco, você os compartilha com a Igreja por meio das entidades da Igreja.</p>
+                                <p>a. A Igreja: A Igreja de Jesus Cristo dos Santos dos Últimos Dias (a “ <strong>Igreja</strong>”) é uma comunidade de pessoas que acreditam na mesma doutrina religiosa, praticam os mesmos ritos e mesmas ordenanças religiosas e são governadas por princípios eclesiásticos. As unidades locais da Igreja, tais como alas, ramos, estacas, distritos, missões e áreas, são meramente subdivisões dessa comunidade de fiéis e não constituem entidades legais separadas. Algumas poucas exceções se aplicam. </p>
+                                <p>b. Entidades da Igreja: A fim de atender às necessidades relacionadas a assuntos temporais e cumprir outros propósitos da Igreja, uma estrutura legal composta por várias entidades legais distintas auxilia a Igreja em todo o mundo. Essas entidades legais distintas (daqui por diante denominadas “ <strong>entidades da Igreja</strong>”) estão legalmente separadas da Igreja. Uma das entidades da Igreja, A Igreja de Jesus Cristo dos Santos dos Últimos Dias, uma entidade unipessoal com finalidade religiosa de Utah, juntamente com uma ou mais entidades da Igreja, tratam seus dados pessoais como agentes com responsabilidade conjunta pelo tratamento de dados. Algumas entidades da Igreja podem receber dados pessoais como operadores de dados para fornecer serviços às entidades da Igreja que atuam como controladores de dados. Mediante sua solicitação, forneceremos informações sobre as entidades da Igreja que tratam seus dados pessoais. </p>
+                                <p>
+                                    <strong>2. Que dados pessoais coletamos?</strong>
+                                </p>
+                                <p>Coletamos dados pessoais que (a) você voluntariamente nos envia, (b) são registrados por nós e (c) obtemos por meio de terceiros. Podemos tratar seus dados pessoais com ou sem a utilização de meios automáticos, incluindo coleta, registro, organização, estruturação, armazenamento, adaptação ou alteração, análise, recuperação, consulta, uso, divulgação por transmissão, disseminação ou outro tipo de disponibilização, alinhamento ou combinação, restrição, apagamento ou destruição de seus dados pessoais.</p>
+                                <p>a. Dados enviados voluntariamente. Você nos envia dados pessoais quando se filia à Igreja, busca ordenanças da Igreja, solicita materiais da Igreja, solicita acesso a ferramentas ou serviços da Igreja ou participa de outras interações ou comunicações com a Igreja. Quando você interage com a Igreja, geralmente tratamos nome, data de nascimento, local de nascimento, número de telefone, endereço de e-mail, endereço físico, foto, sexo, informações sobre doações/pagamentos, e assim por diante. Você pode nos fornecer informações adicionais para participar, por iniciativa própria, de pesquisas, concursos ou outras atividades ou outros eventos, incluindo a participação em gravações de áudio ou vídeo, como quando a tecnologia de vídeoconferência é usada. A participação em pesquisas, concursos e atividades similares é opcional. Se você não desejar participar ou não desejar fornecer dados pessoais relacionados a essas atividades, nem sua condição de membro da Igreja nem sua capacidade de utilizar as ferramentas ou os serviços disponibilizados pela Igreja serão afetadas. Em cada um desses casos, você saberá quais dados pessoais está nos fornecendo, porque você ativa e voluntariamente os envia a nós.</p>
+                                <p>b. Dados que obtemos de terceiros e dados enviados passivamente. Nos lugares em que a legislação local permitir, você pode enviar dados pessoais, inclusive informações de contato sobre alguém que não seja você mesmo (em outras palavras, um terceiro) para que possamos contatar essa pessoa, fazer uma entrega ou, atender à sua solicitação de algum outro modo. Ao fornecer dados pessoais sobre alguém que não seja você mesmo, você deve primeiro obter o consentimento da outra pessoa, caso o consentimento dela seja exigido por lei.</p>
+                                <p>Se você ou outra pessoa tiver nos fornecido suas informações pessoais para contato e não quiser que voltemos a contatá-lo, siga os procedimentos de anulação ou cancelamento de assinatura indicados no site, no boletim ou na notificação de e-mail ou entre em contato conosco pelo site <a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a>. </p>
+                                <p>Podemos tratar e disponibilizar publicamente os dados pessoais obtidos de fontes publicadas. Podemos tratar e publicar dados de pessoas vivas, em conformidade com as leis locais aplicáveis.</p>
+                                <p>Suas informações de localização podem ser coletadas por meio de alguns aplicativos móveis com o objetivo de ajudar a encontrar a capela ou o templo mais próximo ou por razões semelhantes. Você pode alterar as configurações de seu dispositivo para desativar os serviços de localização.</p>
+                                <p>Quando você acessar qualquer um de nossos recursos, nossos servidores (usando arquivos de registros ou sistemas de filtragem) podem coletar informações que seu navegador envia sempre que você acessa um site. Essas informações podem incluir, mas não se limitam a: seu endereço de protocolo da internet (endereço de IP), tipo de navegador, sistema operacional, idioma de preferência, página da internet que você estava acessando antes de entrar em nosso site, data e hora de cada solicitação de visitante, informações que você procurar em nossos recursos e outras informações coletadas por cookies ou tecnologias similares. &nbsp;Consulte a ferramenta Preferências de Cookie (“Ferramenta Cookies”) em cada um de nossos aplicativos para dispositivos móveis e sites da internet para saber mais sobre cookies, inclusive os tipos de cookies, e especificar quais cookies usamos. Contudo, se não aceitar os cookies, poderá não ser possível utilizar algumas das seções ou funções de nossos sites ou aplicativos, conforme descrito na Ferramenta Cookies.</p>
+                                <p>
+                                    <strong>3. Para quais propósitos tratamos dados pessoais?</strong>
+                                </p>
+                                <p>Tratamos dados pessoais para propósitos eclesiásticos, genealógicos, humanitários, de bem-estar social, missionários, educativos e outros propósitos operacionais e administrativos.</p>
+                                <p>Usamos dados pessoais para fornecer serviços eclesiásticos e outros serviços relacionados a fim de cumprir a missão da Igreja. Podemos usar e analisar dados pessoais (incluindo informações sobre como você usa nossos serviços e nossas ferramentas) para (a) contatá-lo ou contatar outros, (b) criar e manter registros de membros, (c) atender às suas solicitações, (d) buscar seu feedback voluntário, (e) customizar ou personalizar recursos ou conteúdo de nossas ferramentas ou nossos serviços, (f) avaliar a elegibilidade para participação no templo e em outras ordenanças, no serviço missionário e em cargos voluntários ou de liderança, ou (g) administrar a educação religiosa na Igreja, o bem-estar ou outros programas da Igreja. Nesse contexto, a base legal para nosso tratamento de seus dados pessoais é a necessidade de cumprir obrigações contratuais e de outra natureza que temos para com você ou o desempenho de nossas atividades legítimas como igreja.</p>
+                                <p>Podemos também usar seus dados para o cumprimento das leis aplicáveis e o exercício de direitos legais como base para nosso tratamento de dados.</p>
+                                <p>Também podemos usar seus dados pessoais para fins internos, incluindo auditorias, análise de dados, resolução de problemas e pesquisa. Nesses casos, baseamos nosso tratamento em interesses legítimos no desempenho das atividades da Igreja.</p>
+                                <p>
+                                    <strong>4. Com quem compartilhamos seus dados pessoais?</strong>
+                                </p>
+                                <p>Compartilhamos seus dados pessoais com terceiros nas seguintes circunstâncias:</p>
+                                <p>a. Provedores de serviço terceirizados. Podemos fornecer dados pessoais a terceiros para que sejam por eles tratados no desempenho de funções em nosso favor como operadores de dados (por exemplo: processamento de pagamentos, manutenção, segurança, análise de dados, hospedagem de dados, serviços de medição, mensagem de mídia social orientada por dados, pesquisas, etc.). Nesses casos, de acordo com esta notificação e com as leis cabíveis, os fornecedores estarão contratualmente obrigados a proteger os dados pessoais de tratamento adicional (inclusive para fins de marketing) e de transferência.</p>
+                                <p>b. Entidades da Igreja. Podemos transferir seus dados pessoais para qualquer entidade da Igreja com o objetivo de cumprir os propósitos da Igreja.</p>
+                                <p>As informações de seu registro geral de membro (caso você seja membro da Igreja), bem como outras informações opcionais que você decida fornecer (por exemplo: endereço de e-mail e foto ou vídeo que você fornecer ou que capturamos com sua permissão) podem ser compartilhadas com os membros da Igreja de sua ala ou seu ramo e de sua estaca ou seu distrito, ou com outros participantes de programas nos quais você participa, conforme necessário, para os propósitos da Igreja citados acima. Algumas de suas informações também podem ser visualizadas de modo restrito e limitado em nossos recursos da internet, incluindo o ChurchofJesusChrist.org. Você pode optar por não compartilhar informações ou limitar as informações opcionais que compartilha, modificando as preferências de seu perfil em cada recurso ou nos contatando por meio das informações fornecidas abaixo.</p>
+                                <p>c. Exigências legais. Podemos acessar e disponibilizar seus dados pessoais, mensagens, anotações de diário, bate-papos on-line, anotações pessoais, conteúdo ou outros envios para qualquer recurso, caso acreditemos de boa-fé que isso esteja sendo requerido por meio de uma intimação, por uma ordem judicial ou administrativa, ou por qualquer outra exigência legal. Além disso, podemos divulgar seus dados pessoais e outras informações: conforme exigido por lei ou para exercer ou defender direitos legais; para nos precavermos de responsabilidade civil; para proteger os direitos, a propriedade ou a segurança dos recursos de qualquer pessoa ou do público em geral; para manter e proteger a segurança e a integridade de nossos serviços ou infraestrutura; para proteger a nós mesmos e a nossos serviços contra uso fraudulento, abusivo ou ilegal; para investigar e nos defender contra ações ou alegações de terceiros; ou para auxiliar órgãos fiscalizadores governamentais.</p>
+                                <p>
+                                    <strong>5. Onde armazenamos seus dados pessoais?</strong>
+                                </p>
+                                <p>Podemos armazenar seus dados pessoais em centrais de dados nos Estados Unidos, em soluções de armazenamento na nuvem ou nas propriedades das entidades da Igreja. Para garantir a devida proteção dos dados que transferimos para outras jurisdições, firmamos acordos de transferência e tratamento de dados entre as respectivas entidades da Igreja e seus prestadores de serviços, que incluem cláusulas contratuais-padrão aprovadas pela Comissão Europeia em conformidade com a legislação dos Estados Unidos (os quais você tem direito de analisar caso entre em contato conosco, como é sugerido no final desta notificação).</p>
+                                <p>
+                                    <strong>6. Como protegemos dados pessoais?</strong>
+                                </p>
+                                <p>Utilizamos medidas técnicas e organizacionais para proteger os dados pessoais que recebemos contra perda, uso indevido, alterações não autorizadas e para proteger a confidencialidade. Analisamos periodicamente nossos procedimentos de segurança e a possibilidade de empregar novos métodos e tecnologias de segurança adequados. Também usamos tecnologia de criptografia atual para criptografar a transmissão de dados em nossas páginas de acesso ao sistema. No entanto, como não podemos garantir a total segurança dessas tecnologias de criptografia, seja cauteloso ao enviar dados pessoais online.</p>
+                                <p>
+                                    <strong>7. Por quanto tempo retemos seus dados pessoais?</strong>
+                                </p>
+                                <p>Retemos dados pessoais coletados, inclusive informações coletadas por meio de aplicativos móveis e outros envios, durante um período de tempo razoável para cumprir os propósitos de tratamento citados acima. Depois, arquivamos esses dados pelo período de tempo exigido ou necessário por lei ou por razões legais. Quando o arquivamento não for mais exigido, apagamos os dados pessoais de nossos registros, com exceção de certas informações históricas dos perfis, registros gerais de genealogia e informações pessoais retidas como parte de um registro genealógico permanente, de condição de membro ou registro histórico da Igreja.</p>
+                                <p>
+                                    <strong>8. Como você pode acessar ou corrigir seus dados pessoais?</strong>
+                                </p>
+                                <p>Nós nos esforçamos para manter a exatidão de seus dados pessoas e dependemos de você para garantir que seus dados pessoais estejam completos e precisos. Você pode solicitar acesso a seus dados pessoais e verificá-los, corrigi-los ou retificá-los (inclusive atualizá-los), bloquear seus dados pessoais por meio do cadastramento específico no site, por meio de seu perfil ou de sua conta da Igreja, se for o caso.</p>
+                                <p>Se você for membro da Igreja, alguns de seus dados pessoais só poderão ser atualizados fazendo alterações no seu registro de membro da Igreja. Para efetuar tais alterações, é necessário contatar o secretário da sua unidade e solicitar a alteração.</p>
+                                <p>Se desejar, entre em contato conosco para exercer direitos regulamentares adicionais, tais como portabilidade de dados, objeção em conformidade com as leis aplicáveis, restrição de tratamento e eliminação de seus dados pessoais. Você também tem o direito de apresentar queixa a uma autoridade supervisora.</p>
+                                <p>Caso surjam problemas ao modificar ou atualizar seus dados pessoais, entre em contato conosco, conforme sugerido no final desta notificação.</p>
+                                <p>
+                                    <strong>9. Data de início de vigência e alterações.</strong>
+                                </p>
+                                <p>Esta notificação entra em vigor em 6 de abril de 2021 e pode ser alterada de tempos em tempos.</p>
+                                <p>
+                                    <strong>10. Entre em contato conosco.</strong>
+                                </p>
+                                <p>As dúvidas referentes a esta notificação ou à segurança dos dados pessoais que tratamos podem ser enviadas por e-mail, fax ou correio:</p>
+                                <p>Nesta notificação, nós, A Igreja de Jesus Cristo dos Santos dos Últimos Dias e suas entidades, fornecemos informações sobre como tratamos os seus dados pessoais. Quando nos referimos a “nós” ou “nosso”, queremos dizer a Igreja e as entidades da Igreja.</p>
+                                <p style="margin-left:.5in;">
+                                    Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="mailto:DataPrivacyOfficer@ChurchofJesusChrist.org">DataPrivacyOfficer@ChurchofJesusChrist.org</a>
+                                    <br>Fax: +1-801-240-1187 <br>Endereço: Data Privacy Office <br>50 E. North Temple Street <br>Salt Lake City, UT 84150-0005 USA <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EUA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <div class="field-error" id="LGPDValidation" style="color:red;"></div>
+    </div>
+    <script>
+        // Usage!
+        function pra_onde_vamos() {
+            //window.location.href="https://semanadaeducacao.org/tpamigo";
+        }
+        redirect = () => {
+            sleep(800).then(() => {
+                try {
+                    if (!(document.getElementById("habilitar_protocolo_homem_aranha") == null || document.getElementById("habilitar_protocolo_homem_aranha") == undefined) && document.getElementById("llfield67881").value == "Menor que 16 anos") {
+                        try {
+                            if (!document.getElementById("llfield143068").checked) {
+                                alert("Não avisou seus pais? Conte pra eles sobre os eventos da Autossuficiencia Brasil! Não deixo-os de fora. E então preencha o campo 'Sou menor de idade' que necessita da autorização do responsável, assinalando que seu responsável está ciente de que você está se inscrevendo aqui. :) ");
+                                //location.reload();
+                                return 0;
+                            }
+                        } catch (e) {
+                            console.log("sem radio button pais responsaveis");
+                        }
+                    }
+                    if (document.getElementById("llfield115508").checked) {
+                        if (document.getElementById("llfield67881").value != "" && document.getElementById("llfield49074").value != "") { //idade, estaca, ala
+                            try {
+                                if (document.getElementById('llfield67881').value != "Menor que 16 anos") {
+                                    pra_onde_vamos();
+                                } else if (document.getElementById('llfield143068').checked) {
+                                    pra_onde_vamos();
+                                }
+                            } catch (e) {
+                                console.error("erro! Radio do pais e responsaveis não encontrada")
+                            } finally {
+                                if (document.getElementById('llfield67881').value != "Menor que 16 anos") {
+                                    pra_onde_vamos();
+                                } else if (document.getElementById('llfield143068').checked) {
+                                    pra_onde_vamos();
+                                }
+                            }
+                            /* if(document.getElementById("llfield115508").checked==true){
+                               window.location.href="semanadaeducacao.org/tpmembro";
+                            }else{
+                               window.location.href="semanadaeducacao.org/tpviral";
+                            }
+                            // Do something after the sleep!*/
+                        }
+                    } else if (document.getElementById("llfield115509").checked) { //Sim
+                        if (document.getElementById("llfield67881").value != "") //idade
+                        {
+                            pra_onde_vamos();
+                        }
+                    } else {
+                        alert("Por favor preencha o campo de se é membro ou não (:-D)");
+                    }
+                    sleep(150).then(() => {
+                        window.location.href = "https://autossuficiencia.org.br/saude-emocional?voceFoiInscritoComSucesso=Parabens";
+                        console.error("HOUVE ALGUM ERRO, tentando redirecionar para tpviral! Para que consiga pelo menos o user não se sinta perdido ;) boa sorte! ERRO: " + e);
+                    });
+                    console.error("ops... ainda está tirando fora...");
+                } catch (e) {
+                    sleep(150).then(() => {
+                        window.location.href = "https://autossuficiencia.org.br/saude-emocional?voceFoiInscritoComSucesso=Parabens";
+                        console.error("HOUVE ALGUM ERRO, tentando redirecionar para tpviral! vai que consiga pelo menos se inscrever ;) boa sorte! ERRO: " + e);
+                    });
+                }
+            });
+        };
+    </script>
+    <script>
+        function salvar_campos() {
+            if (document.getElementById("llfield49036").value == "" || document.getElementById("llfield49037").value == "" || (document.getElementById("llfield115509").value == "" && document.getElementById("llfield115508").value == "") || document.getElementById("LGPDValidation").checked == false) {
+                return null;
+            }
+            if (document.getElementById("llfield115508").checked == true) {
+                var ehmembro = 1;
+            } else if (document.getElementById("llfield115509").checked == true) {
+                var ehmembro = 0;
+            } else {
+                if (document.getElementById("llfield49036").value != "" && document.getElementById("llfield49037").value != "") {
+                    return alert("preencha o campo se é membro ou não");
+                } else {
+                    window.location.href = "https://autossuficiencia.org.br/saude-emocional?voceFoiInscritoComSucesso=Parabens";
+                    return alert("preencha o campo se é membro ou não");
+                }
+            }
+            var nome = document.getElementById("llfield49036").value;
+            //var ehmembro = document.getElementById("llerror49079").value;
+            var email = document.getElementById("llfield49037").value;
+            //setCookie("nome",nome,1);
+            //setCookie("email",email,1);
+            redirect();
+            // document.getElementById("enviar2").hidden=true;
+            //document.getElementById("enviar2").hidden="";
+        }
+    </script>
+    <script>
+        function isMyScriptLoaded(url) {
+            //if (!url) url = "http://xxx.co.uk/xxx/script.js";
+            var scripts = document.getElementsByTagName('script');
+            for (var i = scripts.length; i--;) {
+                if (scripts[i].src == url) return true;
+            }
+            return false;
+        }
+
+        function ijct_script(script_link) { //Injeta scripts na página. script_link = link com .js pra injetar
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.onload = function () {
+                //ACrescente a função do script aqui
+            }
+            script.src = script_link;
+            head.appendChild(script);
+            /*
+            if(!isMyScriptLoaded(script_link)){// pra evitar colocar repetição de scrip
+            head.appendChild(script);
+
+            }else{
+            console.warn("Script já existente: "+script_link);
+            }
+            */
+        }
+        window.onload = jQuery(function ($) {
+            $('script[src="//paginas.rocks/scripts/capture/capture.js"]').remove();
+            () => {
+                ijct_script('//paginas.rocks/scripts/capture/capture.js'); //               < script type = "text/javascript"               src = "//paginas.rocks/scripts/capture/capture.js" >
+            };
+        });
+        /*jQuery(function($){
+        $('script[src="//paginas.rocks/scripts/capture/capture.js"]').remove();
+        });*/
+    </script>
+    <div class="button-bar campo_hid9">
+        <button type="submit" style="font-family: 'pragmatica-extended', Sans-serif;padding: 10px 30px 10px 30px ;background:black;color:white; border:none;font-size:1.1em;cursor:pointer;" onclick="//salvar_campos();">Enviar</button>
+    </div>
+</form>

@@ -299,3 +299,69 @@ function getAllComments(rootElem) {
 /*window.addEventListener("load", function() {
     console.log(getAllComments(document.body));
 });*/
+
+
+// Mais recente: 26/02/2022:
+
+class debugLog{
+   
+  constructor(){
+     var willAutoSave=false;
+     var autoSave;
+     // if(autoSave!=""&&autoSave!=undefined&&autoSave!=null){
+     //    willAutoSave=true;
+     // }
+     var log = "";
+     // [{'@id':0,
+     // 'manualId':0
+     // }];
+     //log.id=0;
+     console.log("debugLog: debugLog open");
+  };
+  saveThisToInput=(autoSave)=>{
+     if(this.willAutoSave){
+        input.value=this.log;
+        console.log("sys: done: saveThisToInput(autoSave)>bool this.whillAutoSave <-> True");
+     }
+     
+  }
+
+  feedback=(id,valor)=>{
+     this.log+="\nID task-"+id.toString()+": "+valor; //Método antigo, sem JSON
+     this.saveThisToInput(this.autoSave);
+  }
+  feedbackJSON=(id,valor)=>{
+     //log+="\nID task:"+toString(id)+": "+valor; //Método antigo, sem JSON
+     var idString = id.toString();
+     if(!this.log[0]['manualId']==id)
+     {
+        this.log['@'+idString]=valor;
+        this.log.id.countLoop=0;
+     }
+     if(this.log['manualId']==id)
+        this.log.id.countLoop+=1;
+
+
+  };
+  cookiesAutoSave=()=>{
+     // period time log. 
+
+
+  };
+  showLog=()=>{
+   console.log(this.log);  
+  }
+  showLogJSON=()=>{
+     return JSON.parse(this.log);
+  };
+
+}  
+
+var debug = new debugLog();
+
+debug.feedback(1,"Debug Executado com Sucesso!");
+debug.willAutoSave=true;
+//COloque aqui  o elemento para salvar os dados (input)
+debug.autoSave= document.getElementById('llfield76834');
+debug.feedback(2,"Ok teste 2:")
+debug.showLog();

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="MVC PHP - Tutorial - Alura 2">
+    <serverData>
+      <paths name="MVC PHP - Tutorial - Alura">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="MVC PHP - Tutorial - Alura 2">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="listar-cursos.php" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

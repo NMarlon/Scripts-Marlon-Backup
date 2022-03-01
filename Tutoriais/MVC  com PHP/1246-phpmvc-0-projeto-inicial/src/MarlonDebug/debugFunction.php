@@ -1,8 +1,10 @@
 <?php
 
+
+
 class debugLog{
    
-  	__construct(){
+  	public function __construct(){
      $willAutoSave=false;
      $autoSave;
      // if(autoSave!=""&&autoSave!=undefined&&autoSave!=null){

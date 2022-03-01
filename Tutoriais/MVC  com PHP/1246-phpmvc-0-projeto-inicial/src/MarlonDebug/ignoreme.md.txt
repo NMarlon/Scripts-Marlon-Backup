@@ -1,0 +1,23 @@
+https://marlonviana.000webhost.com
+
+
+Desenvolver uma aplicação mais ORGÂNICA ->
+	- Colocar animação que se atrai ao mouse do user...
+	- Erros fazem as coisas "quebrarem" ou...
+		- ... alertarem que estão ruins...
+	- Design MINIMALISTA
+
+
+
+'Propagandear' agradecer à 000WebHost (por dar gratuitamente o serviço) "tornou isso possível"
+
+
+Identificar mouse inquieto:
+	- Procurou por algo no site
+	- Usar quadrantes:
+		- Quadrantes:
+			- tela dividia em 3x3
+			- Sobre isso ter 4 quadrantes sobre as divisões do 3x3 para evitar pontos falsos (deve mover-se na tela toda)
+
+	- Quadrantes passados sem pausa em menos de 2 segundos
+

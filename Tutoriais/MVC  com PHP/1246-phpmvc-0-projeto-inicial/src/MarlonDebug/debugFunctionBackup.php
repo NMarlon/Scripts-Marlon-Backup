@@ -1,10 +1,8 @@
 <?php
 
-//namespace Marlon\Debug;
-
 class debugLog{
    
-  	public function __construct(){
+  	__construct(){
      $willAutoSave=false;
      $autoSave;
      // if(autoSave!=""&&autoSave!=undefined&&autoSave!=null){
@@ -20,7 +18,7 @@ class debugLog{
   function saveThisToInput($autoSave){
      if($this->$willAutoSave){
         $input.value=$this->log;
-        console.log("sys: done: saveThisToInput(autoSave)>bool this.whillAutoSave <-> True");
+        //console.log("sys: done: saveThisToInput(autoSave)>bool this.whillAutoSave <-> True");
      }
      
   }

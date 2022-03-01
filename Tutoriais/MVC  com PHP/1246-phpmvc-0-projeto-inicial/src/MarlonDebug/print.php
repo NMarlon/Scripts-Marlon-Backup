@@ -1,15 +1,15 @@
 <?php
 
-namespace Marlon\Debug;
+//namespace Marlon\Debug;
 
-class prints{
-
-	public function __construct($text){
-		// $printOn=true;
-		// if(printOn)
-		system.out.println('Dbg Sys: '+$this->$text);
-	}
+function prints($text){
+	// $printOn=true;
+	// if(printOn)
+	echo "<script>";
+	echo "console.log('Dbg Sys: ". $text."')";
+	echo "</script>";
 }
+
 
 
 ?>

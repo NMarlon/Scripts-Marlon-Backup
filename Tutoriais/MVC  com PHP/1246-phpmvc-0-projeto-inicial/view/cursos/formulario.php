@@ -1,10 +1,8 @@
 
 
 <?php 
-$titulo='Formulário';
-include __DIR__ . '/../inicio-html.php'; 
-
-?>
+$titulo = 'Formulário';
+include __DIR__ . '/../inicio-html.php'; ?>
 
 <form>
     <div class="form-group">

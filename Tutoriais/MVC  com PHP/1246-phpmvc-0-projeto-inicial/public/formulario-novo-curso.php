@@ -1,9 +1,9 @@
 
 <?php 
-//request '/../MarlonDebug/dbg.php';
+require __DIR__ . '/../src/MarlonDebug/dbg.php';
 
 $titulo='Formulário';
-include __DIR__ . '/../inicio-html.php'; 
+include __DIR__ . '/../view/cursos/inicio-html.php'; 
 
 ?>
 
@@ -18,7 +18,7 @@ include __DIR__ . '/../inicio-html.php';
     </form>
 
 
-<?php include __DIR__ . '/../fim-html.php'; ?>
+<?php include __DIR__ . '/../view/cursos/fim-html.php'; ?>
 <!-- I:\Arquivos de Programas Portables\GitHub\Repositorios\Scripts-Marlon-Backup\Tutoriais\MVC  com PHP\1246-phpmvc-0-projeto-inicial
 
 

@@ -10,7 +10,6 @@ include __DIR__ . '/../view/inicio-html.php';
 
 ?>
 
-
 <form>
     <div class="form-group">
         <label for="descricao">Descrição</label>
@@ -20,8 +19,8 @@ include __DIR__ . '/../view/inicio-html.php';
 </form>
 
 
+
 <?php include __DIR__ . '/../view/fim-html.php'; ?>
 <!-- I:\Arquivos de Programas Portables\GitHub\Repositorios\Scripts-Marlon-Backup\Tutoriais\MVC  com PHP\1246-phpmvc-0-projeto-inicial
 
-
-  -->
+-->

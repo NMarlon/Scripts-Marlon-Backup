@@ -1,7 +1,7 @@
 
 
 <?php 
-
+$titulo='Lista de Cursos';
 include __DIR__ . '/../inicio-html.php'; 
 
 ?>

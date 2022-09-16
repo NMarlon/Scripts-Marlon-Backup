@@ -47,6 +47,7 @@ Portanto, essas coisas acontecerão num mundo simulado da "imaginação" da máquina
 		3 - acontece no passado (t < t0) que criança mudou estado de...
 		4 - 'não feliz' para 'feliz'
 		5 - registra o estado individual resultante do que a fala mudou em si e do que as coisas mudam com esse fato em relação ao seu conhecimento anterior. Esse delta indica uma direção clara de para onde o discurso está levando.
+		6 - retorna: O delta, o conhecimento novo do antigo. 
 
 
 # Quanto à AI
@@ -57,5 +58,7 @@ Portanto, essas coisas acontecerão num mundo simulado da "imaginação" da máquina
 
 
 # Ferramentas
-- Analizador lexigrafico e morfológico: https://natura.di.uminho.pt/webjspell/jsol.pl?ajuda=1
+- Analizador lexigrafico e morfológico: 
+	- https://natura.di.uminho.pt/webjspell/jsol.pl?ajuda=1
+	- Mais suscinto: http://comunidade.cogroo.org/grammar
 - Classes de palavras: https://www.todamateria.com.br/classes-de-palavras/#:~:text=As%20classes%20de%20palavras%20ou,,%20conjun%C3%A7%C3%A3o,%20interjei%C3%A7%C3%A3o%20e%20adv%C3%A9rbio.

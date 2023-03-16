@@ -1,0 +1,35 @@
+ul
+{
+   width:200px;
+   border:1px solid #003399;
+   background:#FADE8B;
+   margin:0;
+   padding:0;
+   list-style-type:none;
+}
+
+li
+{
+   border-bottom:1px solid #A4A0F5;
+}
+   
+
+
+a:link, li a:visited 
+{
+   display:block;
+   height:1%;
+   text-decoration:none;
+   font-family: Geneva, Arial, Helvetica, sans-serif;
+   font-size:14px;
+   color:#5E0F50;
+   border-left:10px solid #EEC591;
+   padding-left:5px;
+}
+
+a:hover 
+{
+   background-color: #FFE4B5;
+   color:#DAA520;
+   border-left:10px solid #FFD39B;
+}

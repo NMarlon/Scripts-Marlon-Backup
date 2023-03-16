@@ -1,0 +1,98 @@
+<HTML>
+   <HEAD>
+      <SCRIPT LANGUAGE="JAVASCRIPT">
+     
+         function SOMA(form) 
+         {
+            NUMERO1=parseInt(form.NUM1.value)
+            NUMERO2=parseInt(form.NUM2.value)
+            RESULTADO=NUMERO1+NUMERO2
+            form.OPER.value=" + "
+            form.RESU.value=RESULTADO
+         }
+
+         function SUBT(form) 
+         {
+            NUMERO1=parseInt(form.NUM1.value)
+            NUMERO2=parseInt(form.NUM2.value)
+            RESULTADO=NUMERO1-NUMERO2
+            form.OPER.value=" - "
+            form.RESU.value=RESULTADO
+         }
+
+         function MULT(form) 
+         {
+            NUMERO1=parseInt(form.NUM1.value)
+            NUMERO2=parseInt(form.NUM2.value)
+            RESULTADO=NUMERO1*NUMERO2
+            form.OPER.value=" * "
+            form.RESU.value=RESULTADO
+         }
+
+         function DIVI(form) 
+         {
+            NUMERO1=parseInt(form.NUM1.value)
+            NUMERO2=parseInt(form.NUM2.value)
+            RESULTADO=NUMERO1/NUMERO2
+            form.OPER.value=" / "
+            form.RESU.value=RESULTADO
+         }
+
+         function REST(form) 
+         {
+            NUMERO1=parseInt(form.NUM1.value)
+            NUMERO2=parseInt(form.NUM2.value)
+            RESULTADO=NUMERO1%NUMERO2
+            form.OPER.value=" % "
+            form.RESU.value=RESULTADO
+         }
+
+         function APAG(form) 
+         {
+            form.NUM1.value=""
+            form.NUM2.value=""
+            form.OPER.value="   "
+            form.RESU.value=""
+         }
+      </SCRIPT>
+   </HEAD>
+
+   <BODY>
+      
+         <form>
+            <TABLE BORDER=2 ALIGN=CENTER WIDTH=50% BGCOLOR=GREEN>
+            <TR BGCOLOR=GREEN>
+                <TD COLSPAN=5 ALIGN=CENTER HEIGHT=50>CALCULADORA 1</TD>
+            </TR>
+            <TR ALIGN=CENTER>
+                <TD HEIGHT=100 COLSPAN=2>NUMERO1<BR><input TYPE="TEXT" NAME="NUM1" SIZE=5 MAXLENGTH=4 ></TD>
+                <TD HEIGHT=100><input TYPE="button" NAME="OPER" VALUE="   "></TD>
+                <TD HEIGHT=100 COLSPAN=2>NUMERO2<BR><input TYPE="TEXT" NAME="NUM2" SIZE=5 MAXLENGTH=4></TD>
+            </TR>
+            <TR ALIGN=CENTER >
+                <TD HEIGHT=50><input TYPE="button" NAME="SOMAR" VALUE="   +   " OnClick="SOMA(this.form)"></TD>
+                <TD HEIGHT=50><input TYPE="button" NAME="SUBTRAIR" VALUE="   -   " OnClick="SUBT(this.form)"></TD>
+                <TD HEIGHT=50><input TYPE="button" NAME="MULTIPLICAR" VALUE="   *   " OnClick="MULT(this.form)"></TD>
+                <TD HEIGHT=50><input TYPE="button" NAME="DIVIDIR" VALUE="   /   " OnClick="DIVI(this.form)"></TD>
+                <TD HEIGHT=50><input TYPE="button" NAME="RESTO" VALUE="   %   " OnClick="REST(this.form)"></TD>
+            </TR>
+            <TR >
+                <TD HEIGHT=100 COLSPAN=5 ALIGN=CENTER>RESULTADO<BR><input TYPE="TEXT" NAME="RESU" SIZE=5 MAXLENGTH=4></TD>
+            </TR>
+            <TR>
+                <TD HEIGHT=50 COLSPAN=5 ALIGN=CENTER><input TYPE="button" NAME="RESTO" VALUE="APAGAR" OnClick="APAG(this.form)"></TD>
+            </TR >
+            </TABLE>
+            <P></P>
+ 
+         </form>
+      
+</BODY>
+</HTML>
+
+
+
+
+
+
+

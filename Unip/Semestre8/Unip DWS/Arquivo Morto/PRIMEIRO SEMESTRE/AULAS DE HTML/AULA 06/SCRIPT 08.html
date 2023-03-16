@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>AULA 06 - ABERTURA DE UMA NOVA JANELA</title>
+      <script language="JavaScript">
+    
+
+
+
+      function WinOpen1() 
+      {
+         msg=open("","DisplayWindow","toolbar=yes,directories=yes,menubar=yes");
+         msg.document.write("<HEAD><TITLE>AULA 06 - Janela 02 Aberta</TITLE></HEAD>");
+         msg.document.write("<CENTER><h1><B>JANELA 02</B></h1></CENTER>");
+      }
+      </script>
+</head>
+<body>
+<form>
+<center>
+<br><br>
+<input type="button" name="Button1" value="Abrir Nova Janela" onclick="WinOpen1()">
+
+</center>
+</form>
+</body>
+</html>

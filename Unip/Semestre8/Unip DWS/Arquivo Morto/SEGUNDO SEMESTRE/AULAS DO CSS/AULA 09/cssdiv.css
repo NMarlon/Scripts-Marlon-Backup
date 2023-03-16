@@ -1,0 +1,28 @@
+#militares{
+    background-image: url("camuflado.jpg");
+    border-style: dashed;
+    border-color: #000000;
+    border-width: 20px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    color:#1976FF;
+    font-weight: bold;
+    margin: 100px 40px 10px 70px;
+
+}
+
+#civis{
+    background-image: url("bege.jpg");
+    margin-top: 100px;
+		margin-right: 40px;
+		margin-bottom: 10px;
+		margin-left: 70px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    color:#632b8d;
+    font-weight: bold;
+}

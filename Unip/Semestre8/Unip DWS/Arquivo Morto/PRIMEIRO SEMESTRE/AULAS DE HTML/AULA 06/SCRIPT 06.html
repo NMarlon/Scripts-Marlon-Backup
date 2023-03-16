@@ -1,0 +1,152 @@
+<HTML>
+   <HEAD>
+      <SCRIPT LANGUAGE="JAVASCRIPT">
+
+         function Apaga(form) 
+         {
+            form.RESULTADO.value=""
+         }     
+         function Zero(form) 
+         {
+            if (form.RESULTADO.value !="0")
+               form.RESULTADO.value= form.RESULTADO.value+"0"
+            else
+               form.RESULTADO.value= form.RESULTADO.value
+         }
+         function Um(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"1"
+         }
+         function Dois(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"2"
+         }
+         function Tres(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"3"
+         }
+         function Quatro(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"4"
+         }
+         function Cinco(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"5"
+         }
+         function Seis(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"6"
+         }
+         function Sete(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"7"
+         }
+         function Oito(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"8"
+         }
+         function Nove(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"9"
+         }
+         function Virg(form) 
+         {
+            form.RESULTADO.value= form.RESULTADO.value+"."
+         }
+         function Troca(form) 
+         {
+            VALOR = parseFloat(form.RESULTADO.value) * -1
+            form.RESULTADO.value=VALOR
+
+         }
+         function Soma(form) 
+         {
+            VALOR1 = parseFloat(form.RESULTADO.value)
+            form.RESULTADO.value=""
+            OPER="+"
+         }
+         function Subt(form) 
+         {
+            VALOR1 = parseFloat(form.RESULTADO.value)
+            form.RESULTADO.value=""
+            OPER="-"
+         }
+         function Divi(form) 
+         {
+            VALOR1 = parseFloat(form.RESULTADO.value)
+            form.RESULTADO.value=""
+            OPER="/"
+         }
+         function Mult(form) 
+         {
+            VALOR1 = parseFloat(form.RESULTADO.value)
+            form.RESULTADO.value=""
+            OPER="*"
+         }
+         function Result(form) 
+         {
+            VALOR2 = parseFloat(form.RESULTADO.value)
+            if (OPER == "+")
+               RESU=VALOR1+VALOR2
+            else
+               if (OPER == "-")
+                  RESU=VALOR1-VALOR2
+               else
+                  if (OPER == "*")
+                     RESU=VALOR1*VALOR2
+                  else
+                     if (OPER == "/")
+                        RESU=VALOR1/VALOR2
+            form.RESULTADO.value=RESU
+         }
+
+
+      </SCRIPT>
+   </HEAD>
+
+   <BODY>
+ 
+         <form>
+            <TABLE border=2 align=center BGCOLOR=GREEN>
+               <TR>
+                  <TD HEIGHT=30 align=center colspan=4><input TYPE="TEXT" NAME="RESULTADO" value=""></TD>
+               </TR>
+               <TR>
+                  <TD HEIGHT=30 align=center><input TYPE="button" NAME="1" VALUE=" 1 " OnClick="Um(this.form)"></TD>
+                  <TD HEIGHT=30 align=center><input TYPE="button" NAME="2" VALUE=" 2 " OnClick="Dois(this.form)"></TD>
+                  <TD HEIGHT=30 align=center><input TYPE="button" NAME="3" VALUE=" 3 " OnClick="Tres(this.form)"></TD>
+                  <TD HEIGHT=30 align=center><input TYPE="button" NAME="dvi" VALUE=" / " OnClick="Divi(this.form)"></TD>
+               </TR>
+               <TR>                        
+                  <TD align=center><input TYPE="button" NAME="4" VALUE=" 4 " OnClick="Quatro(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="5" VALUE=" 5 " OnClick="Cinco(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="6" VALUE=" 6 " OnClick="Seis(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="mul" VALUE=" * " OnClick="Mult(this.form)"></TD>
+               </TR>
+               <TR>                        
+                  <TD align=center><input TYPE="button" NAME="7" VALUE=" 7 " OnClick="Sete(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="8" VALUE=" 8 " OnClick="Oito(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="9" VALUE=" 9 " OnClick="Nove(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="sub" VALUE=" - " OnClick="Subt(this.form)"></TD>
+               <TR>                        
+                  <TD align=center><input TYPE="button" NAME="0" VALUE=" 0 " OnClick="Zero(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="sinal" VALUE="+/-" OnClick="Troca(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="virgula" VALUE=" , " OnClick="Virg(this.form)"></TD>
+                  <TD align=center><input TYPE="button" NAME="som" VALUE=" + " OnClick="Soma(this.form)"></TD>
+               </TR>
+               <TR>
+                  <TD align=center colspan=2><input TYPE="button" NAME="apaga" VALUE="APAGA" OnClick="Apaga(this.form)"></TD>
+                  <TD align=center colspan=2><input TYPE="button" NAME="result" VALUE="RESULTADO" OnClick="Result(this.form)"></TD>
+               </TR>
+
+         </form>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+

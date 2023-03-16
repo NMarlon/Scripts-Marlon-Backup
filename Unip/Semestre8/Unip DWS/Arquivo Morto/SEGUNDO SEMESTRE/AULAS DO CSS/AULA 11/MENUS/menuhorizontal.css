@@ -1,0 +1,29 @@
+#menuhor {
+border:none;
+margin: 0;
+font: 9px Arial, sans-serif;
+}
+#menuhor li {
+list-style: none; 
+margin: 0;
+display: inline;
+}
+#menuhor li a {
+height:1px; /* IE5.0 bug */
+padding: 3px 1px; 
+margin:0;
+border: 1px solid #f00; 
+background: #999;
+text-decoration: none;
+}
+#menuhor li a:link {
+color: #fff;
+}
+#menuhor li a:visited {
+color: #fff;
+}
+#menuhor li a:hover {
+background: #ccc;
+color: #000; 
+border-color: #000;
+}

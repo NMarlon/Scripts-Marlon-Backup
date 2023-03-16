@@ -1,0 +1,65 @@
+span 
+{
+   color:green;
+}
+
+span.efeito 
+{
+   color:red;
+}
+#brancos 
+{
+   background:blue;
+}
+
+#tintos
+{
+   background:red;
+}
+
+h2 
+{
+   border-width: 20px;
+   border-style: outset;
+   border-color: red;
+}
+
+p 
+{
+   border-width: 1px;
+   border-style: dashed;
+   border-color: blue;
+}
+
+ul 
+{
+   border-width: thin;
+   border-style: solid;
+   border-color: orange;
+}
+
+h1 
+{
+   border-top-width: thick;
+   border-top-style: solid;
+   border-top-color: red;
+
+   border-bottom-width: thick;
+   border-bottom-style: solid;
+   border-bottom-color: blue;
+
+   border-right-width: thick;
+   border-right-style: solid;
+   border-right-color: green;
+
+   border-left-width: thick;
+   border-left-style: solid;
+   border-left-color: orange;
+}
+
+div.box {
+	height: 500px;
+	width: 200px;
+	border: 1px solid black;
+	background: orange;
+}

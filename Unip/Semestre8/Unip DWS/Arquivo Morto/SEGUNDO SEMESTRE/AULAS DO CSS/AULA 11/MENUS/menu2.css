@@ -1,0 +1,30 @@
+#menuver {
+width: 11em;
+padding: 0; 
+margin: 0;
+font: 12px Verdana, sans-serif;
+background: #000; 
+border-top: 3px solid red; 
+border-bottom: 3px solid red; 
+}
+#menuver li {
+list-style: none;
+margin: 0.5em 0 0.5em 0.5em; 
+}
+#menuver li a {
+margin:0; 
+padding:0;
+text-decoration:none;
+color: #fff;
+}
+#menuver li a:visited {
+color: #fff;
+}
+#menuver li a:hover { 
+background: #fff;
+color: #000; 
+}
+#menuver li a:active { 
+background: #ccc;
+color: #000; 
+}

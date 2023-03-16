@@ -1,0 +1,42 @@
+body {
+color: #000000;
+font-family: arial; verdana;
+font-size: 10pt;
+background-color: #ffffff;
+background-image: url(bgdicas.jpg);
+}
+h1 {
+color:#33ff33;
+font-family: arial; verdana;
+font-size: 11pt;
+}
+h2 {
+font-weight: bold;
+color:#ffffff;
+font-family: arial; verdana;
+font-size: 10pt;
+}
+h3 {
+font-style: italic;
+font-weight: normal;
+color:#ffffff;
+font-family: arial; verdana;
+font-size: 10pt;
+}
+p {
+color: #fff00f;
+font-family: arial; verdana;
+font-size: 10pt;
+margin:0px;
+padding:2px 5px;
+}
+em {
+font-style: normal;
+color:#33ff33;
+}
+tr {
+font-size: 10pt;
+}
+a:link { color:#00ffff; text-decoration: underline }
+a:hover { color:#77ff99; text-decoration: none }
+a:visited { color:#ccffff; text-decoration: underline }

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<title>Javascript - Data e Hora </title>
+<script LANGUAGE="JAVASCRIPT">
+<!--
+function ShowHours() {
+	TodaysHour = new Date()
+	horas = TodaysHour.getHours()
+	minutos = TodaysHour.getMinutes()
+
+	if (horas < 10)
+	   horas= "0" + horas
+        if (minutos < 10)
+	   minutos = "0" + minutos
+
+document.write(horas+":"+minutos)
+}
+
+function ShowTodayDate() {
+	now = new Date()
+	dia = now.getDate()
+	mes = now.getMonth() + 1
+	ano = now.getYear()
+
+	if (dia < 10)
+		dia = "0" + dia
+	if (mes < 10)
+		mes = "0" + mes
+	if (ano < 2000)
+		ano = "19" + ano
+
+	document.write(dia+" / " +mes+ " / " +ano)
+
+}
+
+// --></script>
+</head>
+
+<body TEXT="#808080" BGCOLOR="#FFFFFF" LINK="#80FFFF" VLINK="#FF0000" ALINK="#0000FF">
+<font face="ms sans serif, geneva" size="4" color="#0000A0">
+
+<p align="center">Bem-vindo ao JavaSite, agora são: <script>ShowHours();</script>, do dia: <script>ShowTodayDate();</script></p>
+
+<p align="center">&nbsp;</p>
+</font>
+
+<p><font face="ms sans serif, geneva" size="4" color="#0000A0"><br>
+<br>
+</font>
+
+<dl>
+  <font SIZE="+3" COLOR="WHITE">
+  <dd><br>
+  </dd>
+</dl>
+</font>
+</body>
+</html>

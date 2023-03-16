@@ -1,0 +1,44 @@
+<HTML>
+   <HEAD>
+      <SCRIPT LANGUAGE="JAVASCRIPT">
+     
+         function Mostra(form) 
+         {
+            alert("NOME : "+form.NOME.value+"\nIDADE "+form.IDADE.value+"\nPESO "+form.PESO.value+"\nALTURA "+form.ALTURA.value)
+            
+ 
+         }
+      </SCRIPT>
+   </HEAD>
+
+   <BODY>
+      <FIELDSET>
+         <form>
+            <BR>
+            <P>NOME.......
+            <input TYPE="TEXT" NAME="NOME" SIZE=70 MAXLENGTH=40></P> 
+           
+            <P>IDADE....... 
+            <input TYPE="TEXT" NAME="IDADE" SIZE=10 MAXLENGTH=3></P>
+            
+            <P>PESO......... 
+            <input TYPE="TEXT" NAME="PESO" SIZE=10 MAXLENGTH=6></P>
+            
+            <P>ALTURA.... 
+            <input TYPE="TEXT" NAME="ALTURA" SIZE=10 MAXLENGTH=4></P>
+            
+            <P><input TYPE="button" NAME="BOTAO" VALUE="SUBMETER" OnClick="Mostra(this.form)"></P>
+
+            
+ 
+         </form>
+      </FIELDSET>
+</BODY>
+</HTML>
+
+
+
+
+
+
+

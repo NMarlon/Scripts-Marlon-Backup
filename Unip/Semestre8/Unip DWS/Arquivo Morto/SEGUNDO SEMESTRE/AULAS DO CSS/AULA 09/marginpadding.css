@@ -1,0 +1,19 @@
+
+p 
+{
+color: #FFFFFF;
+background-color: #FFCC66;
+font-family: arial; verdana;
+font-size: 10pt;
+margin: 40px 10px 20 px 30 px;
+padding: 50px 0px 50px 100px;
+
+    margin-top: 100px;
+		margin-right: 40px;
+		margin-bottom: 10px;
+		margin-left: 70px;
+
+ border-width: thin;
+   border-style: solid;
+   border-color: orange;
+}

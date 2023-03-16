@@ -1,0 +1,90 @@
+body {
+   	margin:0 0 5px 0;
+	padding:0;
+	background-color:#444;
+	font:italic 14px/1.5em 
+	Verdana, Arial, Serif;
+}
+#topo{
+	width:auto;
+	height:50px;
+	background-color:#333;
+	border-top:1px solid #666;
+	border-bottom:2px dotted #666;
+	color:#0f0;
+	text-align:center;
+}
+#conteudoEsq {
+	position:absolute;
+	width:190px;
+	top:60px;
+	left:5px;
+	color:#99f;
+	padding-bottom:20px;
+	border-bottom:3px double #666;
+}
+#conteudoDir {
+	position:absolute;
+	width:140px;
+	top:60px;
+	right:5px;
+	color:#99f;
+	padding-bottom:20px;
+	border-bottom:3px double #666;
+}
+#colEsq {
+	background:#444;
+}
+#sepEsqcolCentral {
+	margin-left:200px;
+	padding-left:2px;
+	background:#666;
+}
+#colDir {
+	background:#444;
+	margin:0px;	
+}
+#sepcolCentralDir {
+	margin-right:150px;
+	padding-right:2px;
+	background:#666;
+}
+#colCentral {    
+	background:#22232F;
+	color:#991;
+	padding:2px 10px;
+	text-align:justify;
+	border-bottom:1px solid #666;
+}
+E abaixo o código HTML
+.......
+<body>
+ <div id="topo"> 
+  <h1>TOPO</h1>
+   </div>
+    <div id="conteudoEsq"> 
+     <h3>COLUNA ESQUERDA</h3>
+      <p>Lorem .... </p>
+       </div>
+      <div id="colEsq">
+     <div id="sepEsqcolCentral">
+    <div id="colDir">
+   <div id="conteudoDir"> 
+  <h3>COLUNA DIREITA</h3>
+ Lorem ipsum ...  
+</div>
+ <div id="sepcolCentralDir">
+  <div id="colCentral">
+   <h1>COLUNA CENTRAL</h1>
+    <h3>Abaixo a folha de estilo 
+	deste layout:</h3>
+     ..............
+      <h3>E abaixo o código HTML</h3>		
+       .......
+       </div>
+     </div>
+    </div>
+   </div>  
+  </div>
+ </body>
+</html>

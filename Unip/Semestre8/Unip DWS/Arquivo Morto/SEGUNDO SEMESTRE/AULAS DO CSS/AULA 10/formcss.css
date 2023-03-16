@@ -1,0 +1,45 @@
+form.login {
+   background-color: #FFFFCC; 
+   width:380px;
+   font: 11px Verdana, sans-serif;
+   color: #003399;
+   border: 2px solid #0000FF;
+   padding-left:10px;
+   }
+
+.campos {
+   background-color:#B0E0E6; 
+   font: 11px georgia, sans-serif;
+   color:#0033CC;margin-right: 20px;
+   }
+
+.botao {
+   background-color: #CC3300;
+   font: 10px Arial, sans-serif;
+   color: #CCFFFF;
+   }
+
+textarea { 
+   background-color: #B0E0E6;
+   font:12px verdana, arial, helvetica, sans-serif;
+   color:#003399;
+   }
+
+input { 
+   background-color: #B0E0E6; 
+   font: 12px verdana, arial, helvetica, sans-serif;
+   color:#003399;
+   border:2px solid #000099;
+   }
+
+select { 
+   background-color: #B0E0E6;
+   font:12px verdana, arial, helvetica, sans-serif;
+   color:#003399;
+   }
+
+fieldset {
+   width: 400px; 
+   height: 60px 
+   }
+

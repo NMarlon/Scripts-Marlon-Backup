@@ -1,0 +1,35 @@
+#menubv {
+width: 12em;
+padding: 0;
+margin: 0;
+font: 14px Verdana, sans-serif;
+}
+#menubv ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#menubv li {
+border-bottom: 1px solid #f00;
+margin: 0;
+}
+#menubv li a {
+display: block;
+padding: 5px 5px 5px 0.5em;
+font-weight:bold;
+border-left: 10px solid #ffc0cb;
+border-right: 10px solid #fff5ee;
+background-color: #ffe4e1;
+color: #808000;
+text-decoration: none;
+}
+#menubv li a:hover {
+border-left: 10px solid #fcc;
+border-right: 10px solid #fff;
+background-color: #fff0f5;
+color: #ccc;
+}
+/* Fix IE. Hide from IE Mac \*/
+* html ul#menubv  li { float: left; height: 1%; }
+* html ul#menubv  li a { height: 1%; }
+/* End */

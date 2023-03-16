@@ -1,0 +1,92 @@
+<html>
+   <head>
+      <title>DIFERENÇA DE DATAS E TEMPERATURA</title>
+      <script language="JavaScript">
+  
+      function DIFER()
+      {
+         Hoje = new Date()
+         Dia = parseInt(Hoje.getDate())
+         Mes = parseInt(Hoje.getMonth()) 
+         Ano = parseInt(Hoje.getYear())
+         
+         DTNASC = form01.NUM2.value
+         DiaNasc = parseInt(DTNASC.substring(0,2)) 
+         MesNasc = parseInt(DTNASC.substring(3,5))
+         AnoNasc = parseInt(DTNASC.substring(6,10))
+         DTNASC = (DiaNasc+MesNasc+AnoNasc)
+         if (Mes < MesNasc)
+            TOTANO = (Ano - (AnoNasc+1))*365
+         else   
+            TOTANO= (Ano - AnoNasc)*365
+         
+         TOTMES = (12-MesNasc+Mes)*30
+         TOTDIA = (30-DiaNasc+Dia)
+         
+	       form01.RESU.value = TOTANO+TOTMES+TOTDIA
+	    
+      }
+      function DTHOJE()
+      {
+         Hoje = new Date()
+         Dia = Hoje.getDate()
+         Mes = Hoje.getMonth() 
+         Ano = Hoje.getYear()
+         DT = (Dia+"/"+Mes+"/"+Ano)
+         form01.NUM1.value = DT
+      }
+
+      function Transforme()
+      {
+         Temp = parseFloat(form02.NUM3.value)
+         CELCIU=(5/9*(Temp-32))
+         alert ("A temperatura em graus Celcius é :  "+CELCIU)
+      }
+      
+      </script>
+   </head>
+   <body onload="DTHOJE()">
+         <fieldset>
+             <form name="form01">
+             <legend>FORMULÁRIO DATAS</legend>
+             <TABLE WIDTH=80%>
+             <TR>
+                 <TD>DATA DE HOJE</TD>
+                 <TD ROWSPAN=4 VALIGN=CENTER ALIGN=CENTER><input type="button" name="CALC" value="CÁLCULO" onclick="DIFER()"></TD>
+                 <TD ROWSPAN=2 VALIGN=CENTER ALIGN=CENTER>QUANTIDADE DE DIAS</TD>
+             </TR>
+             <TR>
+                 <TD><input TYPE="TEXT" NAME="NUM1" SIZE=10 MAXLENGTH=10></TD>
+             </TR>
+
+             <TR>
+                 <TD>DATA DE NASCIMENTO</TD>
+                 <TD ROWSPAN=2 VALIGN=CENTER ALIGN=CENTER><input TYPE="TEXT" NAME="RESU" SIZE=10 MAXLENGTH=5></TD>
+             </TR>
+             <TR>
+                 <TD><input TYPE="TEXT" NAME="NUM2" SIZE=10 MAXLENGTH=10></TD>
+             </TR>
+             </TABLE>
+             </form>
+         </fieldset>
+         <fieldset>
+             <form name="form02">
+             <legend>FORMULÁRIO TEMPERATURA</legend>
+             <TABLE WIDTH=60%>
+             <TR>
+                 <TD ALIGN=CENTER>GRAUS FAHREINHEIT</TD>
+                 <TD ROWSPAN=2 VALIGN=CENTER ALIGN=CENTER><input type="button" name="TRANS" value="TRANSFORMAR" onclick="Transforme()"></TD>
+             </TR>
+             <TR>     
+                 <TD ROWSPAN=2 VALIGN=CENTER ALIGN=CENTER><input TYPE="TEXT" NAME="NUM3" SIZE=5 MAXLENGTH=3></TD>
+             </TR>
+             </form>
+         </fieldset>
+       
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-bot",
+      "appliesTo": "1 - Projetos/Bots E AI/UNIP marcar horário prova/bot.py",
+      "type": "launch"
+    }
+  ]
+}

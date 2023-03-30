@@ -1,0 +1,129 @@
+/* Import a custom font for the header */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Set global styles for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E4E4E4;
+}
+
+/* Style the header */
+header {
+    background-color: #296D4D;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+    }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+            header nav ul li a {
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+
+                header nav ul li a:hover {
+                    color: #3EA6C8;
+                }
+
+/* Style the banner */
+#banner {
+    background-image: url('https://i.imgur.com/AsFNiWf.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    #banner h2 {
+        font-size: 48px;
+        margin: 0;
+        text-align: center;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    }
+
+    #banner p {
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+        text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    }
+
+/* Style the sections */
+section {
+    padding: 50px;
+    background-color: white;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+    section h2 {
+        font-size: 36px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    section ul {
+        margin: 0;
+        list-style: none;
+    }
+
+        section ul li {
+            margin-bottom: 10px;
+        }
+
+            section ul li a {
+                color: #296D4D;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+
+                section ul li a:hover {
+                    color: #3EA6C8;
+                }
+
+/* Style the footer */
+footer {
+    background-color: #296D4D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+        footer a:hover {
+            color: #3EA6C8;
+        }

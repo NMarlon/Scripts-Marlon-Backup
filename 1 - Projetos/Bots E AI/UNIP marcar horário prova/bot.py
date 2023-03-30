@@ -36,7 +36,7 @@ icon_location = pyautogui.locateOnScreen('./img/teste.png')
 # Click on the center of the icon
 if icon_location is not None:
     icon_center = pyautogui.center(icon_location)
-    pyautogui.click(icon_center)
+    pyautogui.click(icon_center) 
     pyautogui.click(icon_center)
 else:
     print("Icon not found") 

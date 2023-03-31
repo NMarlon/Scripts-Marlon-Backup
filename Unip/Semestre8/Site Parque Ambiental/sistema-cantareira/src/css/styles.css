@@ -1,9 +1,21 @@
 /* Import a custom font for the header */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../public/fonts/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../public/fonts/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 /* Set global styles for body */
 body {
-    font-family: 'Roboto', Montserrat;
+    font-family: 'Montserrat', sans-serif;
     background-color: #E4E4E4;
 }
 
@@ -17,11 +29,24 @@ header {
     align-items: center;
 }
 
+
+
     header h1 {
         font-size: 36px;
         margin: 0;
+        color: white; /* Changes the link color to blue */
+        border-bottom: 1px solid transparent;
+        transition: color 0.3s ease;
+        text-shadow: inset 2px 2px 4px #000;
     }
+        header h1:hover {
+            color: #c1c1c1; /* Changes the link color to red on hover */
+        }
 
+
+    header a {
+        text-decoration: none; /* Removes the underline */
+    }
     header nav ul {
         display: flex;
         list-style: none;
@@ -152,6 +177,9 @@ footer {
         }
 
 
-h2, #banner > p {
+h2, #banner  p {
     color: orange;
+}
+.titulo-site{
+    color:white;
 }

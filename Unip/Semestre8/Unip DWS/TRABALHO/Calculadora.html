@@ -1,19 +1,123 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <title>MusicDot</title>
-    </head>
-    <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
 
 
-<input type="number" step="any"/>
-<button onclick="">+</button>
-<button onclick="">+</button>
+<script>
+  var neuronio_num = 0;
+  var neuronio2_contador = "";
 
-<button onclick="">+</button>
+  
+ function getID_Value(a){
+    return document.getElementById(a).value;   
+  } 
+  
+ function soma(a){   
+   neuronio_num = parseInt(getID_Value(a));
+   neuronio2_contador="+";
+ }
+  function subtraction(a){
+   neuronio_num = parseInt(getID_Value(a));
+   
+    neuronio2_contador="-";
+  }
+  function multi(a){
+   neuronio_num =  parseInt(getID_Value(a));
+    neuronio2_contador="*";
+  }
+function divide(a){
+  neuronio2_contador="/";
+   neuronio_num =  parseInt(getID_Value(a));
+    
+}
+  
+function equal(a){
+   neuronio_num= eval("neuronio_num"+neuronio2_contador+ "parseInt(document.getElementById(a).value)");
+   document.getElementById(a).value=neuronio_num;
+}
+  
 
 
-<script></script>
+  
+</script>
+<style>
+.flex{
+  display:flex;
+}
+.magin_auto{
+  margin:auto;
+}
+.width90{
+  width:90%;
+}
+.width100{
+  width:100%;
+}
+.height_auto{
+  height:auto;
+}
+.block{
+  display:block;
+}
+.grid{
+  display:grid;
+}
+.full-father{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+.min-margin{
+  min-margin:5px;
+}
+.min-height-buttons{
+  min-height:150px;
+}
+.buttons-separations{
+  padding:8px;
+}
+.font-size-buttons{
+  font-size:4em;
+  font-weight:900;
+}
+  
+</style>
+<body>
+<h1>CALCULADORA 🔢</h1>
+<div class="grid" style="margin:auto; heigth:350px; max-width: 500px;">
+  <input type="number" id="input_calc" step="any" class="magin_auto width90" style="height:55px; font-size:2.3em"/>
+  <div class="box flex magin_auto buttons-separations full-father" style="">
+    <div class="flex magin_auto" style="width:75%">
+
+      
+      <div class="full-father">
+        
+        <button onclick="soma('input_calc')" class="block height_auto font-size-buttons min-height-buttons magin_auto width100 min-margin">+</button>
+        <button onclick="subtraction('input_calc')" class="block height_auto font-size-buttons min-height-buttons magin_auto width100 min-margin">-</button>
+        
+      </div>
+
+      
+      <div class="full-father">
+        
+        <button onclick="multi('input_calc')" class="block height_auto font-size-buttons min-height-buttons magin_auto width100 min-margin">*</button>
+        <button onclick="divide('input_calc')" class="block height_auto font-size-buttons min-height-buttons magin_auto width100 min-margin">/</button>
+        
+      </div>
+      
+    </div>
+    <div class="block magin_auto full-father" style="width:25%">
+      
+        <button onclick="equal('input_calc')" class="height_auto font-size-buttons min-height-buttons magin_auto width100 min-margin full-father " style="display:unset; height: 100%;">=</button>
+      </div>
+  </div>
+</div>
 
     </body>
 </html>

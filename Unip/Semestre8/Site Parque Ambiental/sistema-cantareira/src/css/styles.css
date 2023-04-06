@@ -29,7 +29,22 @@ header {
     align-items: center;
 }
 
+.cantareira {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+    .cantareira h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .cantareira p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
 
     header h1 {
         font-size: 36px;

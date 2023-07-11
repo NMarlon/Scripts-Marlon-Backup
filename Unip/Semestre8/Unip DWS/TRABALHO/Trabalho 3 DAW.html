@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coleção de CDs e DVDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+		margin:auto;
+margin-top:15px;
+display:block;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .media-container {
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coleção de CDs e DVDs</h1>
+
+    <!-- Formulário para adicionar CDs -->
+    <h2>Adicionar CD</h2>
+
+    
+    <form>
+        <label for="cd-autor">Autor:</label>
+        <input type="text" id="cd-autor" name="cd-autor" required>
+
+        <label for="cd-data">Mês/Ano:</label>
+        <input type="text" id="cd-data" name="cd-data" required>
+
+        <label for="cd-nome">Nome:</label>
+        <input type="text" id="cd-nome" name="cd-nome" required>
+
+        <label for="cd-categoria">Categoria:</label>
+        <input type="text" id="cd-categoria" name="cd-categoria" required>
+
+        <input type="submit" value="Adicionar CD">
+    </form>
+
+    <!-- Formulário para adicionar DVDs -->
+    <h2>Adicionar DVD</h2>
+    <form>
+        <label for="dvd-autor">Autor:</label>
+        <input type="text" id="dvd-autor" name="dvd-autor" required>
+
+        <label for="dvd-data">Mês/Ano:</label>
+        <input type="text" id="dvd-data" name="dvd-data" required>
+
+        <label for="dvd-nome">Nome:</label>
+        <input type="text" id="dvd-nome" name="dvd-nome" required>
+
+        <label for="dvd-categoria">Categoria:</label>
+        <input type="text" id="dvd-categoria" name="dvd-categoria" required>
+
+        <input type="submit" value="Adicionar DVD">
+    </form>
+
+
+    <script>
+        // Função para adicionar um CD ou DVD à coleção
+        function adicionarMedia(tipo) {
+            var autor, data, nome, categoria;
+
+            if (tipo === 'cd') {
+                autor = document.getElementById('cd-autor').value;
+                data = document.getElementById('cd-data').value;
+                nome = document.getElementById('cd-nome').value;
+                categoria = document.getElementById('cd-categoria').value;
+            } else if (tipo === 'dvd') {
+                autor = document.getElementById('dvd-autor').value;
+                data = document.getElementById('dvd-data').value;
+                nome = document.getElementById('dvd-nome').value;
+                categoria = document.getElementById('dvd-categoria').value;
+            }
+
+            var mediaContainer = document.createElement('div');
+            mediaContainer.className = 'media-container';
+
+            var mediaInfo = document.createElement('p');
+            mediaInfo.innerHTML = '<strong>Autor:</strong> ' + autor + '<br>' +
+                                  '<strong>Mês/Ano:</strong> ' + data + '<br>' +
+                                  '<strong>Nome:</strong> ' + nome + '<br>' +
+                                  '<strong>Categoria:</strong> ' + categoria;
+
+            mediaContainer.appendChild(mediaInfo);
+            document.getElementById('colecao').appendChild(mediaContainer);
+        }
+
+        // Event listeners para os formulários de adicionar CD e DVD
+        document.forms[0].addEventListener('submit', function(e) {
+            e.preventDefault();
+            adicionarMedia('cd');
+        });
+
+        document.forms[1].addEventListener('submit', function(e) {
+            e.preventDefault();
+            adicionarMedia('dvd');
+        });
+    </script>
+    </form>
+
+    <!-- Área para visualizar a coleção de CDs e DVDs -->
+    <h2>Coleção</h2>
+    <div id="colecao"></div>
+
+    <script>
+       /* // Função para adicionar um CD ou DVD à coleção
+        function adicionarMedia(tipo) {
+            var autor, data, nome, categoria;
+
+            if (tipo === 'cd') {
+                autor = document.getElementById('cd-autor').value;
+                data = document.getElementById('cd-data').value;
+                nome = document.getElementById('cd-nome').value;
+                categoria = document.getElementById('cd-categoria').value;
+            } else if (tipo === 'dvd') {
+                autor = document.getElementById('dvd-autor').value;
+                data = document.getElementById('dvd-data').value;
+                nome = document.getElementById('dvd-nome').value;
+                categoria = document.getElementById('dvd-categoria').value;
+            }
+
+            var mediaContainer = document.createElement('div');
+            mediaContainer.className = 'media-container';
+
+            var mediaInfo = document.createElement('p');
+            mediaInfo.innerHTML = '<strong>Autor:</strong> ' + autor + '<br>' +
+                                  '<strong>Mês/Ano:</strong> ' + data + '<br>' +
+                                  '<strong>Nome:</strong> ' + nome + '<br>' +
+                                  '<strong>Categoria:</strong> ' + categoria;
+
+            mediaContainer.appendChild(mediaInfo);
+            document.getElementById('colecao').appendChild(mediaContainer);
+        }
+
+        // Event listeners para os formulários de adicionar CD e DVD
+        document.forms[0].addEventListener('submit', function(e) {
+            e.preventDefault();
+            adicionarMedia('cd');
+        });
+
+        document.forms[1].addEventListener('submit', function(e) {
+            e.preventDefault();
+            adicionarMedia('dvd');
+        });*/
+    </script>
+</body>
+</html>

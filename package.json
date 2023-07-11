@@ -21,5 +21,8 @@
   "homepage": "https://github.com/NMarlon/Scripts-Marlon-Backup#readme",
   "devDependencies": {
     "cypress": "^8.0.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.10.0"
   }
 }

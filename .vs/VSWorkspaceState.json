@@ -1,13 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Unip",
-    "\\Unip\\Semestre8\\Site Parque Ambiental\\sistema-cantareira",
-    "\\Unip\\Semestre8\\Site Parque Ambiental\\sistema-cantareira\\Unip-Site-8--Sistema-da-Cantareira2\\src",
-    "\\Unip\\Semestre8\\Site Parque Ambiental\\sistema-cantareira\\Unip-Site-8--Sistema-da-Cantareira2\\src\\img",
-    "\\Unip\\Semestre8\\Site Parque Ambiental\\sistema-cantareira\\Unip-Site-8--Sistema-da-Cantareira2\\src\\img\\Cantareira",
-    "\\Unip\\Semestre8\\Site Parque Ambiental\\sistema-cantareira\\Unip-Site-8--Sistema-da-Cantareira2\\src\\pages"
+    "\\1 - Projetos",
+    "\\1 - Projetos\\Bots E AI",
+    "\\1 - Projetos\\Bots E AI\\MegaManBug",
+    "\\1 - Projetos\\Bots E AI\\MegaManBug\\Rust version",
+    "\\1 - Projetos\\Bots E AI\\MegaManBug\\Rust version\\sprites",
+    "\\1 - Projetos\\Bots E AI\\MegaManBug\\Rust version\\src",
+    "\\1 - Projetos\\PEALR",
+    "\\1 - Projetos\\PEALR\\src"
   ],
-  "SelectedNode": "\\Unip\\Semestre8",
+  "SelectedNode": "\\1 - Projetos\\Bots E AI\\MegaManBug\\Rust version\\src\\main.rs",
   "PreviewInSolutionExplorer": false
 }

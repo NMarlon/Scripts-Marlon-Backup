@@ -7,7 +7,7 @@ use sdl2::event::Event;
 use sdl2::keyboard::Keycode;
 use sdl2::pixels::PixelFormatEnum;
 use sdl2::rect::Rect;
-use sdl2::render::TextureCreator;
+use sdl2::render::TextureCreator; 
 use sdl2::video::WindowContext;
 use std::time::Duration;
 
@@ -59,7 +59,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             for x in 0..num_frames_x {
                 let frame = get_frame(&sprite_sheet, x * frame_width, y * frame_height, frame_width, frame_height);
                 let mut texture = texture_creator.create_texture_streaming(pixel_format, frame.width(), frame.height())?;
-                texture.update(None, frame.to_rgba().as_raw(), frame.width() as usize * 4)?;
+                texture.update(None, frame.to_rgba8().as_raw(), frame.width() as usize * 4)?;
                 canvas.copy(&texture, None, Rect::new((x * frame_width) as i32, (y * frame_height) as i32, frame_width, frame_height))?;
             }
         }

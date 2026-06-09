@@ -1,0 +1,217 @@
+<div id="version_doc">v0.0.0</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+// Inicialização segura atrelada ao carregamento do script
+function start() {
+    check_if_auto_reload();
+    
+    // Evita quebra se o elemento não existir
+    var entryContent = document.getElementsByClassName('entry-content')[0];
+    if (entryContent) {
+        entryContent.id = "start";
+    }
+
+    // Configuração inicial da versão em texto puro
+    var versionEl = document.getElementById('version_doc');
+    if (versionEl) {
+        setCookie("v", versionEl.innerText, 365);
+    }
+}
+
+// --- GERENCIAMENTO DE COOKIES ---
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();    
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax;Secure;";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// --- FUNÇÕES DE SUPORTE ---
+function funcoes_de_teste(id_teste) {
+    if (id_teste === "" || id_teste === "0") {
+        console.log("Modo de teste processado com ID: " + id_teste);
+    } else {
+        alert('Número de teste não encontrado!');
+        var dev_nick = getCookie("last_dev");
+        chat_assist(dev_nick);
+    }
+}
+
+function name_user() {
+    var dev_nick = prompt('Bem-vindo, digite seu nome de usuário: ');
+    if (dev_nick) {
+        setCookie("dev_username_" + dev_nick, dev_nick, 365);
+        alert("Criado com sucesso!");
+    }
+}
+
+function diaSeg(valor) {
+    // Retorna a conversão de segundos para fração de dia necessária para o cookie
+    return valor / 24 / 60 / 60;
+}
+
+function auto_reload_ate_version_mudar(timeOutSegundos) {       
+    var versionEl = document.getElementById('version_doc');
+    var currentVersion = versionEl ? versionEl.innerText : "v0.0.0";
+    
+    // Salva a versão atual no cookie com o tempo de expiração determinado
+    setCookie('version_doc_auto_reload', currentVersion, diaSeg(timeOutSegundos));
+}
+
+function check_if_auto_reload() {
+    var versionEl = document.getElementById('version_doc');
+    var currentVersion = versionEl ? versionEl.innerText : "";
+    var autoReloadCookie = getCookie("version_doc_auto_reload");
+
+    if (autoReloadCookie !== "" && autoReloadCookie === currentVersion) {
+        // Recarrega a página mantendo o ciclo se a versão ainda for igual
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000); // Pequeno delay para evitar loops infinitos travando a CPU
+    } else if (autoReloadCookie !== "" && autoReloadCookie !== currentVersion) {
+        // Limpa o cookie se a versão mudou
+        setCookie("version_doc_auto_reload", "", -1);
+        alert("A versão mudou! Auto-reload desativado.");
+    }
+}
+
+// --- CONSOLE INTERATIVO (CHAT ASSIST) ---
+function chat_assist(dev_nick) {
+    console.log("Bem-vindo dev: " + dev_nick);
+    var solicitacao_dev = prompt('Digite "/help" para ver os comandos disponíveis:');
+    
+    if (!solicitacao_dev) return; // Se o usuário cancelar o prompt
+
+    solicitacao_dev = solicitacao_dev.trim();
+
+    try {
+        if (solicitacao_dev === "/help") {
+            alert('/cdn (muda o nickname de dev atual)\n/v (ver versão atual)\n/test=on (habilita modo de teste)\n/r (recarrega a página)\n/ar=tempo (auto-reload em segundos)');
+            chat_assist(dev_nick);
+        } 
+        else if (solicitacao_dev === "/cdn") {
+            name_user();
+        } 
+        else if (solicitacao_dev === "/v") {
+            if (confirm("A versão atual em cookies é: " + getCookie("v") + "\n(OK para continuar, Cancelar para sair)")) {
+                chat_assist(dev_nick);
+            }
+        } 
+        else if (solicitacao_dev === "/r" || solicitacao_dev === "/reload") {
+            window.location.reload();
+        } 
+        else if (solicitacao_dev.startsWith("/test=") || solicitacao_dev === "/teste") {
+            var partes = solicitacao_dev.split('=');
+            var arg = partes[1] ? partes[1].trim() : "on";
+            funcoes_de_teste(arg);
+            alert("Modo de teste executado com argumento: " + arg);
+        } 
+        else if (solicitacao_dev.includes("/autoreload") || solicitacao_dev.includes("/ar") || solicitacao_dev.includes("/autor")) {
+            var partesAr = solicitacao_dev.split('=');
+            var tempoSegundos = (partesAr[1] && !isNaN(partesAr[1])) ? parseInt(partesAr[1].trim()) : 60;
+            
+            auto_reload_ate_version_mudar(tempoSegundos);
+            window.location.reload();
+        } 
+        else {
+            alert("Comando não reconhecido ou em desenvolvimento.");
+            chat_assist(dev_nick);
+        }
+    } catch (e) {
+        console.error("Erro no dev_assist! Erro: " + e.message);
+    }
+}
+
+function check_if_user_dev_exists(dev_nick_input) {    
+    var dev_nick = getCookie('dev_nick_' + dev_nick_input);
+    if (dev_nick_input !== "" && dev_nick_input === dev_nick) {
+        setCookie("last_dev", dev_nick, 7); // 7 dias salvo
+        return true;
+    }
+    return false;
+}
+
+function create_dev() {
+    var dev_nick = prompt("Digite seu novo nome de usuário dev: ");
+    if (dev_nick) {
+        setCookie("dev_nick_" + dev_nick, dev_nick, 365);
+        setCookie("last_dev", dev_nick, 7);
+        alert("Dev criado com sucesso!");
+    }
+}
+
+function remove_dev() {
+    var dev_nick = prompt("Digite o nome do usuário dev a remover: ");
+    if (dev_nick) {
+        setCookie("dev_nick_" + dev_nick, "", -1);
+        alert("Dev removido.");
+    }
+}
+
+// --- CAPTURA DE EVENTO DE TECLADO ---
+function keyCapt(e) {
+    var event = e || window.event;
+    
+    // Tecla F9 (keyCode 120)
+    if (event.keyCode === 120) { 
+        var dev_nick = getCookie("last_dev");
+        
+        if (dev_nick !== "" || window.location.href.indexOf('dev_nick_=NMarlon') >= 0) {
+            chat_assist(dev_nick || "NMarlon");
+            return;
+        }  
+        
+        var debug_mode_key = prompt('Bem-vindo, digite seu nome de usuário: ');
+        if (!debug_mode_key) return;
+
+        if (check_if_user_dev_exists(debug_mode_key)) {
+            chat_assist(debug_mode_key);
+        } else if (debug_mode_key === "/create") {
+            create_dev();
+        } else if (debug_mode_key === "/drop") {
+            remove_dev();
+        } else {
+            if (confirm("Deseja retornar à página inicial?")) {
+                window.location.href = "https://testeapi-lojavirtual.000webhostapp.com/";
+            }
+        }
+    }
+}
+
+// Registro correto e único dos eventos de escuta
+if (document.addEventListener) {
+    document.addEventListener("keydown", keyCapt, false); 
+} else if (document.attachEvent) {
+    document.attachEvent("onkeydown", keyCapt);
+}
+
+// Executa o start ao carregar a página completamente
+window.onload = start;
+</script>
+
+<div>
+    <input type="text" id="link_site" placeholder="Digite aqui o link" />
+    <button onclick="alert('Funcionalidade de adicionar link não implementada.')">Adicionar</button>
+
+    <ul id="tabela_de_links">
+        <li></li>
+    </ul>
+
+    <button onclick="history.back()">Retornar</button>
+</div>
